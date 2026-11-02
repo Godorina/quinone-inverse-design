@@ -1,0 +1,236 @@
+{
+ "paper_id": "m035",
+ "title": "CO2 Capture: Exploring Rhenium Complexes as Redox Mediators",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "Re_phendione",
+   "name": "Re(CO)3Cl(phendione)",
+   "skeleton": "Phenanthrenequinone",
+   "form": "MetalComplex",
+   "substituent_classes": [
+    "NotReported"
+   ],
+   "substituent_text": null,
+   "quote": "Re(CO)3Cl(phendione) and Re(CO)3Cl(AQphen) (phendione = 1,10-phenanthroline-5,6-dione; AQphen = naphtho[2,3-h]dipyrido[3,2-a:2′,3′-c]phenazine-8,13-dione)",
+   "page": 1
+  },
+  {
+   "key": "Re_AQphen",
+   "name": "Re(CO)3Cl(AQphen)",
+   "skeleton": "Naphthoquinone",
+   "form": "MetalComplex",
+   "substituent_classes": [
+    "NotReported"
+   ],
+   "substituent_text": null,
+   "quote": "Re(CO)3Cl(phendione) and Re(CO)3Cl(AQphen) (phendione = 1,10-phenanthroline-5,6-dione; AQphen = naphtho[2,3-h]dipyrido[3,2-a:2′,3′-c]phenazine-8,13-dione)",
+   "page": 1
+  },
+  {
+   "key": "phendione",
+   "name": "phendione",
+   "skeleton": "Phenanthrenequinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "NotReported"
+   ],
+   "substituent_text": null,
+   "quote": "phendione = 1,10-phenanthroline-5,6-dione",
+   "page": 1
+  },
+  {
+   "key": "AQphen",
+   "name": "AQphen",
+   "skeleton": "Naphthoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "NotReported"
+   ],
+   "substituent_text": null,
+   "quote": "AQphen = naphtho[2,3-h]dipyrido[3,2-a:2′,3′-c]phenazine-8,13-dione",
+   "page": 1
+  }
+ ],
+ "conditions": [
+  {
+   "key": "N2_DMSO",
+   "solvent": "DMSO",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.1 M [NBu4][PF6]",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Under nitrogen atmosphere, the half-wave potentials for Re(CO)3Cl(phendione) are observed at −0.12 V and −0.77 V vs Ag/AgCl",
+   "page": 3
+  },
+  {
+   "key": "CO2_20_DMSO",
+   "solvent": "DMSO",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M [NBu4][PF6]",
+   "additive_text": "20% CO2",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "In presence of 20% and 100% carbon dioxide (red dash line and red solid line, respectively), a shift to more positive potentials is observed for the second reduction potential (dianion).",
+   "page": 3
+  },
+  {
+   "key": "CO2_100_DMSO",
+   "solvent": "DMSO",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M [NBu4][PF6]",
+   "additive_text": "100% CO2",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "In presence of 20% and 100% carbon dioxide (red dash line and red solid line, respectively), a shift to more positive potentials is observed for the second reduction potential (dianion).",
+   "page": 3
+  },
+  {
+   "key": "DFT_DMSO",
+   "solvent": "DMSO",
+   "reference_electrode": "NotReported",
+   "atmosphere": "NotReported",
+   "electrolyte_text": "NotReported",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Solvent effects (DMSO) were modeled using the Integral Equation Formalism Polarizable Continuum Model (IEFPCM).",
+   "page": 2
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "Re_phendione",
+   "condition": "N2_DMSO",
+   "property": "HalfWavePotential",
+   "value": -0.12,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "Under nitrogen atmosphere, the half-wave potentials for Re(CO)3Cl(phendione) are observed at −0.12 V and −0.77 V vs Ag/AgCl",
+   "page": 3
+  },
+  {
+   "compound": "Re_phendione",
+   "condition": "N2_DMSO",
+   "property": "HalfWavePotential",
+   "value": -0.77,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "Under nitrogen atmosphere, the half-wave potentials for Re(CO)3Cl(phendione) are observed at −0.12 V and −0.77 V vs Ag/AgCl",
+   "page": 3
+  },
+  {
+   "compound": "Re_AQphen",
+   "condition": "N2_DMSO",
+   "property": "HalfWavePotential",
+   "value": -0.3,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "and for Re(CO)3Cl(AQphen) at −0.30 V and −0.79 V vs Ag/AgCl, respectively.",
+   "page": 3
+  },
+  {
+   "compound": "Re_AQphen",
+   "condition": "N2_DMSO",
+   "property": "HalfWavePotential",
+   "value": -0.79,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "and for Re(CO)3Cl(AQphen) at −0.30 V and −0.79 V vs Ag/AgCl, respectively.",
+   "page": 3
+  },
+  {
+   "compound": "Re_phendione",
+   "condition": "CO2_100_DMSO",
+   "property": "Log10BindingConstant",
+   "value": 5.4,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": null,
+   "quote": "ReCl(CO)3(phendione) −0.12 −0.77 0.14 0.20 5.4",
+   "page": 4
+  },
+  {
+   "compound": "Re_AQphen",
+   "condition": "CO2_100_DMSO",
+   "property": "Log10BindingConstant",
+   "value": 3.9,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": null,
+   "quote": "ReCl(CO)3(AQphen) −0,30 −0.79 0.02 0.14 3.9",
+   "page": 4
+  },
+  {
+   "compound": "phendione",
+   "condition": "CO2_100_DMSO",
+   "property": "Log10BindingConstant",
+   "value": 7.9,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": null,
+   "quote": "phendione −0.35 −1.15 0.24 0.41 7.9",
+   "page": 4
+  },
+  {
+   "compound": "AQphen",
+   "condition": "CO2_100_DMSO",
+   "property": "Log10BindingConstant",
+   "value": 7.6,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": null,
+   "quote": "AQphen −0.43 −0.93 0.27 0.33 7.6",
+   "page": 4
+  }
+ ],
+ "observations": [
+  {
+   "compound": "Re_phendione",
+   "condition": "DFT_DMSO",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "This interaction leads to the formation of a [Quinone-CO2]2−adduct with a bond distance of 1.447 Å",
+   "page": 4
+  },
+  {
+   "compound": "Re_AQphen",
+   "condition": "DFT_DMSO",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "an adduct was formed between the oxygen of the quinone moiety and CO2, with a bond distance of 1.406 Å",
+   "page": 4
+  }
+ ],
+ "not_reported": [
+  "Oxygen stability of the complexes",
+  "Capture capacity in MmolPerGram or MolPerMol",
+  "Rate constants for CO2 binding"
+ ],
+ "dropped": [],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 18,
+   "dropped": 0
+  }
+ ],
+ "review_status": "machine_extracted"
+}

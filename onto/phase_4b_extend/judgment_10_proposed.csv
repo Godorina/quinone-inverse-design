@@ -1,0 +1,11 @@
+doi,xlsx_tier,proposed_status,quote,reason_ko,confidence
+10.1002/celc.201901884,B,borderline,The overall stoichiometry for the electrochemical capture and release of CO,quinone이 아닌 bipyridinium 환원체의 전기화학적 CO2 포집(카바메이트 adduct); phase-1 비-quinone 운반체(phenazine 등) 선례에 따라 경계선,high
+10.1016/j.ces.2023.118673,B,unavailable,,저장된 초록 없음(Crossref abstract 필드 부재),high
+10.1021/acs.cgd.1c00271,B,unavailable,,저장된 초록 없음(Crossref abstract 필드 부재),high
+10.1021/acs.chemmater.0c03218,B,out_of_scope,"For CO2 adsorption specifically, the two best performing COFs originated from the same triamine building block",polyimide COF의 물리흡착 CO2 및 Na-ion 전지 연구; quinone도 산화환원 구동 포집도 초록에 없음,medium
+10.1038/s41560-022-01137-z,B,unavailable,,저장된 초록 없음(Crossref abstract 필드 부재),high
+10.1038/s41560-023-01347-z,B,unavailable,,저장된 초록 없음(Crossref abstract 필드 부재),high
+10.1021/acs.jpclett.4c01188,B,unavailable,,저장된 초록 없음(Crossref abstract 필드 부재),high
+10.1021/acs.energyfuels.5c01091,B,unavailable,,저장된 초록 없음(Crossref abstract 필드 부재),high
+10.1021/acs.jpclett.6c01786,A,added_on_topic,"Using density functional theory (DFT), we screened 31,000 quinones and identified 681 candidates with parameters suitable for oxygen-tolerant ECC.","전기화학적 CO2 포집용 quinone의 DFT 가상 선별(KCO2-Ered trade-off, 산소 내성); CQ05·CQ08·CQ14에 직접 해당",high
+10.26434/chemrxiv.15010519/v1,B,added_on_topic,"incorporating pyridinic nitrogen into an ortho-quinone framework provides this combination in 1,10phenanthroline-5,6-dione (PD)","헤테로원자 도입 ortho-quinone(PD)의 산소·물 내성 전기화학적 CO2 포집, log K·에너지 값 포함",high

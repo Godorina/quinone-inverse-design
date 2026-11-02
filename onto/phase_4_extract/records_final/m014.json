@@ -1,0 +1,105 @@
+{
+ "paper_id": "m014",
+ "title": "Toward solvent-free continuous-flow electrochemically mediated carbon capture with high-concentration liquid quinone chemistry",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "LQ",
+   "name": "2,3-Di-(2-(2-methoxyethoxy)ethoxy)-1,4-naphthoquinone",
+   "skeleton": "Naphthoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "ElectronDonating"
+   ],
+   "substituent_text": null,
+   "quote": "2,3-Di-(2-(2-methoxyethoxy)ethoxy)-1,4-naphthoquinone was synthesized according to a previous report inside a nitrogen-filled glovebox.",
+   "page": 17
+  }
+ ],
+ "conditions": [
+  {
+   "key": "pc_tbapf6",
+   "solvent": "PropyleneCarbonate",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.1 M tetrabutylammonium hexafluorophosphate (TBAPF6)",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "redox behavior in propylene carbonate (PC) with 0.1 M tetrabutylammonium hexafluorophosphate (TBAPF6) as supporting salt under both N2 and CO2",
+   "page": 4
+  },
+  {
+   "key": "degme_natfsi",
+   "solvent": "OtherSolvent",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "NaTFSI",
+   "additive_text": "DEGME",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "LQ-NaTFSI-DEGME 1:1:4",
+   "page": 9
+  },
+  {
+   "key": "degme_naotf",
+   "solvent": "OtherSolvent",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "NaOTf",
+   "additive_text": "DEGME",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "0.5 M LQ and Fc1N112-TFSI, and 1 M NaOTf in DEGME were employed",
+   "page": 14
+  }
+ ],
+ "measurements": [],
+ "observations": [
+  {
+   "compound": "LQ",
+   "condition": "degme_natfsi",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "Quinones have been known to form adducts with CO2 in their reduced state via nucleophilic addition reactions for many years",
+   "page": 3
+  },
+  {
+   "compound": "LQ",
+   "condition": "degme_natfsi",
+   "kind": "OxygenStability",
+   "outcome": "OxygenStable",
+   "quote": "even in the presence of O2, the LQ was able to capture CO2 and release all of that captured gas",
+   "page": 12
+  }
+ ],
+ "not_reported": [
+  "Reduction potentials (quotes could not be verified verbatim due to character encoding issues in source text)",
+  "Binding constant",
+  "Rate constant",
+  "Faradaic efficiency of the specific capture reaction (only electrochemical charge efficiency reported)",
+  "Specific energy consumption values (only ranges reported)"
+ ],
+ "dropped": [],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 4,
+   "dropped": 8
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 5,
+   "dropped": 3
+  },
+  {
+   "n": 3,
+   "parse_errors": [],
+   "kept": 6,
+   "dropped": 0
+  }
+ ],
+ "review_status": "machine_extracted"
+}

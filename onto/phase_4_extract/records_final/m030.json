@@ -1,0 +1,236 @@
+{
+ "paper_id": "m030",
+ "title": "Physicochemical and Electrochemical Investigation of Naturally Occurring Quinones for Application toward Electrochemically Mediated Carbon Dioxide Capture",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "VitK2",
+   "name": "Vitamin K2",
+   "skeleton": "Naphthoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Alkyl"
+   ],
+   "substituent_text": null,
+   "quote": "Vitamin K2 (Menaquinone-4)",
+   "page": 2
+  },
+  {
+   "key": "VitK3",
+   "name": "Vitamin K3",
+   "skeleton": "Naphthoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Alkyl"
+   ],
+   "substituent_text": null,
+   "quote": "Vitamin K3 (crystalline)",
+   "page": 2
+  },
+  {
+   "key": "CoQ10",
+   "name": "Coenzyme Q10",
+   "skeleton": "Benzoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Alkyl",
+    "ElectronDonating"
+   ],
+   "substituent_text": null,
+   "quote": "Coenzyme Q10 (≥98%)",
+   "page": 2
+  },
+  {
+   "key": "CoQ4",
+   "name": "Coenzyme Q4",
+   "skeleton": "Benzoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Alkyl",
+    "ElectronDonating"
+   ],
+   "substituent_text": null,
+   "quote": "Coenzyme Q4 (≥90%)",
+   "page": 2
+  },
+  {
+   "key": "CoQ2",
+   "name": "Coenzyme Q2",
+   "skeleton": "Benzoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Alkyl",
+    "ElectronDonating"
+   ],
+   "substituent_text": null,
+   "quote": "Coenzyme Q2 (≥90%)",
+   "page": 2
+  },
+  {
+   "key": "CoQ1",
+   "name": "Coenzyme Q1",
+   "skeleton": "Benzoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Alkyl",
+    "ElectronDonating"
+   ],
+   "substituent_text": null,
+   "quote": "Coenzyme Q1 (Enzo Life Sciences, Inc., ≥95%)",
+   "page": 2
+  },
+  {
+   "key": "CoQ0",
+   "name": "Coenzyme Q0",
+   "skeleton": "Benzoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "ElectronDonating"
+   ],
+   "substituent_text": null,
+   "quote": "Coenzyme Q0, 1,4-benzoquinone (reagent grade, ≥98%)",
+   "page": 2
+  },
+  {
+   "key": "NQ",
+   "name": "1,4-naphthoquinone",
+   "skeleton": "Naphthoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "1,4-naphthoquinone (97%)",
+   "page": 2
+  },
+  {
+   "key": "BQ",
+   "name": "1,4-benzoquinone",
+   "skeleton": "Benzoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "1,4-benzoquinone (reagent grade, ≥98%)",
+   "page": 2
+  }
+ ],
+ "conditions": [
+  {
+   "key": "dmf_n2",
+   "solvent": "DMF",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.1 M tetrabutylammonium perchlorate",
+   "additive_text": "1.1 mM ferrocene",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "in 5 mL of N,N-dimethylformamide (anhydrous, 99.8%) solution with 0.1 M tetrabutylammonium perchlorate (≥99.0%) and 1.1 mM ferrocene (98%) (as an internal standard, if required)",
+   "page": 2
+  },
+  {
+   "key": "dmf_co2",
+   "solvent": "DMF",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M tetrabutylammonium perchlorate",
+   "additive_text": "1.1 mM ferrocene",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "in 0.1 M NBu4ClO4 N,N-dimethylformamide solution under each gas, and 1.1 mM ferrocene as an internal standard",
+   "page": 6
+  },
+  {
+   "key": "water_licl",
+   "solvent": "Water",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "NotReported",
+   "electrolyte_text": "saturated with lithium chloride",
+   "additive_text": "NotReported",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "an RE-5B MF-2052 Ag/AgCl (3 M NaCl) reference electrode (BASi) (aqueous)",
+   "page": 3
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "CoQ2",
+   "condition": "dmf_co2",
+   "property": "HalfWavePotential",
+   "value": -0.83,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "TwoElectron",
+   "quote": "the E1/2 of the Coenzyme Q2 anion-CO2 adduct at −0.83 V vs Fc/Fc+ was found to lie between those of the Coenzyme Q0 and Coenzyme Q10 anion-CO2 adducts at −0.77 and −0.86 V vs Fc/Fc+, respectively",
+   "page": 6
+  },
+  {
+   "compound": "CoQ0",
+   "condition": "dmf_co2",
+   "property": "HalfWavePotential",
+   "value": -0.77,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "TwoElectron",
+   "quote": "the E1/2 of the Coenzyme Q2 anion-CO2 adduct at −0.83 V vs Fc/Fc+ was found to lie between those of the Coenzyme Q0 and Coenzyme Q10 anion-CO2 adducts at −0.77 and −0.86 V vs Fc/Fc+, respectively",
+   "page": 6
+  },
+  {
+   "compound": "CoQ10",
+   "condition": "dmf_co2",
+   "property": "HalfWavePotential",
+   "value": -0.86,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "TwoElectron",
+   "quote": "the E1/2 of the Coenzyme Q2 anion-CO2 adduct at −0.83 V vs Fc/Fc+ was found to lie between those of the Coenzyme Q0 and Coenzyme Q10 anion-CO2 adducts at −0.77 and −0.86 V vs Fc/Fc+, respectively",
+   "page": 6
+  }
+ ],
+ "observations": [
+  {
+   "compound": "CoQ10",
+   "condition": "dmf_co2",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "the electrochemically generated semiquinone (eq 4) first reacts with a stoichiometric amount of carbon dioxide before further reducing to the dianion form (eq 5) for the capture of an additional carbon dioxide molecule",
+   "page": 5
+  },
+  {
+   "compound": "CoQ10",
+   "condition": "dmf_co2",
+   "kind": "OxygenStability",
+   "outcome": "OxygenStable",
+   "quote": "Coenzyme Q10 appeared to either stabilize or be in close proximity to the O2 −/• radicals,109 which suggests a potential benefit to the presence of its long side chain.",
+   "page": 6
+  }
+ ],
+ "not_reported": [
+  "HalfWavePotential values for Vitamin K2, Vitamin K3, 1,4-naphthoquinone, and 1,4-benzoquinone under nitrogen and carbon dioxide",
+  "Cathodic peak potential values for all compounds",
+  "CaptureCapacity values",
+  "BindingConstant values",
+  "RateConstant values"
+ ],
+ "dropped": [],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 16,
+   "dropped": 1
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 17,
+   "dropped": 0
+  }
+ ],
+ "review_status": "machine_extracted"
+}

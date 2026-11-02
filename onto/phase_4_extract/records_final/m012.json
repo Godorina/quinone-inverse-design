@@ -1,0 +1,576 @@
+{
+ "paper_id": "m012",
+ "title": "Predictive energetic tuning of quinoid O-nucleophiles for the electrochemical capture of carbon dioxide",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "DDQ",
+   "name": "dichlorodicyanoquinone (DDQ)",
+   "skeleton": "Benzoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "ElectronWithdrawing"
+   ],
+   "substituent_text": null,
+   "quote": "electron poor quinones such as dichlorodicyanoquinone (DDQ)",
+   "page": 2
+  },
+  {
+   "key": "chloranil",
+   "name": "chloranil (4ClQ)",
+   "skeleton": "Benzoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "ElectronWithdrawing"
+   ],
+   "substituent_text": null,
+   "quote": "chloranil (4ClQ)",
+   "page": 2
+  },
+  {
+   "key": "dichloroquinone",
+   "name": "1,4-Dichloroquinone (2ClQ)",
+   "skeleton": "Benzoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "ElectronWithdrawing"
+   ],
+   "substituent_text": null,
+   "quote": "1,4-Dichloroquinone (2ClQ)",
+   "page": 2
+  },
+  {
+   "key": "dichloronaphthoquinone",
+   "name": "1,2-dichloronaphthoquinone (2ClNQ)",
+   "skeleton": "Naphthoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "ElectronWithdrawing"
+   ],
+   "substituent_text": null,
+   "quote": "1,2-dichloronaphthoquinone (2ClNQ)",
+   "page": 2
+  },
+  {
+   "key": "BQ",
+   "name": "benzoquinone (BQ)",
+   "skeleton": "Benzoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "reduced forms of benzoquinone (BQ)",
+   "page": 2
+  },
+  {
+   "key": "dimethylbenzoquinone",
+   "name": "1,5-dimethylbenzoquinone (2MeQ)",
+   "skeleton": "Benzoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Alkyl"
+   ],
+   "substituent_text": null,
+   "quote": "1,5-dimethylbenzoquinone (2MeQ)",
+   "page": 2
+  },
+  {
+   "key": "NQ",
+   "name": "naphthoquinone (NQ)",
+   "skeleton": "Naphthoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "naphthoquinone (NQ)",
+   "page": 2
+  }
+ ],
+ "conditions": [
+  {
+   "key": "me_cn_ar",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "Inert",
+   "electrolyte_text": "NBu4PF6",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Cyclic voltammetry of 1 mM solutions of quinone in MeCN with NBu4PF6 under Ar at 100 mV s",
+   "page": 2
+  },
+  {
+   "key": "me_cn_co2",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "NBu4PF6",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Cyclic voltammetry of 1 mM solutions of quinone in MeCN with NBu4PF6 under Ar at 100 mV s",
+   "page": 2
+  },
+  {
+   "key": "dft_me_cn",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "NotReported",
+   "atmosphere": "NotReported",
+   "electrolyte_text": "SMD solvation model",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "DFT-computed thermodynamic and kinetic data obtained using the MN15/6-311+G(d,p) level of theory coupled with the SMD solvation model to account for acetonitrile solvent effects.",
+   "page": 5
+  }
+ ],
+ "measurements": [],
+ "observations": [
+  {
+   "compound": "DDQ",
+   "condition": "me_cn_co2",
+   "kind": "BindingMode",
+   "outcome": "OtherBinding",
+   "quote": "Experiments suggest that the there is no measurable binding between the DDQ2",
+   "page": 3
+  },
+  {
+   "compound": "chloranil",
+   "condition": "me_cn_co2",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "4ClQ is the only quinone studied which avoids O2 reduction while still exhibiting CO2 binding as predicted by DFT and observed experimentally",
+   "page": 5
+  },
+  {
+   "compound": "dichloroquinone",
+   "condition": "me_cn_co2",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "A peculiar observation about 2ClQ is that although it falls in the electron-poor category, it binds two equivalents of CO2.",
+   "page": 4
+  },
+  {
+   "compound": "dichloronaphthoquinone",
+   "condition": "me_cn_co2",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "2ClNQ, 2ClQ, and 4ClQ, the calculated free energies of binding are in close agreement with the experimental values.",
+   "page": 4
+  },
+  {
+   "compound": "BQ",
+   "condition": "me_cn_co2",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "The doubly reduced forms of 2MeQ, NQ and BQ, the three electron-rich quinones in the list, bind CO2 strongly.",
+   "page": 4
+  },
+  {
+   "compound": "dimethylbenzoquinone",
+   "condition": "me_cn_co2",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "The doubly reduced forms of 2MeQ, NQ and BQ, the three electron-rich quinones in the list, bind CO2 strongly.",
+   "page": 4
+  },
+  {
+   "compound": "NQ",
+   "condition": "me_cn_co2",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "The doubly reduced forms of 2MeQ, NQ and BQ, the three electron-rich quinones in the list, bind CO2 strongly.",
+   "page": 4
+  },
+  {
+   "compound": "chloranil",
+   "condition": "me_cn_co2",
+   "kind": "OxygenStability",
+   "outcome": "OxygenStable",
+   "quote": "4ClQ is the only quinone studied which avoids O2 reduction while still exhibiting CO2 binding as predicted by DFT and observed experimentally",
+   "page": 5
+  }
+ ],
+ "not_reported": [
+  "First reduction potentials for 4ClQ, 2ClQ, 2ClNQ, BQ, 2MeQ, and NQ",
+  "Experimental binding energy for DDQ",
+  "DFT binding energy for DDQ second CO2",
+  "DFT reduction potentials for all compounds",
+  "Electrolyte concentration"
+ ],
+ "dropped": [
+  {
+   "kind": "measurement",
+   "raw": {
+    "property": "ReductionPotential",
+    "compound": "DDQ",
+    "condition": "me_cn_ar",
+    "value": 0.12,
+    "unit": "Volt",
+    "redox_couple": "FirstReduction",
+    "basis": "Experiment",
+    "method": "CyclicVoltammetry",
+    "quote": "0.12"
+   },
+   "reasons": [
+    "measurements[0]: wrong shape: quote: String should have at least 8 characters"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "property": "ReductionPotential",
+    "compound": "DDQ",
+    "condition": "me_cn_ar",
+    "value": -0.69,
+    "unit": "Volt",
+    "redox_couple": "SecondReduction",
+    "basis": "Experiment",
+    "method": "CyclicVoltammetry",
+    "quote": "0.69"
+   },
+   "reasons": [
+    "measurements[1]: wrong shape: quote: String should have at least 8 characters"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "property": "ReductionPotential",
+    "compound": "chloranil",
+    "condition": "me_cn_ar",
+    "value": -1.18,
+    "unit": "Volt",
+    "redox_couple": "SecondReduction",
+    "basis": "Experiment",
+    "method": "CyclicVoltammetry",
+    "quote": "1.18"
+   },
+   "reasons": [
+    "measurements[2]: wrong shape: quote: String should have at least 8 characters"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "property": "ReductionPotential",
+    "compound": "dichloroquinone",
+    "condition": "me_cn_ar",
+    "value": -1.43,
+    "unit": "Volt",
+    "redox_couple": "SecondReduction",
+    "basis": "Experiment",
+    "method": "CyclicVoltammetry",
+    "quote": "1.43"
+   },
+   "reasons": [
+    "measurements[3]: wrong shape: quote: String should have at least 8 characters"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "property": "ReductionPotential",
+    "compound": "dichloronaphthoquinone",
+    "condition": "me_cn_ar",
+    "value": -1.49,
+    "unit": "Volt",
+    "redox_couple": "SecondReduction",
+    "basis": "Experiment",
+    "method": "CyclicVoltammetry",
+    "quote": "1.49"
+   },
+   "reasons": [
+    "measurements[4]: wrong shape: quote: String should have at least 8 characters"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "property": "ReductionPotential",
+    "compound": "BQ",
+    "condition": "me_cn_ar",
+    "value": -1.74,
+    "unit": "Volt",
+    "redox_couple": "SecondReduction",
+    "basis": "Experiment",
+    "method": "CyclicVoltammetry",
+    "quote": "1.74"
+   },
+   "reasons": [
+    "measurements[5]: wrong shape: quote: String should have at least 8 characters"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "property": "ReductionPotential",
+    "compound": "dimethylbenzoquinone",
+    "condition": "me_cn_ar",
+    "value": -1.94,
+    "unit": "Volt",
+    "redox_couple": "SecondReduction",
+    "basis": "Experiment",
+    "method": "CyclicVoltammetry",
+    "quote": "1.94"
+   },
+   "reasons": [
+    "measurements[6]: wrong shape: quote: String should have at least 8 characters"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "property": "ReductionPotential",
+    "compound": "NQ",
+    "condition": "me_cn_ar",
+    "value": -1.82,
+    "unit": "Volt",
+    "redox_couple": "SecondReduction",
+    "basis": "Experiment",
+    "method": "CyclicVoltammetry",
+    "quote": "1.82"
+   },
+   "reasons": [
+    "measurements[7]: wrong shape: quote: String should have at least 8 characters"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "property": "BindingEnergy",
+    "compound": "DDQ",
+    "condition": "dft_me_cn",
+    "value": 3.1,
+    "unit": "KcalPerMol",
+    "basis": "Computation",
+    "method": "DFT",
+    "quote": "3.1"
+   },
+   "reasons": [
+    "measurements[8]: wrong shape: quote: String should have at least 8 characters"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "property": "BindingEnergy",
+    "compound": "chloranil",
+    "condition": "dft_me_cn",
+    "value": -4.9,
+    "unit": "KcalPerMol",
+    "basis": "Computation",
+    "method": "DFT",
+    "quote": "4.9"
+   },
+   "reasons": [
+    "measurements[9]: wrong shape: quote: String should have at least 8 characters"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "property": "BindingEnergy",
+    "compound": "dichloroquinone",
+    "condition": "dft_me_cn",
+    "value": -9.8,
+    "unit": "KcalPerMol",
+    "basis": "Computation",
+    "method": "DFT",
+    "quote": "9.8"
+   },
+   "reasons": [
+    "measurements[10]: wrong shape: quote: String should have at least 8 characters"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "property": "BindingEnergy",
+    "compound": "dichloronaphthoquinone",
+    "condition": "dft_me_cn",
+    "value": -8.8,
+    "unit": "KcalPerMol",
+    "basis": "Computation",
+    "method": "DFT",
+    "quote": "8.8"
+   },
+   "reasons": [
+    "measurements[11]: wrong shape: quote: String should have at least 8 characters"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "property": "BindingEnergy",
+    "compound": "BQ",
+    "condition": "dft_me_cn",
+    "value": -15.1,
+    "unit": "KcalPerMol",
+    "basis": "Computation",
+    "method": "DFT",
+    "quote": "15.1"
+   },
+   "reasons": [
+    "measurements[12]: wrong shape: quote: String should have at least 8 characters"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "property": "BindingEnergy",
+    "compound": "dimethylbenzoquinone",
+    "condition": "dft_me_cn",
+    "value": -16.8,
+    "unit": "KcalPerMol",
+    "basis": "Computation",
+    "method": "DFT",
+    "quote": "16.8"
+   },
+   "reasons": [
+    "measurements[13]: wrong shape: quote: String should have at least 8 characters"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "property": "BindingEnergy",
+    "compound": "NQ",
+    "condition": "dft_me_cn",
+    "value": -13.7,
+    "unit": "KcalPerMol",
+    "basis": "Computation",
+    "method": "DFT",
+    "quote": "13.7"
+   },
+   "reasons": [
+    "measurements[14]: wrong shape: quote: String should have at least 8 characters"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "property": "BindingEnergy",
+    "compound": "chloranil",
+    "condition": "me_cn_co2",
+    "value": -3.88,
+    "unit": "KcalPerMol",
+    "basis": "Experiment",
+    "method": "CyclicVoltammetry",
+    "quote": "3.88"
+   },
+   "reasons": [
+    "measurements[15]: wrong shape: quote: String should have at least 8 characters"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "property": "BindingEnergy",
+    "compound": "dichloroquinone",
+    "condition": "me_cn_co2",
+    "value": -9.42,
+    "unit": "KcalPerMol",
+    "basis": "Experiment",
+    "method": "CyclicVoltammetry",
+    "quote": "9.42"
+   },
+   "reasons": [
+    "measurements[16]: wrong shape: quote: String should have at least 8 characters"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "property": "BindingEnergy",
+    "compound": "dichloronaphthoquinone",
+    "condition": "me_cn_co2",
+    "value": -5.0,
+    "unit": "KcalPerMol",
+    "basis": "Experiment",
+    "method": "CyclicVoltammetry",
+    "quote": "5.00"
+   },
+   "reasons": [
+    "measurements[17]: wrong shape: quote: String should have at least 8 characters"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "property": "BindingEnergy",
+    "compound": "BQ",
+    "condition": "me_cn_co2",
+    "value": -12.53,
+    "unit": "KcalPerMol",
+    "basis": "Experiment",
+    "method": "CyclicVoltammetry",
+    "quote": "12.53"
+   },
+   "reasons": [
+    "measurements[18]: wrong shape: quote: String should have at least 8 characters"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "property": "BindingEnergy",
+    "compound": "dimethylbenzoquinone",
+    "condition": "me_cn_co2",
+    "value": -13.75,
+    "unit": "KcalPerMol",
+    "basis": "Experiment",
+    "method": "CyclicVoltammetry",
+    "quote": "13.75"
+   },
+   "reasons": [
+    "measurements[19]: wrong shape: quote: String should have at least 8 characters"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "property": "BindingEnergy",
+    "compound": "NQ",
+    "condition": "me_cn_co2",
+    "value": -12.28,
+    "unit": "KcalPerMol",
+    "basis": "Experiment",
+    "method": "CyclicVoltammetry",
+    "quote": "12.28"
+   },
+   "reasons": [
+    "measurements[20]: wrong shape: quote: String should have at least 8 characters"
+   ]
+  }
+ ],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 4,
+   "dropped": 35
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 8,
+   "dropped": 31
+  },
+  {
+   "n": 3,
+   "parse_errors": [],
+   "kept": 17,
+   "dropped": 22
+  },
+  {
+   "n": 4,
+   "parse_errors": [],
+   "kept": 18,
+   "dropped": 21
+  }
+ ],
+ "review_status": "machine_extracted"
+}

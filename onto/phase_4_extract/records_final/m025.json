@@ -1,0 +1,645 @@
+{
+ "paper_id": "m025",
+ "title": "Electrolyte Effects on the Reduction Potential and Carbon Dioxide Binding Affinity of Quinones",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "Q1",
+   "name": "2,3-dichloro-5,6-dicyano-p-benzoquinone",
+   "skeleton": "Benzoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "ElectronWithdrawing"
+   ],
+   "substituent_text": null,
+   "quote": "2,3-dichloro-5,6-dicyano-p-benzoquinone, 2,6-dichloro-p-benzoquinone, 2,3-dichloro-p-naphthoquinone, tetrachloro-p-benzoquinone, and tetrabromo-p-benzoquinone were purchased and used without further puriﬁcation.",
+   "page": 2
+  },
+  {
+   "key": "Q2",
+   "name": "2,6-dichloro-p-benzoquinone",
+   "skeleton": "Benzoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "ElectronWithdrawing"
+   ],
+   "substituent_text": null,
+   "quote": "2,3-dichloro-5,6-dicyano-p-benzoquinone, 2,6-dichloro-p-benzoquinone, 2,3-dichloro-p-naphthoquinone, tetrachloro-p-benzoquinone, and tetrabromo-p-benzoquinone were purchased and used without further puriﬁcation.",
+   "page": 2
+  },
+  {
+   "key": "Q3",
+   "name": "2,3-dichloro-p-naphthoquinone",
+   "skeleton": "Naphthoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "ElectronWithdrawing"
+   ],
+   "substituent_text": null,
+   "quote": "2,3-dichloro-5,6-dicyano-p-benzoquinone, 2,6-dichloro-p-benzoquinone, 2,3-dichloro-p-naphthoquinone, tetrachloro-p-benzoquinone, and tetrabromo-p-benzoquinone were purchased and used without further puriﬁcation.",
+   "page": 2
+  },
+  {
+   "key": "Q4",
+   "name": "tetrachloro-p-benzoquinone",
+   "skeleton": "Benzoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "ElectronWithdrawing"
+   ],
+   "substituent_text": null,
+   "quote": "2,3-dichloro-5,6-dicyano-p-benzoquinone, 2,6-dichloro-p-benzoquinone, 2,3-dichloro-p-naphthoquinone, tetrachloro-p-benzoquinone, and tetrabromo-p-benzoquinone were purchased and used without further puriﬁcation.",
+   "page": 2
+  },
+  {
+   "key": "Q5",
+   "name": "tetrabromo-p-benzoquinone",
+   "skeleton": "Benzoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "ElectronWithdrawing"
+   ],
+   "substituent_text": null,
+   "quote": "2,3-dichloro-5,6-dicyano-p-benzoquinone, 2,6-dichloro-p-benzoquinone, 2,3-dichloro-p-naphthoquinone, tetrachloro-p-benzoquinone, and tetrabromo-p-benzoquinone were purchased and used without further puriﬁcation.",
+   "page": 2
+  },
+  {
+   "key": "Q6",
+   "name": "2,3-dicyano-p-benzoquinone",
+   "skeleton": "Benzoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "ElectronWithdrawing"
+   ],
+   "substituent_text": null,
+   "quote": "Synthesis of bis-tetrabutylammonium 2,3-dicyano-p-benzoquinone dianion.",
+   "page": 2
+  }
+ ],
+ "conditions": [
+  {
+   "key": "TMA",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.1 M TMAPF6",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Each quinone was studied by cyclic voltammetry (CV) in acetonitrile with a solution of 0.001 M quinone and 0.1 M electrolyte in the presence of N2 and CO2.",
+   "page": 3
+  },
+  {
+   "key": "TBA",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.1 M TBAPF6",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Each quinone was studied by cyclic voltammetry (CV) in acetonitrile with a solution of 0.001 M quinone and 0.1 M electrolyte in the presence of N2 and CO2.",
+   "page": 3
+  },
+  {
+   "key": "TOA",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.1 M TOAPF6",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Each quinone was studied by cyclic voltammetry (CV) in acetonitrile with a solution of 0.001 M quinone and 0.1 M electrolyte in the presence of N2 and CO2.",
+   "page": 3
+  },
+  {
+   "key": "TMA_CO2",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M TMAPF6",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Each quinone was studied by cyclic voltammetry (CV) in acetonitrile with a solution of 0.001 M quinone and 0.1 M electrolyte in the presence of N2 and CO2.",
+   "page": 3
+  },
+  {
+   "key": "TBA_CO2",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M TBAPF6",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Each quinone was studied by cyclic voltammetry (CV) in acetonitrile with a solution of 0.001 M quinone and 0.1 M electrolyte in the presence of N2 and CO2.",
+   "page": 3
+  },
+  {
+   "key": "TOA_CO2",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M TOAPF6",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Each quinone was studied by cyclic voltammetry (CV) in acetonitrile with a solution of 0.001 M quinone and 0.1 M electrolyte in the presence of N2 and CO2.",
+   "page": 3
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "Q1",
+   "condition": "TMA",
+   "property": "ReductionPotential",
+   "value": -0.67,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "Q1 E1/2 2 (V vs Fe(C5H5)2 +/0) –0.67 –0.70 –0.70",
+   "page": 4
+  },
+  {
+   "compound": "Q1",
+   "condition": "TBA",
+   "property": "ReductionPotential",
+   "value": -0.7,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "Q1 E1/2 2 (V vs Fe(C5H5)2 +/0) –0.67 –0.70 –0.70",
+   "page": 4
+  },
+  {
+   "compound": "Q1",
+   "condition": "TBA_CO2",
+   "property": "Log10BindingConstant",
+   "value": 0.3,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "NotReported",
+   "quote": "0.3 ± 0.1",
+   "page": 4
+  },
+  {
+   "compound": "Q1",
+   "condition": "TOA",
+   "property": "ReductionPotential",
+   "value": -0.7,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "Q1 E1/2 2 (V vs Fe(C5H5)2 +/0) –0.67 –0.70 –0.70",
+   "page": 4
+  },
+  {
+   "compound": "Q1",
+   "condition": "TOA_CO2",
+   "property": "Log10BindingConstant",
+   "value": 0.9,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "NotReported",
+   "quote": "0.9 ± 0.1",
+   "page": 4
+  },
+  {
+   "compound": "Q2",
+   "condition": "TMA",
+   "property": "ReductionPotential",
+   "value": -0.9,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "Q2 E1/2 2 (V vs Fe(C5H5)2 +/0) –0.90 –0.93 –0.95",
+   "page": 4
+  },
+  {
+   "compound": "Q2",
+   "condition": "TMA_CO2",
+   "property": "Log10BindingConstant",
+   "value": 3.8,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "NotReported",
+   "quote": "3.8 ± 0.2",
+   "page": 4
+  },
+  {
+   "compound": "Q2",
+   "condition": "TBA",
+   "property": "ReductionPotential",
+   "value": -0.93,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "Q2 E1/2 2 (V vs Fe(C5H5)2 +/0) –0.90 –0.93 –0.95",
+   "page": 4
+  },
+  {
+   "compound": "Q2",
+   "condition": "TBA_CO2",
+   "property": "Log10BindingConstant",
+   "value": 4.0,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "NotReported",
+   "quote": "4.0 ± 0.1",
+   "page": 4
+  },
+  {
+   "compound": "Q2",
+   "condition": "TOA",
+   "property": "ReductionPotential",
+   "value": -0.95,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "Q2 E1/2 2 (V vs Fe(C5H5)2 +/0) –0.90 –0.93 –0.95",
+   "page": 4
+  },
+  {
+   "compound": "Q3",
+   "condition": "TMA",
+   "property": "ReductionPotential",
+   "value": -1.12,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "Q3 E1/2 2 (V vs Fe(C5H5)2 +/0) –1.12 –1.15 –1.18",
+   "page": 4
+  },
+  {
+   "compound": "Q3",
+   "condition": "TMA_CO2",
+   "property": "Log10BindingConstant",
+   "value": 2.3,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "NotReported",
+   "quote": "2.3 ± 0.3",
+   "page": 4
+  },
+  {
+   "compound": "Q3",
+   "condition": "TBA",
+   "property": "ReductionPotential",
+   "value": -1.15,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "Q3 E1/2 2 (V vs Fe(C5H5)2 +/0) –1.12 –1.15 –1.18",
+   "page": 4
+  },
+  {
+   "compound": "Q3",
+   "condition": "TBA_CO2",
+   "property": "Log10BindingConstant",
+   "value": 2.9,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "NotReported",
+   "quote": "2.9 ± 0.5",
+   "page": 4
+  },
+  {
+   "compound": "Q3",
+   "condition": "TOA",
+   "property": "ReductionPotential",
+   "value": -1.18,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "Q3 E1/2 2 (V vs Fe(C5H5)2 +/0) –1.12 –1.15 –1.18",
+   "page": 4
+  },
+  {
+   "compound": "Q3",
+   "condition": "TOA_CO2",
+   "property": "Log10BindingConstant",
+   "value": 3.0,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "NotReported",
+   "quote": "3.0 ± 0.5",
+   "page": 4
+  },
+  {
+   "compound": "Q4",
+   "condition": "TMA",
+   "property": "ReductionPotential",
+   "value": -1.1,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "Q4 E1/2 2 (V vs Fe(C5H5)2 +/0) –1.10 –1.17 –1.17",
+   "page": 4
+  },
+  {
+   "compound": "Q4",
+   "condition": "TBA",
+   "property": "ReductionPotential",
+   "value": -1.17,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "Q4 E1/2 2 (V vs Fe(C5H5)2 +/0) –1.10 –1.17 –1.17",
+   "page": 4
+  },
+  {
+   "compound": "Q4",
+   "condition": "TBA_CO2",
+   "property": "Log10BindingConstant",
+   "value": 3.0,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "NotReported",
+   "quote": "3.0 ± 0.6",
+   "page": 4
+  },
+  {
+   "compound": "Q4",
+   "condition": "TOA",
+   "property": "ReductionPotential",
+   "value": -1.17,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "Q4 E1/2 2 (V vs Fe(C5H5)2 +/0) –1.10 –1.17 –1.17",
+   "page": 4
+  },
+  {
+   "compound": "Q4",
+   "condition": "TOA_CO2",
+   "property": "Log10BindingConstant",
+   "value": 3.0,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "NotReported",
+   "quote": "3.0 ± 0.4",
+   "page": 4
+  },
+  {
+   "compound": "Q5",
+   "condition": "TMA",
+   "property": "ReductionPotential",
+   "value": -1.34,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "Q5 E1/2 2 (V vs Fe(C5H5)2 +/0) –1.34 –1.41 –1.43",
+   "page": 4
+  },
+  {
+   "compound": "Q5",
+   "condition": "TMA_CO2",
+   "property": "Log10BindingConstant",
+   "value": 6.3,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "NotReported",
+   "quote": "6.3 ± 0.8",
+   "page": 4
+  },
+  {
+   "compound": "Q5",
+   "condition": "TBA",
+   "property": "ReductionPotential",
+   "value": -1.41,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "Q5 E1/2 2 (V vs Fe(C5H5)2 +/0) –1.34 –1.41 –1.43",
+   "page": 4
+  },
+  {
+   "compound": "Q5",
+   "condition": "TBA_CO2",
+   "property": "Log10BindingConstant",
+   "value": 7.2,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "NotReported",
+   "quote": "7.2 ± 0.7",
+   "page": 4
+  },
+  {
+   "compound": "Q5",
+   "condition": "TOA",
+   "property": "ReductionPotential",
+   "value": -1.43,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "Q5 E1/2 2 (V vs Fe(C5H5)2 +/0) –1.34 –1.41 –1.43",
+   "page": 4
+  },
+  {
+   "compound": "Q5",
+   "condition": "TOA_CO2",
+   "property": "Log10BindingConstant",
+   "value": 7.3,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "NotReported",
+   "quote": "7.3 ± 0.5",
+   "page": 4
+  },
+  {
+   "compound": "Q6",
+   "condition": "TMA",
+   "property": "ReductionPotential",
+   "value": -1.46,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "Q6 E1/2 2 (V vs Fe(C5H5)2 +/0) –1.46 –1.52 –1.54",
+   "page": 4
+  },
+  {
+   "compound": "Q6",
+   "condition": "TMA_CO2",
+   "property": "Log10BindingConstant",
+   "value": 5.5,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "NotReported",
+   "quote": "5.5 ± 0.5",
+   "page": 4
+  },
+  {
+   "compound": "Q6",
+   "condition": "TBA",
+   "property": "ReductionPotential",
+   "value": -1.52,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "Q6 E1/2 2 (V vs Fe(C5H5)2 +/0) –1.46 –1.52 –1.54",
+   "page": 4
+  },
+  {
+   "compound": "Q6",
+   "condition": "TBA_CO2",
+   "property": "Log10BindingConstant",
+   "value": 6.2,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "NotReported",
+   "quote": "6.2 ± 0.6",
+   "page": 4
+  },
+  {
+   "compound": "Q6",
+   "condition": "TOA",
+   "property": "ReductionPotential",
+   "value": -1.54,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "Q6 E1/2 2 (V vs Fe(C5H5)2 +/0) –1.46 –1.52 –1.54",
+   "page": 4
+  },
+  {
+   "compound": "Q6",
+   "condition": "TOA_CO2",
+   "property": "Log10BindingConstant",
+   "value": 6.0,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "NotReported",
+   "quote": "6.0 ± 0.2",
+   "page": 4
+  }
+ ],
+ "observations": [
+  {
+   "compound": "Q1",
+   "condition": "TMA_CO2",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "The appearance of new features between the N2 and CO2 spectra indicates formation of the CO2-bound species.",
+   "page": 3
+  }
+ ],
+ "not_reported": [
+  "Specific binding mode (e.g., carbamate vs carbonate) for individual quinones",
+  "Oxygen stability data for the specific quinones in this study"
+ ],
+ "dropped": [
+  {
+   "kind": "measurement",
+   "raw": {
+    "property": "Log10BindingConstant",
+    "compound": "Q1",
+    "condition": "TMA_CO2",
+    "value": 0,
+    "unit": "Dimensionless",
+    "basis": "Experiment",
+    "method": "CyclicVoltammetry",
+    "redox_couple": "NotReported",
+    "quote": "0 ± 0.1"
+   },
+   "reasons": [
+    "measurements[1]: wrong shape: quote: String should have at least 8 characters"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "Q2",
+    "condition": "TOA_CO2",
+    "property": "Log10BindingConstant",
+    "value": 3.3,
+    "unit": "Dimensionless",
+    "basis": "Experiment",
+    "method": "CyclicVoltammetry",
+    "redox_couple": "NotReported",
+    "quote": "3.3 ± 0.3"
+   },
+   "reasons": [
+    "measurements[10] Q2/Log10BindingConstant: quote is not verbatim on one page. this short quote appears more than once (pages [4]); quote a longer fragment that includes the row label or the sentence around it"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "Q4",
+    "condition": "TMA_CO2",
+    "property": "Log10BindingConstant",
+    "value": 3.3,
+    "unit": "Dimensionless",
+    "basis": "Experiment",
+    "method": "CyclicVoltammetry",
+    "redox_couple": "NotReported",
+    "quote": "3.3 ± 0.3"
+   },
+   "reasons": [
+    "measurements[18] Q4/Log10BindingConstant: quote is not verbatim on one page. this short quote appears more than once (pages [4]); quote a longer fragment that includes the row label or the sentence around it"
+   ]
+  }
+ ],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 27,
+   "dropped": 19
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 31,
+   "dropped": 18
+  },
+  {
+   "n": 3,
+   "parse_errors": [],
+   "kept": 46,
+   "dropped": 3
+  },
+  {
+   "n": 4,
+   "parse_errors": [],
+   "kept": 31,
+   "dropped": 18
+  }
+ ],
+ "review_status": "machine_extracted"
+}

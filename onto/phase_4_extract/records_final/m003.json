@@ -1,0 +1,85 @@
+{
+ "paper_id": "m003",
+ "title": "Redox-Responsive 2-Aminoanthraquinone Core–Shell Particles for Structural Colors and Carbon Capture",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "AAQ",
+   "name": "2-aminoanthraquinone",
+   "skeleton": "Anthraquinone",
+   "form": "Polymer",
+   "substituent_classes": [
+    "Amino"
+   ],
+   "substituent_text": null,
+   "quote": "The use of glycidyl methacrylate within the shell material oﬀers the possibility of a ring-opening reaction with the redox-responsive 2-aminoanthraquinone (2-AAQ), which possesses a high aﬃnity toward electrophilic carbon dioxide.",
+   "page": 1
+  }
+ ],
+ "conditions": [
+  {
+   "key": "cv_acid",
+   "solvent": "Water",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "Inert",
+   "electrolyte_text": "1 M degassed sulfuric acid",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "For this purpose, the 2-AAQ-containing particles were analyzed by using CV using 1 M degassed sulfuric acid as an electrolyte as it provides the protons needed to address the immobilized 2-AAQ moieties in a potential range of −0.3 V to +0.3 V versus Ag/AgCl at a scan rate of 50 mV s−1.",
+   "page": 6
+  },
+  {
+   "key": "cell_ilt",
+   "solvent": "IonicLiquid",
+   "reference_electrode": "NotReported",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "1-butyl-3-methylimidazolium bis(triﬂuoromethylsulfonyl)imide (BMIM TFSI) room-temperature ionic liquid (RTIL) electrolyte",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "This consisted of the 2-AAQ electrode, a porous separator, a counter electrode comprising a poly-vinylferrocene (PVFc)-CNT composite coated on carbon felt, and 1-butyl-3-methylimidazolium bis(triﬂuoromethylsulfonyl)imide (BMIM TFSI) room-temperature ionic liquid (RTIL) electrolyte.",
+   "page": 8
+  }
+ ],
+ "measurements": [],
+ "observations": [
+  {
+   "compound": "AAQ",
+   "condition": "cell_ilt",
+   "kind": "BindingMode",
+   "outcome": "OtherBinding",
+   "quote": "In aprotic electrolytes, the two-electron reduction of 2-AAQ generates two nucleophilic centers (Figure 4, ﬁrst reaction), which react with electrophilic CO2 to form the corresponding biscarbonate (below).",
+   "page": 8
+  }
+ ],
+ "not_reported": [
+  "HalfWavePotential or ReductionPotential values for 2-AAQ",
+  "CaptureCapacity values (e.g., mmol/g or mol/mol)",
+  "BindingConstant or BindingEnergy values",
+  "Reference electrode for the electrochemical cell potentials",
+  "Exact Faradaic Efficiency value (reported as >95%)"
+ ],
+ "dropped": [],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 2,
+   "dropped": 3
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 3,
+   "dropped": 2
+  },
+  {
+   "n": 3,
+   "parse_errors": [],
+   "kept": 4,
+   "dropped": 0
+  }
+ ],
+ "review_status": "machine_extracted"
+}

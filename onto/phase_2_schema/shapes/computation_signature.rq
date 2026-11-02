@@ -1,0 +1,9 @@
+# Computational method signatures are forbidden on experimental measurements; NotReported is allowed for computations.
+PREFIX qn: <https://w3id.org/quinone#>
+SELECT ?focus ?message WHERE {
+  ?focus a qn:Measurement ; qn:basis ?basis .
+  ?focus ?field ?value .
+  VALUES ?field { qn:functional qn:basisSet qn:solvationModel qn:dispersion qn:code }
+  FILTER(?basis != qn:Computation)
+  BIND("computational method signatures are allowed only for qn:Computation measurements" AS ?message)
+}

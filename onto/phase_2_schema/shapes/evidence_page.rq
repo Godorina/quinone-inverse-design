@@ -1,0 +1,10 @@
+# A quote taken from the full text needs a page; an abstract quote has none.
+PREFIX qn: <https://w3id.org/quinone#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?focus ?message WHERE {
+  { ?focus a qn:Evidence ; qn:evidenceSource qn:FullText . FILTER NOT EXISTS { ?focus qn:page ?pg }
+    BIND("a full-text quote needs its page (qn:page)" AS ?message) }
+  UNION
+  { ?focus a qn:Evidence ; qn:evidenceSource qn:Abstract ; qn:page ?pg2 .
+    BIND("an abstract quote must not carry a page" AS ?message) }
+}

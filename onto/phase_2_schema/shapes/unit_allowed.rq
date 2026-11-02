@@ -1,0 +1,8 @@
+# A unit must be one the property allows (qn:allowedUnit on the property concept).
+PREFIX qn: <https://w3id.org/quinone#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?focus ?message WHERE {
+  ?focus a qn:Measurement ; qn:property ?p ; qn:unit ?u .
+  FILTER NOT EXISTS { ?p qn:allowedUnit ?u }
+  BIND("unit is not allowed for this property (see qn:allowedUnit)" AS ?message)
+}

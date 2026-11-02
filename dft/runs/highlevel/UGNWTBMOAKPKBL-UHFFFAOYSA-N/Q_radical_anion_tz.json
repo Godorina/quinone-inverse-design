@@ -1,0 +1,43 @@
+{
+  "name": "UGNWTBMOAKPKBL-UHFFFAOYSA-N_Q_radical_anion_tz",
+  "task": "opt",
+  "status": "ok",
+  "spec": {
+    "name": "UGNWTBMOAKPKBL-UHFFFAOYSA-N_Q_radical_anion_tz",
+    "xyz": "O 0.5881404467 -2.6673675297 -0.0406568078\nC 0.3201797870 -1.4528705150 -0.0221120418\nC -1.0475473006 -0.9348511170 -0.0310752449\nCl -2.3088409844 -2.1380625801 -0.0700553644\nC -1.3434811722 0.4091598905 -0.0106198547\nCl -2.9937292628 0.9717086178 -0.0228295664\nC -0.3199918068 1.4534096461 0.0222661978\nO -0.5879957063 2.6678890525 0.0407964268\nC 1.0477516241 0.9354402952 0.0312438477\nCl 2.3088885812 2.1388351076 0.0702425508\nC 1.3436660592 -0.4085759952 0.0107803525\nCl 2.9937243266 -0.9716359445 0.0229742878",
+    "charge": -1,
+    "spin": 1,
+    "task": "opt",
+    "xc": "wb97m_v",
+    "basis": "def2-tzvpd",
+    "grids_atom": [
+      99,
+      590
+    ],
+    "nlc_grids_atom": [
+      50,
+      194
+    ],
+    "nlc_grids_prune": "sg1",
+    "thermo_model": "mrrho",
+    "temperature": 298.15,
+    "density_fit": true,
+    "solvent": {
+      "model": "smd",
+      "name": "acetonitrile"
+    },
+    "log": "/home/hgpark/whlee/hgpark/quinone/dft/runs/highlevel/UGNWTBMOAKPKBL-UHFFFAOYSA-N/Q_radical_anion_tz.log"
+  },
+  "nao": 486,
+  "opt_converged": true,
+  "xyz_final": "O 0.57976381 -2.64532735 -0.03922492\nC 0.31398060 -1.43136792 -0.02113394\nC -1.04626639 -0.92563443 -0.03191913\nCl -2.29334775 -2.11887043 -0.07178015\nC -1.33771690 0.40399837 -0.01232264\nCl -2.96965797 0.96703052 -0.02660448\nC -0.31375858 1.43196314 0.02132594\nO -0.57989683 2.64585193 0.03944594\nC 1.04645184 0.92609011 0.03208185\nCl 2.29327434 2.11960100 0.07191723\nC 1.33805228 -0.40352956 0.01249051\nCl 2.97000179 -0.96656854 0.02675586",
+  "energy_Eh": -2220.0409105170743,
+  "scf_converged": true,
+  "s2": 0.7713997622196018,
+  "s2_ideal": 0.75,
+  "auxbasis": "None",
+  "wall_s": 764.6,
+  "source": "/home/hgpark/whlee/hgpark/quinone/dft/runs/ref_set/UGNWTBMOAKPKBL-UHFFFAOYSA-N.json",
+  "o_index": null,
+  "nao_tz": 486
+}

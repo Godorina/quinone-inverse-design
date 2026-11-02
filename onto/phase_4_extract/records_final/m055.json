@@ -1,0 +1,180 @@
+{
+ "paper_id": "m055",
+ "title": "Impacts of Quinone Structure on Trade‐Offs Between Redox Potential and CO 2 Binding Strength",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "BQ_Cl4",
+   "name": "terachloro-benzoquinone (BQ-Cl4)",
+   "skeleton": "Benzoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "ElectronWithdrawing"
+   ],
+   "substituent_text": null,
+   "quote": "Cyclic voltammogram (CV) for terachloro-benzoquinone (BQ-Cl4) in DMSO with scan rate of 20 mVs",
+   "page": 3
+  },
+  {
+   "key": "NQ_23",
+   "name": "2,3-naphthoquinone",
+   "skeleton": "Naphthoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "One previously uninvestigated quinone for ECCS, 2,3-naphthoquinone, is identified as particularly promising",
+   "page": 1
+  },
+  {
+   "key": "NQ_23_dianion",
+   "name": "2,3-naphthoquinone dianion",
+   "skeleton": "Naphthoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "nuclear magnetic resonance (NMR) spectroscopy shows its dianion capable of capturing CO2 but lacks electrochemical reversibility.",
+   "page": 1
+  }
+ ],
+ "conditions": [],
+ "measurements": [],
+ "observations": [],
+ "not_reported": [
+  "Experimental binding constant for 2,3-naphthoquinone",
+  "Experimental redox potential for 2,3-naphthoquinone",
+  "Specific values for other quinones (BQ, NQ, AQ, oBQ, PAQ) as they are presented in figures or supporting information tables not fully transcribed in the main text"
+ ],
+ "dropped": [
+  {
+   "kind": "condition",
+   "raw": {
+    "key": "DMSO_N2_Fc",
+    "solvent": "DMSO",
+    "reference_electrode": "FcFcPlus",
+    "atmosphere": "Inert",
+    "electrolyte_text": "TBAPF6 (0.1 M)",
+    "additive_text": null,
+    "ph": null,
+    "temperature_k": null,
+    "quote": "100 mVs−1 CVs of the 2,3-naphthoquinone dianion sodium salt (5 mM) in DMSO with TBAPF6 (0.1 M) supporting electrolyte."
+   },
+   "reasons": [
+    "conditions[0] DMSO_N2_Fc: quote is not verbatim on one page. no page contains the start of this quote; copy it exactly from the page text"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "BQ_Cl4",
+    "condition": "DMSO_N2_Fc",
+    "property": "ReductionPotential",
+    "value": -0.341,
+    "unit": "Volt",
+    "basis": "Experiment",
+    "method": "CyclicVoltammetry",
+    "redox_couple": "FirstReduction",
+    "quote": "Two one-electron redox waves are present at 0.341 and 1.155 V, respectively."
+   },
+   "reasons": [
+    "measurements[0] BQ_Cl4/ReductionPotential: quote is not verbatim on one page. page 3: your quote matches up to '...ronredoxwavesarepresentat' then the page has '\u00010.341and\u00011.155v,respectively.theexperim' but you wrote '0.341and1.155v,respectively.' (spaces ignored)",
+    "measurements[0] BQ_Cl4/ReductionPotential: refers to 'DMSO_N2_Fc', which is not a kept compound or condition",
+    "measurements[0] BQ_Cl4/ReductionPotential: the number -0.341 is not printed in the quote; quote the sentence or table row that prints it"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "BQ_Cl4",
+    "condition": "DMSO_N2_Fc",
+    "property": "ReductionPotential",
+    "value": -1.155,
+    "unit": "Volt",
+    "basis": "Experiment",
+    "method": "CyclicVoltammetry",
+    "redox_couple": "SecondReduction",
+    "quote": "Two one-electron redox waves are present at 0.341 and 1.155 V, respectively."
+   },
+   "reasons": [
+    "measurements[1] BQ_Cl4/ReductionPotential: quote is not verbatim on one page. page 3: your quote matches up to '...ronredoxwavesarepresentat' then the page has '\u00010.341and\u00011.155v,respectively.theexperim' but you wrote '0.341and1.155v,respectively.' (spaces ignored)",
+    "measurements[1] BQ_Cl4/ReductionPotential: refers to 'DMSO_N2_Fc', which is not a kept compound or condition",
+    "measurements[1] BQ_Cl4/ReductionPotential: the number -1.155 is not printed in the quote; quote the sentence or table row that prints it"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "BQ_Cl4",
+    "condition": "DMSO_N2_Fc",
+    "property": "ReductionPotential",
+    "value": -0.748,
+    "unit": "Volt",
+    "basis": "Experiment",
+    "method": "CyclicVoltammetry",
+    "redox_couple": "TwoElectron",
+    "quote": "The experimental two-electron redox potential (E2e), which is the average of the two one-electron redox potentials, is also shown at 0.748 V."
+   },
+   "reasons": [
+    "measurements[2] BQ_Cl4/ReductionPotential: quote is not verbatim on one page. page 3: your quote matches up to '...xpotentials,isalsoshownat' then the page has '\u00010.748v.b)cvsforbqcl4indmsoafterpurgingw' but you wrote '0.748v.' (spaces ignored)",
+    "measurements[2] BQ_Cl4/ReductionPotential: refers to 'DMSO_N2_Fc', which is not a kept compound or condition",
+    "measurements[2] BQ_Cl4/ReductionPotential: the number -0.748 is not printed in the quote; quote the sentence or table row that prints it"
+   ]
+  },
+  {
+   "kind": "observation",
+   "raw": {
+    "compound": "NQ_23_dianion",
+    "condition": "DMSO_N2_Fc",
+    "kind": "BindingMode",
+    "outcome": "Carbonate",
+    "quote": "the 1H NMR spectrum then indicated capture of CO2 via the dianion"
+   },
+   "reasons": [
+    "observations[0] NQ_23_dianion/BindingMode: refers to 'DMSO_N2_Fc', which is not a kept compound or condition"
+   ]
+  },
+  {
+   "kind": "observation",
+   "raw": {
+    "compound": "NQ_23",
+    "condition": "DMSO_N2_Fc",
+    "kind": "OxygenStability",
+    "outcome": "OxygenUnstable",
+    "quote": "we believe that this, along with the result of attempting to chemically synthesize the oxidized quinone, indicate that 2,3-naphthoquinone is inherently unstable"
+   },
+   "reasons": [
+    "observations[1] NQ_23/OxygenStability: refers to 'DMSO_N2_Fc', which is not a kept compound or condition"
+   ]
+  }
+ ],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 2,
+   "dropped": 7
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 3,
+   "dropped": 6
+  },
+  {
+   "n": 3,
+   "parse_errors": [],
+   "kept": 3,
+   "dropped": 6
+  },
+  {
+   "n": 4,
+   "parse_errors": [],
+   "kept": 3,
+   "dropped": 6
+  }
+ ],
+ "review_status": "machine_extracted"
+}

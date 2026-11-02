@@ -1,0 +1,139 @@
+{
+ "paper_id": "m057",
+ "title": "Mechanistic Origins of Wave Coalescence in Electrochemically Mediated CO 2 Capture: Kinetic Drill and Potential Inversion Paradigm",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "AQ",
+   "name": "anthraquinone",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "Anthraquinone (AQ, 9,10-anthraquinone, 97%)",
+   "page": 2
+  }
+ ],
+ "conditions": [
+  {
+   "key": "me_cn_tbap_ar",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.1 M TBAP/MeCN",
+   "additive_text": "ferrocene",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "All measurements were conducted in an aprotic and anhydrous MeCN/TBAP electrolyte under argon-purged or CO2-saturated conditions.",
+   "page": 2
+  },
+  {
+   "key": "me_cn_tbap_co2",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M TBAP/MeCN",
+   "additive_text": "ferrocene",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "All measurements were conducted in an aprotic and anhydrous MeCN/TBAP electrolyte under argon-purged or CO2-saturated conditions.",
+   "page": 2
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "AQ",
+   "condition": "me_cn_tbap_ar",
+   "property": "ReductionPotential",
+   "value": -1.3,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "the two well-separated reduction waves centered at approximately −1.3 V and −1.9 V vs. Fc+/Fc",
+   "page": 3
+  },
+  {
+   "compound": "AQ",
+   "condition": "me_cn_tbap_ar",
+   "property": "ReductionPotential",
+   "value": -1.9,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "the two well-separated reduction waves centered at approximately −1.3 V and −1.9 V vs. Fc+/Fc",
+   "page": 3
+  }
+ ],
+ "observations": [
+  {
+   "compound": "AQ",
+   "condition": "me_cn_tbap_co2",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "reveals the formation of the radical anion (RAQ) and the dominant accumulation of the bound dianion DAQCO2 adduct",
+   "page": 1
+  }
+ ],
+ "not_reported": [
+  "Oxygen stability of the compound",
+  "Capture capacity in MmolPerGram or MolPerMol",
+  "Energy consumption",
+  "Faradaic efficiency",
+  "Rate constants for CO2 binding in PerMolarPerSecond"
+ ],
+ "dropped": [
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "AQ",
+    "condition": "me_cn_tbap_co2",
+    "property": "BindingConstant",
+    "value": 1000000000.0,
+    "unit": "PerMolar",
+    "basis": "Experiment",
+    "method": "CyclicVoltammetry",
+    "redox_couple": null,
+    "quote": "the equilibrium binding constant for the DAQCO2 adduct could be estimated at an order of 109 using the Nernstian shift formalism"
+   },
+   "reasons": [
+    "measurements[2] AQ/BindingConstant: the number 1000000000.0 is not printed in the quote; quote the sentence or table row that prints it"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "AQ",
+    "condition": "me_cn_tbap_co2",
+    "property": "BindingConstant",
+    "value": 0.5,
+    "unit": "PerMolar",
+    "basis": "Experiment",
+    "method": "CyclicVoltammetry",
+    "redox_couple": null,
+    "quote": "yields a RAQCO2 binding constant K1 less than 0.5"
+   },
+   "reasons": [
+    "measurements[3] AQ/BindingConstant: 0.5 is given as a bound (less than, more than, at least, ...) in the quote; omit it"
+   ]
+  }
+ ],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 6,
+   "dropped": 2
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 6,
+   "dropped": 0
+  }
+ ],
+ "review_status": "machine_extracted"
+}

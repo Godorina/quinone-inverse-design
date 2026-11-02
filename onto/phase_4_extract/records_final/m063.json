@@ -1,0 +1,170 @@
+{
+ "paper_id": "m063",
+ "title": "pH-dependent redox hydrogen pump for electrochemical direct air capture of CO&lt;sub&gt;2&lt;/sub&gt;.",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "AQDS",
+   "name": "anthraquinone-2,7-disulfonic acid salt (AQDS)",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Sulfonate"
+   ],
+   "substituent_text": null,
+   "quote": "We selected anthraquinone-2,7-disulfonic acid salt (AQDS) as the redox mediator due to its high reversibility, solubility, and low cost.",
+   "page": 1
+  }
+ ],
+ "conditions": [
+  {
+   "key": "cond_hcl",
+   "solvent": "Water",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "NotReported",
+   "electrolyte_text": "0.2 M HCl",
+   "additive_text": "NotReported",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "In 0.2 M HCl (simulating Mode I), AQDS exhibits a redox potential of +0.009 V vs. Ag/AgCl.",
+   "page": 3
+  },
+  {
+   "key": "cond_li2co3",
+   "solvent": "Water",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "NotReported",
+   "electrolyte_text": "0.2 M Li2CO3",
+   "additive_text": "NotReported",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Under 0.2 M Li2CO3 (simulating Mode II), the potential cathodically shifts to −0.467 V vs. Ag/AgCl",
+   "page": 3
+  },
+  {
+   "key": "cond_dac_exp",
+   "solvent": "Water",
+   "reference_electrode": "NotReported",
+   "atmosphere": "AirOxygen",
+   "electrolyte_text": "AQDS/LiCl aqueous",
+   "additive_text": "NotReported",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "the Mode II-regenerated LiOH solution was exposed to ambient laboratory air (CO2 concentration: 504.2 ± 8.4 ppm)",
+   "page": 4
+  },
+  {
+   "key": "cond_dac_theo",
+   "solvent": "Water",
+   "reference_electrode": "NotReported",
+   "atmosphere": "NotReported",
+   "electrolyte_text": "NotReported",
+   "additive_text": "NotReported",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "The minimum theoretical energy input for CO2 capture via this AQDS-mediated process is 173 kJ mol−1 CO2",
+   "page": 5
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "AQDS",
+   "condition": "cond_hcl",
+   "property": "ReductionPotential",
+   "value": 0.009,
+   "unit": "Volt",
+   "basis": "Computation",
+   "method": "NotReported",
+   "redox_couple": "TwoElectron",
+   "quote": "In 0.2 M HCl (simulating Mode I), AQDS exhibits a redox potential of +0.009 V vs. Ag/AgCl.",
+   "page": 3
+  },
+  {
+   "compound": "AQDS",
+   "condition": "cond_li2co3",
+   "property": "ReductionPotential",
+   "value": -0.467,
+   "unit": "Volt",
+   "basis": "Computation",
+   "method": "NotReported",
+   "redox_couple": "TwoElectron",
+   "quote": "Under 0.2 M Li2CO3 (simulating Mode II), the potential cathodically shifts to −0.467 V vs. Ag/AgCl",
+   "page": 3
+  },
+  {
+   "compound": "AQDS",
+   "condition": "cond_dac_exp",
+   "property": "EnergyConsumption",
+   "value": 257.0,
+   "unit": "KJPerMol",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": "NotReported",
+   "quote": "increasing the practical energy demand to 257 kJ mol−1 CO2 for the coupled electrolyzer-hydrogen pump system.",
+   "page": 5
+  },
+  {
+   "compound": "AQDS",
+   "condition": "cond_dac_theo",
+   "property": "EnergyConsumption",
+   "value": 173.0,
+   "unit": "KJPerMol",
+   "basis": "Computation",
+   "method": "NotReported",
+   "redox_couple": "NotReported",
+   "quote": "The minimum theoretical energy input for CO2 capture via this AQDS-mediated process is 173 kJ mol−1 CO2",
+   "page": 5
+  },
+  {
+   "compound": "AQDS",
+   "condition": "cond_dac_exp",
+   "property": "FaradaicEfficiency",
+   "value": 67.0,
+   "unit": "Percent",
+   "basis": "Computation",
+   "method": "NotReported",
+   "redox_couple": "NotReported",
+   "quote": "corresponding to a CO2 capture faradaic eﬃciency of 67%.",
+   "page": 4
+  }
+ ],
+ "observations": [
+  {
+   "compound": "AQDS",
+   "condition": "cond_dac_exp",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "which then reacts with AQDS2−to form the AQDS(CO2)2 2−precipitate.",
+   "page": 4
+  }
+ ],
+ "not_reported": [],
+ "dropped": [],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 1,
+   "dropped": 10
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 5,
+   "dropped": 5
+  },
+  {
+   "n": 3,
+   "parse_errors": [],
+   "kept": 8,
+   "dropped": 3
+  },
+  {
+   "n": 4,
+   "parse_errors": [],
+   "kept": 11,
+   "dropped": 0
+  }
+ ],
+ "review_status": "machine_extracted"
+}

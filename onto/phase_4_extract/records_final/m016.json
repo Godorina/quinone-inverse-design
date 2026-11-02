@@ -1,0 +1,319 @@
+{
+ "paper_id": "m016",
+ "title": "Assessing the Kinetics of Quinone–CO2 Adduct Formation for Electrochemically Mediated Carbon Capture",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "PAQ",
+   "name": "9,10-phenanthrenequinone (PAQ)",
+   "skeleton": "Phenanthrenequinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "Compounds are 9,10-phenanthrenequinone (PAQ), 9,10-anthraquinone (AQ), 1,2-naphthoquinone (oNQ), 1,4-naphthoquinone (pNQ)",
+   "page": 3
+  },
+  {
+   "key": "AQ",
+   "name": "9,10-anthraquinone (AQ)",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "Compounds are 9,10-phenanthrenequinone (PAQ), 9,10-anthraquinone (AQ), 1,2-naphthoquinone (oNQ), 1,4-naphthoquinone (pNQ)",
+   "page": 3
+  },
+  {
+   "key": "oNQ",
+   "name": "1,2-naphthoquinone (oNQ)",
+   "skeleton": "Naphthoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "Compounds are 9,10-phenanthrenequinone (PAQ), 9,10-anthraquinone (AQ), 1,2-naphthoquinone (oNQ), 1,4-naphthoquinone (pNQ)",
+   "page": 3
+  },
+  {
+   "key": "pNQ",
+   "name": "1,4-naphthoquinone (pNQ)",
+   "skeleton": "Naphthoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "Compounds are 9,10-phenanthrenequinone (PAQ), 9,10-anthraquinone (AQ), 1,2-naphthoquinone (oNQ), 1,4-naphthoquinone (pNQ)",
+   "page": 3
+  }
+ ],
+ "conditions": [
+  {
+   "key": "dmso_nbu4clo4",
+   "solvent": "DMSO",
+   "reference_electrode": "NotReported",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "100 mM NBu4ClO4",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "the bimolecular rate constant is 162 M−1 s−1 in 100 mM NBu4ClO4",
+   "page": 4
+  },
+  {
+   "key": "dmso_liclo4",
+   "solvent": "DMSO",
+   "reference_electrode": "NotReported",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "100 mM LiClO4",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "drops to only 6 M−1 s−1 in 100 mM LiClO4",
+   "page": 4
+  },
+  {
+   "key": "dmso_naclo4",
+   "solvent": "DMSO",
+   "reference_electrode": "NotReported",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "100 mM NaClO4",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "kbimolecular is 43.8 M−1 s−1 in the presence of 100 mM NaClO4",
+   "page": 5
+  },
+  {
+   "key": "dmso_natfsi",
+   "solvent": "DMSO",
+   "reference_electrode": "NotReported",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "NaTFSI",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "drops to only 7.5 M−1 s−1 when using NaTFSI",
+   "page": 5
+  },
+  {
+   "key": "dmso_nbu4pf6",
+   "solvent": "DMSO",
+   "reference_electrode": "NotReported",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "100 mM NBu4PF6",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "kbimolecular increases from 27.2 M−1 s−1 without additives to a plateaued value of ∼65 M−1 s−1 at n-butanol above 200 mM",
+   "page": 6
+  },
+  {
+   "key": "dmso_nbu4pf6_butanol",
+   "solvent": "DMSO",
+   "reference_electrode": "NotReported",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "100 mM NBu4PF6",
+   "additive_text": "n-butanol above 200 mM",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "kbimolecular increases from 27.2 M−1 s−1 without additives to a plateaued value of ∼65 M−1 s−1 at n-butanol above 200 mM",
+   "page": 6
+  },
+  {
+   "key": "unspecified_dft",
+   "solvent": "NotReported",
+   "reference_electrode": "NotReported",
+   "atmosphere": "NotReported",
+   "electrolyte_text": "NotReported",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "DFT predicts ΔG‡ of 0.338 eV for oNQ and 0.344 eV for pNQ",
+   "page": 7
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "PAQ",
+   "condition": "dmso_nbu4clo4",
+   "property": "RateConstant",
+   "value": 162.0,
+   "unit": "PerMolarPerSecond",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": "NotReported",
+   "quote": "the bimolecular rate constant is 162 M−1 s−1 in 100 mM NBu4ClO4",
+   "page": 4
+  },
+  {
+   "compound": "PAQ",
+   "condition": "dmso_liclo4",
+   "property": "RateConstant",
+   "value": 6.0,
+   "unit": "PerMolarPerSecond",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": "NotReported",
+   "quote": "drops to only 6 M−1 s−1 in 100 mM LiClO4",
+   "page": 4
+  },
+  {
+   "compound": "PAQ",
+   "condition": "dmso_naclo4",
+   "property": "RateConstant",
+   "value": 43.8,
+   "unit": "PerMolarPerSecond",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": "NotReported",
+   "quote": "kbimolecular is 43.8 M−1 s−1 in the presence of 100 mM NaClO4",
+   "page": 5
+  },
+  {
+   "compound": "PAQ",
+   "condition": "dmso_natfsi",
+   "property": "RateConstant",
+   "value": 7.5,
+   "unit": "PerMolarPerSecond",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": "NotReported",
+   "quote": "drops to only 7.5 M−1 s−1 when using NaTFSI",
+   "page": 5
+  },
+  {
+   "compound": "AQ",
+   "condition": "dmso_nbu4pf6",
+   "property": "RateConstant",
+   "value": 27.2,
+   "unit": "PerMolarPerSecond",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": "NotReported",
+   "quote": "kbimolecular increases from 27.2 M−1 s−1 without additives to a plateaued value of ∼65 M−1 s−1 at n-butanol above 200 mM",
+   "page": 6
+  },
+  {
+   "compound": "AQ",
+   "condition": "dmso_nbu4pf6_butanol",
+   "property": "RateConstant",
+   "value": 65.0,
+   "unit": "PerMolarPerSecond",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": "NotReported",
+   "quote": "kbimolecular increases from 27.2 M−1 s−1 without additives to a plateaued value of ∼65 M−1 s−1 at n-butanol above 200 mM",
+   "page": 6
+  }
+ ],
+ "observations": [
+  {
+   "compound": "PAQ",
+   "condition": "dmso_nbu4pf6",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "reduced quinones can chemically react with CO2 via nucleophilic addition to form stable adducts",
+   "page": 1
+  }
+ ],
+ "not_reported": [
+  "reference electrode of the potentials",
+  "specific rate constants for oNQ and pNQ",
+  "specific rate constants for AQ in DMSO with NBu4ClO4"
+ ],
+ "dropped": [
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "oNQ",
+    "condition": "unspecified_dft",
+    "property": "BindingEnergy",
+    "value": 0.338,
+    "unit": "ElectronVolt",
+    "basis": "Computation",
+    "method": "DFT",
+    "redox_couple": "NotReported",
+    "quote": "DFT predicts ΔG‡ of 0.338 eV for oNQ and 0.344 eV for pNQ"
+   },
+   "reasons": [
+    "measurements[6] oNQ/BindingEnergy: the quote is about 'ΔG‡', which is not BindingEnergy; omit it",
+    "measurements[6] oNQ/BindingEnergy: the quote is about 'barrier', which is not BindingEnergy; omit it"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "pNQ",
+    "condition": "unspecified_dft",
+    "property": "BindingEnergy",
+    "value": 0.344,
+    "unit": "ElectronVolt",
+    "basis": "Computation",
+    "method": "DFT",
+    "redox_couple": "NotReported",
+    "quote": "DFT predicts ΔG‡ of 0.338 eV for oNQ and 0.344 eV for pNQ"
+   },
+   "reasons": [
+    "measurements[7] pNQ/BindingEnergy: the quote is about 'ΔG‡', which is not BindingEnergy; omit it",
+    "measurements[7] pNQ/BindingEnergy: the quote is about 'barrier', which is not BindingEnergy; omit it"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "AQ",
+    "condition": "unspecified_dft",
+    "property": "BindingEnergy",
+    "value": 0.331,
+    "unit": "ElectronVolt",
+    "basis": "Computation",
+    "method": "DFT",
+    "redox_couple": "NotReported",
+    "quote": "DFT predicts ΔG‡ values of 0.331 and 0.275 eV for AQ and PAQ, respectively"
+   },
+   "reasons": [
+    "measurements[8] AQ/BindingEnergy: the quote is about 'ΔG‡', which is not BindingEnergy; omit it",
+    "measurements[8] AQ/BindingEnergy: the quote is about 'δg‡', which is not BindingEnergy; omit it"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "PAQ",
+    "condition": "unspecified_dft",
+    "property": "BindingEnergy",
+    "value": 0.275,
+    "unit": "ElectronVolt",
+    "basis": "Computation",
+    "method": "DFT",
+    "redox_couple": "NotReported",
+    "quote": "DFT predicts ΔG‡ values of 0.331 and 0.275 eV for AQ and PAQ, respectively"
+   },
+   "reasons": [
+    "measurements[9] PAQ/BindingEnergy: the quote is about 'ΔG‡', which is not BindingEnergy; omit it",
+    "measurements[9] PAQ/BindingEnergy: the quote is about 'δg‡', which is not BindingEnergy; omit it"
+   ]
+  }
+ ],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 18,
+   "dropped": 4
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 18,
+   "dropped": 0
+  }
+ ],
+ "review_status": "machine_extracted"
+}

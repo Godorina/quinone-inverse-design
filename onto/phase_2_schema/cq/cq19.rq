@@ -1,0 +1,13 @@
+# CQ19: For every reported value: its paper, the quote, where the quote comes from, and its page.
+PREFIX qn: <https://w3id.org/quinone#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX schema: <https://schema.org/>
+
+SELECT ?result ?doi ?name ?quote ?source ?page ?status WHERE {
+  ?result qn:fromPaper ?paper ; qn:ofCompound ?compound ; qn:hasEvidence ?ev ; qn:reviewStatus ?status .
+  ?paper schema:identifier ?doi .
+  ?compound schema:name ?name .
+  ?ev qn:quote ?quote ; qn:evidenceSource ?src .
+  ?src skos:prefLabel ?source . FILTER(lang(?source) = "en")
+  OPTIONAL { ?ev qn:page ?page }
+} ORDER BY ?doi ?result

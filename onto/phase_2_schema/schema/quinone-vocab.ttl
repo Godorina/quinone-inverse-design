@@ -1,0 +1,327 @@
+# quinone vocabularies (SKOS) v0.1.0: value lists for the schema in quinone.ttl.
+# qn:NotReported sits in several schemes: the text does not say, which is data, not a gap to guess.
+
+@prefix qn:      <https://w3id.org/quinone#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix schema:  <https://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+qn:SkeletonScheme a skos:ConceptScheme ;
+    rdfs:label "Quinone skeletons"@en , "퀴논 골격"@ko .
+
+qn:Benzoquinone a skos:Concept ; skos:inScheme qn:SkeletonScheme ;
+    skos:prefLabel "Benzoquinone"@en , "벤조퀴논"@ko ;
+    skos:definition "One six-membered quinone ring."@en , "여섯 원자 고리 하나의 quinone."@ko .
+qn:Naphthoquinone a skos:Concept ; skos:inScheme qn:SkeletonScheme ;
+    skos:prefLabel "Naphthoquinone"@en , "나프토퀴논"@ko ;
+    skos:definition "Quinone on a naphthalene core."@en , "나프탈렌 골격의 quinone."@ko .
+qn:Anthraquinone a skos:Concept ; skos:inScheme qn:SkeletonScheme ;
+    skos:prefLabel "Anthraquinone"@en , "안트라퀴논"@ko ;
+    skos:definition "Quinone on an anthracene core."@en , "안트라센 골격의 quinone."@ko .
+qn:Phenanthrenequinone a skos:Concept ; skos:inScheme qn:SkeletonScheme ;
+    skos:prefLabel "Phenanthrenequinone"@en , "페난트렌퀴논"@ko ;
+    skos:definition "Quinone on a phenanthrene core, e.g. 9,10-phenanthrenequinone."@en , "페난트렌 골격의 quinone. 예: 9,10-페난트렌퀴논."@ko .
+qn:HeterocyclicQuinone a skos:Concept ; skos:inScheme qn:SkeletonScheme ;
+    skos:prefLabel "Heterocyclic quinone"@en , "헤테로고리 퀴논"@ko ;
+    skos:definition "Quinone fused to a heterocycle, e.g. benzodithiophene quinone."@en , "헤테로고리가 융합된 quinone. 예: benzodithiophene quinone."@ko .
+qn:OtherQuinoid a skos:Concept ; skos:inScheme qn:SkeletonScheme ;
+    skos:prefLabel "Other quinoid"@en , "기타 퀴논류"@ko ;
+    skos:definition "Quinone-type core not listed above."@en , "위에 없는 quinone형 골격."@ko .
+
+qn:FormScheme a skos:ConceptScheme ;
+    rdfs:label "Compound forms"@en , "화합물 형태"@ko .
+
+qn:Molecular a skos:Concept ; skos:inScheme qn:FormScheme ;
+    skos:prefLabel "Free molecule"@en , "자유 분자"@ko ;
+    skos:definition "Dissolved or liquid molecular quinone."@en , "용해되었거나 액체인 분자형 quinone."@ko .
+qn:Polymer a skos:Concept ; skos:inScheme qn:FormScheme ;
+    skos:prefLabel "Polymer"@en , "고분자"@ko ;
+    skos:definition "Quinone units in a polymer chain."@en , "고분자 사슬에 quinone 단위가 있는 형태."@ko .
+qn:Framework a skos:Concept ; skos:inScheme qn:FormScheme ;
+    skos:prefLabel "Framework"@en , "골격체"@ko ;
+    skos:definition "Quinone in a COF or MOF framework."@en , "COF나 MOF 골격 안의 quinone."@ko .
+qn:CarbonImmobilized a skos:Concept ; skos:inScheme qn:FormScheme ;
+    skos:prefLabel "Carbon-immobilized"@en , "탄소 고정화"@ko ;
+    skos:definition "Quinone attached to a carbon electrode or tube."@en , "탄소 전극이나 나노튜브에 붙인 quinone."@ko .
+qn:MetalComplex a skos:Concept ; skos:inScheme qn:FormScheme ;
+    skos:prefLabel "Metal complex"@en , "금속 착물"@ko ;
+    skos:definition "Quinone bound in a metal complex."@en , "금속 착물에 결합한 quinone."@ko .
+
+qn:SubstituentClassScheme a skos:ConceptScheme ;
+    rdfs:label "Substituent classes"@en , "치환기 종류"@ko .
+
+qn:Unsubstituted a skos:Concept ; skos:inScheme qn:SubstituentClassScheme ;
+    skos:prefLabel "Unsubstituted"@en , "치환기 없음"@ko ;
+    skos:definition "Parent skeleton without substituents."@en , "치환기 없는 모체 골격."@ko .
+qn:ElectronWithdrawing a skos:Concept ; skos:inScheme qn:SubstituentClassScheme ;
+    skos:prefLabel "Electron-withdrawing"@en , "전자 끌개"@ko ;
+    skos:definition "Substituent that lowers electron density (e.g. cyano, nitro, halogen)."@en , "전자 밀도를 낮추는 치환기(시아노, 니트로, 할로젠 등)."@ko .
+qn:ElectronDonating a skos:Concept ; skos:inScheme qn:SubstituentClassScheme ;
+    skos:prefLabel "Electron-donating"@en , "전자 주개"@ko ;
+    skos:definition "Substituent that raises electron density (e.g. methoxy, methyl)."@en , "전자 밀도를 높이는 치환기(메톡시, 메틸 등)."@ko .
+qn:Sulfonate a skos:Concept ; skos:inScheme qn:SubstituentClassScheme ;
+    skos:prefLabel "Sulfonate"@en , "술폰산기"@ko ;
+    skos:definition "Sulfonate group, usually for water solubility."@en , "수용성을 위한 술폰산기."@ko .
+qn:IonicGroup a skos:Concept ; skos:inScheme qn:SubstituentClassScheme ;
+    skos:prefLabel "Ionic group"@en , "이온성 기"@ko ;
+    skos:definition "Charged group such as imidazolium."@en , "이미다졸륨 같은 전하를 띤 기."@ko .
+qn:Hydroxyl a skos:Concept ; skos:inScheme qn:SubstituentClassScheme ;
+    skos:prefLabel "Hydroxyl"@en , "하이드록실기"@ko ;
+    skos:definition "OH group on the ring."@en , "고리에 붙은 OH기."@ko .
+qn:Amino a skos:Concept ; skos:inScheme qn:SubstituentClassScheme ;
+    skos:prefLabel "Amino"@en , "아미노기"@ko ;
+    skos:definition "NH2 or substituted amino group."@en , "NH2 또는 치환된 아미노기."@ko .
+qn:Alkyl a skos:Concept ; skos:inScheme qn:SubstituentClassScheme ;
+    skos:prefLabel "Alkyl"@en , "알킬기"@ko ;
+    skos:definition "Alkyl chain or group."@en , "알킬 사슬 또는 기."@ko .
+
+qn:SolventScheme a skos:ConceptScheme ;
+    rdfs:label "Solvents"@en , "용매"@ko .
+
+qn:Acetonitrile a skos:Concept ; skos:inScheme qn:SolventScheme ;
+    skos:prefLabel "Acetonitrile"@en , "아세토니트릴"@ko ;
+    skos:definition "Aprotic organic solvent."@en , "비양성자성 유기 용매."@ko .
+qn:DMF a skos:Concept ; skos:inScheme qn:SolventScheme ;
+    skos:prefLabel "DMF"@en , "DMF"@ko ;
+    skos:definition "N,N-dimethylformamide."@en , "N,N-다이메틸폼아마이드."@ko .
+qn:DMSO a skos:Concept ; skos:inScheme qn:SolventScheme ;
+    skos:prefLabel "DMSO"@en , "DMSO"@ko ;
+    skos:definition "Dimethyl sulfoxide."@en , "다이메틸 설폭사이드."@ko .
+qn:Water a skos:Concept ; skos:inScheme qn:SolventScheme ;
+    skos:prefLabel "Water"@en , "물"@ko ;
+    skos:definition "Aqueous medium."@en , "수용액 매질."@ko .
+qn:IonicLiquid a skos:Concept ; skos:inScheme qn:SolventScheme ;
+    skos:prefLabel "Ionic liquid"@en , "이온성 액체"@ko ;
+    skos:definition "Ionic liquid as solvent or electrolyte."@en , "용매나 전해질로 쓰는 이온성 액체."@ko .
+qn:PropyleneCarbonate a skos:Concept ; skos:inScheme qn:SolventScheme ;
+    skos:prefLabel "Propylene carbonate"@en , "프로필렌 카보네이트"@ko ;
+    skos:definition "Aprotic carbonate solvent."@en , "비양성자성 카보네이트 용매."@ko .
+qn:OtherSolvent a skos:Concept ; skos:inScheme qn:SolventScheme ;
+    skos:prefLabel "Other solvent"@en , "기타 용매"@ko ;
+    skos:definition "Solvent not listed above; name it in qn:electrolyteText."@en , "위에 없는 용매. qn:electrolyteText에 이름을 적는다."@ko .
+qn:NotReported a skos:Concept ; skos:inScheme qn:SolventScheme , qn:ReferenceElectrodeScheme , qn:AtmosphereScheme , qn:RedoxCoupleScheme , qn:MethodScheme , qn:SkeletonScheme , qn:FormScheme , qn:SubstituentClassScheme ;
+    skos:prefLabel "Not reported"@en , "보고 안 됨"@ko ;
+    skos:definition "The text does not say. Used instead of a guess."@en , "글에 없다. 추측 대신 쓴다."@ko ;
+    qn:appliesToBasis qn:Experiment , qn:Computation .
+
+qn:ReferenceElectrodeScheme a skos:ConceptScheme ;
+    rdfs:label "Reference electrodes"@en , "기준 전극"@ko .
+
+qn:AgAgCl a skos:Concept ; skos:inScheme qn:ReferenceElectrodeScheme ;
+    skos:prefLabel "Ag/AgCl"@en , "Ag/AgCl"@ko ;
+    skos:definition "Silver/silver chloride reference."@en , "은/염화은 기준 전극."@ko .
+qn:SCE a skos:Concept ; skos:inScheme qn:ReferenceElectrodeScheme ;
+    skos:prefLabel "SCE"@en , "SCE"@ko ;
+    skos:definition "Saturated calomel electrode."@en , "포화 칼로멜 전극."@ko .
+qn:FcFcPlus a skos:Concept ; skos:inScheme qn:ReferenceElectrodeScheme ;
+    skos:prefLabel "Fc/Fc+"@en , "Fc/Fc+"@ko ;
+    skos:definition "Ferrocene/ferrocenium internal reference."@en , "페로센/페로세늄 내부 기준."@ko .
+qn:SHE a skos:Concept ; skos:inScheme qn:ReferenceElectrodeScheme ;
+    skos:prefLabel "SHE"@en , "SHE"@ko ;
+    skos:definition "Standard hydrogen electrode."@en , "표준 수소 전극."@ko .
+qn:AgAgPlus a skos:Concept ; skos:inScheme qn:ReferenceElectrodeScheme ;
+    skos:prefLabel "Ag/Ag+"@en , "Ag/Ag+"@ko ;
+    skos:definition "Silver/silver ion, common in non-aqueous media."@en , "비수계에서 흔한 은/은 이온 기준 전극."@ko .
+
+qn:AtmosphereScheme a skos:ConceptScheme ;
+    rdfs:label "Atmospheres"@en , "분위기"@ko .
+
+qn:Inert a skos:Concept ; skos:inScheme qn:AtmosphereScheme ;
+    skos:prefLabel "Inert gas"@en , "불활성 기체"@ko ;
+    skos:definition "N2 or Ar, no CO2 and no O2."@en , "CO2와 O2가 없는 N2 또는 Ar."@ko .
+qn:CO2Atmosphere a skos:Concept ; skos:inScheme qn:AtmosphereScheme ;
+    skos:prefLabel "CO2 atmosphere"@en , "CO2 분위기"@ko ;
+    skos:definition "Pure or dilute CO2 without oxygen."@en , "산소 없는 순수 또는 묽은 CO2."@ko .
+qn:AirOxygen a skos:Concept ; skos:inScheme qn:AtmosphereScheme ;
+    skos:prefLabel "Air or O2-containing"@en , "공기·산소 포함"@ko ;
+    skos:definition "Oxygen present, including air."@en , "공기를 포함해 산소가 있는 분위기."@ko .
+qn:FlueGas a skos:Concept ; skos:inScheme qn:AtmosphereScheme ;
+    skos:prefLabel "Flue gas"@en , "배기가스"@ko ;
+    skos:definition "Simulated or real flue gas."@en , "모사 또는 실제 배기가스."@ko .
+
+qn:RedoxCoupleScheme a skos:ConceptScheme ;
+    rdfs:label "Redox couples"@en , "산화환원 쌍"@ko .
+
+qn:FirstReduction a skos:Concept ; skos:inScheme qn:RedoxCoupleScheme ;
+    skos:prefLabel "First reduction (Q/Q•−)"@en , "첫 번째 환원(Q/Q•−)"@ko ;
+    skos:definition "Quinone to radical anion."@en , "quinone에서 라디칼 음이온으로의 환원."@ko .
+qn:SecondReduction a skos:Concept ; skos:inScheme qn:RedoxCoupleScheme ;
+    skos:prefLabel "Second reduction (Q•−/Q2−)"@en , "두 번째 환원(Q•−/Q2−)"@ko ;
+    skos:definition "Radical anion to dianion, the step that binds CO2 strongly."@en , "라디칼 음이온에서 이음이온으로의 환원. CO2를 강하게 결합하는 단계."@ko .
+qn:TwoElectron a skos:Concept ; skos:inScheme qn:RedoxCoupleScheme ;
+    skos:prefLabel "Two-electron wave (Q/Q2−)"@en , "2전자 파(Q/Q2−)"@ko ;
+    skos:definition "One merged two-electron wave."@en , "하나로 합쳐진 2전자 파."@ko .
+
+qn:UnitScheme a skos:ConceptScheme ;
+    rdfs:label "Units"@en , "단위"@ko .
+
+qn:Volt a skos:Concept ; skos:inScheme qn:UnitScheme ;
+    skos:prefLabel "V"@en , "V"@ko ;
+    skos:definition "Volt, for potentials; always with a reference electrode."@en , "볼트. 전위용이며 기준 전극이 함께 필요하다."@ko .
+qn:KJPerMol a skos:Concept ; skos:inScheme qn:UnitScheme ;
+    skos:prefLabel "kJ/mol"@en , "kJ/mol"@ko ;
+    skos:definition "Kilojoule per mole."@en , "몰당 킬로줄."@ko .
+qn:KcalPerMol a skos:Concept ; skos:inScheme qn:UnitScheme ;
+    skos:prefLabel "kcal/mol"@en , "kcal/mol"@ko ;
+    skos:definition "Kilocalorie per mole."@en , "몰당 킬로칼로리."@ko .
+qn:ElectronVolt a skos:Concept ; skos:inScheme qn:UnitScheme ;
+    skos:prefLabel "eV"@en , "eV"@ko ;
+    skos:definition "Electron volt, for computed energies."@en , "계산 에너지용 전자볼트."@ko .
+qn:Dimensionless a skos:Concept ; skos:inScheme qn:UnitScheme ;
+    skos:prefLabel "dimensionless"@en , "무차원"@ko ;
+    skos:definition "Pure number, e.g. log10 K."@en , "순수한 수. 예: log10 K."@ko .
+qn:PerMolar a skos:Concept ; skos:inScheme qn:UnitScheme ;
+    skos:prefLabel "M^-1"@en , "M^-1"@ko ;
+    skos:definition "Per molar, for an equilibrium constant."@en , "평형 상수용 몰 농도의 역수."@ko .
+qn:PerMolarPerSecond a skos:Concept ; skos:inScheme qn:UnitScheme ;
+    skos:prefLabel "M^-1 s^-1"@en , "M^-1 s^-1"@ko ;
+    skos:definition "Second-order rate constant."@en , "2차 반응 속도 상수."@ko .
+qn:MolPerMol a skos:Concept ; skos:inScheme qn:UnitScheme ;
+    skos:prefLabel "mol CO2/mol quinone"@en , "mol CO2/mol quinone"@ko ;
+    skos:definition "Capacity per quinone."@en , "quinone 한 몰당 CO2 몰수."@ko .
+qn:MmolPerGram a skos:Concept ; skos:inScheme qn:UnitScheme ;
+    skos:prefLabel "mmol/g"@en , "mmol/g"@ko ;
+    skos:definition "Capacity per mass of material."@en , "소재 질량당 용량."@ko .
+qn:Percent a skos:Concept ; skos:inScheme qn:UnitScheme ;
+    skos:prefLabel "%"@en , "%"@ko ;
+    skos:definition "Percent, for efficiencies."@en , "효율용 퍼센트."@ko .
+
+qn:PropertyScheme a skos:ConceptScheme ;
+    rdfs:label "Measured properties"@en , "측정 항목"@ko .
+
+qn:HalfWavePotential a skos:Concept ; skos:inScheme qn:PropertyScheme ;
+    skos:prefLabel "Half-wave potential"@en , "반파 전위"@ko ;
+    skos:definition "E1/2 from voltammetry. Needs a redox couple and a reference electrode."@en , "전압전류법의 E1/2. 산화환원 쌍과 기준 전극이 필요하다."@ko ;
+    qn:allowedUnit qn:Volt ;
+    qn:requiresRedoxCouple true .
+qn:ReductionPotential a skos:Concept ; skos:inScheme qn:PropertyScheme ;
+    skos:prefLabel "Reduction potential"@en , "환원 전위"@ko ;
+    skos:definition "Reduction potential from other sources (formal, computed). Needs a redox couple."@en , "다른 방법의 환원 전위(형식, 계산). 산화환원 쌍이 필요하다."@ko ;
+    qn:allowedUnit qn:Volt ;
+    qn:requiresRedoxCouple true .
+qn:Log10BindingConstant a skos:Concept ; skos:inScheme qn:PropertyScheme ;
+    skos:prefLabel "log10 CO2 binding constant"@en , "CO2 결합 상수의 log10"@ko ;
+    skos:definition "log10 of K_CO2 of the reduced quinone."@en , "환원된 quinone의 K_CO2의 상용로그."@ko ;
+    qn:allowedUnit qn:Dimensionless .
+qn:BindingConstant a skos:Concept ; skos:inScheme qn:PropertyScheme ;
+    skos:prefLabel "CO2 binding constant"@en , "CO2 결합 상수"@ko ;
+    skos:definition "K_CO2 of the reduced quinone."@en , "환원된 quinone의 K_CO2."@ko ;
+    qn:allowedUnit qn:PerMolar .
+qn:BindingEnergy a skos:Concept ; skos:inScheme qn:PropertyScheme ;
+    skos:prefLabel "CO2 binding energy"@en , "CO2 결합 에너지"@ko ;
+    skos:definition "Binding free energy or enthalpy of CO2."@en , "CO2 결합 자유 에너지 또는 엔탈피."@ko ;
+    qn:allowedUnit qn:KJPerMol , qn:KcalPerMol , qn:ElectronVolt .
+qn:RateConstant a skos:Concept ; skos:inScheme qn:PropertyScheme ;
+    skos:prefLabel "Adduct formation rate constant"@en , "adduct 형성 속도 상수"@ko ;
+    skos:definition "Second-order rate constant of CO2 adding to the radical anion."@en , "CO2가 라디칼 음이온에 붙는 2차 속도 상수."@ko ;
+    qn:allowedUnit qn:PerMolarPerSecond .
+qn:CaptureCapacity a skos:Concept ; skos:inScheme qn:PropertyScheme ;
+    skos:prefLabel "CO2 capture capacity"@en , "CO2 포집 용량"@ko ;
+    skos:definition "CO2 taken up per quinone or per mass."@en , "quinone 또는 질량당 흡수한 CO2."@ko ;
+    qn:allowedUnit qn:MolPerMol , qn:MmolPerGram .
+qn:FaradaicEfficiency a skos:Concept ; skos:inScheme qn:PropertyScheme ;
+    skos:prefLabel "Faradaic efficiency"@en , "패러데이 효율"@ko ;
+    skos:definition "Share of charge that captures CO2."@en , "CO2 포집에 쓰인 전하의 비율."@ko ;
+    qn:allowedUnit qn:Percent .
+qn:EnergyConsumption a skos:Concept ; skos:inScheme qn:PropertyScheme ;
+    skos:prefLabel "Energy consumption"@en , "에너지 소비"@ko ;
+    skos:definition "Energy per mole of CO2 captured."@en , "CO2 한 몰 포집당 에너지."@ko ;
+    qn:allowedUnit qn:KJPerMol .
+
+qn:BasisScheme a skos:ConceptScheme ;
+    rdfs:label "Bases"@en , "근거 종류"@ko .
+
+qn:Experiment a skos:Concept ; skos:inScheme qn:BasisScheme ;
+    skos:prefLabel "Experiment"@en , "실험"@ko ;
+    skos:definition "Measured in the laboratory."@en , "실험실에서 측정한 값."@ko .
+qn:Computation a skos:Concept ; skos:inScheme qn:BasisScheme ;
+    skos:prefLabel "Computation"@en , "계산"@ko ;
+    skos:definition "Computed (DFT, molecular dynamics, screening)."@en , "계산으로 얻은 값(DFT, 분자동역학, 선별)."@ko .
+
+qn:MethodScheme a skos:ConceptScheme ;
+    rdfs:label "Methods"@en , "방법"@ko .
+
+qn:CyclicVoltammetry a skos:Concept ; skos:inScheme qn:MethodScheme ;
+    skos:prefLabel "Cyclic voltammetry"@en , "순환 전압전류법"@ko ;
+    skos:definition "Voltammetric measurement."@en , "전압전류 측정."@ko ;
+    qn:appliesToBasis qn:Experiment .
+qn:ControlledPotentialElectrolysis a skos:Concept ; skos:inScheme qn:MethodScheme ;
+    skos:prefLabel "Controlled-potential electrolysis"@en , "정전위 전기분해"@ko ;
+    skos:definition "Bulk electrolysis at fixed potential, e.g. for capacity."@en , "전위를 고정한 전기분해. 예: 용량 측정."@ko ;
+    qn:appliesToBasis qn:Experiment .
+qn:InSituSpectroscopy a skos:Concept ; skos:inScheme qn:MethodScheme ;
+    skos:prefLabel "In situ spectroscopy"@en , "현장 분광"@ko ;
+    skos:definition "IR, Raman, NMR or UV-vis while the cell runs."@en , "셀이 작동하는 동안의 IR, Raman, NMR, UV-vis."@ko ;
+    qn:appliesToBasis qn:Experiment .
+qn:DFT a skos:Concept ; skos:inScheme qn:MethodScheme ;
+    skos:prefLabel "DFT"@en , "DFT"@ko ;
+    skos:definition "Density functional theory."@en , "밀도범함수 이론."@ko ;
+    qn:appliesToBasis qn:Computation .
+qn:MolecularDynamics a skos:Concept ; skos:inScheme qn:MethodScheme ;
+    skos:prefLabel "Molecular dynamics"@en , "분자동역학"@ko ;
+    skos:definition "Classical or ab initio molecular dynamics."@en , "고전 또는 제일원리 분자동역학."@ko ;
+    qn:appliesToBasis qn:Computation .
+
+qn:ObservationKindScheme a skos:ConceptScheme ;
+    rdfs:label "Observation kinds"@en , "관찰 종류"@ko .
+
+qn:BindingMode a skos:Concept ; skos:inScheme qn:ObservationKindScheme ;
+    skos:prefLabel "Binding mode"@en , "결합 형태"@ko ;
+    skos:definition "How the reduced quinone holds CO2."@en , "환원된 quinone이 CO2를 붙잡는 방식."@ko .
+qn:OxygenStability a skos:Concept ; skos:inScheme qn:ObservationKindScheme ;
+    skos:prefLabel "Oxygen stability"@en , "산소 안정성"@ko ;
+    skos:definition "Whether the reduced quinone survives O2."@en , "환원된 quinone이 O2에서 살아남는지."@ko .
+
+qn:OutcomeScheme a skos:ConceptScheme ;
+    rdfs:label "Observation outcomes"@en , "관찰 결과"@ko .
+
+qn:CO2Adduct a skos:Concept ; skos:inScheme qn:OutcomeScheme ;
+    skos:prefLabel "CO2 adduct"@en , "CO2 adduct"@ko ;
+    skos:definition "Covalent addition of CO2 to the reduced quinone."@en , "환원된 quinone에 CO2가 공유 결합으로 붙은 것."@ko ;
+    qn:forKind qn:BindingMode .
+qn:Carbonate a skos:Concept ; skos:inScheme qn:OutcomeScheme ;
+    skos:prefLabel "Carbonate"@en , "카보네이트"@ko ;
+    skos:definition "CO2 held as carbonate."@en , "CO2가 카보네이트로 결합."@ko ;
+    qn:forKind qn:BindingMode .
+qn:Bicarbonate a skos:Concept ; skos:inScheme qn:OutcomeScheme ;
+    skos:prefLabel "Bicarbonate"@en , "비카보네이트"@ko ;
+    skos:definition "CO2 held as bicarbonate (pH swing)."@en , "CO2가 비카보네이트로 결합(pH swing)."@ko ;
+    qn:forKind qn:BindingMode .
+qn:Carbamate a skos:Concept ; skos:inScheme qn:OutcomeScheme ;
+    skos:prefLabel "Carbamate"@en , "카바메이트"@ko ;
+    skos:definition "CO2 held as carbamate."@en , "CO2가 카바메이트로 결합."@ko ;
+    qn:forKind qn:BindingMode .
+qn:Physisorption a skos:Concept ; skos:inScheme qn:OutcomeScheme ;
+    skos:prefLabel "Physisorption"@en , "물리 흡착"@ko ;
+    skos:definition "No chemical bond."@en , "화학 결합 없음."@ko ;
+    qn:forKind qn:BindingMode .
+qn:OtherBinding a skos:Concept ; skos:inScheme qn:OutcomeScheme ;
+    skos:prefLabel "Other binding"@en , "기타 결합"@ko ;
+    skos:definition "Binding not listed above."@en , "위에 없는 결합."@ko ;
+    qn:forKind qn:BindingMode .
+qn:OxygenStable a skos:Concept ; skos:inScheme qn:OutcomeScheme ;
+    skos:prefLabel "Oxygen stable"@en , "산소에 안정"@ko ;
+    skos:definition "Survives oxygen under the stated condition."@en , "밝힌 조건에서 산소에 안정."@ko ;
+    qn:forKind qn:OxygenStability .
+qn:OxygenUnstable a skos:Concept ; skos:inScheme qn:OutcomeScheme ;
+    skos:prefLabel "Oxygen unstable"@en , "산소에 불안정"@ko ;
+    skos:definition "Degrades or is oxidised by oxygen."@en , "산소에 의해 분해되거나 산화된다."@ko ;
+    qn:forKind qn:OxygenStability .
+qn:OxygenImproved a skos:Concept ; skos:inScheme qn:OutcomeScheme ;
+    skos:prefLabel "Oxygen stability improved"@en , "산소 안정성 개선"@ko ;
+    skos:definition "More stable than its own baseline, still not fully stable."@en , "자체 기준보다 안정해졌으나 완전하지는 않다."@ko ;
+    qn:forKind qn:OxygenStability .
+
+qn:EvidenceSourceScheme a skos:ConceptScheme ;
+    rdfs:label "Evidence sources"@en , "근거 위치"@ko .
+
+qn:Abstract a skos:Concept ; skos:inScheme qn:EvidenceSourceScheme ;
+    skos:prefLabel "Abstract"@en , "초록"@ko ;
+    skos:definition "Quote taken from the abstract; carries no page."@en , "초록에서 가져온 인용. 쪽이 없다."@ko .
+qn:FullText a skos:Concept ; skos:inScheme qn:EvidenceSourceScheme ;
+    skos:prefLabel "Full text"@en , "본문"@ko ;
+    skos:definition "Quote taken from the full text; needs a page."@en , "본문에서 가져온 인용. 쪽이 필요하다."@ko .
+

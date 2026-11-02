@@ -1,0 +1,251 @@
+{
+ "paper_id": "m023",
+ "title": "Correlating the structure of quinone-functionalized carbons with electrochemical CO2 capture performance",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "f_CMK_3",
+   "name": "f-CMK-3",
+   "skeleton": "Anthraquinone",
+   "form": "CarbonImmobilized",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "While the anthraquinone-functionalized mesoporous carbon, f-CMK-3, showed the highest quinone loading",
+   "page": 1
+  },
+  {
+   "key": "f_BP_1300",
+   "name": "f-BP-1300",
+   "skeleton": "Anthraquinone",
+   "form": "CarbonImmobilized",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "This resulted in three functionalized carbon samples: f-CMK-3, f-BP-1300 and f-YP-80F.",
+   "page": 3
+  },
+  {
+   "key": "f_YP_80F",
+   "name": "f-YP-80F",
+   "skeleton": "Anthraquinone",
+   "form": "CarbonImmobilized",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "In contrast, the predominantly microporous functionalized carbon, f-YP-80F, showed a higher quinone utilization",
+   "page": 1
+  },
+  {
+   "key": "f_ABP",
+   "name": "f-ABP",
+   "skeleton": "Anthraquinone",
+   "form": "CarbonImmobilized",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "CV experiments of functionalized ABP (f-ABP, Fig. 6B) show two well-deﬁned redox peaks attributed to anthraquinone",
+   "page": 9
+  }
+ ],
+ "conditions": [
+  {
+   "key": "bmim_tfsi_n2",
+   "solvent": "IonicLiquid",
+   "reference_electrode": "NotReported",
+   "atmosphere": "Inert",
+   "electrolyte_text": "1-Butyl-3-methylimidazolium bis(triﬂuoromethyl sulfonyl)imide ionic liquid (200 mL) was used as the electrolyte in all experiments.",
+   "additive_text": "NotReported",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "1-Butyl-3-methylimidazolium bis(triﬂuoromethyl sulfonyl)imide ionic liquid (200 mL) was used as the electrolyte in all experiments.",
+   "page": 3
+  },
+  {
+   "key": "bmim_tfsi_co2",
+   "solvent": "IonicLiquid",
+   "reference_electrode": "NotReported",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "1-Butyl-3-methylimidazolium bis(triﬂuoromethyl sulfonyl)imide ionic liquid (200 mL) was used as the electrolyte in all experiments.",
+   "additive_text": "NotReported",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "For two-electrode cells under a CO2 atmosphere, the same set-up was followed; however, a glove-bag ﬁlled with CO2 was used",
+   "page": 3
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "f_ABP",
+   "condition": "bmim_tfsi_co2",
+   "property": "CaptureCapacity",
+   "value": 0.2,
+   "unit": "MmolPerGram",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": "NotReported",
+   "quote": "The initial CO2 adsorption capacity of f-ABP (0.2 mmol/g) was lower than what was observed for f-BP-1300",
+   "page": 9
+  },
+  {
+   "compound": "f_CMK_3",
+   "condition": "bmim_tfsi_co2",
+   "property": "EnergyConsumption",
+   "value": 281.6,
+   "unit": "KJPerMol",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": "NotReported",
+   "quote": "f-CMK-3 had the highest energy consumption (281.6 ± 24.1 kJ/molCO2)",
+   "page": 6
+  },
+  {
+   "compound": "f_YP_80F",
+   "condition": "bmim_tfsi_co2",
+   "property": "EnergyConsumption",
+   "value": 211.5,
+   "unit": "KJPerMol",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": "NotReported",
+   "quote": "compared to f-YP-80F (211.5 ± 24.5 kJ/molCO2)",
+   "page": 6
+  },
+  {
+   "compound": "f_BP_1300",
+   "condition": "bmim_tfsi_co2",
+   "property": "EnergyConsumption",
+   "value": 197.4,
+   "unit": "KJPerMol",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": "NotReported",
+   "quote": "and f-BP-1300 (197.4 ± 33.3 kJ/molCO2)",
+   "page": 6
+  }
+ ],
+ "observations": [
+  {
+   "compound": "f_CMK_3",
+   "condition": "bmim_tfsi_co2",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "This caused a decrease in the CO2 pressure as carbon dioxide was captured by reduced quinones",
+   "page": 6
+  },
+  {
+   "compound": "f_YP_80F",
+   "condition": "bmim_tfsi_co2",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "This caused a decrease in the CO2 pressure as carbon dioxide was captured by reduced quinones",
+   "page": 6
+  },
+  {
+   "compound": "f_BP_1300",
+   "condition": "bmim_tfsi_co2",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "This caused a decrease in the CO2 pressure as carbon dioxide was captured by reduced quinones",
+   "page": 6
+  },
+  {
+   "compound": "f_ABP",
+   "condition": "bmim_tfsi_co2",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "indicating the capture of CO2 (Fig. 6B)",
+   "page": 9
+  }
+ ],
+ "not_reported": [
+  "reference electrode of the potentials",
+  "binding constant",
+  "rate constant",
+  "faradaic efficiency values for f-ABP"
+ ],
+ "dropped": [
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "f_YP_80F",
+    "condition": "bmim_tfsi_co2",
+    "property": "CaptureCapacity",
+    "value": 0.6,
+    "unit": "MmolPerGram",
+    "basis": "Experiment",
+    "method": "ControlledPotentialElectrolysis",
+    "redox_couple": "NotReported",
+    "quote": "f-YP-80F having the highest adsorption capacity (0.6 mmol/g)"
+   },
+   "reasons": [
+    "measurements[0] f_YP_80F/CaptureCapacity: the text says 'theoretical', so basis must be Computation, not Experiment"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "f_CMK_3",
+    "condition": "bmim_tfsi_co2",
+    "property": "CaptureCapacity",
+    "value": 0.4,
+    "unit": "MmolPerGram",
+    "basis": "Experiment",
+    "method": "ControlledPotentialElectrolysis",
+    "redox_couple": "NotReported",
+    "quote": "followed by f-CMK-3 (0.4 mmol/g)"
+   },
+   "reasons": [
+    "measurements[1] f_CMK_3/CaptureCapacity: the text says 'theoretical', so basis must be Computation, not Experiment"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "f_BP_1300",
+    "condition": "bmim_tfsi_co2",
+    "property": "CaptureCapacity",
+    "value": 0.3,
+    "unit": "MmolPerGram",
+    "basis": "Experiment",
+    "method": "ControlledPotentialElectrolysis",
+    "redox_couple": "NotReported",
+    "quote": "and f-BP-1300 (0.3 mmol/g)"
+   },
+   "reasons": [
+    "measurements[2] f_BP_1300/CaptureCapacity: the text says 'theoretical', so basis must be Computation, not Experiment"
+   ]
+  }
+ ],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 4,
+   "dropped": 13
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 14,
+   "dropped": 3
+  },
+  {
+   "n": 3,
+   "parse_errors": [],
+   "kept": 14,
+   "dropped": 3
+  },
+  {
+   "n": 4,
+   "parse_errors": [],
+   "kept": 14,
+   "dropped": 3
+  }
+ ],
+ "review_status": "machine_extracted"
+}

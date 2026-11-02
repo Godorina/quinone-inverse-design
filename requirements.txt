@@ -1,0 +1,32 @@
+# One env for this project: make env  ->  .venv/ (python 3.11)
+# Versions pinned to the envs that already passed: gpu4pyscf conda env (chemistry) and mlp-icl-llmsr venv (ontology).
+# onto/phase_4_extract keeps its own uv project (pyproject.toml + uv.lock), created inside that folder.
+
+# chemistry / DFT (CUDA 12)
+pyscf==2.13.1
+pyscf-dispersion==1.5.0
+gpu4pyscf-cuda12x==1.7.1
+gpu4pyscf-libxc-cuda12x==0.8.1
+cupy-cuda12x==14.1.1
+cutensor-cu12==2.6.0
+geometric==1.1.1
+rdkit==2026.3.3
+ase==3.28.0
+numpy==2.4.6
+scipy==1.17.1
+
+# ontology checks
+rdflib==7.6.0
+pyshacl==0.40.1
+owlrl==7.6.2
+pyoxigraph==0.5.11
+
+# CUDA 12 runtime libs for cupy/gpu4pyscf (the conda env had these; pip needs them explicitly)
+nvidia-cublas-cu12==12.9.2.10
+nvidia-cuda-nvrtc-cu12==12.9.86
+nvidia-cuda-runtime-cu12==12.9.79
+nvidia-cufft-cu12==11.4.1.4
+nvidia-curand-cu12==10.3.10.19
+nvidia-cusolver-cu12==11.7.5.82
+nvidia-cusparse-cu12==12.5.10.65
+nvidia-nvjitlink-cu12==12.9.86

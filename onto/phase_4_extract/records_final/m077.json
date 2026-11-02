@@ -1,0 +1,241 @@
+{
+ "paper_id": "m077",
+ "title": "Thermodynamic Assessment of Redox-Active CO 2 Capture Agent Performance in Aerobic Environments",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "BQ_Cl4",
+   "name": "2,3,5,6-tetrachlorobenzoquinone",
+   "skeleton": "Benzoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "ElectronWithdrawing"
+   ],
+   "substituent_text": null,
+   "quote": "the characteristics of 2,3,5,6-tetrachlorobenzoquinone, the quinone with the second most positive reduction potential in Figure 1b",
+   "page": 4
+  },
+  {
+   "key": "BQ_Cl2",
+   "name": "BQ-Cl2",
+   "skeleton": "Benzoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "ElectronWithdrawing"
+   ],
+   "substituent_text": null,
+   "quote": "Four of the quinones examined do not form stable anion CO2 adducts: BQ-Cl4, BQ-Cl2, p-NQ-Cl2, and one isomer of o-NQ.",
+   "page": 8
+  },
+  {
+   "key": "PQ_I2",
+   "name": "PQ-I2",
+   "skeleton": "Phenanthrenequinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "ElectronWithdrawing"
+   ],
+   "substituent_text": null,
+   "quote": "Diiodo-substituted PQ, PQ-I2, retains a high log(KC1) value, decreasing by less than 1.5 from PQ",
+   "page": 8
+  },
+  {
+   "key": "PQ_I",
+   "name": "PQ-I",
+   "skeleton": "Phenanthrenequinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "ElectronWithdrawing"
+   ],
+   "substituent_text": null,
+   "quote": "only BQ-Cl2, PQ-I2, and PQ-I, due to the combination of a moderately positive second reduction potential and large KC1, can achieve nearly complete binding of all sorbent molecules to CO2",
+   "page": 8
+  },
+  {
+   "key": "p_NQ",
+   "name": "p-NQ",
+   "skeleton": "Naphthoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "where larger KC1 and KC2 for similar EA1 0 and EA2 0 yield >1:1 CO2 loading at more positive potentials than for p-NQ.",
+   "page": 8
+  },
+  {
+   "key": "p_NQ_Me2",
+   "name": "p-NQ-Me2",
+   "skeleton": "Naphthoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Alkyl"
+   ],
+   "substituent_text": null,
+   "quote": "applied potentials negative of EO d2 0 by 0.1 to 0.2 V are necessary to achieve >1:1 CO2 loading of the absorbent bar p-NQ-Me2",
+   "page": 8
+  },
+  {
+   "key": "p_NQ_Cl2",
+   "name": "p-NQ-Cl2",
+   "skeleton": "Naphthoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "ElectronWithdrawing"
+   ],
+   "substituent_text": null,
+   "quote": "p-NQ-Cl2 (with close to the same EA2 0 as PQ-I2) has a log(KC1) that decreases by more than 3 units from p-NQ",
+   "page": 8
+  },
+  {
+   "key": "AQ",
+   "name": "AQ",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "The combination of a comparable low KC1 and quite negative second reduction potential for AQ results in poor sorbent loading",
+   "page": 8
+  },
+  {
+   "key": "PQ",
+   "name": "PQ",
+   "skeleton": "Phenanthrenequinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "between iodo phenanthrenequinones and neat phenanthrenequinone (PQ).",
+   "page": 8
+  }
+ ],
+ "conditions": [
+  {
+   "key": "dmf_flue_gas",
+   "solvent": "DMF",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "FlueGas",
+   "electrolyte_text": null,
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "simulated flue gas, 3% O2, 10% CO2, balance N2",
+   "page": 8
+  },
+  {
+   "key": "dmf_dac",
+   "solvent": "DMF",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "AirOxygen",
+   "electrolyte_text": null,
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "direct air capture, 21% O2, 400 ppm of CO2, balance N2",
+   "page": 8
+  }
+ ],
+ "measurements": [],
+ "observations": [
+  {
+   "compound": "BQ_Cl4",
+   "condition": "dmf_flue_gas",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "the binding of a second CO2 to the dianion of BQ-Cl4 is unfavorable",
+   "page": 8
+  },
+  {
+   "compound": "PQ_I2",
+   "condition": "dmf_flue_gas",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "it is favorable for PQ-I2 and p-NQ, which then in Figure 6c yields the mixed formation of A(CO2)2− and A(CO2)2 2−",
+   "page": 8
+  },
+  {
+   "compound": "p_NQ",
+   "condition": "dmf_flue_gas",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "it is favorable for PQ-I2 and p-NQ, which then in Figure 6c yields the mixed formation of A(CO2)2− and A(CO2)2 2−",
+   "page": 8
+  }
+ ],
+ "not_reported": [
+  "Specific reduction potentials (EA1, EA2) for individual compounds in Volts vs Fc/Fc+ are referenced in Table S1 (Supporting Information) but not printed in the main text.",
+  "Specific binding constants (KC1, KC2) for compounds other than the generic model parameters (BQ-Cl4 proxy) are referenced in Table S3 (Supporting Information) but not printed in the main text.",
+  "Experimental values; all reported values are from DFT or thermodynamic modeling."
+ ],
+ "dropped": [
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "BQ_Cl4",
+    "condition": "dmf_flue_gas",
+    "property": "BindingConstant",
+    "value": 10000000000.0,
+    "unit": "PerMolar",
+    "basis": "Computation",
+    "method": "DFT",
+    "redox_couple": "NotReported",
+    "quote": "KC1 1010 mol/L"
+   },
+   "reasons": [
+    "measurements[0] BQ_Cl4/BindingConstant: the number 10000000000.0 is not printed in the quote; quote the sentence or table row that prints it"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "BQ_Cl4",
+    "condition": "dmf_flue_gas",
+    "property": "BindingConstant",
+    "value": 10000.0,
+    "unit": "PerMolar",
+    "basis": "Computation",
+    "method": "DFT",
+    "redox_couple": "NotReported",
+    "quote": "KC2 104 mol/L"
+   },
+   "reasons": [
+    "measurements[1] BQ_Cl4/BindingConstant: the number 10000.0 is not printed in the quote; quote the sentence or table row that prints it"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "BQ_Cl4",
+    "condition": "dmf_flue_gas",
+    "property": "BindingConstant",
+    "value": 1.0,
+    "unit": "PerMolar",
+    "basis": "Computation",
+    "method": "DFT",
+    "redox_couple": "NotReported",
+    "quote": "KB 10−5 mol/L"
+   },
+   "reasons": [
+    "measurements[2] BQ_Cl4/BindingConstant: the number 1.0 is not printed in the quote; quote the sentence or table row that prints it"
+   ]
+  }
+ ],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 14,
+   "dropped": 3
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 14,
+   "dropped": 0
+  }
+ ],
+ "review_status": "machine_extracted"
+}

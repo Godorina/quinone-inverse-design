@@ -1,0 +1,17 @@
+# CQ20: Same skeleton, different substituent, same condition and same reduction step: how do potential and binding constant differ?
+PREFIX qn: <https://w3id.org/quinone#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX schema: <https://schema.org/>
+
+SELECT ?skeleton ?nameA ?substituentA ?nameB ?substituentB ?potentialA ?potentialB ?logKA ?logKB WHERE {
+  ?a a qn:Compound ; schema:name ?nameA ; qn:skeleton ?sk ; qn:substituentClass ?sa .
+  ?b a qn:Compound ; schema:name ?nameB ; qn:skeleton ?sk ; qn:substituentClass ?sb .
+  FILTER(STR(?a) < STR(?b) && ?sa != ?sb)
+  ?sk skos:prefLabel ?skeleton . FILTER(lang(?skeleton) = "en")
+  ?sa skos:prefLabel ?substituentA . FILTER(lang(?substituentA) = "en")
+  ?sb skos:prefLabel ?substituentB . FILTER(lang(?substituentB) = "en")
+  ?ea a qn:Measurement ; qn:ofCompound ?a ; qn:property qn:HalfWavePotential ; qn:value ?potentialA ; qn:redoxCouple ?cp ; qn:underCondition ?c .
+  ?eb a qn:Measurement ; qn:ofCompound ?b ; qn:property qn:HalfWavePotential ; qn:value ?potentialB ; qn:redoxCouple ?cp ; qn:underCondition ?c .
+  ?ka a qn:Measurement ; qn:ofCompound ?a ; qn:property qn:Log10BindingConstant ; qn:value ?logKA ; qn:underCondition ?c .
+  ?kb a qn:Measurement ; qn:ofCompound ?b ; qn:property qn:Log10BindingConstant ; qn:value ?logKB ; qn:underCondition ?c .
+} ORDER BY ?skeleton ?nameA ?nameB

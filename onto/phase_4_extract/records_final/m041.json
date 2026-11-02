@@ -1,0 +1,206 @@
+{
+ "paper_id": "m041",
+ "title": "Ion pairing enhances hydroquinone stability toward oxygen in aqueous electrochemical carbon dioxide capture",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "TMAP_NH2_NQ",
+   "name": "TMAP-NH2-NQ",
+   "skeleton": "Naphthoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Amino",
+    "IonicGroup"
+   ],
+   "substituent_text": null,
+   "quote": "Figure 2a illustrates the synthesis of TMAP-NH2-NQ, beginning with nucleophilic substitution of 2,3-dichloronaphthoquinone with potassium phthalimide.",
+   "page": 2
+  },
+  {
+   "key": "BTMAPAQ",
+   "name": "1,5-BTMAPAQ",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Amino",
+    "IonicGroup"
+   ],
+   "substituent_text": null,
+   "quote": "Recently, a water-soluble anthraquinone, 1,5-BTMAPAQ, has been utilized for efficient CO2 capture and concentration through a combination of nucleophilicity- and pH-swing mechanisms28.",
+   "page": 2
+  }
+ ],
+ "conditions": [
+  {
+   "key": "KCl_N2",
+   "solvent": "Water",
+   "reference_electrode": "SHE",
+   "atmosphere": "Inert",
+   "electrolyte_text": "1 M KCl",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "TMAP-NH2-NQ has a potential of −0.317 V vs. the standard hydrogen electrode (SHE) in 1 M KCl (Fig. 2d).",
+   "page": 3
+  },
+  {
+   "key": "KCl_CO2",
+   "solvent": "Water",
+   "reference_electrode": "SHE",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "1 M KCl",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "As shown in Fig. 2d, CV data under nitrogen and CO2 conditions reveal that KCO2 for TMAP-NH2-NQ is 1:1 × 109 M",
+   "page": 3
+  },
+  {
+   "key": "TEAC_CO2",
+   "solvent": "Water",
+   "reference_electrode": "SHE",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "1 M TEAC",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "CV analysis of TMAP-NH2-NQ in 1 M TEAC under N2 and CO2 shows positive shift of the oxidation peak of ~40 mV (Supplementary Fig. 16) and ~100 mV (Fig. 6d), respectively.",
+   "page": 5
+  },
+  {
+   "key": "TEAC_O2_CO2",
+   "solvent": "Water",
+   "reference_electrode": "NotReported",
+   "atmosphere": "FlueGas",
+   "electrolyte_text": "1 M TEAC",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Finally, we tested a 0.1 M solution of TMAP-NH₂-NQ in 1 M TEAC electrolyte in a full flow cell for an entire capture and release cycle, with capture from a gas mixture containing 10% CO2 and 3% O2",
+   "page": 7
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "TMAP_NH2_NQ",
+   "condition": "KCl_N2",
+   "property": "ReductionPotential",
+   "value": -0.317,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "TwoElectron",
+   "quote": "TMAP-NH2-NQ has a potential of −0.317 V vs. the standard hydrogen electrode (SHE) in 1 M KCl (Fig. 2d).",
+   "page": 3
+  },
+  {
+   "compound": "TMAP_NH2_NQ",
+   "condition": "TEAC_O2_CO2",
+   "property": "FaradaicEfficiency",
+   "value": 87.0,
+   "unit": "Percent",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": null,
+   "quote": "This cycle, conducted at 40 mA cm⁻² with 3 h of exposure to oxygen during capture, achieved 87% Coulombic efficiency and an 82% release-to-capture ratio at an energy cost of 157 kJ/mol CO2.",
+   "page": 7
+  },
+  {
+   "compound": "TMAP_NH2_NQ",
+   "condition": "TEAC_O2_CO2",
+   "property": "EnergyConsumption",
+   "value": 157.0,
+   "unit": "KJPerMol",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": null,
+   "quote": "This cycle, conducted at 40 mA cm⁻² with 3 h of exposure to oxygen during capture, achieved 87% Coulombic efficiency and an 82% release-to-capture ratio at an energy cost of 157 kJ/mol CO2.",
+   "page": 7
+  }
+ ],
+ "observations": [
+  {
+   "compound": "TMAP_NH2_NQ",
+   "condition": "KCl_CO2",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "When quinone is reduced to 100% state of charge (SOC) under CO2, major species include hydroquinone (H2Q), a CO2 adduct (Q(CO2)2 2−), and the dianion (Q2-)",
+   "page": 3
+  },
+  {
+   "compound": "TMAP_NH2_NQ",
+   "condition": "TEAC_O2_CO2",
+   "kind": "OxygenStability",
+   "outcome": "OxygenImproved",
+   "quote": "Here we show that a naphthoquinone derivative, when reduced in the presence of tetraalkylammonium countercations, displays enhanced stability toward oxygen while maintaining carbon dioxide binding ability.",
+   "page": 1
+  }
+ ],
+ "not_reported": [
+  "Reference electrode for the flow cell Coulombic efficiency measurements",
+  "Specific pH value for the TEAC flow cell experiments"
+ ],
+ "dropped": [
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "TMAP_NH2_NQ",
+    "condition": "KCl_CO2",
+    "property": "BindingConstant",
+    "value": 1100000000.0,
+    "unit": "PerMolar",
+    "basis": "Experiment",
+    "method": "CyclicVoltammetry",
+    "redox_couple": null,
+    "quote": "As shown in Fig. 2d, CV data under nitrogen and CO2 conditions reveal that KCO2 for TMAP-NH2-NQ is 1:1 × 109 M"
+   },
+   "reasons": [
+    "measurements[1] TMAP_NH2_NQ/BindingConstant: the number 1100000000.0 is not printed in the quote; quote the sentence or table row that prints it"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "TMAP_NH2_NQ",
+    "condition": "TEAC_CO2",
+    "property": "BindingConstant",
+    "value": 15000000000.0,
+    "unit": "PerMolar",
+    "basis": "Experiment",
+    "method": "CyclicVoltammetry",
+    "redox_couple": null,
+    "quote": "This behavior is illustrated in thermodynamic terms in Fig. 7a, b, which highlights the enhancement of K’CO2 through ion pairing, yielding a new value of 1:5 × 1010 M"
+   },
+   "reasons": [
+    "measurements[2] TMAP_NH2_NQ/BindingConstant: the number 15000000000.0 is not printed in the quote; quote the sentence or table row that prints it"
+   ]
+  }
+ ],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 9,
+   "dropped": 5
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 11,
+   "dropped": 2
+  },
+  {
+   "n": 3,
+   "parse_errors": [],
+   "kept": 11,
+   "dropped": 2
+  },
+  {
+   "n": 4,
+   "parse_errors": [],
+   "kept": 11,
+   "dropped": 0
+  }
+ ],
+ "review_status": "machine_extracted"
+}

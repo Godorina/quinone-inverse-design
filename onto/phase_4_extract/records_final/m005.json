@@ -1,0 +1,253 @@
+{
+ "paper_id": "m005",
+ "title": "Computational and Experimental Design of Quinones for Electrochemical CO 2 Capture and Concentration",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "c7",
+   "name": "2,3-dicyano-1,4-naphthoquinone",
+   "skeleton": "Naphthoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "ElectronWithdrawing"
+   ],
+   "substituent_text": null,
+   "quote": "Compounds 2,3-dicyano-1,4-naphthoquinone (7),19,20",
+   "page": 2
+  },
+  {
+   "key": "c8",
+   "name": "tetramethylester-p-benzoquinone",
+   "skeleton": "Benzoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "ElectronWithdrawing"
+   ],
+   "substituent_text": null,
+   "quote": "tetramethylester-p-benzoquinone (8),21,22",
+   "page": 2
+  },
+  {
+   "key": "c9",
+   "name": "Bromanil",
+   "skeleton": "Benzoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "ElectronWithdrawing"
+   ],
+   "substituent_text": null,
+   "quote": "Bromanil (9) and 2,3-dichloro-p-naphthoqui-none (10) were purchased",
+   "page": 2
+  },
+  {
+   "key": "c10",
+   "name": "2,3-dichloro-p-naphthoquinone",
+   "skeleton": "Naphthoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "ElectronWithdrawing"
+   ],
+   "substituent_text": null,
+   "quote": "2,3-dichloro-p-naphthoqui-none (10) were purchased",
+   "page": 2
+  },
+  {
+   "key": "c11",
+   "name": "2,5-bis(dimethylamino)-p-benzoquinone",
+   "skeleton": "Benzoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Amino"
+   ],
+   "substituent_text": null,
+   "quote": "2,5-bis(dimethylamino)-p-benzoquinone (11),23",
+   "page": 2
+  },
+  {
+   "key": "c12",
+   "name": "2,5-bis(dimethylamino)-3,6-difluoro-p-benzoquinone",
+   "skeleton": "Benzoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Amino",
+    "ElectronWithdrawing"
+   ],
+   "substituent_text": null,
+   "quote": "2,5-bis(dimethylamino)-3,6-difluoro-p-benzoquinone (12),23",
+   "page": 2
+  },
+  {
+   "key": "c13",
+   "name": "tetra(dimethlyamino)-p-benzoquinone",
+   "skeleton": "Benzoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Amino"
+   ],
+   "substituent_text": null,
+   "quote": "tetra(dimethlyamino)-p-benzoquinone (13)24",
+   "page": 2
+  }
+ ],
+ "conditions": [
+  {
+   "key": "me_cn_tbapf6",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "NotReported",
+   "electrolyte_text": "100 mM concentration of tetrabutylammo-nium hexafluorophosphate (TBAPF6) supporting electrolyte",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "All experiments were performed in dry and degassed organic solvents using 1 mM analyte with 100 mM concentration of tetrabutylammo-nium hexafluorophosphate (TBAPF6) supporting electrolyte.",
+   "page": 2
+  },
+  {
+   "key": "dmf_tbapf6",
+   "solvent": "DMF",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "NotReported",
+   "electrolyte_text": "0.1 M TBAPF6 electrolyte",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "aAll values found using CV with 1 mM analyte and 0.1 M TBAPF6 electrolyte.",
+   "page": 6
+  },
+  {
+   "key": "dmso_tbapf6",
+   "solvent": "DMSO",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "NotReported",
+   "electrolyte_text": "0.1 M TBAPF6 electrolyte",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "aAll values found using CV with 1 mM analyte and 0.1 M TBAPF6 electrolyte.",
+   "page": 6
+  },
+  {
+   "key": "chcl3_tbapf6",
+   "solvent": "OtherSolvent",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "NotReported",
+   "electrolyte_text": "100 mM concentration of tetrabutylammo-nium hexafluorophosphate (TBAPF6) supporting electrolyte",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Chloroform was used as a solvent for tetramethylester-p-benzoquinone (8)",
+   "page": 6
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "c10",
+   "condition": "me_cn_tbapf6",
+   "property": "ReductionPotential",
+   "value": -1.51,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "MeCN −1.51 5.3 ± 0.6",
+   "page": 6
+  },
+  {
+   "compound": "c10",
+   "condition": "me_cn_tbapf6",
+   "property": "Log10BindingConstant",
+   "value": 5.3,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "NotReported",
+   "quote": "MeCN −1.51 5.3 ± 0.6",
+   "page": 6
+  },
+  {
+   "compound": "c10",
+   "condition": "dmf_tbapf6",
+   "property": "ReductionPotential",
+   "value": -1.61,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "DMF −1.61 5.7 ± 0.8",
+   "page": 6
+  },
+  {
+   "compound": "c10",
+   "condition": "dmf_tbapf6",
+   "property": "Log10BindingConstant",
+   "value": 5.7,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "NotReported",
+   "quote": "DMF −1.61 5.7 ± 0.8",
+   "page": 6
+  },
+  {
+   "compound": "c10",
+   "condition": "dmso_tbapf6",
+   "property": "ReductionPotential",
+   "value": -1.5,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "DMSO −1.50 5.5 ± 0.9",
+   "page": 6
+  },
+  {
+   "compound": "c10",
+   "condition": "dmso_tbapf6",
+   "property": "Log10BindingConstant",
+   "value": 5.5,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "NotReported",
+   "quote": "DMSO −1.50 5.5 ± 0.9",
+   "page": 6
+  }
+ ],
+ "observations": [
+  {
+   "compound": "c7",
+   "condition": "me_cn_tbapf6",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "indicating the species reacts with CO2 in a chemical step.",
+   "page": 6
+  },
+  {
+   "compound": "c11",
+   "condition": "me_cn_tbapf6",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "Upon reduction of the neutral quinone to the radical anion, it binds a CO2 molecule",
+   "page": 6
+  }
+ ],
+ "not_reported": [
+  "Specific reduction potentials and binding constants for compounds 7, 8, 9, 11, 12, and 13 are not explicitly printed in the provided text pages (referenced in Table 2 which is not fully legible/printed in the text stream)."
+ ],
+ "dropped": [],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 4,
+   "dropped": 15
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 19,
+   "dropped": 0
+  }
+ ],
+ "review_status": "machine_extracted"
+}

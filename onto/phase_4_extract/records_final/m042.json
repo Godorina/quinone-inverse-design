@@ -1,0 +1,195 @@
+{
+ "paper_id": "m042",
+ "title": "Modeling of CO2 Capture by Electro-Swing Reactive Adsorption from Low-Concentration Streams",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "pAQ",
+   "name": "poly(1,4-anthraquinone)",
+   "skeleton": "Anthraquinone",
+   "form": "Polymer",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "cathode made of a quinone polymerized into a solid, i.e., carbon fiber coated with carbon nanotubes (CNTs) and poly(1,4-anthraquinone) (p-AQ).",
+   "page": 2
+  },
+  {
+   "key": "AQ",
+   "name": "anthraquinone",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "k f 1 m3/(s·mol) 10−2 anthraquinone compound [23]",
+   "page": 11
+  }
+ ],
+ "conditions": [
+  {
+   "key": "IL_Bmim_TF2N",
+   "solvent": "IonicLiquid",
+   "reference_electrode": "NotReported",
+   "atmosphere": "NotReported",
+   "electrolyte_text": "1-butyl-3-methylimidazolium bis(trifluorosulfonyl)imide ([Bmim]-[TF2N])",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Using the ambient temperature ionic liquid 1-butyl-3-methylimidazolium bis(trifluorosulfonyl)imide ([Bmim]-[TF2N]) as both solvent and electrolyte",
+   "page": 2
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "AQ",
+   "condition": "IL_Bmim_TF2N",
+   "property": "BindingConstant",
+   "value": 10.0,
+   "unit": "PerMolar",
+   "basis": "Experiment",
+   "method": "NotReported",
+   "redox_couple": "NotReported",
+   "quote": "K1 m3/mol 10/1010 weakly complexing quinones/strongly complexing quinones [13]",
+   "page": 11
+  },
+  {
+   "compound": "pAQ",
+   "condition": "IL_Bmim_TF2N",
+   "property": "FaradaicEfficiency",
+   "value": 90.0,
+   "unit": "Percent",
+   "basis": "Experiment",
+   "method": "NotReported",
+   "redox_couple": "NotReported",
+   "quote": "the system experimentally achieved the 90% Faradaic efficiency in a pure CO2 environment.",
+   "page": 2
+  }
+ ],
+ "observations": [
+  {
+   "compound": "AQ",
+   "condition": "IL_Bmim_TF2N",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "quinone dianion diadduct (Q(CO2)2 2−)",
+   "page": 6
+  }
+ ],
+ "not_reported": [
+  "reference electrode of the potentials",
+  "atmosphere for the specific simulation runs",
+  "oxygen stability of the quinone compounds"
+ ],
+ "dropped": [
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "AQ",
+    "condition": "IL_Bmim_TF2N",
+    "property": "ReductionPotential",
+    "value": -1.21,
+    "unit": "Volt",
+    "basis": "Experiment",
+    "method": "NotReported",
+    "redox_couple": "FirstReduction",
+    "quote": "E ◦ 1 V −1.21 [10]"
+   },
+   "reasons": [
+    "measurements[0] AQ/ReductionPotential: -1.21 is followed by a citation marker, so it is another work's value or a model input; omit it"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "AQ",
+    "condition": "IL_Bmim_TF2N",
+    "property": "ReductionPotential",
+    "value": -1.21,
+    "unit": "Volt",
+    "basis": "Experiment",
+    "method": "NotReported",
+    "redox_couple": "SecondReduction",
+    "quote": "E ◦ 2 V −1.21 [10]"
+   },
+   "reasons": [
+    "measurements[1] AQ/ReductionPotential: -1.21 is followed by a citation marker, so it is another work's value or a model input; omit it"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "AQ",
+    "condition": "IL_Bmim_TF2N",
+    "property": "RateConstant",
+    "value": 0.01,
+    "unit": "PerMolarPerSecond",
+    "basis": "Experiment",
+    "method": "NotReported",
+    "redox_couple": "NotReported",
+    "quote": "k f 1 m3/(s·mol) 10−2 anthraquinone compound [23]"
+   },
+   "reasons": [
+    "measurements[2] AQ/RateConstant: the number 0.01 is not printed in the quote; quote the sentence or table row that prints it"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "AQ",
+    "condition": "IL_Bmim_TF2N",
+    "property": "BindingConstant",
+    "value": 10000000000.0,
+    "unit": "PerMolar",
+    "basis": "Experiment",
+    "method": "NotReported",
+    "redox_couple": "NotReported",
+    "quote": "K1 m3/mol 10/1010 weakly complexing quinones/strongly complexing quinones [13]"
+   },
+   "reasons": [
+    "measurements[4] AQ/BindingConstant: the number 10000000000.0 is not printed in the quote; quote the sentence or table row that prints it"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "pAQ",
+    "condition": "IL_Bmim_TF2N",
+    "property": "EnergyConsumption",
+    "value": 0.6,
+    "unit": "KJPerMol",
+    "basis": "Computation",
+    "method": "NotReported",
+    "redox_couple": "NotReported",
+    "quote": "the electrical consumption due to the electrochemical cycle is 0.6 MWh/tCO2"
+   },
+   "reasons": [
+    "measurements[6] pAQ/EnergyConsumption: quote is not verbatim on one page. page 10: your quote matches up to '...theelectricalconsumption' then the page has 'causedbygascompressioninanadiabaticsyste' but you wrote 'duetotheelectrochemicalcycleis0.6mwh/tco' (spaces ignored)",
+    "measurements[6] pAQ/EnergyConsumption: basis Computation needs method DFT or MolecularDynamics, or wording such as calculated or simulated"
+   ]
+  }
+ ],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 6,
+   "dropped": 5
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 6,
+   "dropped": 1
+  },
+  {
+   "n": 3,
+   "parse_errors": [],
+   "kept": 6,
+   "dropped": 0
+  }
+ ],
+ "review_status": "machine_extracted"
+}

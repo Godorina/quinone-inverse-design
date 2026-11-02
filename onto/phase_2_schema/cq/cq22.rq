@@ -1,0 +1,14 @@
+# CQ22: Which compounds bind CO2 at least as strongly as the threshold and are oxygen stable (or improved)?
+# params: minLogK=6
+PREFIX qn: <https://w3id.org/quinone#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX schema: <https://schema.org/>
+
+SELECT ?compound ?name ?logK ?outcome WHERE {
+  ?m a qn:Measurement ; qn:ofCompound ?compound ; qn:property qn:Log10BindingConstant ; qn:value ?logK .
+  FILTER(?logK >= ?minLogK)
+  ?o a qn:Observation ; qn:observationKind qn:OxygenStability ; qn:ofCompound ?compound ; qn:outcome ?out .
+  FILTER(?out IN (qn:OxygenStable, qn:OxygenImproved))
+  ?compound schema:name ?name .
+  ?out skos:prefLabel ?outcome . FILTER(lang(?outcome) = "en")
+} ORDER BY DESC(?logK)

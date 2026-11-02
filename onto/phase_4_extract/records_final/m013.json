@@ -1,0 +1,170 @@
+{
+ "paper_id": "m013",
+ "title": "Preparation Methods and Performance Analysis of Polyanthra-Quinone/Carbon Nanotube Composites for Capturing Carbon Dioxide",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "PAQ_MWCNTs",
+   "name": "poly(anthraquinone)/multi-walled carbon nanotube composites",
+   "skeleton": "Anthraquinone",
+   "form": "Polymer",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "poly(anthraquinone)/multi-walled carbon nanotube composites (PAQ/MWCNTs) for capturing carbon dioxide",
+   "page": 1
+  }
+ ],
+ "conditions": [
+  {
+   "key": "cond_N2",
+   "solvent": "Water",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "Inert",
+   "electrolyte_text": "20 M lithium bis(trifluoromethanesulfonyl)imide aqueous electrolyte",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "a 20 M lithium bis(trifluoromethanesulfonyl)imide aqueous electrolyte, and a scan rate of 25 mV s−1.",
+   "page": 5
+  },
+  {
+   "key": "cond_CO2",
+   "solvent": "Water",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "20 M lithium bis(trifluoromethanesulfonyl)imide aqueous electrolyte",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "The three electrodes were placed in a 20 M lithium bis(trifluoromethanesulfonyl)imide electrolyte under the conditions of nitrogen and carbon dioxide inlet.",
+   "page": 4
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "PAQ_MWCNTs",
+   "condition": "cond_N2",
+   "property": "HalfWavePotential",
+   "value": -0.251,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "TwoElectron",
+   "quote": "The anodic peak potential of the composite under CO2 conditions is significantly positively shifted compared to that under nitrogen conditions (from −0.251 V to 0.065 V).",
+   "page": 7
+  }
+ ],
+ "observations": [
+  {
+   "compound": "PAQ_MWCNTs",
+   "condition": "cond_CO2",
+   "kind": "BindingMode",
+   "outcome": "Carbonate",
+   "quote": "where the CO2 molecule carboxylates the quinone to produce carbonate",
+   "page": 6
+  }
+ ],
+ "not_reported": [
+  "pH of the electrolyte",
+  "Oxygen stability of the compound"
+ ],
+ "dropped": [
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "PAQ_MWCNTs",
+    "condition": "cond_CO2",
+    "property": "HalfWavePotential",
+    "value": 0.065,
+    "unit": "Volt",
+    "basis": "Experiment",
+    "method": "CyclicVoltammetry",
+    "redox_couple": "TwoElectron",
+    "quote": "the anodic peak potential Epa, and the reduction potential Epc are 1.392 mA, 1.450 mA, 0.065 V, and −0.190 V, respectively."
+   },
+   "reasons": [
+    "measurements PAQ_MWCNTs/cond_CO2/HalfWavePotential: HalfWavePotential has different values (-0.19, 0.065) for the same compound and condition. Make one condition per value (pH, salt, additive or solvent) and give each value its own condition key"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "PAQ_MWCNTs",
+    "condition": "cond_CO2",
+    "property": "HalfWavePotential",
+    "value": -0.19,
+    "unit": "Volt",
+    "basis": "Experiment",
+    "method": "CyclicVoltammetry",
+    "redox_couple": "TwoElectron",
+    "quote": "the anodic peak potential Epa, and the reduction potential Epc are 1.392 mA, 1.450 mA, 0.065 V, and −0.190 V, respectively."
+   },
+   "reasons": [
+    "measurements PAQ_MWCNTs/cond_CO2/HalfWavePotential: HalfWavePotential has different values (-0.19, 0.065) for the same compound and condition. Make one condition per value (pH, salt, additive or solvent) and give each value its own condition key"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "PAQ_MWCNTs",
+    "condition": "cond_CO2",
+    "property": "CaptureCapacity",
+    "value": 7.8,
+    "unit": "MmolPerGram",
+    "basis": "Experiment",
+    "method": "NotReported",
+    "redox_couple": null,
+    "quote": "the actual CO2 capture capacity of the prepared PAQ/MWCNTs composite is converted to 7.80 mmol·g−1"
+   },
+   "reasons": [
+    "measurements PAQ_MWCNTs/cond_CO2/CaptureCapacity: CaptureCapacity has different values (7.8, 9.26) for the same compound and condition. Make one condition per value (pH, salt, additive or solvent) and give each value its own condition key"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "PAQ_MWCNTs",
+    "condition": "cond_CO2",
+    "property": "CaptureCapacity",
+    "value": 9.26,
+    "unit": "MmolPerGram",
+    "basis": "Experiment",
+    "method": "NotReported",
+    "redox_couple": null,
+    "quote": "the theoretical CO2 uptake capacity of PAQ/MWCNTs can be obtained as 9.26 mmol·g−1"
+   },
+   "reasons": [
+    "measurements PAQ_MWCNTs/cond_CO2/CaptureCapacity: CaptureCapacity has different values (7.8, 9.26) for the same compound and condition. Make one condition per value (pH, salt, additive or solvent) and give each value its own condition key"
+   ]
+  }
+ ],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 5,
+   "dropped": 4
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 5,
+   "dropped": 4
+  },
+  {
+   "n": 3,
+   "parse_errors": [],
+   "kept": 5,
+   "dropped": 4
+  },
+  {
+   "n": 4,
+   "parse_errors": [],
+   "kept": 5,
+   "dropped": 4
+  }
+ ],
+ "review_status": "machine_extracted"
+}

@@ -1,0 +1,41 @@
+{
+  "name": "SJZRFNPTPXVJLK-UHFFFAOYSA-N_Q_dianion_tz",
+  "task": "opt",
+  "status": "ok",
+  "spec": {
+    "name": "SJZRFNPTPXVJLK-UHFFFAOYSA-N_Q_dianion_tz",
+    "xyz": "O -1.1006043373 2.5712181735 -0.3765433585\nC -0.6103033262 1.4086383867 -0.2081236286\nC 0.7963303746 1.1077694761 -0.1897587044\nC 1.3184464195 -0.1824956460 -0.0020562456\nCl 3.0956510974 -0.3661315882 -0.0085303321\nC 0.5619382924 -1.3877387369 0.1974185696\nO 1.0164352570 -2.5660524865 0.3683635378\nC -0.8429816508 -1.0655410549 0.1770638891\nF -1.6988590029 -2.1177299984 0.3576581225\nC -1.3922158545 0.2057098978 -0.0083799561\nCl -3.1598272157 0.3629235995 0.0011873727\nH 1.4833329804 1.9480065091 -0.3319801557",
+    "charge": -2,
+    "spin": 0,
+    "task": "opt",
+    "xc": "wb97m_v",
+    "basis": "def2-tzvpd",
+    "grids_atom": [
+      99,
+      590
+    ],
+    "nlc_grids_atom": [
+      50,
+      194
+    ],
+    "nlc_grids_prune": "sg1",
+    "thermo_model": "mrrho",
+    "temperature": 298.15,
+    "density_fit": true,
+    "solvent": {
+      "model": "smd",
+      "name": "acetonitrile"
+    },
+    "log": "/home/hgpark/whlee/hgpark/quinone/dft/runs/highlevel/SJZRFNPTPXVJLK-UHFFFAOYSA-N/Q_dianion_tz.log"
+  },
+  "nao": 443,
+  "opt_converged": true,
+  "xyz_final": "O -1.09280557 2.55530161 -0.37149745\nC -0.59697215 1.37788432 -0.20203350\nC 0.79123523 1.09811688 -0.18479501\nC 1.30615902 -0.18186488 0.00083677\nCl 3.05930380 -0.35862171 -0.00296351\nC 0.54838797 -1.35989199 0.19345707\nO 1.01086300 -2.55279545 0.36577146\nC -0.83421520 -1.05255235 0.17258367\nF -1.69002365 -2.10296565 0.34979953\nC -1.38516786 0.20592939 -0.00997168\nCl -3.12722373 0.35923827 -0.00358562\nH 1.47524238 1.92787659 -0.32337797",
+  "energy_Eh": -1400.218967356831,
+  "scf_converged": true,
+  "auxbasis": "None",
+  "wall_s": 413.3,
+  "source": "/home/hgpark/whlee/hgpark/quinone/onto/phase_8_design/runs/loop-20261102-003356/round_2/SJZRFNPTPXVJLK-UHFFFAOYSA-N.json",
+  "o_index": null,
+  "nao_tz": 443
+}

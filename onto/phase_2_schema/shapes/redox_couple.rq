@@ -1,0 +1,9 @@
+# A potential must say which reduction step it belongs to (qn:NotReported if the text does not).
+PREFIX qn: <https://w3id.org/quinone#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?focus ?message WHERE {
+  ?focus a qn:Measurement ; qn:property ?p .
+  ?p qn:requiresRedoxCouple true .
+  FILTER NOT EXISTS { ?focus qn:redoxCouple ?c }
+  BIND("a potential needs its redox couple (qn:RedoxCoupleScheme)" AS ?message)
+}

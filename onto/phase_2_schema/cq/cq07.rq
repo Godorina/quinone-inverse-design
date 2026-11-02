@@ -1,0 +1,15 @@
+# CQ07: What are the reduction potentials, for which step, against which reference, in which medium?
+PREFIX qn: <https://w3id.org/quinone#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX schema: <https://schema.org/>
+
+SELECT ?name ?couple ?value ?reference ?solvent ?electrolyte WHERE {
+  ?m a qn:Measurement ; qn:ofCompound ?compound ; qn:property ?p ; qn:value ?value ; qn:redoxCouple ?cp ; qn:underCondition ?c .
+  FILTER(?p IN (qn:HalfWavePotential, qn:ReductionPotential))
+  ?compound schema:name ?name .
+  ?cp skos:prefLabel ?couple . FILTER(lang(?couple) = "en")
+  ?c qn:referenceElectrode ?re ; qn:solvent ?sv .
+  ?re skos:prefLabel ?reference . FILTER(lang(?reference) = "en")
+  ?sv skos:prefLabel ?solvent . FILTER(lang(?solvent) = "en")
+  OPTIONAL { ?c qn:electrolyteText ?electrolyte }
+} ORDER BY ?reference ?couple ?value

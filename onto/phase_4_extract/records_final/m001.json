@@ -1,0 +1,273 @@
+{
+ "paper_id": "m001",
+ "title": "Electrochemically mediated carbon dioxide separation with quinone chemistry in salt-concentrated aqueous media",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "AQ",
+   "name": "anthraquinone",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "Figure 1a shows the overall reaction of quinone-mediated CO2 capture and release, using anthraquinone (AQ) as an example.",
+   "page": 2
+  },
+  {
+   "key": "PAQ",
+   "name": "poly(1,4-anthraquinone)",
+   "skeleton": "Anthraquinone",
+   "form": "Polymer",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "CV scans were conducted using poly(1,4-anthraquinone)-carbon nanotube (PAQ-CNT) composite under both N2 and CO2 atmospheres.",
+   "page": 3
+  },
+  {
+   "key": "NQ",
+   "name": "1,4-naphthoquinone",
+   "skeleton": "Naphthoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "Redox-active sorbents with higher reduction potentials (e.g. 1,4-naphthoquinone, NQ, Supplementary Fig. 16b) can also be chosen to minimize side reactions.",
+   "page": 8
+  }
+ ],
+ "conditions": [
+  {
+   "key": "dms_tbapf6",
+   "solvent": "DMSO",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "NotReported",
+   "electrolyte_text": "0.1 M TBAPF6 in DMSO",
+   "additive_text": "5 mM AQ, 1 mM Fc",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "The CV scans were carried out in 5 mM AQ in dimethyl sulfoxide (DMSO) with 0.1 M tetrabutylammonium hexafluorophosphate (TBAPF6) supporting salt.",
+   "page": 3
+  },
+  {
+   "key": "liTFSI_1m",
+   "solvent": "Water",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "NotReported",
+   "electrolyte_text": "1m LiTFSI",
+   "additive_text": null,
+   "ph": 4.0,
+   "temperature_k": null,
+   "quote": "having a pH near 4 at both 1m and 20m.",
+   "page": 3
+  },
+  {
+   "key": "liTFSI_20m",
+   "solvent": "Water",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "NotReported",
+   "electrolyte_text": "20m LiTFSI",
+   "additive_text": null,
+   "ph": 4.0,
+   "temperature_k": null,
+   "quote": "having a pH near 4 at both 1m and 20m.",
+   "page": 3
+  },
+  {
+   "key": "nh4no3_1m",
+   "solvent": "Water",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "NotReported",
+   "electrolyte_text": "1m NH4NO3",
+   "additive_text": "pH adjusted to 4 with HNO3",
+   "ph": 4.0,
+   "temperature_k": null,
+   "quote": "Fig. 3a shows the CV scans of PAQ under N2 in 1m NH4NO3 (pH adjusted to 4 with HNO3) and LiTFSI electrolytes with different molalities (pH ~ 4).",
+   "page": 4
+  },
+  {
+   "key": "unspecified",
+   "solvent": "NotReported",
+   "reference_electrode": "NotReported",
+   "atmosphere": "NotReported",
+   "electrolyte_text": null,
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "(condition not stated in the paper)",
+   "page": null
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "PAQ",
+   "condition": "liTFSI_20m",
+   "property": "CaptureCapacity",
+   "value": 6.6,
+   "unit": "MmolPerGram",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": "NotReported",
+   "quote": "a working capacity of ~6.6 mmol g−1 could still be obtained",
+   "page": 6
+  },
+  {
+   "compound": "PAQ",
+   "condition": "liTFSI_20m",
+   "property": "EnergyConsumption",
+   "value": 56.0,
+   "unit": "KJPerMol",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": "NotReported",
+   "quote": "The electrical energy consumption of this capture-release process was calculated to be ~56 kJ mol−1 CO2",
+   "page": 10
+  }
+ ],
+ "observations": [
+  {
+   "compound": "AQ",
+   "condition": "unspecified",
+   "kind": "BindingMode",
+   "outcome": "Carbonate",
+   "quote": "Mizen and Wrighton23 ﬁrst reported that electrogenerated 9,10-phenanthrenequinone dianion can chemically react with CO2 in homogeneous solutions to yield bis(carbonate)",
+   "page": 2
+  }
+ ],
+ "not_reported": [
+  "Specific reduction potentials for PAQ in salt-concentrated media",
+  "Binding constants for PAQ or AQ"
+ ],
+ "dropped": [
+  {
+   "kind": "measurement",
+   "raw": {
+    "property": "BindingEnergy",
+    "value": -47.46,
+    "unit": "KJPerMol",
+    "compound": "AQ",
+    "condition": "liTFSI_1m",
+    "basis": "Computation",
+    "method": "DFT",
+    "redox_couple": "NotReported",
+    "quote": "AQ2– + 2Li+       adduct \nAQ2–       Adduct \n1m LiTFSI\n5m \n20m \n–0.8\n–0.9\nIncreasing salt\nconcentration\nScan direction\n100\n500\n1000 mV s–1\n100\n500\n1000 mV s–1\n100\n500\n1000 mV s–1\nFig. 3 Enhanced reactivity of CO2 with quinones in salt-concentrated media. a CV of PAQ-CNT in 1m NH4NO3, 1, 5 and 20m Li... (1274 characters)"
+   },
+   "reasons": [
+    "measurements[5]: wrong shape: quote: String should have at most 700 characters"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "property": "BindingEnergy",
+    "value": -49.98,
+    "unit": "KJPerMol",
+    "compound": "AQ",
+    "condition": "liTFSI_20m",
+    "basis": "Computation",
+    "method": "DFT",
+    "redox_couple": "NotReported",
+    "quote": "AQ2– + 2Li+       adduct \nAQ2–       Adduct \n1m LiTFSI\n5m \n20m \n–0.8\n–0.9\nIncreasing salt\nconcentration\nScan direction\n100\n500\n1000 mV s–1\n100\n500\n1000 mV s–1\n100\n500\n1000 mV s–1\nFig. 3 Enhanced reactivity of CO2 with quinones in salt-concentrated media. a CV of PAQ-CNT in 1m NH4NO3, 1, 5 and 20m Li... (1274 characters)"
+   },
+   "reasons": [
+    "measurements[6]: wrong shape: quote: String should have at most 700 characters"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "PAQ",
+    "condition": "unspecified",
+    "property": "CaptureCapacity",
+    "value": 9.7,
+    "unit": "MmolPerGram",
+    "basis": "Experiment",
+    "method": "NotReported",
+    "redox_couple": "NotReported",
+    "quote": "theoretical capacity = 260 mAh g−1, or 9.7 mmol CO2 g−1"
+   },
+   "reasons": [
+    "measurements[0] PAQ/CaptureCapacity: the quote prints 'total mmol' after the value, which is not the saved unit MmolPerGram; fix the unit or omit the item",
+    "measurements[0] PAQ/CaptureCapacity: the text says 'theoretical', so basis must be Computation, not Experiment"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "PAQ",
+    "condition": "unspecified",
+    "property": "CaptureCapacity",
+    "value": 8.9,
+    "unit": "MmolPerGram",
+    "basis": "Experiment",
+    "method": "NotReported",
+    "redox_couple": "NotReported",
+    "quote": "the carbon capture capacity of PAQ is ~8.9 mmol g−1"
+   },
+   "reasons": [
+    "measurements[1] PAQ/CaptureCapacity: the text says 'theoretical', so basis must be Computation, not Experiment"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "PAQ",
+    "condition": "liTFSI_20m",
+    "property": "CaptureCapacity",
+    "value": 8.4,
+    "unit": "MmolPerGram",
+    "basis": "Experiment",
+    "method": "ControlledPotentialElectrolysis",
+    "redox_couple": "NotReported",
+    "quote": "a carbon capture capacity of ~8.4 mmol g−1 can be achieved"
+   },
+   "reasons": [
+    "measurements[2] PAQ/CaptureCapacity: the text says 'theoretical', so basis must be Computation, not Experiment"
+   ]
+  },
+  {
+   "kind": "observation",
+   "raw": {
+    "compound": "PAQ",
+    "condition": "liTFSI_20m",
+    "kind": "OxygenStability",
+    "outcome": "OxygenStable",
+    "quote": "Merely 9.4% of the adducts were oxidized after resting in air for 15 min"
+   },
+   "reasons": [
+    "observations[1] PAQ/OxygenStability: the quote does not support OxygenStable: the quote describes degradation"
+   ]
+  }
+ ],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 11,
+   "dropped": 6
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 11,
+   "dropped": 3
+  },
+  {
+   "n": 3,
+   "parse_errors": [],
+   "kept": 11,
+   "dropped": 2
+  },
+  {
+   "n": 4,
+   "parse_errors": [],
+   "kept": 11,
+   "dropped": 2
+  }
+ ],
+ "review_status": "machine_extracted"
+}

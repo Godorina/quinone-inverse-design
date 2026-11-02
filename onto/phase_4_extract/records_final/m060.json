@@ -1,0 +1,372 @@
+{
+ "paper_id": "m060",
+ "title": "Sulfonated anthraquinone for enhanced electrochemical CO2 capture via improved solubility and redox kinetics",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "AQ",
+   "name": "Anthraquinone",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "Anthraquinone (84–65-1, melting point standard, AQ)",
+   "page": 2
+  },
+  {
+   "key": "AQS1",
+   "name": "1-anthraquinonesulfonic acid sodium salt",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Sulfonate"
+   ],
+   "substituent_text": null,
+   "quote": "1-anthraquinonesulfonic acid sodium salt (128–56-3, ≥98%, 1-AQS)",
+   "page": 2
+  },
+  {
+   "key": "AQS2",
+   "name": "sodium anthraquinone-2-sulfonate",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Sulfonate"
+   ],
+   "substituent_text": null,
+   "quote": "sodium anthraquinone-2-sulfonate (131–08-8, ≥98%, 2-AQS)",
+   "page": 2
+  },
+  {
+   "key": "AQS15",
+   "name": "anthraquinone-1,5-disulfonic acid sodium",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Sulfonate"
+   ],
+   "substituent_text": null,
+   "quote": "anthraquinone-1,5-disulfonic acid sodium (853–35-0, ≥95%, 1,5-AQS)",
+   "page": 2
+  },
+  {
+   "key": "AQS26",
+   "name": "anthraquinone-2,6-disulfonic acid disodium salt",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Sulfonate"
+   ],
+   "substituent_text": null,
+   "quote": "anthraquinone-2,6-disulfonic acid disodium salt (853–68-9, ≥98%, 2,6-AQS)",
+   "page": 2
+  },
+  {
+   "key": "AQS27",
+   "name": "anthraquinone-2,7-disulfonic acid disodium salt",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Sulfonate"
+   ],
+   "substituent_text": null,
+   "quote": "anthraquinone-2,7-disulfonic acid disodium salt (853–67-8, 97%, 2,7-AQS)",
+   "page": 2
+  }
+ ],
+ "conditions": [
+  {
+   "key": "cv_01M_NaTFSI_DMSO_N2",
+   "solvent": "DMSO",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.1 M NaTFSI",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "using 0.1 M NaTFSI as the supporting electrolyte and DMSO as the solvent",
+   "page": 2
+  },
+  {
+   "key": "cv_01M_NaTFSI_DMSO_CO2",
+   "solvent": "DMSO",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M NaTFSI",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "For CV testing under CO2 atmosphere, the electrolyte solution was bubbled with CO2 for 30 min",
+   "page": 2
+  },
+  {
+   "key": "flow_cell_AQS2_15pct_CO2",
+   "solvent": "DMSO",
+   "reference_electrode": "NotReported",
+   "atmosphere": "FlueGas",
+   "electrolyte_text": "0.2 M 2-AQS + 0.5 M NaTFSI in DMSO",
+   "additive_text": "15% CO2",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "The AQS reservoir (containing PTFE microbeads) was continuously fed with 15% CO2 (3 sccm) and contained the electrolyte solution of 0.2 M 2-AQS + 0.5 M NaTFSI in DMSO.",
+   "page": 9
+  },
+  {
+   "key": "flow_cell_AQ_15pct_CO2",
+   "solvent": "DMSO",
+   "reference_electrode": "NotReported",
+   "atmosphere": "FlueGas",
+   "electrolyte_text": "AQ system",
+   "additive_text": "15% CO2",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "the electrochemical CO2 capture performance of the AQ system under 15% CO2 declines rapidly within 8 cycles.",
+   "page": 8
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "AQ",
+   "condition": "cv_01M_NaTFSI_DMSO_N2",
+   "property": "ReductionPotential",
+   "value": -1.33,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "AQ (−1.33 V vs. Fc+/Fc)",
+   "page": 5
+  },
+  {
+   "compound": "AQS1",
+   "condition": "cv_01M_NaTFSI_DMSO_N2",
+   "property": "ReductionPotential",
+   "value": -1.3,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "1-AQS (−1.30 V)",
+   "page": 5
+  },
+  {
+   "compound": "AQS2",
+   "condition": "cv_01M_NaTFSI_DMSO_N2",
+   "property": "ReductionPotential",
+   "value": -1.29,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "2-AQS (−1.29 V)",
+   "page": 5
+  },
+  {
+   "compound": "AQS26",
+   "condition": "cv_01M_NaTFSI_DMSO_N2",
+   "property": "ReductionPotential",
+   "value": -1.27,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "2,6-AQS (−1.27 V)",
+   "page": 5
+  },
+  {
+   "compound": "AQS15",
+   "condition": "cv_01M_NaTFSI_DMSO_N2",
+   "property": "ReductionPotential",
+   "value": -1.27,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "1,5-AQS (−1.27 V)",
+   "page": 5
+  },
+  {
+   "compound": "AQS27",
+   "condition": "cv_01M_NaTFSI_DMSO_N2",
+   "property": "ReductionPotential",
+   "value": -1.26,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "2,7-AQS (−1.26 V)",
+   "page": 5
+  },
+  {
+   "compound": "AQS15",
+   "condition": "cv_01M_NaTFSI_DMSO_CO2",
+   "property": "Log10BindingConstant",
+   "value": 16.07,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": null,
+   "quote": "corresponding to a log(Kbinding) as high as 16.07",
+   "page": 6
+  },
+  {
+   "compound": "AQ",
+   "condition": "cv_01M_NaTFSI_DMSO_CO2",
+   "property": "EnergyConsumption",
+   "value": 55.0,
+   "unit": "KJPerMol",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": null,
+   "quote": "AQ (55 kJ⋅mol−1)",
+   "page": 6
+  },
+  {
+   "compound": "AQS2",
+   "condition": "cv_01M_NaTFSI_DMSO_CO2",
+   "property": "EnergyConsumption",
+   "value": 56.0,
+   "unit": "KJPerMol",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": null,
+   "quote": "2-AQS (56 kJ⋅mol−1)",
+   "page": 6
+  },
+  {
+   "compound": "AQS26",
+   "condition": "cv_01M_NaTFSI_DMSO_CO2",
+   "property": "EnergyConsumption",
+   "value": 59.0,
+   "unit": "KJPerMol",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": null,
+   "quote": "2,6-AQS (59 kJ⋅mol−1)",
+   "page": 6
+  },
+  {
+   "compound": "AQS1",
+   "condition": "cv_01M_NaTFSI_DMSO_CO2",
+   "property": "EnergyConsumption",
+   "value": 60.0,
+   "unit": "KJPerMol",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": null,
+   "quote": "1-AQS (60 kJ⋅mol−1)",
+   "page": 6
+  },
+  {
+   "compound": "AQS27",
+   "condition": "cv_01M_NaTFSI_DMSO_CO2",
+   "property": "EnergyConsumption",
+   "value": 64.0,
+   "unit": "KJPerMol",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": null,
+   "quote": "2,7-AQS (64 kJ⋅mol−1)",
+   "page": 6
+  },
+  {
+   "compound": "AQS15",
+   "condition": "cv_01M_NaTFSI_DMSO_CO2",
+   "property": "EnergyConsumption",
+   "value": 97.0,
+   "unit": "KJPerMol",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": null,
+   "quote": "1,5-AQS (97 kJ⋅mol−1)",
+   "page": 6
+  },
+  {
+   "compound": "AQ",
+   "condition": "flow_cell_AQ_15pct_CO2",
+   "property": "EnergyConsumption",
+   "value": 498.23,
+   "unit": "KJPerMol",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": null,
+   "quote": "the average CO2 capture energy consumption for the AQ system reaches as high as 498.23 kJ⋅mol−1 CO2",
+   "page": 9
+  },
+  {
+   "compound": "AQS2",
+   "condition": "flow_cell_AQS2_15pct_CO2",
+   "property": "EnergyConsumption",
+   "value": 285.92,
+   "unit": "KJPerMol",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": null,
+   "quote": "the average capture energy consumption for 2-AQS was only 285.92 kJ⋅mol−1 CO2",
+   "page": 10
+  },
+  {
+   "compound": "AQS2",
+   "condition": "flow_cell_AQS2_15pct_CO2",
+   "property": "FaradaicEfficiency",
+   "value": 85.06,
+   "unit": "Percent",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": null,
+   "quote": "Its average coulombic efficiency was 85.06%",
+   "page": 9
+  },
+  {
+   "compound": "AQ",
+   "condition": "flow_cell_AQ_15pct_CO2",
+   "property": "FaradaicEfficiency",
+   "value": 56.67,
+   "unit": "Percent",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": null,
+   "quote": "low average coulombic efficiency of 56.67%",
+   "page": 9
+  }
+ ],
+ "observations": [
+  {
+   "compound": "AQS2",
+   "condition": "cv_01M_NaTFSI_DMSO_CO2",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "the reduced anion radicals rapidly undergo chemical reactions with CO2",
+   "page": 6
+  }
+ ],
+ "not_reported": [
+  "Reference electrode for flow cell experiments",
+  "Binding constants for compounds other than 1,5-AQS",
+  "Oxygen stability of the compounds"
+ ],
+ "dropped": [],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 4,
+   "dropped": 24
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 25,
+   "dropped": 3
+  },
+  {
+   "n": 3,
+   "parse_errors": [],
+   "kept": 28,
+   "dropped": 0
+  }
+ ],
+ "review_status": "machine_extracted"
+}

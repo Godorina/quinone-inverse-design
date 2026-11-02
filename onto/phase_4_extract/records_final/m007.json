@@ -1,0 +1,526 @@
+{
+ "paper_id": "m007",
+ "title": "Direct Electrochemical CO2 Capture Using Substituted Anthraquinones in Homogeneous Solutions: A Joint Experimental and Theoretical Study",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "AQ",
+   "name": "unsubstituted AQ",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "The CV curve in Figure 3 of unsubstituted AQ shows two reversible reduction peaks",
+   "page": 5
+  },
+  {
+   "key": "OH_AQ_1",
+   "name": "1-OH-AQ",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Hydroxyl"
+   ],
+   "substituent_text": null,
+   "quote": "1-OH-AQ −0.52 V −1.06 V −0.49 V −0.94 V − 5.1",
+   "page": 6
+  },
+  {
+   "key": "OH_AQ_1_4",
+   "name": "1,4-OH-AQ",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Hydroxyl"
+   ],
+   "substituent_text": null,
+   "quote": "1,4-OH-AQ −0.39 V −0.91 V −0.40 V −0.90 V − 1.1",
+   "page": 6
+  },
+  {
+   "key": "NH2_AQ_1",
+   "name": "1-NH2-AQ",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Amino"
+   ],
+   "substituent_text": null,
+   "quote": "1-NH2-AQ −0.75 V −1.34 V −0.73 V − −1.64 V 8.3",
+   "page": 6
+  },
+  {
+   "key": "NH2_AQ_1_4",
+   "name": "1,4-NH2-AQ",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Amino"
+   ],
+   "substituent_text": null,
+   "quote": "1,4-NH2-AQ −0.90 V −1.39 V −0.89 V − −1.47 V 9.7",
+   "page": 6
+  },
+  {
+   "key": "NH2_OH_AQ_1_4",
+   "name": "1-NH2-4-OH-AQ",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Amino",
+    "Hydroxyl"
+   ],
+   "substituent_text": null,
+   "quote": "1-NH2-4-OH-AQ −0.66 V −1.17 V −0.67 V −0.96 V − 4.8",
+   "page": 6
+  }
+ ],
+ "conditions": [
+  {
+   "key": "N2_MeCN_TBAPF6",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "SHE",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.1 M solution containing tetrabutylammonium hexafluorophosphate (TBAPF6, Sigma-Aldrich) as electrolyte in MeCN",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "all potentials reported in this work refer to the standard hydrogen electrode (SHE)",
+   "page": 3
+  },
+  {
+   "key": "CO2_MeCN_TBAPF6",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "SHE",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M solution containing tetrabutylammonium hexafluorophosphate (TBAPF6, Sigma-Aldrich) as electrolyte in MeCN",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "To reach a CO2 saturated environment, the solution was purged with CO2 (Linde Gas) for 15 min",
+   "page": 3
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "AQ",
+   "condition": "N2_MeCN_TBAPF6",
+   "property": "HalfWavePotential",
+   "value": -0.67,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "AQ −0.67 V −1.32 V −0.66 V −0.86 V −1.50 V 9.0",
+   "page": 6
+  },
+  {
+   "compound": "AQ",
+   "condition": "N2_MeCN_TBAPF6",
+   "property": "HalfWavePotential",
+   "value": -1.32,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "AQ −0.67 V −1.32 V −0.66 V −0.86 V −1.50 V 9.0",
+   "page": 6
+  },
+  {
+   "compound": "AQ",
+   "condition": "CO2_MeCN_TBAPF6",
+   "property": "HalfWavePotential",
+   "value": -0.66,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "AQ −0.67 V −1.32 V −0.66 V −0.86 V −1.50 V 9.0",
+   "page": 6
+  },
+  {
+   "compound": "AQ",
+   "condition": "CO2_MeCN_TBAPF6",
+   "property": "HalfWavePotential",
+   "value": -0.86,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "AQ −0.67 V −1.32 V −0.66 V −0.86 V −1.50 V 9.0",
+   "page": 6
+  },
+  {
+   "compound": "AQ",
+   "condition": "CO2_MeCN_TBAPF6",
+   "property": "HalfWavePotential",
+   "value": -1.5,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "NotReported",
+   "quote": "AQ −0.67 V −1.32 V −0.66 V −0.86 V −1.50 V 9.0",
+   "page": 6
+  },
+  {
+   "compound": "AQ",
+   "condition": "CO2_MeCN_TBAPF6",
+   "property": "Log10BindingConstant",
+   "value": 9.0,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": null,
+   "quote": "AQ −0.67 V −1.32 V −0.66 V −0.86 V −1.50 V 9.0",
+   "page": 6
+  },
+  {
+   "compound": "OH_AQ_1",
+   "condition": "N2_MeCN_TBAPF6",
+   "property": "HalfWavePotential",
+   "value": -0.52,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "1-OH-AQ −0.52 V −1.06 V −0.49 V −0.94 V − 5.1",
+   "page": 6
+  },
+  {
+   "compound": "OH_AQ_1",
+   "condition": "N2_MeCN_TBAPF6",
+   "property": "HalfWavePotential",
+   "value": -1.06,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "1-OH-AQ −0.52 V −1.06 V −0.49 V −0.94 V − 5.1",
+   "page": 6
+  },
+  {
+   "compound": "OH_AQ_1",
+   "condition": "CO2_MeCN_TBAPF6",
+   "property": "HalfWavePotential",
+   "value": -0.49,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "1-OH-AQ −0.52 V −1.06 V −0.49 V −0.94 V − 5.1",
+   "page": 6
+  },
+  {
+   "compound": "OH_AQ_1",
+   "condition": "CO2_MeCN_TBAPF6",
+   "property": "HalfWavePotential",
+   "value": -0.94,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "1-OH-AQ −0.52 V −1.06 V −0.49 V −0.94 V − 5.1",
+   "page": 6
+  },
+  {
+   "compound": "OH_AQ_1",
+   "condition": "CO2_MeCN_TBAPF6",
+   "property": "Log10BindingConstant",
+   "value": 5.1,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": null,
+   "quote": "1-OH-AQ −0.52 V −1.06 V −0.49 V −0.94 V − 5.1",
+   "page": 6
+  },
+  {
+   "compound": "OH_AQ_1_4",
+   "condition": "N2_MeCN_TBAPF6",
+   "property": "HalfWavePotential",
+   "value": -0.39,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "1,4-OH-AQ −0.39 V −0.91 V −0.40 V −0.90 V − 1.1",
+   "page": 6
+  },
+  {
+   "compound": "OH_AQ_1_4",
+   "condition": "N2_MeCN_TBAPF6",
+   "property": "HalfWavePotential",
+   "value": -0.91,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "1,4-OH-AQ −0.39 V −0.91 V −0.40 V −0.90 V − 1.1",
+   "page": 6
+  },
+  {
+   "compound": "OH_AQ_1_4",
+   "condition": "CO2_MeCN_TBAPF6",
+   "property": "HalfWavePotential",
+   "value": -0.4,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "1,4-OH-AQ −0.39 V −0.91 V −0.40 V −0.90 V − 1.1",
+   "page": 6
+  },
+  {
+   "compound": "OH_AQ_1_4",
+   "condition": "CO2_MeCN_TBAPF6",
+   "property": "HalfWavePotential",
+   "value": -0.9,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "1,4-OH-AQ −0.39 V −0.91 V −0.40 V −0.90 V − 1.1",
+   "page": 6
+  },
+  {
+   "compound": "OH_AQ_1_4",
+   "condition": "CO2_MeCN_TBAPF6",
+   "property": "Log10BindingConstant",
+   "value": 1.1,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": null,
+   "quote": "1,4-OH-AQ −0.39 V −0.91 V −0.40 V −0.90 V − 1.1",
+   "page": 6
+  },
+  {
+   "compound": "NH2_AQ_1",
+   "condition": "N2_MeCN_TBAPF6",
+   "property": "HalfWavePotential",
+   "value": -0.75,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "1-NH2-AQ −0.75 V −1.34 V −0.73 V − −1.64 V 8.3",
+   "page": 6
+  },
+  {
+   "compound": "NH2_AQ_1",
+   "condition": "N2_MeCN_TBAPF6",
+   "property": "HalfWavePotential",
+   "value": -1.34,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "1-NH2-AQ −0.75 V −1.34 V −0.73 V − −1.64 V 8.3",
+   "page": 6
+  },
+  {
+   "compound": "NH2_AQ_1",
+   "condition": "CO2_MeCN_TBAPF6",
+   "property": "HalfWavePotential",
+   "value": -0.73,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "1-NH2-AQ −0.75 V −1.34 V −0.73 V − −1.64 V 8.3",
+   "page": 6
+  },
+  {
+   "compound": "NH2_AQ_1",
+   "condition": "CO2_MeCN_TBAPF6",
+   "property": "HalfWavePotential",
+   "value": -1.64,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "NotReported",
+   "quote": "1-NH2-AQ −0.75 V −1.34 V −0.73 V − −1.64 V 8.3",
+   "page": 6
+  },
+  {
+   "compound": "NH2_AQ_1",
+   "condition": "CO2_MeCN_TBAPF6",
+   "property": "Log10BindingConstant",
+   "value": 8.3,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": null,
+   "quote": "1-NH2-AQ −0.75 V −1.34 V −0.73 V − −1.64 V 8.3",
+   "page": 6
+  },
+  {
+   "compound": "NH2_AQ_1_4",
+   "condition": "N2_MeCN_TBAPF6",
+   "property": "HalfWavePotential",
+   "value": -0.9,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "1,4-NH2-AQ −0.90 V −1.39 V −0.89 V − −1.47 V 9.7",
+   "page": 6
+  },
+  {
+   "compound": "NH2_AQ_1_4",
+   "condition": "N2_MeCN_TBAPF6",
+   "property": "HalfWavePotential",
+   "value": -1.39,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "1,4-NH2-AQ −0.90 V −1.39 V −0.89 V − −1.47 V 9.7",
+   "page": 6
+  },
+  {
+   "compound": "NH2_AQ_1_4",
+   "condition": "CO2_MeCN_TBAPF6",
+   "property": "HalfWavePotential",
+   "value": -0.89,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "1,4-NH2-AQ −0.90 V −1.39 V −0.89 V − −1.47 V 9.7",
+   "page": 6
+  },
+  {
+   "compound": "NH2_AQ_1_4",
+   "condition": "CO2_MeCN_TBAPF6",
+   "property": "HalfWavePotential",
+   "value": -1.47,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "NotReported",
+   "quote": "1,4-NH2-AQ −0.90 V −1.39 V −0.89 V − −1.47 V 9.7",
+   "page": 6
+  },
+  {
+   "compound": "NH2_AQ_1_4",
+   "condition": "CO2_MeCN_TBAPF6",
+   "property": "Log10BindingConstant",
+   "value": 9.7,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": null,
+   "quote": "1,4-NH2-AQ −0.90 V −1.39 V −0.89 V − −1.47 V 9.7",
+   "page": 6
+  },
+  {
+   "compound": "NH2_OH_AQ_1_4",
+   "condition": "N2_MeCN_TBAPF6",
+   "property": "HalfWavePotential",
+   "value": -0.66,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "1-NH2-4-OH-AQ −0.66 V −1.17 V −0.67 V −0.96 V − 4.8",
+   "page": 6
+  },
+  {
+   "compound": "NH2_OH_AQ_1_4",
+   "condition": "N2_MeCN_TBAPF6",
+   "property": "HalfWavePotential",
+   "value": -1.17,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "1-NH2-4-OH-AQ −0.66 V −1.17 V −0.67 V −0.96 V − 4.8",
+   "page": 6
+  },
+  {
+   "compound": "NH2_OH_AQ_1_4",
+   "condition": "CO2_MeCN_TBAPF6",
+   "property": "HalfWavePotential",
+   "value": -0.67,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "1-NH2-4-OH-AQ −0.66 V −1.17 V −0.67 V −0.96 V − 4.8",
+   "page": 6
+  },
+  {
+   "compound": "NH2_OH_AQ_1_4",
+   "condition": "CO2_MeCN_TBAPF6",
+   "property": "HalfWavePotential",
+   "value": -0.96,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "1-NH2-4-OH-AQ −0.66 V −1.17 V −0.67 V −0.96 V − 4.8",
+   "page": 6
+  },
+  {
+   "compound": "NH2_OH_AQ_1_4",
+   "condition": "CO2_MeCN_TBAPF6",
+   "property": "Log10BindingConstant",
+   "value": 4.8,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": null,
+   "quote": "1-NH2-4-OH-AQ −0.66 V −1.17 V −0.67 V −0.96 V − 4.8",
+   "page": 6
+  }
+ ],
+ "observations": [
+  {
+   "compound": "AQ",
+   "condition": "CO2_MeCN_TBAPF6",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "This can be understood in terms of the proposed reaction of the reduced AQ species with CO2 forming [AQ-(CO2)2]2−",
+   "page": 8
+  },
+  {
+   "compound": "NH2_AQ_1_4",
+   "condition": "CO2_MeCN_TBAPF6",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "this sequential band appearance can be interpreted as the formation of the 1,4-NH2-AQ2−dianionic species with coordinating CO2 interaction and single-bound CO2",
+   "page": 9
+  },
+  {
+   "compound": "OH_AQ_1_4",
+   "condition": "CO2_MeCN_TBAPF6",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "absorption at 417 and 492 nm was observed which correlate to covalently single and dual bound [X-AQ-(CO2)n]2−species",
+   "page": 10
+  }
+ ],
+ "not_reported": [
+  "Binding energies (Eb) for specific compounds are discussed qualitatively and in correlation plots (Figures 9, 11) but specific numerical values are not printed in the text or tables.",
+  "Oxygen stability of the compounds was not tested or reported in this study."
+ ],
+ "dropped": [],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 10,
+   "dropped": 32
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 42,
+   "dropped": 0
+  }
+ ],
+ "review_status": "machine_extracted"
+}

@@ -1,0 +1,151 @@
+{
+ "paper_id": "m022",
+ "title": "Quinone-functionalised carbons as new materials for electrochemical carbon dioxide capture",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "f_CMK3",
+   "name": "f-CMK-3",
+   "skeleton": "Anthraquinone",
+   "form": "CarbonImmobilized",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "We selected CMK-3 mesoporous carbon and 2-aminoanthraquinone to yield the anthraquinone functionalised carbon, f-CMK-3.",
+   "page": 4
+  },
+  {
+   "key": "u_CMK3",
+   "name": "u-CMK-3",
+   "skeleton": "NotReported",
+   "form": "CarbonImmobilized",
+   "substituent_classes": [
+    "NotReported"
+   ],
+   "substituent_text": null,
+   "quote": "N2 gas sorption isotherms at 77 K showed typical type IV adsorption–desorption hysteresis loops for u-CMK-3 and f-CMK-3",
+   "page": 4
+  }
+ ],
+ "conditions": [
+  {
+   "key": "bmim_tfsi_co2_initial",
+   "solvent": "IonicLiquid",
+   "reference_electrode": "NotReported",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "1-Butyl-3-methylimidazolium bis(triﬂuoromethyl sulfonyl)imide ionic liquid (200 mm) was used as an electrolyte in all experiments.",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "1-Butyl-3-methylimidazolium bis(triﬂuoromethyl sulfonyl)imide ionic liquid (200 mm) was used as an electrolyte in all experiments.",
+   "page": 4
+  },
+  {
+   "key": "bmim_tfsi_co2_stabilized",
+   "solvent": "IonicLiquid",
+   "reference_electrode": "NotReported",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "1-Butyl-3-methylimidazolium bis(triﬂuoromethyl sulfonyl)imide ionic liquid (200 mm) was used as an electrolyte in all experiments.",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "1-Butyl-3-methylimidazolium bis(triﬂuoromethyl sulfonyl)imide ionic liquid (200 mm) was used as an electrolyte in all experiments.",
+   "page": 4
+  },
+  {
+   "key": "bmim_tfsi_n2",
+   "solvent": "IonicLiquid",
+   "reference_electrode": "NotReported",
+   "atmosphere": "Inert",
+   "electrolyte_text": "1-Butyl-3-methylimidazolium bis(triﬂuoromethyl sulfonyl)imide ionic liquid (200 mm) was used as an electrolyte in all experiments.",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "All electrochemical cells were assembled inside a glovebox under an inert nitrogen (N2) atmosphere.",
+   "page": 4
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "f_CMK3",
+   "condition": "bmim_tfsi_co2_initial",
+   "property": "CaptureCapacity",
+   "value": 0.4,
+   "unit": "MmolPerGram",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": "NotReported",
+   "quote": "Adsorption capacity values of around 0.4 mmol g−1 were seen with an energy consumption of 256 kJ mol−1",
+   "page": 7
+  },
+  {
+   "compound": "f_CMK3",
+   "condition": "bmim_tfsi_co2_initial",
+   "property": "EnergyConsumption",
+   "value": 256.0,
+   "unit": "KJPerMol",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": "NotReported",
+   "quote": "Adsorption capacity values of around 0.4 mmol g−1 were seen with an energy consumption of 256 kJ mol−1",
+   "page": 7
+  },
+  {
+   "compound": "f_CMK3",
+   "condition": "bmim_tfsi_co2_stabilized",
+   "property": "CaptureCapacity",
+   "value": 0.2,
+   "unit": "MmolPerGram",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": "NotReported",
+   "quote": "Following initial losses, the CO2 adsorption capacity began to stabilize around 0.2 mmol g−1.",
+   "page": 9
+  },
+  {
+   "compound": "u_CMK3",
+   "condition": "bmim_tfsi_co2_initial",
+   "property": "CaptureCapacity",
+   "value": 0.15,
+   "unit": "MmolPerGram",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": "NotReported",
+   "quote": "control experiments on the unfunctionalized carbon, u-CMK-3, also showed a small amount of reversible CO2 capture with an initial adsorption capacity of 0.15 mmol g−1",
+   "page": 9
+  }
+ ],
+ "observations": [
+  {
+   "compound": "f_CMK3",
+   "condition": "bmim_tfsi_co2_initial",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "electrochemical reduction to form a radical anion (1 electron reduction) or dianion (2 electron reduction) activates this molecule to bind CO2 in either an EECC or ECEC (E = electron transfer, C = chemical reaction) mechanism",
+   "page": 2
+  }
+ ],
+ "not_reported": [
+  "reference electrode of the potentials",
+  "binding constant",
+  "rate constant",
+  "faradaic efficiency value for specific cycle count in main text (only described as 'above 90%')"
+ ],
+ "dropped": [],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 7,
+   "dropped": 2
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 10,
+   "dropped": 0
+  }
+ ],
+ "review_status": "machine_extracted"
+}

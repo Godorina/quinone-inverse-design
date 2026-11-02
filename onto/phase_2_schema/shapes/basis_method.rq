@@ -1,0 +1,8 @@
+# The method must belong to the basis: DFT is not an experiment, voltammetry is not a computation.
+PREFIX qn: <https://w3id.org/quinone#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?focus ?message WHERE {
+  ?focus a qn:Measurement ; qn:basis ?b ; qn:method ?m .
+  FILTER NOT EXISTS { ?m qn:appliesToBasis ?b }
+  BIND("method does not fit the basis (see qn:appliesToBasis)" AS ?message)
+}

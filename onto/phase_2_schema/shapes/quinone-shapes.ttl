@@ -1,0 +1,75 @@
+# quinone v0.1.0 - SHACL rules. Rules SHACL-core cannot express are the *.rq files next to this one (one row = one violation).
+@prefix qn:   <https://w3id.org/quinone#> .
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix schema: <https://schema.org/> .
+
+qn:PaperShape a sh:NodeShape ; sh:targetClass qn:Paper ;
+    sh:property [ sh:path schema:name ; sh:minCount 1 ; sh:message "a paper needs its title (schema:name)" ] ;
+    sh:property [ sh:path schema:identifier ; sh:minCount 1 ; sh:maxCount 1 ; sh:message "a paper needs exactly one DOI (schema:identifier)" ] ;
+    sh:property [ sh:path schema:datePublished ; sh:minCount 1 ; sh:message "a paper needs its year" ] .
+
+qn:CompoundShape a sh:NodeShape ; sh:targetClass qn:Compound ;
+    sh:property [ sh:path schema:name ; sh:minCount 1 ; sh:message "a compound needs a name (schema:name)" ] ;
+    sh:property [ sh:path qn:skeleton ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:node [ sh:property [ sh:path skos:inScheme ; sh:hasValue qn:SkeletonScheme ] ] ;
+        sh:message "a compound needs exactly one skeleton (qn:SkeletonScheme)" ] ;
+    sh:property [ sh:path qn:form ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:node [ sh:property [ sh:path skos:inScheme ; sh:hasValue qn:FormScheme ] ] ;
+        sh:message "a compound needs exactly one form (qn:FormScheme)" ] ;
+    sh:property [ sh:path qn:substituentClass ; sh:minCount 1 ;
+        sh:node [ sh:property [ sh:path skos:inScheme ; sh:hasValue qn:SubstituentClassScheme ] ] ;
+        sh:message "a compound needs at least one substituent class (qn:Unsubstituted for the parent)" ] .
+
+qn:ConditionShape a sh:NodeShape ; sh:targetClass qn:Condition ;
+    sh:property [ sh:path qn:solvent ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:node [ sh:property [ sh:path skos:inScheme ; sh:hasValue qn:SolventScheme ] ] ;
+        sh:message "a condition needs exactly one solvent (qn:NotReported when the text does not say)" ] ;
+    sh:property [ sh:path qn:referenceElectrode ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:node [ sh:property [ sh:path skos:inScheme ; sh:hasValue qn:ReferenceElectrodeScheme ] ] ;
+        sh:message "a condition needs exactly one reference electrode (qn:NotReported when the text does not say)" ] ;
+    sh:property [ sh:path qn:atmosphere ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:node [ sh:property [ sh:path skos:inScheme ; sh:hasValue qn:AtmosphereScheme ] ] ;
+        sh:message "a condition needs one atmosphere (qn:NotReported when the text does not say)" ] ;
+    sh:property [ sh:path qn:pH ; sh:maxCount 1 ; sh:datatype xsd:decimal ; sh:minInclusive 0 ; sh:maxInclusive 14 ] ;
+    sh:property [ sh:path qn:temperatureK ; sh:maxCount 1 ; sh:datatype xsd:decimal ; sh:minExclusive 0 ] .
+
+qn:ResultShape a sh:NodeShape ; sh:targetClass qn:Result ;
+    sh:property [ sh:path qn:ofCompound ; sh:minCount 1 ; sh:maxCount 1 ; sh:class qn:Compound ; sh:message "a result needs exactly one compound" ] ;
+    sh:property [ sh:path qn:underCondition ; sh:minCount 1 ; sh:maxCount 1 ; sh:class qn:Condition ; sh:message "a result needs exactly one condition" ] ;
+    sh:property [ sh:path qn:fromPaper ; sh:minCount 1 ; sh:maxCount 1 ; sh:class qn:Paper ; sh:message "a result needs exactly one paper" ] ;
+    sh:property [ sh:path qn:hasEvidence ; sh:minCount 1 ; sh:class qn:Evidence ; sh:message "a result needs at least one quote" ] ;
+    sh:property [ sh:path qn:reviewStatus ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ( "example" "machine_extracted" "reviewed" ) ; sh:message "reviewStatus must be example, machine_extracted or reviewed" ] .
+
+qn:MeasurementShape a sh:NodeShape ; sh:targetClass qn:Measurement ;
+    sh:property [ sh:path qn:property ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:node [ sh:property [ sh:path skos:inScheme ; sh:hasValue qn:PropertyScheme ] ] ;
+        sh:message "a measurement needs exactly one property (qn:PropertyScheme)" ] ;
+    sh:property [ sh:path qn:value ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:decimal ; sh:message "a measurement needs exactly one decimal value" ] ;
+    sh:property [ sh:path qn:unit ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:node [ sh:property [ sh:path skos:inScheme ; sh:hasValue qn:UnitScheme ] ] ;
+        sh:message "a measurement needs exactly one unit (qn:UnitScheme)" ] ;
+    sh:property [ sh:path qn:basis ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:node [ sh:property [ sh:path skos:inScheme ; sh:hasValue qn:BasisScheme ] ] ;
+        sh:message "a measurement needs its basis: qn:Experiment or qn:Computation" ] ;
+    sh:property [ sh:path qn:method ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:node [ sh:property [ sh:path skos:inScheme ; sh:hasValue qn:MethodScheme ] ] ;
+        sh:message "a measurement needs its method (qn:MethodScheme; qn:NotReported when the text does not say)" ] ;
+    sh:property [ sh:path qn:redoxCouple ; sh:maxCount 1 ;
+        sh:node [ sh:property [ sh:path skos:inScheme ; sh:hasValue qn:RedoxCoupleScheme ] ] ] .
+
+qn:ObservationShape a sh:NodeShape ; sh:targetClass qn:Observation ;
+    sh:property [ sh:path qn:observationKind ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:node [ sh:property [ sh:path skos:inScheme ; sh:hasValue qn:ObservationKindScheme ] ] ;
+        sh:message "an observation needs exactly one kind" ] ;
+    sh:property [ sh:path qn:outcome ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:node [ sh:property [ sh:path skos:inScheme ; sh:hasValue qn:OutcomeScheme ] ] ;
+        sh:message "an observation needs exactly one outcome" ] .
+
+qn:EvidenceShape a sh:NodeShape ; sh:targetClass qn:Evidence ;
+    sh:property [ sh:path qn:quote ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ; sh:minLength 20 ; sh:message "a quote must be verbatim text of at least 20 characters" ] ;
+    sh:property [ sh:path qn:evidenceSource ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:node [ sh:property [ sh:path skos:inScheme ; sh:hasValue qn:EvidenceSourceScheme ] ] ;
+        sh:message "a quote needs its source: qn:Abstract or qn:FullText" ] ;
+    sh:property [ sh:path qn:page ; sh:maxCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 1 ] .

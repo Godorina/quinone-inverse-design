@@ -1,0 +1,343 @@
+{
+ "paper_id": "m048",
+ "title": "Sustainable Electrochemical CO 2 Capture from Air Using Heterogenized Quinones in Aqueous Media",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "BDT_Q",
+   "name": "BDT-Q",
+   "skeleton": "HeterocyclicQuinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "NotReported"
+   ],
+   "substituent_text": null,
+   "quote": "redox-active heterocyclic benzodithiophene quinone (BDT-Q)",
+   "page": 2
+  },
+  {
+   "key": "PBDT_Q",
+   "name": "PBDT-Q",
+   "skeleton": "HeterocyclicQuinone",
+   "form": "Polymer",
+   "substituent_classes": [
+    "NotReported"
+   ],
+   "substituent_text": null,
+   "quote": "polymerized BDT-Q (PBDT-Q)",
+   "page": 2
+  },
+  {
+   "key": "PBDT_Q_CNT",
+   "name": "PBDT-Q/CNT",
+   "skeleton": "HeterocyclicQuinone",
+   "form": "CarbonImmobilized",
+   "substituent_classes": [
+    "NotReported"
+   ],
+   "substituent_text": null,
+   "quote": "heterogenization of the redox-active polymerized benzodithiophene quinone (PBDT-Q) immobilized onto carbon nanotubes (CNTs) to form a PBDT-Q/CNT composite",
+   "page": 1
+  },
+  {
+   "key": "BDT_Q_CNT",
+   "name": "BDT-Q/CNT",
+   "skeleton": "HeterocyclicQuinone",
+   "form": "CarbonImmobilized",
+   "substituent_classes": [
+    "NotReported"
+   ],
+   "substituent_text": null,
+   "quote": "BDT-Q was subjected to the same experimental conditions, as shown in Figure S3",
+   "page": 4
+  }
+ ],
+ "conditions": [
+  {
+   "key": "dmf_tbapf6_n2",
+   "solvent": "DMF",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.1 M TBAPF6",
+   "additive_text": "NotReported",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Experiments were conducted in 0.1 M TBAPF6 dissolved in DMF, with a scan rate of 100 mV/s.",
+   "page": 2
+  },
+  {
+   "key": "dmf_tbapf6_h2o_n2",
+   "solvent": "DMF",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.1 M TBAPF6",
+   "additive_text": "0.3 mL H2O",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Upon the addition of 0.3 mL of H2O (gray curve), both peaks shifted positively",
+   "page": 3
+  },
+  {
+   "key": "dmf_tbapf6_h2o_co2",
+   "solvent": "DMF",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M TBAPF6",
+   "additive_text": "0.3 mL H2O",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "When CO2 was introduced (red curve), the second peak shifted further to −1.33 V",
+   "page": 3
+  },
+  {
+   "key": "kcl_01m_n2",
+   "solvent": "Water",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.1 M KCl",
+   "additive_text": "NotReported",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Measurements were conducted in a three-electrode configuration with 0.1 M KCl as the electrolyte (Figure 3a) under both CO2 and N2 atmospheres.",
+   "page": 5
+  },
+  {
+   "key": "kcl_01m_co2",
+   "solvent": "Water",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M KCl",
+   "additive_text": "NotReported",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Measurements were conducted in a three-electrode configuration with 0.1 M KCl as the electrolyte (Figure 3a) under both CO2 and N2 atmospheres.",
+   "page": 5
+  },
+  {
+   "key": "kcl_05m_co2",
+   "solvent": "Water",
+   "reference_electrode": "NotReported",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.5 M KCl",
+   "additive_text": "NotReported",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Both chambers were filled with 15 mL of 0.5 M KCl as the electrolyte.",
+   "page": 7
+  },
+  {
+   "key": "kcl_05m_ferrocyanide_fluegas",
+   "solvent": "Water",
+   "reference_electrode": "NotReported",
+   "atmosphere": "FlueGas",
+   "electrolyte_text": "0.5 M KCl",
+   "additive_text": "0.5 mM ferrocyanide",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Each compartment was connected to a sealed 8 mL vial containing 6 mL of 0.5 M KCl solution as the primary electrolyte.",
+   "page": 7
+  },
+  {
+   "key": "unspecified",
+   "solvent": "NotReported",
+   "reference_electrode": "NotReported",
+   "atmosphere": "NotReported",
+   "electrolyte_text": null,
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "(condition not stated in the paper)",
+   "page": null
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "BDT_Q",
+   "condition": "unspecified",
+   "property": "RateConstant",
+   "value": 1.056,
+   "unit": "PerMolarPerSecond",
+   "basis": "Experiment",
+   "method": "NotReported",
+   "redox_couple": "NotReported",
+   "quote": "bimolecular rate constant (kf = 1.056 M−1 s−1)",
+   "page": 2
+  },
+  {
+   "compound": "BDT_Q",
+   "condition": "unspecified",
+   "property": "Log10BindingConstant",
+   "value": 7.6,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "NotReported",
+   "redox_couple": "NotReported",
+   "quote": "equilibrium constant (log KCO d2 = 7.6)",
+   "page": 2
+  },
+  {
+   "compound": "BDT_Q",
+   "condition": "dmf_tbapf6_n2",
+   "property": "ReductionPotential",
+   "value": -1.3,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "The first reduction peak was observed at E1red = −1.3 V vs Fc+/Fc",
+   "page": 3
+  },
+  {
+   "compound": "BDT_Q",
+   "condition": "dmf_tbapf6_n2",
+   "property": "ReductionPotential",
+   "value": -1.78,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "the second peak at E2red = −1.78 V vs Fc+/Fc",
+   "page": 3
+  },
+  {
+   "compound": "BDT_Q",
+   "condition": "dmf_tbapf6_h2o_n2",
+   "property": "ReductionPotential",
+   "value": -0.97,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "the first peak moving to −0.97 V",
+   "page": 3
+  },
+  {
+   "compound": "BDT_Q",
+   "condition": "dmf_tbapf6_h2o_n2",
+   "property": "ReductionPotential",
+   "value": -1.48,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "the second to −1.48 V vs Fc+/Fc",
+   "page": 3
+  },
+  {
+   "compound": "BDT_Q",
+   "condition": "dmf_tbapf6_h2o_co2",
+   "property": "ReductionPotential",
+   "value": -1.33,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "the second peak shifted further to −1.33 V",
+   "page": 3
+  },
+  {
+   "compound": "PBDT_Q_CNT",
+   "condition": "kcl_05m_co2",
+   "property": "CaptureCapacity",
+   "value": 0.187,
+   "unit": "MmolPerGram",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": "NotReported",
+   "quote": "an average capture of 0.187 ± 0.015 mmol of CO2 was observed",
+   "page": 7
+  },
+  {
+   "compound": "PBDT_Q_CNT",
+   "condition": "kcl_05m_ferrocyanide_fluegas",
+   "property": "CaptureCapacity",
+   "value": 0.217,
+   "unit": "MmolPerGram",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": "NotReported",
+   "quote": "the system achieved a CO2 capture of 0.217 ± 0.016 mmol",
+   "page": 7
+  }
+ ],
+ "observations": [
+  {
+   "compound": "PBDT_Q_CNT",
+   "condition": "kcl_05m_ferrocyanide_fluegas",
+   "kind": "BindingMode",
+   "outcome": "Bicarbonate",
+   "quote": "CO2 gas is introduced into the electrolyte, where it is primarily converted to HCO3−, which is then captured by PBDT-Q in an indirect manner.",
+   "page": 8
+  }
+ ],
+ "not_reported": [
+  "Reference electrode for bulk electrolyzer and flow cell experiments",
+  "pH of the electrolyte solutions",
+  "Specific redox couple for PBDT-Q potentials in aqueous media",
+  "Oxygen stability of PBDT-Q/CNT"
+ ],
+ "dropped": [
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "PBDT_Q",
+    "condition": "kcl_01m_n2",
+    "property": "ReductionPotential",
+    "value": -1.42,
+    "unit": "Volt",
+    "basis": "Experiment",
+    "method": "CyclicVoltammetry",
+    "redox_couple": "NotReported",
+    "quote": "exhibited a more pronounced anodic shift, from −1.42 V vs Fc+/Fc under N2"
+   },
+   "reasons": [
+    "measurements[7] PBDT_Q/ReductionPotential: quote is not verbatim on one page. page 6: your quote matches up to '...ronouncedanodicshift,from' then the page has 'figure5.(a)schematicrepresentationofthef' but you wrote '-1.42vvsfc+/fcundern2' (spaces ignored)",
+    "measurements[7] PBDT_Q/ReductionPotential: the quote names reference 'FcFcPlus' but the condition says AgAgCl; make a condition with the printed reference"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "PBDT_Q",
+    "condition": "kcl_01m_co2",
+    "property": "ReductionPotential",
+    "value": -1.18,
+    "unit": "Volt",
+    "basis": "Experiment",
+    "method": "CyclicVoltammetry",
+    "redox_couple": "NotReported",
+    "quote": "to −1.18 V vs Fc+/Fc under CO2"
+   },
+   "reasons": [
+    "measurements[8] PBDT_Q/ReductionPotential: the quote names reference 'FcFcPlus' but the condition says AgAgCl; make a condition with the printed reference"
+   ]
+  }
+ ],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 7,
+   "dropped": 18
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 22,
+   "dropped": 2
+  },
+  {
+   "n": 3,
+   "parse_errors": [],
+   "kept": 22,
+   "dropped": 2
+  },
+  {
+   "n": 4,
+   "parse_errors": [],
+   "kept": 22,
+   "dropped": 2
+  }
+ ],
+ "review_status": "machine_extracted"
+}

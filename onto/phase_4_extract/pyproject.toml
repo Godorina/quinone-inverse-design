@@ -1,0 +1,53 @@
+[project]
+name = "qextract"
+version = "0.1.0"
+description = "Quote-backed extraction of quinone CO2-capture results from paper text"
+requires-python = ">=3.12"
+dependencies = ["pydantic>=2.9", "httpx>=0.27", "rdflib>=7.0", "typer>=0.12", "rich>=13"]
+
+[project.scripts]
+qextract = "qextract.cli:app"
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.6", "basedpyright>=1.18"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/qextract"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = ["D203", "D213", "COM812", "ISC001", "T201", "S101", "PLR2004", "FBT001", "FBT002", "TD", "FIX", "ERA001", "EM101", "EM102", "TRY003", "D100", "D104", "CPY001"]
+
+[tool.ruff.lint.flake8-bugbear]
+extend-immutable-calls = ["typer.Argument", "typer.Option"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.per-file-ignores]
+"src/qextract/cli.py" = ["PLR0913", "PLR0917", "FBT003"]
+"src/qextract/checker.py" = ["PLR0911", "PLR0913", "PLR0917"]
+"tests/*" = ["D", "ANN", "S", "PLR", "SLF001", "INP001"]
+
+[tool.basedpyright]
+typeCheckingMode = "all"
+pythonVersion = "3.12"
+include = ["src", "tests"]
+reportMissingTypeStubs = false
+reportUnusedCallResult = false
+reportAny = false
+reportExplicitAny = false
+reportImplicitStringConcatenation = false
+reportCallInDefaultInitializer = false
+reportUnnecessaryTypeIgnoreComment = "error"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,184 @@
+{
+ "paper_id": "m045",
+ "title": "Real-time monitoring of the reversible capture and release of CO 2 on anthraquinone and riboflavin-modified graphitic electrodes using ATR-SEIRAS",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "AQ",
+   "name": "anthraquinone",
+   "skeleton": "Anthraquinone",
+   "form": "CarbonImmobilized",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "grafted anthraquinone (AQ)",
+   "page": 1
+  },
+  {
+   "key": "MFD",
+   "name": "10-ethyl-3-methyl ﬂavin derivative",
+   "skeleton": "HeterocyclicQuinone",
+   "form": "CarbonImmobilized",
+   "substituent_classes": [
+    "Alkyl"
+   ],
+   "substituent_text": null,
+   "quote": "a synthesized riboﬂavin derivative, 10-ethyl-3-methyl ﬂavin derivative (MFD)",
+   "page": 1
+  }
+ ],
+ "conditions": [
+  {
+   "key": "aq_argon",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.1 M TBAPF6 in MeCN",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Under argon, the CV displays two distinct redox peaks at −1.28 V (i) and −2.01 V (ii)",
+   "page": 4
+  },
+  {
+   "key": "aq_co2",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M TBAPF6 in MeCN",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "(iii) (−1.20 V vs. −1.28 V, respectively)",
+   "page": 4
+  },
+  {
+   "key": "mfd_argon",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.1 M TBAPF6 in MeCN",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "The CV shows the reduction of the MFD with a main peak (i) at −1.99 V",
+   "page": 8
+  },
+  {
+   "key": "pc_litfsi",
+   "solvent": "PropyleneCarbonate",
+   "reference_electrode": "NotReported",
+   "atmosphere": "NotReported",
+   "electrolyte_text": "0.5 M LiTFSI in PC electrolyte",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "in 0.5 M LiTFSI in PC electrolyte using unmodiﬁed YP-50 as the counter electrode",
+   "page": 9
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "AQ",
+   "condition": "aq_argon",
+   "property": "ReductionPotential",
+   "value": -1.28,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "Under argon, the CV displays two distinct redox peaks at −1.28 V (i) and −2.01 V (ii)",
+   "page": 4
+  },
+  {
+   "compound": "AQ",
+   "condition": "aq_argon",
+   "property": "ReductionPotential",
+   "value": -2.01,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "Under argon, the CV displays two distinct redox peaks at −1.28 V (i) and −2.01 V (ii)",
+   "page": 4
+  },
+  {
+   "compound": "AQ",
+   "condition": "aq_co2",
+   "property": "ReductionPotential",
+   "value": -1.2,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "(iii) (−1.20 V vs. −1.28 V, respectively)",
+   "page": 4
+  },
+  {
+   "compound": "MFD",
+   "condition": "mfd_argon",
+   "property": "ReductionPotential",
+   "value": -1.99,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "NotReported",
+   "quote": "The CV shows the reduction of the MFD with a main peak (i) at −1.99 V",
+   "page": 8
+  }
+ ],
+ "observations": [
+  {
+   "compound": "AQ",
+   "condition": "aq_co2",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "When AQ2−is exposed to CO2, it spontaneously reacts and binds with this species to form two CO2-adducts (AQ-(CO2)2 2−)",
+   "page": 3
+  },
+  {
+   "compound": "MFD",
+   "condition": "aq_co2",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "these spectral changes strongly suggest binding of CO2 to MFD",
+   "page": 9
+  }
+ ],
+ "not_reported": [
+  "CaptureCapacity",
+  "EnergyConsumption",
+  "BindingConstant",
+  "RateConstant",
+  "OxygenStability"
+ ],
+ "dropped": [],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 3,
+   "dropped": 7
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 8,
+   "dropped": 2
+  },
+  {
+   "n": 3,
+   "parse_errors": [],
+   "kept": 8,
+   "dropped": 4
+  },
+  {
+   "n": 4,
+   "parse_errors": [],
+   "kept": 12,
+   "dropped": 0
+  }
+ ],
+ "review_status": "machine_extracted"
+}

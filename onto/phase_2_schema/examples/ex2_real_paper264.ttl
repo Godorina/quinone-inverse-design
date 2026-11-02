@@ -1,0 +1,28 @@
+# Real example: values copied from the ABSTRACT of 10.1021/acssuschemeng.5c11680 (id 264 in data/on_topic_final.json). Quotes are exact copies of the stored abstract.
+# Not reviewed by a person. The paper's solvent, atmosphere and method are not in the abstract, hence qn:NotReported. "Log(KCO2)" is read as log10 K_CO2.
+@prefix qn:     <https://w3id.org/quinone#> .
+@prefix e:      <https://w3id.org/quinone/entity/> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <https://schema.org/> .
+
+e:paper-264 a qn:Paper ; schema:name "Tuning the Half-Wave Potential and Binding Constant of PAQ Molecules for the Enhanced O 2 -Tolerant Electrochemical CO 2 Capture Process" ;
+    schema:identifier "10.1021/acssuschemeng.5c11680" ; schema:datePublished "2026" .
+
+e:cpd-paq a qn:Compound ; schema:name "9,10-Phenanthrenequinone (PAQ)" ; qn:skeleton qn:Phenanthrenequinone ; qn:form qn:Molecular ; qn:substituentClass qn:Unsubstituted .
+
+e:cond-264-etoh a qn:Condition ; qn:solvent qn:NotReported ; qn:referenceElectrode qn:AgAgCl ; qn:atmosphere qn:NotReported ; qn:additiveText "ethanol 0.66 M" .
+e:cond-264-base a qn:Condition ; qn:solvent qn:NotReported ; qn:referenceElectrode qn:NotReported ; qn:atmosphere qn:NotReported .
+
+e:ev-264-1 a qn:Evidence ; qn:evidenceSource qn:Abstract ; qn:quote "When the ethanol (EtOH) concentration was 0.66 M, the E 1/2 (Q –1 /Q –2 ) of PAQ anodically shifted to −0.85 V vs Ag/AgCl; simultaneously, an appropriate Log(KCO 2 ) (8.55) was still maintained at this time, and the estimated minimum energy consumption of the electrochemical system was 50.94 kJ/mol, which was significantly lower than that of the original electrolyte (73.43 kJ/mol)." .
+e:ev-264-2 a qn:Evidence ; qn:evidenceSource qn:Abstract ; qn:quote "This suggested that constructing intermolecular hydrogen-bonding networks is beneficial for alleviating the O 2 stability problem of quinone molecules with strong CO 2 complexation." .
+
+e:m-264-e a qn:Measurement ; qn:ofCompound e:cpd-paq ; qn:underCondition e:cond-264-etoh ; qn:fromPaper e:paper-264 ; qn:hasEvidence e:ev-264-1 ; qn:reviewStatus "example" ;
+    qn:property qn:HalfWavePotential ; qn:value -0.85 ; qn:unit qn:Volt ; qn:redoxCouple qn:SecondReduction ; qn:basis qn:Experiment ; qn:method qn:NotReported .
+e:m-264-k a qn:Measurement ; qn:ofCompound e:cpd-paq ; qn:underCondition e:cond-264-etoh ; qn:fromPaper e:paper-264 ; qn:hasEvidence e:ev-264-1 ; qn:reviewStatus "example" ;
+    qn:property qn:Log10BindingConstant ; qn:value 8.55 ; qn:unit qn:Dimensionless ; qn:basis qn:Experiment ; qn:method qn:NotReported .
+e:m-264-w1 a qn:Measurement ; qn:ofCompound e:cpd-paq ; qn:underCondition e:cond-264-etoh ; qn:fromPaper e:paper-264 ; qn:hasEvidence e:ev-264-1 ; qn:reviewStatus "example" ;
+    qn:property qn:EnergyConsumption ; qn:value 50.94 ; qn:unit qn:KJPerMol ; qn:basis qn:Experiment ; qn:method qn:NotReported .
+e:m-264-w0 a qn:Measurement ; qn:ofCompound e:cpd-paq ; qn:underCondition e:cond-264-base ; qn:fromPaper e:paper-264 ; qn:hasEvidence e:ev-264-1 ; qn:reviewStatus "example" ;
+    qn:property qn:EnergyConsumption ; qn:value 73.43 ; qn:unit qn:KJPerMol ; qn:basis qn:Experiment ; qn:method qn:NotReported .
+e:o-264-o2 a qn:Observation ; qn:ofCompound e:cpd-paq ; qn:underCondition e:cond-264-etoh ; qn:fromPaper e:paper-264 ; qn:hasEvidence e:ev-264-2 ; qn:reviewStatus "example" ;
+    qn:observationKind qn:OxygenStability ; qn:outcome qn:OxygenImproved .

@@ -1,0 +1,239 @@
+{
+ "paper_id": "m054",
+ "title": "Evaluation of a Ruthenium(II) (2,2′:6′,2′′‐Terpyridine)–Benzoquinone Complex for Electrochemical CO 2 Capture",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "BQtpy",
+   "name": "4-BQ-tpy",
+   "skeleton": "Benzoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "NotReported"
+   ],
+   "substituent_text": null,
+   "quote": "4’-(2,5-benzoquinonyl)-2,2’:6’,2’’-terpyridine (4BQtpy)",
+   "page": 3
+  },
+  {
+   "key": "Ru_complex",
+   "name": "[Ru(ttpy)(4-BQ-tpy)]2 +",
+   "skeleton": "Benzoquinone",
+   "form": "MetalComplex",
+   "substituent_classes": [
+    "NotReported"
+   ],
+   "substituent_text": null,
+   "quote": "This work investigates the spectroscopic and electrochemical properties of Ru(ttpy)(4-BQ-tpy)2 +",
+   "page": 1
+  }
+ ],
+ "conditions": [
+  {
+   "key": "DMSO_N2",
+   "solvent": "DMSO",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.1 M [NBu4 ][PF6 ]",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "recorded in DMSO under a nitrogen atmosphere (black line)",
+   "page": 4
+  },
+  {
+   "key": "DMSO_CO2_20",
+   "solvent": "DMSO",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M [NBu4 ][PF6 ]",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "20% CO2 (dashed red line)",
+   "page": 4
+  },
+  {
+   "key": "DMSO_CO2_100",
+   "solvent": "DMSO",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M [NBu4 ][PF6 ]",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "100% CO2 (solid red line)",
+   "page": 4
+  },
+  {
+   "key": "DFT_DMSO",
+   "solvent": "DMSO",
+   "reference_electrode": "NotReported",
+   "atmosphere": "NotReported",
+   "electrolyte_text": "NotReported",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "the SMD solvation model was used with dimethyl sulfoxide (DMSO)",
+   "page": 6
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "BQtpy",
+   "condition": "DMSO_CO2_100",
+   "property": "Log10BindingConstant",
+   "value": 11.3,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "NotReported",
+   "quote": "4-BQ-tpy \n− 0.72 \n− 1.43 \n0.39 \n0.65 \n11.3",
+   "page": 5
+  },
+  {
+   "compound": "Ru_complex",
+   "condition": "DMSO_CO2_100",
+   "property": "Log10BindingConstant",
+   "value": 7.8,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "NotReported",
+   "quote": "[Ru(ttpy)(4-BQ-tpy)]2 + \n− 0.64 \n− 1.25 \n0.26 \n0.46 \n7.8",
+   "page": 5
+  },
+  {
+   "compound": "Ru_complex",
+   "condition": "DFT_DMSO",
+   "property": "BindingEnergy",
+   "value": 5.9,
+   "unit": "KcalPerMol",
+   "basis": "Computation",
+   "method": "DFT",
+   "redox_couple": "NotReported",
+   "quote": "The optimization of the doubly reduced species with a single CO2 molecule resulted in carbonate-type species with relative energy differences of 5.9 kcal/mol.",
+   "page": 6
+  }
+ ],
+ "observations": [
+  {
+   "compound": "Ru_complex",
+   "condition": "DFT_DMSO",
+   "kind": "BindingMode",
+   "outcome": "Carbonate",
+   "quote": "The optimization of the doubly reduced species with a single CO2 molecule resulted in carbonate-type species",
+   "page": 6
+  },
+  {
+   "compound": "BQtpy",
+   "condition": "DMSO_CO2_100",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "consistent with adduct formation between the doubly reduced quinone species and CO2",
+   "page": 1
+  }
+ ],
+ "not_reported": [
+  "Oxygen stability of the compounds",
+  "Capture capacity in MmolPerGram or MolPerMol",
+  "Rate constants for CO2 binding"
+ ],
+ "dropped": [
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "BQtpy",
+    "condition": "DMSO_N2",
+    "property": "HalfWavePotential",
+    "value": -0.72,
+    "unit": "Volt",
+    "basis": "Experiment",
+    "method": "CyclicVoltammetry",
+    "redox_couple": "FirstReduction",
+    "quote": "4-BQ-tpy \n− 0.72 \n− 1.43 \n0.39 \n0.65 \n11.3"
+   },
+   "reasons": [
+    "measurements[0] BQtpy/HalfWavePotential: the number -0.72 is not printed in the quote; quote the sentence or table row that prints it"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "BQtpy",
+    "condition": "DMSO_N2",
+    "property": "HalfWavePotential",
+    "value": -1.43,
+    "unit": "Volt",
+    "basis": "Experiment",
+    "method": "CyclicVoltammetry",
+    "redox_couple": "SecondReduction",
+    "quote": "4-BQ-tpy \n− 0.72 \n− 1.43 \n0.39 \n0.65 \n11.3"
+   },
+   "reasons": [
+    "measurements[1] BQtpy/HalfWavePotential: the number -1.43 is not printed in the quote; quote the sentence or table row that prints it"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "Ru_complex",
+    "condition": "DMSO_N2",
+    "property": "HalfWavePotential",
+    "value": -0.64,
+    "unit": "Volt",
+    "basis": "Experiment",
+    "method": "CyclicVoltammetry",
+    "redox_couple": "FirstReduction",
+    "quote": "appearing at − 0.64 V and − 1.25 V for the complex"
+   },
+   "reasons": [
+    "measurements[3] Ru_complex/HalfWavePotential: the number -0.64 is not printed in the quote; quote the sentence or table row that prints it"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "Ru_complex",
+    "condition": "DMSO_N2",
+    "property": "HalfWavePotential",
+    "value": -1.25,
+    "unit": "Volt",
+    "basis": "Experiment",
+    "method": "CyclicVoltammetry",
+    "redox_couple": "SecondReduction",
+    "quote": "appearing at − 0.64 V and − 1.25 V for the complex"
+   },
+   "reasons": [
+    "measurements[4] Ru_complex/HalfWavePotential: the number -1.25 is not printed in the quote; quote the sentence or table row that prints it"
+   ]
+  }
+ ],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 8,
+   "dropped": 7
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 11,
+   "dropped": 4
+  },
+  {
+   "n": 3,
+   "parse_errors": [],
+   "kept": 11,
+   "dropped": 4
+  },
+  {
+   "n": 4,
+   "parse_errors": [],
+   "kept": 11,
+   "dropped": 4
+  }
+ ],
+ "review_status": "machine_extracted"
+}

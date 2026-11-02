@@ -1,0 +1,97 @@
+{
+ "paper_id": "m040",
+ "title": "Electrochemically Mediated Carbon Capture on Surface-Confined Quinone: Unveiling Interfacial Pathways via Surface-Enhanced Spectroscopy",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "AAQ",
+   "name": "2-aminoanthracene-9,10-dione (AAQ)",
+   "skeleton": "Anthraquinone",
+   "form": "CarbonImmobilized",
+   "substituent_classes": [
+    "Amino"
+   ],
+   "substituent_text": null,
+   "quote": "2-aminoanthracene-9,10-dione (AAQ) (TCI) > 98% (HPLC)",
+   "page": 2
+  }
+ ],
+ "conditions": [
+  {
+   "key": "inert_meCN",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.1 M TBAPF6 MeCN",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Figure 2a presents the cyclic voltammograms of AQ-grafted gold electrodes in 0.1 M TBAPF6/MeCN under an inert atmosphere",
+   "page": 4
+  },
+  {
+   "key": "co2_meCN",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M TBAPF6 MeCN",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Cyclic voltammetry conducted under CO2 introduction (Figure 2c) reveals a progressive transformation in the voltammetric response.",
+   "page": 5
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "AAQ",
+   "condition": "inert_meCN",
+   "property": "HalfWavePotential",
+   "value": -1.32,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "The first wave, centered at E1/2 = −1.32 V vs. Fc/Fc+, corresponds to the one-electron reduction of neutral anthraquinone (NAQ) to the radical anion (RAQ)",
+   "page": 4
+  },
+  {
+   "compound": "AAQ",
+   "condition": "inert_meCN",
+   "property": "HalfWavePotential",
+   "value": -1.98,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "the second one-electron reduction is attributed to the formation of the dianion species (DAQ), appears at E1/2 = −1.98 V vs Fc/Fc+",
+   "page": 4
+  }
+ ],
+ "observations": [
+  {
+   "compound": "AAQ",
+   "condition": "co2_meCN",
+   "kind": "BindingMode",
+   "outcome": "Carbonate",
+   "quote": "CO2 binding was observed only after the second electron transfer, resulting in the formation of a mono(carbonate) DAQ−CO2 complex.",
+   "page": 1
+  }
+ ],
+ "not_reported": [
+  "CaptureCapacity",
+  "BindingConstant",
+  "RateConstant",
+  "OxygenStability"
+ ],
+ "dropped": [],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 6,
+   "dropped": 0
+  }
+ ],
+ "review_status": "machine_extracted"
+}

@@ -1,0 +1,14 @@
+# CQ05: What are the CO2 binding constants and energies, by which basis and method?
+PREFIX qn: <https://w3id.org/quinone#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX schema: <https://schema.org/>
+
+SELECT ?name ?property ?value ?unit ?basis ?method WHERE {
+  ?m a qn:Measurement ; qn:ofCompound ?compound ; qn:property ?p ; qn:value ?value ; qn:unit ?u ; qn:basis ?b ; qn:method ?me .
+  FILTER(?p IN (qn:Log10BindingConstant, qn:BindingConstant, qn:BindingEnergy))
+  ?compound schema:name ?name .
+  ?p skos:prefLabel ?property . FILTER(lang(?property) = "en")
+  ?u skos:prefLabel ?unit . FILTER(lang(?unit) = "en")
+  ?b skos:prefLabel ?basis . FILTER(lang(?basis) = "en")
+  ?me skos:prefLabel ?method . FILTER(lang(?method) = "en")
+} ORDER BY ?property ?name

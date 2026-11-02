@@ -1,0 +1,134 @@
+{
+ "paper_id": "m031",
+ "title": "Porous Polymeric Electrodes for Electrochemical Carbon Dioxide Capture",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "PVAQ",
+   "name": "poly(vinylanthraquinone) (PVAQ)",
+   "skeleton": "Anthraquinone",
+   "form": "Polymer",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "redox-active quinones (e.g., poly(vinylanthraquinone) (PVAQ))",
+   "page": 2
+  }
+ ],
+ "conditions": [
+  {
+   "key": "IL_CO2_single",
+   "solvent": "IonicLiquid",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "[BMIM][TFSI]",
+   "additive_text": "single piece of PPE",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "CV testing setup, which was carried out in [BMIM][TFSI] saturated with CO2, Pt wire as the counter electrode, and Ag/AgCl leakless as a reference electrode.",
+   "page": 3
+  },
+  {
+   "key": "IL_CO2_parallel",
+   "solvent": "IonicLiquid",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "[BMIM][TFSI]",
+   "additive_text": "parallelly stacked cell",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "The parallelly stacked cell reaches saturation after 1.5 h with a high Faradic eﬃciency at ≈97%",
+   "page": 5
+  },
+  {
+   "key": "IL_N2",
+   "solvent": "IonicLiquid",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "Inert",
+   "electrolyte_text": "[BMIM][TFSI]",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "CVs of PPE and counter electrode (PVFc-CNT) in [BMIM][TFSI] under N2 (dashed line) and CO2 (solid line). The reference electrode was Ag/AgCl leakless",
+   "page": 5
+  },
+  {
+   "key": "IL_Air",
+   "solvent": "IonicLiquid",
+   "reference_electrode": "NotReported",
+   "atmosphere": "AirOxygen",
+   "electrolyte_text": "[BMIM][TFSI]",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "the performance of the cell was first evaluated under air (≈21% oxygen) at diﬀerent applied potentials",
+   "page": 6
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "PVAQ",
+   "condition": "IL_CO2_single",
+   "property": "FaradaicEfficiency",
+   "value": 88.0,
+   "unit": "Percent",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": "NotReported",
+   "quote": "the system was close to fully charged after 60 min with a Faradaic eﬃciency of ≈88%.",
+   "page": 4
+  },
+  {
+   "compound": "PVAQ",
+   "condition": "IL_CO2_parallel",
+   "property": "FaradaicEfficiency",
+   "value": 97.0,
+   "unit": "Percent",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": "NotReported",
+   "quote": "The parallelly stacked cell reaches saturation after 1.5 h with a high Faradic eﬃciency at ≈97%",
+   "page": 5
+  }
+ ],
+ "observations": [
+  {
+   "compound": "PVAQ",
+   "condition": "IL_CO2_single",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "indicating the complexation of CO2 with quinone proceeds via an ECEC mechanism",
+   "page": 4
+  },
+  {
+   "compound": "PVAQ",
+   "condition": "IL_Air",
+   "kind": "OxygenStability",
+   "outcome": "OxygenUnstable",
+   "quote": "the cyclic capacity in the air decreased due to the intrinsic limitation of PVAQ in the presence of parasitic reactions under oxygen-present conditions",
+   "page": 6
+  }
+ ],
+ "not_reported": [
+  "HalfWavePotential or ReductionPotential values for PVAQ",
+  "BindingConstant or BindingEnergy values",
+  "RateConstant values"
+ ],
+ "dropped": [],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 6,
+   "dropped": 3
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 9,
+   "dropped": 0
+  }
+ ],
+ "review_status": "machine_extracted"
+}

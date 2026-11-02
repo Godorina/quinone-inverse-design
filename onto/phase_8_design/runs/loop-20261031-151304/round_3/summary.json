@@ -1,0 +1,15 @@
+{
+  "excluded_detached": 0,
+  "line_measurable": false,
+  "molecules": [
+    {
+      "E2_eV": -2.0868843158330983,
+      "E2_reported_V": 2.0868843158330983,
+      "E_O2_eV": -2.230119513869266,
+      "co2_detached": false,
+      "co2_distance": 1.4608842572302398,
+      "dE_bind_kcal": -27.770468309773122,
+      "inchikey": "NYAVPORNTNZVOE-UHFFFAOYSA-N"
+    }
+  ]
+}

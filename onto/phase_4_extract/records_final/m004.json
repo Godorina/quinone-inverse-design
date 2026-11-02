@@ -1,0 +1,168 @@
+{
+ "paper_id": "m004",
+ "title": "Regeneration of Na2Q in an Electrochemical CO2 Capture System",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "tiron",
+   "name": "Tiron",
+   "skeleton": "Benzoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Hydroxyl",
+    "Sulfonate"
+   ],
+   "substituent_text": null,
+   "quote": "Tiron (disodium 4,5-dihydroxybenzene-1,3-disulfonate, QH2) is a phenolic quinone that undergoes the PCET reaction.",
+   "page": 1
+  }
+ ],
+ "conditions": [
+  {
+   "key": "cond_1m_kcl",
+   "solvent": "Water",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "NotReported",
+   "electrolyte_text": "1 M KCl",
+   "additive_text": "NotReported",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "P-GF was used to test the CV of the 0.05−0.7 M Na2Q/1 M KCl mixture solution at room temperature.",
+   "page": 2
+  },
+  {
+   "key": "cond_1m_na2so4",
+   "solvent": "Water",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "NotReported",
+   "electrolyte_text": "1 M Na2SO4",
+   "additive_text": "NotReported",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "The glassy carbon electrode or H-GF was used as a working electrode (WE) to test the CV of a 0.05 M Na2Q, NaHQ, and QH2/1 M Na2SO4 mixture solution.",
+   "page": 2
+  },
+  {
+   "key": "cond_07m_absorption",
+   "solvent": "Water",
+   "reference_electrode": "NotReported",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.7 M Na2Q",
+   "additive_text": "NotReported",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "0.7 M Na2Q (Na2Q was prepared by QH2 and NaOH with a molar ratio of 1:2) can achieve a CO2 absorption capacity of 0.9 mol CO2/mol Na2Q.",
+   "page": 1
+  },
+  {
+   "key": "cond_01m_cycle1",
+   "solvent": "Water",
+   "reference_electrode": "NotReported",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M Na2Q",
+   "additive_text": "NotReported",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "CO2 capacity (mol CO2/mol Na2Q) 1.0 0.4 0.4 0.9 0.3 0.0",
+   "page": 4
+  },
+  {
+   "key": "cond_01m_optimized",
+   "solvent": "Water",
+   "reference_electrode": "NotReported",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M Na2Q",
+   "additive_text": "NotReported",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "the CO2 capacity is 0.9 mol CO2/mol Na2Q.",
+   "page": 6
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "tiron",
+   "condition": "cond_07m_absorption",
+   "property": "CaptureCapacity",
+   "value": 0.9,
+   "unit": "MolPerMol",
+   "basis": "Experiment",
+   "method": "NotReported",
+   "redox_couple": "NotReported",
+   "quote": "0.7 M Na2Q (Na2Q was prepared by QH2 and NaOH with a molar ratio of 1:2) can achieve a CO2 absorption capacity of 0.9 mol CO2/mol Na2Q.",
+   "page": 1
+  },
+  {
+   "compound": "tiron",
+   "condition": "cond_01m_cycle1",
+   "property": "CaptureCapacity",
+   "value": 1.0,
+   "unit": "MolPerMol",
+   "basis": "Experiment",
+   "method": "NotReported",
+   "redox_couple": "NotReported",
+   "quote": "CO2 capacity (mol CO2/mol Na2Q) 1.0 0.4 0.4 0.9 0.3 0.0",
+   "page": 4
+  },
+  {
+   "compound": "tiron",
+   "condition": "cond_01m_optimized",
+   "property": "CaptureCapacity",
+   "value": 0.9,
+   "unit": "MolPerMol",
+   "basis": "Experiment",
+   "method": "NotReported",
+   "redox_couple": "NotReported",
+   "quote": "the CO2 capacity is 0.9 mol CO2/mol Na2Q.",
+   "page": 6
+  }
+ ],
+ "observations": [],
+ "not_reported": [
+  "HalfWavePotential or ReductionPotential values",
+  "BindingConstant or BindingEnergy values",
+  "RateConstant values in allowed units (PerMolarPerSecond)"
+ ],
+ "dropped": [
+  {
+   "kind": "observation",
+   "raw": {
+    "compound": "tiron",
+    "condition": "unspecified",
+    "kind": "BindingMode",
+    "outcome": "Bicarbonate",
+    "quote": "NaOH CO2 NaHCO3"
+   },
+   "reasons": [
+    "observations[0] tiron/BindingMode: quote is not verbatim on one page. no page contains the start of this quote; copy it exactly from the page text"
+   ]
+  }
+ ],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 1,
+   "dropped": 6
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 9,
+   "dropped": 1
+  },
+  {
+   "n": 3,
+   "parse_errors": [],
+   "kept": 9,
+   "dropped": 1
+  },
+  {
+   "n": 4,
+   "parse_errors": [],
+   "kept": 9,
+   "dropped": 1
+  }
+ ],
+ "review_status": "machine_extracted"
+}

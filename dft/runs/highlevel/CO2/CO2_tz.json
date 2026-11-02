@@ -1,0 +1,41 @@
+{
+  "name": "CO2_CO2_tz",
+  "task": "opt",
+  "status": "ok",
+  "spec": {
+    "name": "CO2_CO2_tz",
+    "xyz": "O -1.1630815132 -0.0001329926 -0.0000000000\nC 0.0000036720 0.0000000006 -0.0000000000\nO 1.1630778146 0.0001329926 -0.0000000000",
+    "charge": 0,
+    "spin": 0,
+    "task": "opt",
+    "xc": "wb97m_v",
+    "basis": "def2-tzvpd",
+    "grids_atom": [
+      99,
+      590
+    ],
+    "nlc_grids_atom": [
+      50,
+      194
+    ],
+    "nlc_grids_prune": "sg1",
+    "thermo_model": "mrrho",
+    "temperature": 298.15,
+    "density_fit": true,
+    "solvent": {
+      "model": "smd",
+      "name": "acetonitrile"
+    },
+    "log": "/home/hgpark/whlee/hgpark/quinone/dft/runs/highlevel/CO2/CO2_tz.log"
+  },
+  "nao": 117,
+  "opt_converged": true,
+  "xyz_final": "O -1.15832813 -0.00014980 -0.00000000\nC -0.00000006 0.00000000 0.00000000\nO 1.15832817 0.00014980 0.00000000",
+  "energy_Eh": -188.62467223111562,
+  "scf_converged": true,
+  "auxbasis": "None",
+  "wall_s": 9.1,
+  "source": "/home/hgpark/whlee/hgpark/quinone/dft/runs/ref_set/_common.json",
+  "o_index": null,
+  "nao_tz": 117
+}

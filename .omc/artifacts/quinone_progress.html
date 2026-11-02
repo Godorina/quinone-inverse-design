@@ -1,0 +1,186 @@
+<title>퀴논 역설계 경과</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column; diagram, two charts and a table stacked as a lab notebook page */
+:root{
+  --bg:#f7f8f6; --surface:#ffffff; --fg:#141713; --muted:#5a6158; --rule:#dfe3dc;
+  --accent:#1f6f5c; --ref:#8a908a; --llm:#2a78d6; --rand:#eb6834;
+  --good:#0ca30c; --bad:#d03b3b; --zone:rgba(12,163,12,.08);
+  --sans:"IBM Plex Sans KR",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#141614; --surface:#1b1e1b; --fg:#ecefea; --muted:#a6ada4; --rule:#2e332e;
+  --accent:#5cc2a6; --ref:#8f968f; --llm:#3987e5; --rand:#d95926; --zone:rgba(12,163,12,.14); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141614; --surface:#1b1e1b; --fg:#ecefea; --muted:#a6ada4; --rule:#2e332e;
+  --accent:#5cc2a6; --ref:#8f968f; --llm:#3987e5; --rand:#d95926; --zone:rgba(12,163,12,.14); color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px 64px}
+main{max-width:980px;margin:0 auto;display:flex;flex-direction:column;gap:40px}
+h1{font-size:1.9rem;margin:0;text-wrap:balance}
+h2{font-size:1.2rem;margin:0 0 6px;text-wrap:balance}
+p{margin:0;max-width:68ch}
+.lede{color:var(--muted);margin-top:8px}
+.eyebrow{font-family:var(--mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+section{display:flex;flex-direction:column;gap:12px}
+.panel{background:var(--surface);border:1px solid var(--rule);border-radius:8px;padding:16px;min-width:0}
+.scroll{overflow-x:auto}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.step{background:var(--surface);border:1px solid var(--rule);border-radius:8px;padding:12px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.step b{font-size:.95rem}.step span{color:var(--muted);font-size:.85rem}
+.step .tag{font-family:var(--mono);font-size:.72rem;color:var(--accent)}
+.arrow{color:var(--muted);text-align:center}
+.timeline{display:flex;flex-direction:column;gap:8px;margin:0;padding:0;list-style:none}
+.timeline li{display:grid;grid-template-columns:5.5rem 1fr;gap:12px;align-items:baseline}
+.timeline .v{font-family:var(--mono);font-size:.8rem;color:var(--accent)}
+.legend{display:flex;flex-wrap:wrap;gap:16px;font-size:.85rem;color:var(--muted)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle}
+svg text{fill:var(--muted);font-family:var(--mono);font-size:11px}
+.tip{position:fixed;pointer-events:none;background:var(--surface);color:var(--fg);border:1px solid var(--rule);border-radius:6px;padding:6px 8px;font-size:.8rem;font-family:var(--mono);box-shadow:0 4px 14px rgba(0,0,0,.15)}
+table{border-collapse:collapse;width:100%;font-size:.88rem;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--rule);white-space:nowrap}
+th{color:var(--muted);font-weight:600;font-size:.8rem}
+td.num{text-align:right;font-family:var(--mono)}
+.chip{display:inline-block;padding:1px 8px;border-radius:999px;font-size:.78rem;font-weight:600;border:1px solid}
+.chip.pass{color:var(--good);border-color:var(--good)}.chip.fail{color:var(--bad);border-color:var(--bad)}.chip.edge{color:var(--muted);border-color:var(--muted)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:720px){.cols{grid-template-columns:1fr}}
+.list{margin:0;padding-left:1.1rem;display:flex;flex-direction:column;gap:4px}
+.note{font-size:.82rem;color:var(--muted)}
+code{font-family:var(--mono);font-size:.85em}
+</style>
+<main>
+<header>
+  <div class="eyebrow">quinone · electrochemical CO₂ capture</div>
+  <h1>퀴논 역설계 경과</h1>
+  <p class="lede">논문 38편으로 온톨로지를 만들고, LLM이 그 근거로 퀴논을 제안하면 DFT가 평가해 결과를 되돌려 주는 루프를 돌렸습니다. 루프는 끝까지 작동했지만, 고수준 계산까지 통과한 목표 분자는 아직 없습니다.</p>
+</header>
+
+<section>
+  <div class="eyebrow">파이프라인</div>
+  <h2>무엇을 어떤 순서로 했나</h2>
+  <div class="steps">
+    <div class="step"><span class="tag">데이터</span><b>논문 → 온톨로지</b><span>38편 정리, RDF 그래프(화합물 186, 측정값 307), Alherz 실험표 입력</span></div>
+    <div class="step"><span class="tag">기준</span><b>기준 분자 15개 DFT</b><span>환원전위 ↔ CO₂ 결합 맞교환선 (σ 3.4 kcal/mol)</span></div>
+    <div class="step"><span class="tag">역설계</span><b>LLM ↔ DFT 루프</b><span>3회차 × 5개, 결과를 다음 회차 프롬프트에 되돌림</span></div>
+    <div class="step"><span class="tag">비교</span><b>무작위 루프</b><span>같은 예산·같은 검사, 공정 조건으로 재실행</span></div>
+    <div class="step"><span class="tag">검증</span><b>고수준 DFT</b><span>ωB97M-V/TZVPD + Fc + mRRHO, chloranil로 실험 대조</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">계획 변경</div>
+  <h2>계획이 바뀐 이유</h2>
+  <ol class="timeline">
+    <li><span class="v">개정 1–2</span><span>xTB 평가자 + 대규모 닫힌 루프로 설계</span></li>
+    <li><span class="v">개정 3</span><span>DFT만 쓰기로 해서 비용 때문에 단발 생성(B안)으로 축소</span></li>
+    <li><span class="v">개정 4</span><span>B안은 역설계가 아니고 LLM이 후보 0개를 내서, 작은 닫힌 루프로 변경</span></li>
+    <li><span class="v">개정 4.1</span><span>적용 영역 확장, 빈자리 보충, 무작위 비교군 추가</span></li>
+    <li><span class="v">개정 4.2</span><span>루프는 상대 비교, 최종 후보만 고수준 확인, 실험표 재입력</span></li>
+  </ol>
+</section>
+
+<section>
+  <div class="eyebrow">맞교환 지도</div>
+  <h2>평가한 분자 55개 (저수준 DFT)</h2>
+  <p class="note">오른쪽일수록 전자를 쉽게 받고(O₂에 강함), 아래일수록 CO₂를 세게 잡습니다. 목표는 오른쪽 아래 초록 영역(맞교환선보다 2σ 아래, O₂ 여유 ≥ 0.15 V)입니다. 빈 원은 CO₂가 떨어져 나간 분자입니다. 점에 마우스를 올리면 값이 보입니다.</p>
+  <div class="legend"><span><i style="background:var(--ref)"></i>기준 세트 15</span><span><i style="background:var(--llm)"></i>LLM 루프 25</span><span><i style="background:var(--rand)"></i>무작위 루프(공정) 15</span></div>
+  <div class="panel scroll"><svg id="map" viewBox="0 0 900 440" role="img" aria-label="환원전위와 CO2 결합 에너지 산점도" style="width:100%;min-width:620px;height:auto"></svg></div>
+</section>
+
+<section>
+  <div class="eyebrow">공정 비교</div>
+  <h2>LLM 대 무작위, 회차별</h2>
+  <div class="cols">
+    <div class="panel"><b>O₂ 통과 후보 중 최고 f</b><svg id="best" viewBox="0 0 420 230" style="width:100%;height:auto"></svg></div>
+    <div class="panel"><b>평가한 후보의 평균 f</b><svg id="mean" viewBox="0 0 420 230" style="width:100%;height:auto"></svg></div>
+  </div>
+  <p class="note">최고값은 사실상 같고, 평균은 LLM이 세 회차 모두 높습니다. 제안 시도는 LLM 19번, 무작위 52번이었습니다. 각 1회 실행이라 통계적 비교는 아닙니다.</p>
+</section>
+
+<section>
+  <div class="eyebrow">고수준 확인</div>
+  <h2>최종 후보는 O₂ 기준을 넘지 못했다</h2>
+  <div class="panel scroll"><table id="hl"><thead><tr><th>분자</th><th>저수준 f</th><th>저수준 O₂ 여유</th><th>고수준 E2 (V vs Fc)</th><th>고수준 ΔG 결합, 1 M</th><th>고수준 O₂ 여유</th><th>판정</th></tr></thead><tbody></tbody></table></div>
+  <p class="note">O₂ 여유는 실험 O₂/O₂•⁻ 전위(−1.23 V vs Fc, MeCN)를 기준으로 했고, 사전 통과 기준은 +0.15 V입니다. chloranil은 계산과 실험의 차이가 E2 −0.045 V, ΔG −2.9 kcal/mol로 방법 검증용입니다.</p>
+</section>
+
+<section>
+  <div class="eyebrow">결론</div>
+  <div class="cols">
+    <div class="panel"><b>된 것</b><ul class="list"><li>온톨로지 → LLM → DFT → 피드백 루프가 끝까지 작동</li><li>실험값(chloranil)으로 계산 방법 검증</li><li>할로젠 퀴논 범위에서는 맞교환을 넘기 어렵다는 확인</li><li>버그 약 20개를 독립 검토로 찾아 수정</li></ul></div>
+    <div class="panel"><b>안 된 것</b><ul class="list"><li>목표 분자 발견 (고수준 O₂ 통과 0개)</li><li>LLM이 무작위보다 낫다는 입증</li><li>피드백 효과 입증 (최고값은 피드백 전 1회차)</li><li>신규성은 등록 범위(KG, Alherz 표) 안에서만</li></ul></div>
+  </div>
+</section>
+</main>
+<div class="tip" id="tip" hidden></div>
+<script>
+const D = {"line": {"a": -8.971458339658367, "b": -42.406668947099355, "n": 12, "sigma": 3.4349261629533934}, "pts": [{"g": "ref", "label": "1-NH2-4-OH-AQ", "r": null, "x": 2.237, "y": -18.66, "f": -1.07, "m": 0.007, "det": false}, {"g": "ref", "label": "1-OH-AQ", "r": null, "x": 2.409, "y": -17.63, "f": -0.92, "m": 0.179, "det": false}, {"g": "ref", "label": "2,3-Dicyano-1,4-benzoquinone", "r": null, "x": 3.155, "y": -7.9, "f": -1.81, "m": 0.925, "det": true}, {"g": "ref", "label": "1,4-NH2-AQ", "r": null, "x": 2.041, "y": -20.95, "f": -0.91, "m": -0.189, "det": false}, {"g": "ref", "label": "1,4-OH-AQ", "r": null, "x": 2.437, "y": -13.18, "f": -2.14, "m": 0.207, "det": false}, {"g": "ref", "label": "2,3-dichloro-5,6-dicyano-p-benzoquinone", "r": null, "x": 3.4, "y": -7.08, "f": -1.4, "m": 1.17, "det": true}, {"g": "ref", "label": "2,6-dichloro-p-benzoquinone", "r": null, "x": 2.327, "y": -25.8, "f": 1.24, "m": 0.097, "det": false}, {"g": "ref", "label": "2,3,5,6-Tetrafluoro-1,4-benzoquinone", "r": null, "x": 2.408, "y": -24.33, "f": 1.03, "m": 0.178, "det": false}, {"g": "ref", "label": "1-NH2-AQ", "r": null, "x": 2.051, "y": -24.58, "f": 0.17, "m": -0.179, "det": false}, {"g": "ref", "label": "2,3-Dicyano-1,4-naphthoquinone", "r": null, "x": 3.166, "y": -7.56, "f": -1.88, "m": 0.936, "det": true}, {"g": "ref", "label": "tetrabromo-p-benzoquinone", "r": null, "x": 2.692, "y": -19.21, "f": 0.28, "m": 0.462, "det": false}, {"g": "ref", "label": "unsubstituted AQ", "r": null, "x": 2.039, "y": -24.61, "f": 0.14, "m": -0.191, "det": false}, {"g": "ref", "label": "2,3-dichloro-p-naphthoquinone", "r": null, "x": 2.319, "y": -22.89, "f": 0.38, "m": 0.089, "det": false}, {"g": "ref", "label": "tetrachloro-p-benzoquinone", "r": null, "x": 2.576, "y": -21.77, "f": 0.72, "m": 0.346, "det": false}, {"g": "ref", "label": "9,10-Phenanthrenequinone", "r": null, "x": 2.034, "y": -27.9, "f": 1.09, "m": -0.196, "det": false}, {"g": "llm", "label": "O=C1C(F)=C(F)C(=O)C(F)=C1Cl", "r": 1, "x": 2.448, "y": -24.47, "f": 1.17, "m": 0.217, "det": false}, {"g": "llm", "label": "O=C1C(=O)c2cc(Cl)ccc2-c2ccc(Cl)cc21", "r": 1, "x": 2.213, "y": -25.36, "f": 0.82, "m": -0.017, "det": false}, {"g": "llm", "label": "O=C1C(F)=C(Cl)C(=O)C(Cl)=C1F", "r": 1, "x": 2.49, "y": -24.6, "f": 1.32, "m": 0.26, "det": false}, {"g": "llm", "label": "O=C1C(Br)=C(Cl)C(=O)C(Cl)=C1Br", "r": 1, "x": 2.634, "y": -21.26, "f": 0.72, "m": 0.404, "det": false}, {"g": "llm", "label": "O=C1C(F)=C(Cl)C(=O)C(Cl)=C1", "r": 1, "x": 2.406, "y": -25.56, "f": 1.38, "m": 0.176, "det": false}, {"g": "llm", "label": "O=C1C(F)=C(Cl)C(=O)C(F)=C1Cl", "r": 2, "x": 2.483, "y": -23.23, "f": 0.9, "m": 0.253, "det": false}, {"g": "llm", "label": "O=C1C=C(F)C(=O)C(F)=C1", "r": 2, "x": 2.198, "y": -28.34, "f": 1.65, "m": -0.032, "det": false}, {"g": "llm", "label": "O=C1C(=O)c2cc(Cl)ccc2-c2ccccc21", "r": 2, "x": 2.124, "y": -26.94, "f": 1.04, "m": -0.106, "det": false}, {"g": "llm", "label": "O=C1C=C(F)C(=O)C(F)=C1F", "r": 2, "x": 2.299, "y": -26.27, "f": 1.31, "m": 0.068, "det": false}, {"g": "llm", "label": "O=C1C(=O)c2cc(F)ccc2-c2ccccc21", "r": 3, "x": 2.087, "y": -27.77, "f": 1.19, "m": -0.143, "det": false}, {"g": "llm", "label": "O=C1C=C(Cl)C(=O)C(Cl)=C1Br", "r": 1, "x": 2.484, "y": -22.98, "f": 0.83, "m": 0.254, "det": false}, {"g": "llm", "label": "O=C1C(F)=C(Cl)C(=O)C(Cl)=C1Br", "r": 1, "x": 2.563, "y": -22.42, "f": 0.88, "m": 0.333, "det": false}, {"g": "llm", "label": "O=C1C(=O)c2cc(F)ccc2-c2ccc(F)cc21", "r": 1, "x": 2.143, "y": -26.69, "f": 1.02, "m": -0.087, "det": false}, {"g": "llm", "label": "O=C1C(F)=C(F)C(=O)C(Cl)=C1Cl", "r": 1, "x": 2.501, "y": -23.02, "f": 0.89, "m": 0.271, "det": false}, {"g": "llm", "label": "O=C1C(F)=C(Cl)C(=O)C(Cl)=C1Cl", "r": 1, "x": 2.533, "y": -23.28, "f": 1.05, "m": 0.303, "det": false}, {"g": "llm", "label": "O=C1C(=O)c2cc(F)c(F)cc2-c2cc(F)c(F)cc21", "r": 2, "x": 2.177, "y": -25.92, "f": 0.89, "m": -0.053, "det": false}, {"g": "llm", "label": "O=C1C(=O)c2c(F)cccc2-c2cccc(F)c21", "r": 2, "x": 2.11, "y": -27.33, "f": 1.12, "m": -0.12, "det": false}, {"g": "llm", "label": "O=C1C=C(Cl)C(=O)C=C1Cl", "r": 2, "x": 2.329, "y": -25.28, "f": 1.1, "m": 0.099, "det": false}, {"g": "llm", "label": "O=C1C(=O)c2ccc(Cl)cc2-c2cc(Cl)ccc21", "r": 2, "x": 2.184, "y": -25.55, "f": 0.8, "m": -0.046, "det": false}, {"g": "llm", "label": "O=C1C(F)=CC(=O)C(Cl)=C1Cl", "r": 2, "x": 2.387, "y": -25.01, "f": 1.17, "m": 0.157, "det": false}, {"g": "llm", "label": "O=C1C(F)=C(F)C(=O)C(Cl)=C1", "r": 3, "x": 2.373, "y": -25.4, "f": 1.25, "m": 0.143, "det": false}, {"g": "llm", "label": "O=C1C(Br)=CC(=O)C(Cl)=C1Cl", "r": 3, "x": 2.491, "y": -23.4, "f": 0.97, "m": 0.26, "det": false}, {"g": "llm", "label": "O=C1C(F)=C(Cl)C(=O)C(F)=C1", "r": 3, "x": 2.33, "y": -25.81, "f": 1.25, "m": 0.1, "det": false}, {"g": "llm", "label": "O=C1C(F)=C(Cl)C(=O)C=C1Cl", "r": 3, "x": 2.411, "y": -24.82, "f": 1.18, "m": 0.181, "det": false}, {"g": "llm", "label": "O=C1C(=O)c2c(F)cccc2-c2c(F)cccc21", "r": 3, "x": 2.171, "y": -26.86, "f": 1.15, "m": -0.059, "det": false}, {"g": "rand", "label": "O=C1C(O)=C(Cl)C(=O)C(Cl)=C1Cl", "r": 1, "x": 2.503, "y": -21.61, "f": 0.48, "m": 0.273, "det": false}, {"g": "rand", "label": "O=C1C=C(Cl)C(=O)C(Cl)=C1Cl", "r": 1, "x": 2.452, "y": -23.78, "f": 0.98, "m": 0.222, "det": false}, {"g": "rand", "label": "O=C1C(Cl)=C(Br)C(=O)C(Br)=C1Br", "r": 1, "x": 2.663, "y": -20.29, "f": 0.52, "m": 0.433, "det": false}, {"g": "rand", "label": "O=C1C=C(Br)C(=O)C(Br)=C1Br", "r": 1, "x": 2.551, "y": -22.05, "f": 0.73, "m": 0.32, "det": false}, {"g": "rand", "label": "O=C1C(F)=C(Cl)C(=O)C(Cl)=C1Cl", "r": 1, "x": 2.533, "y": -23.28, "f": 1.05, "m": 0.303, "det": false}, {"g": "rand", "label": "O=C1C=C(Br)C(=O)C(Cl)=C1Cl", "r": 2, "x": 2.49, "y": -23.43, "f": 0.98, "m": 0.26, "det": false}, {"g": "rand", "label": "O=C1C=C(Cl)C(=O)C=C1Cl", "r": 2, "x": 2.329, "y": -25.28, "f": 1.1, "m": 0.099, "det": false}, {"g": "rand", "label": "O=C1C(Cl)=C(Cl)C(=O)C(Br)=C1Cl", "r": 2, "x": 2.604, "y": -21.52, "f": 0.72, "m": 0.374, "det": false}, {"g": "rand", "label": "O=C1C=C(Cl)C(=O)C(F)=C1Cl", "r": 2, "x": 2.411, "y": -24.83, "f": 1.18, "m": 0.181, "det": false}, {"g": "rand", "label": "O=C1C=CC(=O)C(Br)=C1Br", "r": 2, "x": 2.352, "y": -24.38, "f": 0.9, "m": 0.122, "det": false}, {"g": "rand", "label": "O=C1C=C(Cl)C(=O)C(Br)=C1", "r": 3, "x": 2.366, "y": -25.42, "f": 1.23, "m": 0.136, "det": false}, {"g": "rand", "label": "O=C1C(O)=C(Br)C(=O)C(Cl)=C1Cl", "r": 3, "x": 2.529, "y": -20.63, "f": 0.27, "m": 0.299, "det": false}, {"g": "rand", "label": "O=C1C(Cl)=C(Cl)C(=O)C(Br)=C1Br", "r": 3, "x": 2.635, "y": -20.52, "f": 0.51, "m": 0.405, "det": false}, {"g": "rand", "label": "NC1=C(Cl)C(=O)C(F)=C(Cl)C1=O", "r": 3, "x": 2.201, "y": -25.29, "f": 0.77, "m": -0.029, "det": false}, {"g": "rand", "label": "O=C1C=C(F)C(=O)C(Cl)=C1Cl", "r": 3, "x": 2.386, "y": -25.04, "f": 1.18, "m": 0.156, "det": false}], "hl": [{"id": "QCOVIANIHBBUDY", "smiles": "O=C1C(F)=C(Cl)C(=O)C(Cl)=C1", "low_f": 1.38, "low_m": 0.176, "E2": -1.358, "dG": -9.29, "m": -0.128, "flags": []}, {"id": "KOQCAJNJSQGENA", "smiles": "O=C1C(F)=C(Cl)C(=O)C(Cl)=C1F", "low_f": 1.32, "low_m": 0.26, "E2": -1.249, "dG": -7.53, "m": -0.019, "flags": []}, {"id": "SJZRFNPTPXVJLK", "smiles": "O=C1C(F)=C(Cl)C(=O)C=C1Cl", "low_f": 1.18, "low_m": 0.181, "E2": -1.353, "dG": -8.42, "m": -0.123, "flags": []}, {"id": "UGNWTBMOAKPKBL", "smiles": "O=C1C(Cl)=C(Cl)C(=O)C(Cl)=C1Cl", "low_f": 0.72, "low_m": 0.346, "E2": -1.225, "dG": -6.74, "m": 0.005, "flags": []}], "eo2": 2.23}
+;
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const NS = "http://www.w3.org/2000/svg";
+const el = (t, a, p) => { const e = document.createElementNS(NS, t); for (const k in a) e.setAttribute(k, a[k]); p && p.appendChild(e); return e; };
+const tip = document.getElementById("tip");
+function showTip(ev, html){ tip.innerHTML = html; tip.hidden = false; tip.style.left = (ev.clientX + 14) + "px"; tip.style.top = (ev.clientY + 14) + "px"; }
+function hideTip(){ tip.hidden = true; }
+
+function drawMap(){
+  const svg = document.getElementById("map"); svg.innerHTML = "";
+  const W=900,H=440,L=64,R=20,T=16,B=48;
+  const xs=D.pts.map(p=>p.x), ys=D.pts.map(p=>p.y);
+  const x0=1.95,x1=3.45,y0=Math.floor(Math.min(...ys)/5)*5-5,y1=0;
+  const X=v=>L+(v-x0)/(x1-x0)*(W-L-R), Y=v=>T+(v-y1)/(y0-y1)*(H-T-B);
+  const a=D.line.a,b=D.line.b,s=D.line.sigma, line=x=>-a*x+b, xo2=D.eo2+0.15;
+  // success zone: right of O2 threshold, below line - 2 sigma
+  const zone=[[xo2,line(xo2)-2*s],[x1,line(x1)-2*s],[x1,y0],[xo2,y0]].map(([x,y])=>X(x)+","+Y(Math.max(y,y0)));
+  el("polygon",{points:zone.join(" "),fill:css("--zone")},svg);
+  for(let y=y1;y>=y0;y-=5){ el("line",{x1:L,x2:W-R,y1:Y(y),y2:Y(y),stroke:css("--rule")},svg); const t=el("text",{x:L-8,y:Y(y)+4,"text-anchor":"end"},svg); t.textContent=y; }
+  for(let x=2.0;x<=3.4+1e-9;x+=0.2){ const t=el("text",{x:X(x),y:H-B+18,"text-anchor":"middle"},svg); t.textContent=x.toFixed(1); }
+  el("text",{x:(L+W-R)/2,y:H-8,"text-anchor":"middle"},svg).textContent="E2 (상대값, eV) → 전자를 쉽게 받음";
+  const yl=el("text",{x:14,y:(T+H-B)/2,"text-anchor":"middle",transform:`rotate(-90 14 ${(T+H-B)/2})`},svg); yl.textContent="ΔE 결합 (kcal/mol) ↓ 강한 결합";
+  el("line",{x1:X(x0),y1:Y(line(x0)),x2:X(x1),y2:Y(line(x1)),stroke:css("--fg"),"stroke-width":2},svg);
+  el("line",{x1:X(x0),y1:Y(line(x0)-2*s),x2:X(x1),y2:Y(line(x1)-2*s),stroke:css("--good"),"stroke-width":1.5,"stroke-dasharray":"6 4"},svg);
+  el("line",{x1:X(xo2),y1:T,x2:X(xo2),y2:H-B,stroke:css("--bad"),"stroke-width":1.5,"stroke-dasharray":"4 4"},svg);
+  el("text",{x:X(xo2)+6,y:T+12},svg).textContent="O₂ 여유 0.15 V";
+  el("text",{x:X(2.0),y:Y(line(2.0))-8},svg).textContent="맞교환선";
+  el("text",{x:X(2.6),y:Y(line(2.6)-2*s)+16},svg).textContent="선 − 2σ (f = 2)";
+  const col={ref:css("--ref"),llm:css("--llm"),rand:css("--rand")}, nm={ref:"기준",llm:"LLM",rand:"무작위"};
+  for(const g of ["ref","rand","llm"]) for(const p of D.pts.filter(q=>q.g===g)){
+    const c=el("circle",{cx:X(p.x),cy:Y(p.y),r:5.5,fill:p.det?css("--surface"):col[g],stroke:p.det?col[g]:css("--surface"),"stroke-width":p.det?2:1.5,tabindex:0},svg);
+    const html=`${nm[g]}${p.r?" · "+p.r+"회차":""}<br>${p.label}<br>f ${p.f} · O₂ 여유 ${p.m} V${p.det?"<br>CO₂ 이탈":""}`;
+    c.addEventListener("mousemove",e=>showTip(e,html)); c.addEventListener("mouseleave",hideTip);
+    c.addEventListener("focus",e=>{const r=c.getBoundingClientRect();showTip({clientX:r.right,clientY:r.top},html)}); c.addEventListener("blur",hideTip);
+  }
+}
+function drawRounds(id, llm, rand, lo, hi){
+  const svg=document.getElementById(id); svg.innerHTML="";
+  const W=420,H=230,L=40,R=64,T=14,B=30, X=r=>L+(r-1)/2*(W-L-R), Y=v=>T+(hi-v)/(hi-lo)*(H-T-B);
+  for(let v=lo; v<=hi+1e-9; v+=0.2){ el("line",{x1:L,x2:W-R,y1:Y(v),y2:Y(v),stroke:css("--rule")},svg); el("text",{x:L-6,y:Y(v)+4,"text-anchor":"end"},svg).textContent=v.toFixed(1); }
+  [1,2,3].forEach(r=>{ el("text",{x:X(r),y:H-10,"text-anchor":"middle"},svg).textContent=r+"회차"; });
+  for(const [vals,c,name] of [[llm,css("--llm"),"LLM"],[rand,css("--rand"),"무작위"]]){
+    el("polyline",{points:vals.map((v,i)=>X(i+1)+","+Y(v)).join(" "),fill:"none",stroke:c,"stroke-width":2},svg);
+    vals.forEach((v,i)=>{ const d=el("circle",{cx:X(i+1),cy:Y(v),r:5,fill:c,stroke:css("--surface"),"stroke-width":2},svg);
+      d.addEventListener("mousemove",e=>showTip(e,`${name} · ${i+1}회차<br>f ${v.toFixed(3)}`)); d.addEventListener("mouseleave",hideTip); });
+    el("text",{x:X(3)+10,y:Y(vals[2])+4,style:`fill:${c}`},svg).textContent=name;
+  }
+}
+function fillTable(){
+  const tb=document.querySelector("#hl tbody"); tb.innerHTML="";
+  const label={"QCOVIANIHBBUD":"후보 1","KOQCAJNJSQGEN":"후보 2","SJZRFNPTPXVJL":"후보 3","UGNWTBMOAKPKB":"chloranil (검증)"};
+  for(const r of D.hl){
+    const k=Object.keys(label).find(p=>r.id.startsWith(p.slice(0,13)))||r.id;
+    const verdict = r.m>=0.15?'<span class="chip pass">통과</span>':(r.m>-0.05?'<span class="chip edge">경계 · 기준 미달</span>':'<span class="chip fail">실패</span>');
+    tb.insertAdjacentHTML("beforeend",`<tr><td>${label[k]||k}<br><code>${r.smiles}</code></td><td class="num">${r.low_f.toFixed(2)}</td><td class="num">${r.low_m>=0?"+":""}${r.low_m.toFixed(2)} V</td><td class="num">${r.E2.toFixed(2)}</td><td class="num">${r.dG.toFixed(1)}</td><td class="num">${r.m>=0?"+":""}${r.m.toFixed(2)} V</td><td>${verdict}</td></tr>`);
+  }
+}
+function render(){
+  drawMap();
+  drawRounds("best",[1.048,1.169,1.177],[1.048,1.181,1.176],0.8,1.4);
+  drawRounds("mean",[0.933,1.014,1.159],[0.753,0.975,0.791],0.6,1.2);
+  fillTable();
+}
+render();
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change",render);
+new MutationObserver(render).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
+</script>

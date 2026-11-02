@@ -1,0 +1,389 @@
+{
+ "paper_id": "m049",
+ "title": "Concentration-dependent dual role of imidazolium ionic liquid in quinone-mediated electrochemical CO2 capture: Hydrogen bonding engineering and apparent binding thermodynamics",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "PAQ",
+   "name": "9,10-Phenanthrenequinone",
+   "skeleton": "Phenanthrenequinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "9,10-Phenanthrenequinone (PAQ, 95%) was supplied by Shanghai Macklin Biochemical Technology Co., Ltd.",
+   "page": 2
+  }
+ ],
+ "conditions": [
+  {
+   "key": "N2_TBAP_MeCN_EMIM_TF2N",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.1 M TBAP/MeCN",
+   "additive_text": "[EMIM][TF2N]",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "the addition of [EMIM][TF2N], [BMIM] [TF2N], [HMIM][TF2N], [BMMIM][TF2N], [EMIM][Ac], and [EMIM] [PF6] shifted the E1/2(Q−1/Q−2) to –0.971 V, –0.990 V, –0.987 V, –1.106 V, –0.928 V, and –0.971 V vs. Ag/AgCl, respectively.",
+   "page": 3
+  },
+  {
+   "key": "N2_TBAP_MeCN_BMIM_TF2N",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.1 M TBAP/MeCN",
+   "additive_text": "[BMIM][TF2N]",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "the addition of [EMIM][TF2N], [BMIM] [TF2N], [HMIM][TF2N], [BMMIM][TF2N], [EMIM][Ac], and [EMIM] [PF6] shifted the E1/2(Q−1/Q−2) to –0.971 V, –0.990 V, –0.987 V, –1.106 V, –0.928 V, and –0.971 V vs. Ag/AgCl, respectively.",
+   "page": 3
+  },
+  {
+   "key": "N2_TBAP_MeCN_HMIM_TF2N",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.1 M TBAP/MeCN",
+   "additive_text": "[HMIM][TF2N]",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "the addition of [EMIM][TF2N], [BMIM] [TF2N], [HMIM][TF2N], [BMMIM][TF2N], [EMIM][Ac], and [EMIM] [PF6] shifted the E1/2(Q−1/Q−2) to –0.971 V, –0.990 V, –0.987 V, –1.106 V, –0.928 V, and –0.971 V vs. Ag/AgCl, respectively.",
+   "page": 3
+  },
+  {
+   "key": "N2_TBAP_MeCN_BMMIM_TF2N",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.1 M TBAP/MeCN",
+   "additive_text": "[BMMIM][TF2N]",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "the addition of [EMIM][TF2N], [BMIM] [TF2N], [HMIM][TF2N], [BMMIM][TF2N], [EMIM][Ac], and [EMIM] [PF6] shifted the E1/2(Q−1/Q−2) to –0.971 V, –0.990 V, –0.987 V, –1.106 V, –0.928 V, and –0.971 V vs. Ag/AgCl, respectively.",
+   "page": 3
+  },
+  {
+   "key": "N2_TBAP_MeCN_EMIM_Ac",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.1 M TBAP/MeCN",
+   "additive_text": "[EMIM][Ac]",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "the addition of [EMIM][TF2N], [BMIM] [TF2N], [HMIM][TF2N], [BMMIM][TF2N], [EMIM][Ac], and [EMIM] [PF6] shifted the E1/2(Q−1/Q−2) to –0.971 V, –0.990 V, –0.987 V, –1.106 V, –0.928 V, and –0.971 V vs. Ag/AgCl, respectively.",
+   "page": 3
+  },
+  {
+   "key": "N2_TBAP_MeCN_EMIM_PF6",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.1 M TBAP/MeCN",
+   "additive_text": "[EMIM][PF6]",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "the addition of [EMIM][TF2N], [BMIM] [TF2N], [HMIM][TF2N], [BMMIM][TF2N], [EMIM][Ac], and [EMIM] [PF6] shifted the E1/2(Q−1/Q−2) to –0.971 V, –0.990 V, –0.987 V, –1.106 V, –0.928 V, and –0.971 V vs. Ag/AgCl, respectively.",
+   "page": 3
+  },
+  {
+   "key": "CO2_TBAP_MeCN_pristine",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M TBAP/MeCN",
+   "additive_text": "none",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "For the pristine PAQ-based active electrolyte, the estimated minimum energy consumption was approximately 75.84 kJ/mol.",
+   "page": 7
+  },
+  {
+   "key": "CO2_TBAP_MeCN_EMIM_TF2N",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M TBAP/MeCN",
+   "additive_text": "[EMIM][TF2N]",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "at concentrations of 0.0767 M, 0.0273 M, 0.0245 M, and 0.0197 M for [EMIM][TF2N], [BMIM][TF2N], [HMIM][TF2N], and [BMMIM][TF2N], respectively, the estimated energy consumption was reduced to 48.15 kJ/mol, 48.44 kJ/mol, 47.76 kJ/mol, and 60.69 kJ/mol, respectively.",
+   "page": 7
+  },
+  {
+   "key": "CO2_TBAP_MeCN_BMIM_TF2N",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M TBAP/MeCN",
+   "additive_text": "[BMIM][TF2N]",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "at concentrations of 0.0767 M, 0.0273 M, 0.0245 M, and 0.0197 M for [EMIM][TF2N], [BMIM][TF2N], [HMIM][TF2N], and [BMMIM][TF2N], respectively, the estimated energy consumption was reduced to 48.15 kJ/mol, 48.44 kJ/mol, 47.76 kJ/mol, and 60.69 kJ/mol, respectively.",
+   "page": 7
+  },
+  {
+   "key": "CO2_TBAP_MeCN_HMIM_TF2N",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M TBAP/MeCN",
+   "additive_text": "[HMIM][TF2N]",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "at concentrations of 0.0767 M, 0.0273 M, 0.0245 M, and 0.0197 M for [EMIM][TF2N], [BMIM][TF2N], [HMIM][TF2N], and [BMMIM][TF2N], respectively, the estimated energy consumption was reduced to 48.15 kJ/mol, 48.44 kJ/mol, 47.76 kJ/mol, and 60.69 kJ/mol, respectively.",
+   "page": 7
+  },
+  {
+   "key": "CO2_TBAP_MeCN_BMMIM_TF2N",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M TBAP/MeCN",
+   "additive_text": "[BMMIM][TF2N]",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "at concentrations of 0.0767 M, 0.0273 M, 0.0245 M, and 0.0197 M for [EMIM][TF2N], [BMIM][TF2N], [HMIM][TF2N], and [BMMIM][TF2N], respectively, the estimated energy consumption was reduced to 48.15 kJ/mol, 48.44 kJ/mol, 47.76 kJ/mol, and 60.69 kJ/mol, respectively.",
+   "page": 7
+  },
+  {
+   "key": "CO2_TBAP_MeCN_EMIM_Ac",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M TBAP/MeCN",
+   "additive_text": "[EMIM][Ac]",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Under the experimental conditions, the energy consumption for [EMIM][Ac] and [EMIM][PF6] was reduced to 49.69 kJ/mol and 45.54 kJ/mol, respectively.",
+   "page": 7
+  },
+  {
+   "key": "CO2_TBAP_MeCN_EMIM_PF6",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M TBAP/MeCN",
+   "additive_text": "[EMIM][PF6]",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Under the experimental conditions, the energy consumption for [EMIM][Ac] and [EMIM][PF6] was reduced to 49.69 kJ/mol and 45.54 kJ/mol, respectively.",
+   "page": 7
+  },
+  {
+   "key": "DFT_gas_phase",
+   "solvent": "NotReported",
+   "reference_electrode": "NotReported",
+   "atmosphere": "NotReported",
+   "electrolyte_text": "NotReported",
+   "additive_text": "NotReported",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Density functional theory (DFT) calculations were performed using Gaussian 16 software [15].",
+   "page": 2
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "PAQ",
+   "condition": "N2_TBAP_MeCN_EMIM_TF2N",
+   "property": "HalfWavePotential",
+   "value": -0.971,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "the addition of [EMIM][TF2N], [BMIM] [TF2N], [HMIM][TF2N], [BMMIM][TF2N], [EMIM][Ac], and [EMIM] [PF6] shifted the E1/2(Q−1/Q−2) to –0.971 V, –0.990 V, –0.987 V, –1.106 V, –0.928 V, and –0.971 V vs. Ag/AgCl, respectively.",
+   "page": 3
+  },
+  {
+   "compound": "PAQ",
+   "condition": "N2_TBAP_MeCN_BMIM_TF2N",
+   "property": "HalfWavePotential",
+   "value": -0.99,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "the addition of [EMIM][TF2N], [BMIM] [TF2N], [HMIM][TF2N], [BMMIM][TF2N], [EMIM][Ac], and [EMIM] [PF6] shifted the E1/2(Q−1/Q−2) to –0.971 V, –0.990 V, –0.987 V, –1.106 V, –0.928 V, and –0.971 V vs. Ag/AgCl, respectively.",
+   "page": 3
+  },
+  {
+   "compound": "PAQ",
+   "condition": "N2_TBAP_MeCN_HMIM_TF2N",
+   "property": "HalfWavePotential",
+   "value": -0.987,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "the addition of [EMIM][TF2N], [BMIM] [TF2N], [HMIM][TF2N], [BMMIM][TF2N], [EMIM][Ac], and [EMIM] [PF6] shifted the E1/2(Q−1/Q−2) to –0.971 V, –0.990 V, –0.987 V, –1.106 V, –0.928 V, and –0.971 V vs. Ag/AgCl, respectively.",
+   "page": 3
+  },
+  {
+   "compound": "PAQ",
+   "condition": "N2_TBAP_MeCN_BMMIM_TF2N",
+   "property": "HalfWavePotential",
+   "value": -1.106,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "the addition of [EMIM][TF2N], [BMIM] [TF2N], [HMIM][TF2N], [BMMIM][TF2N], [EMIM][Ac], and [EMIM] [PF6] shifted the E1/2(Q−1/Q−2) to –0.971 V, –0.990 V, –0.987 V, –1.106 V, –0.928 V, and –0.971 V vs. Ag/AgCl, respectively.",
+   "page": 3
+  },
+  {
+   "compound": "PAQ",
+   "condition": "N2_TBAP_MeCN_EMIM_Ac",
+   "property": "HalfWavePotential",
+   "value": -0.928,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "the addition of [EMIM][TF2N], [BMIM] [TF2N], [HMIM][TF2N], [BMMIM][TF2N], [EMIM][Ac], and [EMIM] [PF6] shifted the E1/2(Q−1/Q−2) to –0.971 V, –0.990 V, –0.987 V, –1.106 V, –0.928 V, and –0.971 V vs. Ag/AgCl, respectively.",
+   "page": 3
+  },
+  {
+   "compound": "PAQ",
+   "condition": "N2_TBAP_MeCN_EMIM_PF6",
+   "property": "HalfWavePotential",
+   "value": -0.971,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "the addition of [EMIM][TF2N], [BMIM] [TF2N], [HMIM][TF2N], [BMMIM][TF2N], [EMIM][Ac], and [EMIM] [PF6] shifted the E1/2(Q−1/Q−2) to –0.971 V, –0.990 V, –0.987 V, –1.106 V, –0.928 V, and –0.971 V vs. Ag/AgCl, respectively.",
+   "page": 3
+  },
+  {
+   "compound": "PAQ",
+   "condition": "CO2_TBAP_MeCN_pristine",
+   "property": "EnergyConsumption",
+   "value": 75.84,
+   "unit": "KJPerMol",
+   "basis": "Experiment",
+   "method": "NotReported",
+   "redox_couple": null,
+   "quote": "For the pristine PAQ-based active electrolyte, the estimated minimum energy consumption was approximately 75.84 kJ/mol.",
+   "page": 7
+  },
+  {
+   "compound": "PAQ",
+   "condition": "CO2_TBAP_MeCN_EMIM_TF2N",
+   "property": "EnergyConsumption",
+   "value": 48.15,
+   "unit": "KJPerMol",
+   "basis": "Experiment",
+   "method": "NotReported",
+   "redox_couple": null,
+   "quote": "at concentrations of 0.0767 M, 0.0273 M, 0.0245 M, and 0.0197 M for [EMIM][TF2N], [BMIM][TF2N], [HMIM][TF2N], and [BMMIM][TF2N], respectively, the estimated energy consumption was reduced to 48.15 kJ/mol, 48.44 kJ/mol, 47.76 kJ/mol, and 60.69 kJ/mol, respectively.",
+   "page": 7
+  },
+  {
+   "compound": "PAQ",
+   "condition": "CO2_TBAP_MeCN_BMIM_TF2N",
+   "property": "EnergyConsumption",
+   "value": 48.44,
+   "unit": "KJPerMol",
+   "basis": "Experiment",
+   "method": "NotReported",
+   "redox_couple": null,
+   "quote": "at concentrations of 0.0767 M, 0.0273 M, 0.0245 M, and 0.0197 M for [EMIM][TF2N], [BMIM][TF2N], [HMIM][TF2N], and [BMMIM][TF2N], respectively, the estimated energy consumption was reduced to 48.15 kJ/mol, 48.44 kJ/mol, 47.76 kJ/mol, and 60.69 kJ/mol, respectively.",
+   "page": 7
+  },
+  {
+   "compound": "PAQ",
+   "condition": "CO2_TBAP_MeCN_HMIM_TF2N",
+   "property": "EnergyConsumption",
+   "value": 47.76,
+   "unit": "KJPerMol",
+   "basis": "Experiment",
+   "method": "NotReported",
+   "redox_couple": null,
+   "quote": "at concentrations of 0.0767 M, 0.0273 M, 0.0245 M, and 0.0197 M for [EMIM][TF2N], [BMIM][TF2N], [HMIM][TF2N], and [BMMIM][TF2N], respectively, the estimated energy consumption was reduced to 48.15 kJ/mol, 48.44 kJ/mol, 47.76 kJ/mol, and 60.69 kJ/mol, respectively.",
+   "page": 7
+  },
+  {
+   "compound": "PAQ",
+   "condition": "CO2_TBAP_MeCN_BMMIM_TF2N",
+   "property": "EnergyConsumption",
+   "value": 60.69,
+   "unit": "KJPerMol",
+   "basis": "Experiment",
+   "method": "NotReported",
+   "redox_couple": null,
+   "quote": "at concentrations of 0.0767 M, 0.0273 M, 0.0245 M, and 0.0197 M for [EMIM][TF2N], [BMIM][TF2N], [HMIM][TF2N], and [BMMIM][TF2N], respectively, the estimated energy consumption was reduced to 48.15 kJ/mol, 48.44 kJ/mol, 47.76 kJ/mol, and 60.69 kJ/mol, respectively.",
+   "page": 7
+  },
+  {
+   "compound": "PAQ",
+   "condition": "CO2_TBAP_MeCN_EMIM_Ac",
+   "property": "EnergyConsumption",
+   "value": 49.69,
+   "unit": "KJPerMol",
+   "basis": "Experiment",
+   "method": "NotReported",
+   "redox_couple": null,
+   "quote": "Under the experimental conditions, the energy consumption for [EMIM][Ac] and [EMIM][PF6] was reduced to 49.69 kJ/mol and 45.54 kJ/mol, respectively.",
+   "page": 7
+  },
+  {
+   "compound": "PAQ",
+   "condition": "CO2_TBAP_MeCN_EMIM_PF6",
+   "property": "EnergyConsumption",
+   "value": 45.54,
+   "unit": "KJPerMol",
+   "basis": "Experiment",
+   "method": "NotReported",
+   "redox_couple": null,
+   "quote": "Under the experimental conditions, the energy consumption for [EMIM][Ac] and [EMIM][PF6] was reduced to 49.69 kJ/mol and 45.54 kJ/mol, respectively.",
+   "page": 7
+  },
+  {
+   "compound": "PAQ",
+   "condition": "DFT_gas_phase",
+   "property": "BindingEnergy",
+   "value": -13.6,
+   "unit": "KcalPerMol",
+   "basis": "Computation",
+   "method": "DFT",
+   "redox_couple": null,
+   "quote": "Fig. 8b describes the hydrogen-bond energy ΔE between the [EMIM]⁺ cation and the QDA dianion, which was calculated to be approximately −13.6 kcal/mol",
+   "page": 10
+  }
+ ],
+ "observations": [
+  {
+   "compound": "PAQ",
+   "condition": "CO2_TBAP_MeCN_pristine",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "PAQ(CO2)2−+ CO2→PAQ(CO2)2 2−C2",
+   "page": 6
+  }
+ ],
+ "not_reported": [
+  "Specific numerical values for the apparent CO2 binding constant (KappCO2) are presented in Figure 5 and Table S4, which are not included in the provided text.",
+  "Specific numerical values for the first reduction half-wave potential (E1/2(Q/Q-1)) are not explicitly listed in the text, only described as having a relatively minor impact."
+ ],
+ "dropped": [],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 6,
+   "dropped": 12
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 30,
+   "dropped": 0
+  }
+ ],
+ "review_status": "machine_extracted"
+}

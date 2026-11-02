@@ -1,0 +1,213 @@
+{
+ "paper_id": "m062",
+ "title": "Tuning the electrochemical CO2 capture behavior of anthraquinone derivatives through substituent electronic effects",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "AQ",
+   "name": "Anthraquinone",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "Anthraquinone (AQ, 98%), 1-chloroanthraquinone (1-Cl-AQ, 98%), 1-bromoanthraquinone (1-Br-AQ, 98%), 1-aminoanthraquinone (1- NH2-AQ, 98%) and 1-methylaminoanthraquinone (1-NH-CH3-AQ, 98%)",
+   "page": 2
+  },
+  {
+   "key": "Cl_AQ",
+   "name": "1-chloroanthraquinone",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "ElectronWithdrawing"
+   ],
+   "substituent_text": null,
+   "quote": "1-chloroanthraquinone (1-Cl-AQ, 98%)",
+   "page": 2
+  },
+  {
+   "key": "Br_AQ",
+   "name": "1-bromoanthraquinone",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "ElectronWithdrawing"
+   ],
+   "substituent_text": null,
+   "quote": "1-bromoanthraquinone (1-Br-AQ, 98%)",
+   "page": 2
+  },
+  {
+   "key": "NH2_AQ",
+   "name": "1-aminoanthraquinone",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Amino",
+    "ElectronDonating"
+   ],
+   "substituent_text": null,
+   "quote": "1-aminoanthraquinone (1- NH2-AQ, 98%)",
+   "page": 2
+  },
+  {
+   "key": "NHCH3_AQ",
+   "name": "1-methylaminoanthraquinone",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Amino",
+    "ElectronDonating"
+   ],
+   "substituent_text": null,
+   "quote": "1-methylaminoanthraquinone (1-NH-CH3-AQ, 98%)",
+   "page": 2
+  }
+ ],
+ "conditions": [
+  {
+   "key": "me_cn_tbap_n2",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "Inert",
+   "electrolyte_text": "10 mM TBAP",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "The redox behavior of AQ was initially investigated by CV mea­surements using 1 mM AQ in MeCN containing 10 mM TBAP as a sup­porting electrolyte (Fig. 1a). Under a N2 atmosphere (black curve)",
+   "page": 3
+  },
+  {
+   "key": "me_cn_tbap_co2",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "10 mM TBAP",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "After introducing saturated CO2 into the solution (blue curve in Fig. 1a), a main reduction peak was observed at −0.980 V (vs. Ag/AgCl)",
+   "page": 3
+  },
+  {
+   "key": "me_cn_tbap_o2",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "AirOxygen",
+   "electrolyte_text": "10 mM TBAP",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Figure S15 presented the CV curves of five quinone com­pounds in MeCN under a mixed gas atmosphere containing 3% oxygen by volume.",
+   "page": 12
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "AQ",
+   "condition": "me_cn_tbap_n2",
+   "property": "ReductionPotential",
+   "value": -0.906,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "The generation of the semiquinone radical AQ⋅- through a single-electron transfer at the first cathodic potential (E1 = −0.906 V)",
+   "page": 3
+  },
+  {
+   "compound": "AQ",
+   "condition": "me_cn_tbap_n2",
+   "property": "ReductionPotential",
+   "value": -1.457,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "followed by the formation of the quinone dianion AQ2⁻ (E2 = −1.457 V) through a second single-electron transfer",
+   "page": 3
+  },
+  {
+   "compound": "AQ",
+   "condition": "me_cn_tbap_co2",
+   "property": "ReductionPotential",
+   "value": -0.98,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "After introducing saturated CO2 into the solution (blue curve in Fig. 1a), a main reduction peak was observed at −0.980 V (vs. Ag/AgCl)",
+   "page": 3
+  },
+  {
+   "compound": "Cl_AQ",
+   "condition": "me_cn_tbap_n2",
+   "property": "HalfWavePotential",
+   "value": -1.155,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "specifically, the E1/2 of 1-Cl- AQ reached −1.155 V, representing the most positive reduction poten­ tial among all compounds depicted in the figure.",
+   "page": 4
+  },
+  {
+   "compound": "NH2_AQ",
+   "condition": "me_cn_tbap_n2",
+   "property": "HalfWavePotential",
+   "value": -1.256,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "for instance, the E1/2 of 1-NH2-AQ decreased to −1.256 V.",
+   "page": 4
+  },
+  {
+   "compound": "AQ",
+   "condition": "me_cn_tbap_n2",
+   "property": "HalfWavePotential",
+   "value": -1.18,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "The unsubstituted AQ was situated between these two groups, and its half-wave potential (≈−1.180 V) acted as a reference benchmark",
+   "page": 4
+  }
+ ],
+ "observations": [
+  {
+   "compound": "AQ",
+   "condition": "me_cn_tbap_co2",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "Specifically, the generated AQ⋅- first undergoes rapid nucleophilic addition with CO2, forming an AQ-CO2 ⋅- adduct intermediate.",
+   "page": 3
+  }
+ ],
+ "not_reported": [
+  "Specific numerical values for CO2 binding constants (KCO2) for individual compounds",
+  "Specific numerical values for rate constants (kf or kb) for individual compounds",
+  "Specific numerical values for solubility of individual compounds in MeCN",
+  "Specific numerical values for half-wave potentials of 1-Br-AQ, 1-NHCH3-AQ, and 1-Cl-AQ (only shifts or relative positions described in text, specific numbers likely in Table S1 or Fig 4a which are not fully transcribed with numbers in the provided text snippets)"
+ ],
+ "dropped": [],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 9,
+   "dropped": 7
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 15,
+   "dropped": 0
+  }
+ ],
+ "review_status": "machine_extracted"
+}

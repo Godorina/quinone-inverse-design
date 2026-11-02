@@ -1,0 +1,116 @@
+{
+ "paper_id": "m078",
+ "title": "In-situ CO2 capture outperforms conventional bulk pH-swing electrolyzers",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "AQDS",
+   "name": "2,7-anthraquinone disulfonic acid",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Sulfonate"
+   ],
+   "substituent_text": null,
+   "quote": "Using 0.1 M 2,7-anthraquinone disulfonic acid (AQDS) as a model active redox carrier",
+   "page": 1
+  }
+ ],
+ "conditions": [
+  {
+   "key": "aqds_bulk",
+   "solvent": "Water",
+   "reference_electrode": "NotReported",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M 2,7-AQDS in 1 M NaCl solution",
+   "additive_text": "bulk setup",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "exploiting the reduction/oxidation of 0.1 M 2,7-AQDS in 1 M NaCl solution acting as working electrolyte",
+   "page": 2
+  },
+  {
+   "key": "aqds_in_situ",
+   "solvent": "Water",
+   "reference_electrode": "NotReported",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M 2,7-AQDS in 1 M NaCl solution",
+   "additive_text": "in-situ setup",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "exploiting the reduction/oxidation of 0.1 M 2,7-AQDS in 1 M NaCl solution acting as working electrolyte",
+   "page": 2
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "AQDS",
+   "condition": "aqds_bulk",
+   "property": "EnergyConsumption",
+   "value": 86.1,
+   "unit": "KJPerMol",
+   "basis": "Experiment",
+   "method": "NotReported",
+   "redox_couple": "NotReported",
+   "quote": "Energy consumption decreased from 86.1 kJ⋅mol−1 (bulk) to 66.7 kJ⋅mol−1 (in-situ)",
+   "page": 1
+  },
+  {
+   "compound": "AQDS",
+   "condition": "aqds_in_situ",
+   "property": "EnergyConsumption",
+   "value": 66.7,
+   "unit": "KJPerMol",
+   "basis": "Experiment",
+   "method": "NotReported",
+   "redox_couple": "NotReported",
+   "quote": "Energy consumption decreased from 86.1 kJ⋅mol−1 (bulk) to 66.7 kJ⋅mol−1 (in-situ)",
+   "page": 1
+  }
+ ],
+ "observations": [
+  {
+   "compound": "AQDS",
+   "condition": "aqds_bulk",
+   "kind": "BindingMode",
+   "outcome": "Bicarbonate",
+   "quote": "CO2(g) + OH− (aq)⇄HCO3 − (aq)",
+   "page": 2
+  },
+  {
+   "compound": "AQDS",
+   "condition": "aqds_in_situ",
+   "kind": "OxygenStability",
+   "outcome": "OxygenUnstable",
+   "quote": "attributable to the reoxidation of the working electrolyte through the well-known reaction with O2",
+   "page": 6
+  }
+ ],
+ "not_reported": [
+  "reference electrode of the potentials",
+  "reduction potential of AQDS",
+  "binding constant of AQDS"
+ ],
+ "dropped": [],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 1,
+   "dropped": 6
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 4,
+   "dropped": 2
+  },
+  {
+   "n": 3,
+   "parse_errors": [],
+   "kept": 7,
+   "dropped": 0
+  }
+ ],
+ "review_status": "machine_extracted"
+}

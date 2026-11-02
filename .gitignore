@@ -1,0 +1,27 @@
+# environments (rebuild with `make env`; extractor uses `uv run --frozen`)
+.venv/
+**/.venv/
+__pycache__/
+.pytest_cache/
+
+# copyrighted source material: paper PDFs, extracted full text, and publisher abstracts
+onto/phase_3_corpus/pdf/
+onto/phase_3_corpus/text/
+onto/phase_3_corpus/judge/
+onto/phase_3_corpus/master.json
+onto/phase_3_corpus/master.xlsx
+onto/data/abstracts_4b/
+onto/data/labeled_all.json
+onto/data/on_topic_final.json
+onto/data/borderline.json
+# intermediate extraction runs and their logs can hold long verbatim passages
+onto/phase_4_extract/records/
+onto/phase_4_extract/records_v1/
+onto/phase_4_extract/records_abstract/
+onto/phase_4_extract/*.log
+
+# run logs and local agent state
+*.log
+.omc/*
+!.omc/plans/
+!.omc/artifacts/

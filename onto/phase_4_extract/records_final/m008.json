@@ -1,0 +1,446 @@
+{
+ "paper_id": "m008",
+ "title": "Electrochemical and Molecular Assessment of Quinones as CO 2 -Binding Redox Molecules for Carbon Capture",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "BQ",
+   "name": "p-Benzoquinone",
+   "skeleton": "Benzoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "p-Benzoquinone (BQ)",
+   "page": 2
+  },
+  {
+   "key": "DBQ",
+   "name": "tetramethyl-p-benzoquinone",
+   "skeleton": "Benzoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Alkyl"
+   ],
+   "substituent_text": null,
+   "quote": "tetramethyl-p-benzoquinone (DBQ)",
+   "page": 2
+  },
+  {
+   "key": "TBQ",
+   "name": "2,7-di-tert-butyl-p-benzoquinone",
+   "skeleton": "Benzoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Alkyl"
+   ],
+   "substituent_text": null,
+   "quote": "2,7-di-tert-butyl-p-benzoquinone (TBQ)",
+   "page": 2
+  },
+  {
+   "key": "BQ_Cl2",
+   "name": "2,7-dichloro-p-benzoquinone",
+   "skeleton": "Benzoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "ElectronWithdrawing"
+   ],
+   "substituent_text": null,
+   "quote": "2,7-dichloro-p-benzoquinone (BQ-Cl2)",
+   "page": 2
+  },
+  {
+   "key": "BQ_Cl4",
+   "name": "tetrachloro-p-benzoquinone",
+   "skeleton": "Benzoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "ElectronWithdrawing"
+   ],
+   "substituent_text": null,
+   "quote": "tetrachloro-p-benzoquinone (BQ-Cl4)",
+   "page": 2
+  },
+  {
+   "key": "pNQ",
+   "name": "p-Napthoquinone",
+   "skeleton": "Naphthoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "p-Napthoquinone (p-NQ)",
+   "page": 2
+  },
+  {
+   "key": "pNQ_Me2",
+   "name": "2,3-dimethyl-p-napthoquinone",
+   "skeleton": "Naphthoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Alkyl"
+   ],
+   "substituent_text": null,
+   "quote": "2,3-dimethyl-p-napthoquinone (p-NQ-Me2)",
+   "page": 2
+  },
+  {
+   "key": "pNQ_Cl2",
+   "name": "2,3-dichloro-p-napthoquinone",
+   "skeleton": "Naphthoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "ElectronWithdrawing"
+   ],
+   "substituent_text": null,
+   "quote": "2,3-dichloro-p-napthoquinone (p-NQ-Cl2)",
+   "page": 2
+  },
+  {
+   "key": "AQ",
+   "name": "9,10-anthraquinone",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "9,10-anthraquinone (AQ)",
+   "page": 2
+  },
+  {
+   "key": "AQ_Cl",
+   "name": "2-chloro-9,10-anthraquinone",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "ElectronWithdrawing"
+   ],
+   "substituent_text": null,
+   "quote": "2-chloro-9,10-anthraquinone (AQ-Cl)",
+   "page": 2
+  },
+  {
+   "key": "AQ_OH",
+   "name": "2-hydroxy-9,10-anthraquinone",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Hydroxyl"
+   ],
+   "substituent_text": null,
+   "quote": "2-hydroxy-9,10-anthraquinone (AQ-OH)",
+   "page": 2
+  },
+  {
+   "key": "AQ_COOH",
+   "name": "2-carboxylic acid-9,10-anthraquinone",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "ElectronWithdrawing"
+   ],
+   "substituent_text": null,
+   "quote": "2-carboxylic acid-9,10-anthraquinone (AQ-COOH)",
+   "page": 2
+  },
+  {
+   "key": "oNQ",
+   "name": "o-napthoquinone",
+   "skeleton": "Naphthoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "o-napthoquinone (o-NQ)",
+   "page": 2
+  },
+  {
+   "key": "PQ",
+   "name": "9,10-phenanthraquinone",
+   "skeleton": "Phenanthrenequinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "9,10-phenanthraquinone (PQ)",
+   "page": 2
+  },
+  {
+   "key": "AQ_O_C3H7",
+   "name": "Ether Derivative of 9,10-Anthraquinone",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Alkyl"
+   ],
+   "substituent_text": null,
+   "quote": "Synthesis of Ether Derivative of 9,10-Anthraquinone (AQ-O-C3H7)",
+   "page": 2
+  },
+  {
+   "key": "AQ_COO_C3H7",
+   "name": "Ester Derivative of 9,10-Anthraquinone",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "ElectronWithdrawing"
+   ],
+   "substituent_text": null,
+   "quote": "Synthesis of Ester Derivative of 9,10-Anthraquinone (AQ-COO-C3H7)",
+   "page": 2
+  },
+  {
+   "key": "AQ_CONH_C4H9",
+   "name": "amide-derivative 9,10-anthraquinone",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Amino"
+   ],
+   "substituent_text": null,
+   "quote": "for the amide-derivative 9,10-anthraquinone (AQ-CONH-C4H9)",
+   "page": 3
+  },
+  {
+   "key": "PQ_I",
+   "name": "2-Iodo-9,10-phenanthraquinone",
+   "skeleton": "Phenanthrenequinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "ElectronWithdrawing"
+   ],
+   "substituent_text": null,
+   "quote": "Synthesis of 2-Iodo-9,10-phenanthraquinone (PQ-I)",
+   "page": 2
+  },
+  {
+   "key": "PQ_I2",
+   "name": "2,7-Diiodo-9,10-phenanthraquinone",
+   "skeleton": "Phenanthrenequinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "ElectronWithdrawing"
+   ],
+   "substituent_text": null,
+   "quote": "2,7-Diiodo-9,10-phenanthraquinone (PQ-I2)",
+   "page": 2
+  }
+ ],
+ "conditions": [
+  {
+   "key": "dmf_n2",
+   "solvent": "DMF",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.1 M [n-Bu4N]PF6",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Anhydrous DMF containing 0.1 M [n-Bu4N]PF6 was used as an electrolyte.",
+   "page": 2
+  },
+  {
+   "key": "dmf_co2",
+   "solvent": "DMF",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M [n-Bu4N]PF6",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "To test the electrochemical behavior of quinones under CO2, the electrolyte was bubbled with 100% CO2 for 30 min before testing.",
+   "page": 2
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "TBQ",
+   "condition": "dmf_n2",
+   "property": "HalfWavePotential",
+   "value": -1.12,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "with the ﬁrst and second half-wave potentials at −1.12 and −2.15 V, respectively (Figure 1a)",
+   "page": 3
+  },
+  {
+   "compound": "TBQ",
+   "condition": "dmf_n2",
+   "property": "HalfWavePotential",
+   "value": -2.15,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "with the ﬁrst and second half-wave potentials at −1.12 and −2.15 V, respectively (Figure 1a)",
+   "page": 3
+  },
+  {
+   "compound": "AQ_CONH_C4H9",
+   "condition": "dmf_n2",
+   "property": "HalfWavePotential",
+   "value": -1.23,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "with half-wave potentials at −1.23 and −1.96 V (Figure 1b)",
+   "page": 3
+  },
+  {
+   "compound": "AQ_CONH_C4H9",
+   "condition": "dmf_n2",
+   "property": "HalfWavePotential",
+   "value": -1.96,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "with half-wave potentials at −1.23 and −1.96 V (Figure 1b)",
+   "page": 3
+  },
+  {
+   "compound": "BQ_Cl4",
+   "condition": "dmf_n2",
+   "property": "HalfWavePotential",
+   "value": -0.39,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "BQ-Cl4 showed two one-electron transfer processes with the ﬁrst half-wave potential at −0.39 V and the second at −1.32 V.",
+   "page": 4
+  },
+  {
+   "compound": "BQ_Cl4",
+   "condition": "dmf_n2",
+   "property": "HalfWavePotential",
+   "value": -1.32,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "BQ-Cl4 showed two one-electron transfer processes with the ﬁrst half-wave potential at −0.39 V and the second at −1.32 V.",
+   "page": 4
+  },
+  {
+   "compound": "BQ_Cl4",
+   "condition": "dmf_co2",
+   "property": "BindingConstant",
+   "value": 661.0,
+   "unit": "PerMolar",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": null,
+   "quote": "this analysis gives a value of 6.61 × 102 M−1 for the CO2 association constant.",
+   "page": 5
+  },
+  {
+   "compound": "BQ_Cl2",
+   "condition": "dmf_co2",
+   "property": "BindingConstant",
+   "value": 818000.0,
+   "unit": "PerMolar",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": null,
+   "quote": "The CO2 association constants with the BQ-Cl2 and p-NQ-Cl2 dianions are 8.18 × 105 and 7.32 × 104 M−1, respectively.",
+   "page": 5
+  },
+  {
+   "compound": "pNQ_Cl2",
+   "condition": "dmf_co2",
+   "property": "BindingConstant",
+   "value": 73200.0,
+   "unit": "PerMolar",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": null,
+   "quote": "The CO2 association constants with the BQ-Cl2 and p-NQ-Cl2 dianions are 8.18 × 105 and 7.32 × 104 M−1, respectively.",
+   "page": 5
+  },
+  {
+   "compound": "AQ_Cl",
+   "condition": "dmf_co2",
+   "property": "BindingConstant",
+   "value": 235000.0,
+   "unit": "PerMolar",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": null,
+   "quote": "AQ-Cl and AQ-COO-C3H7 were 2.35 × 105 and 7.78 × 107 M−1, respectively.",
+   "page": 7
+  },
+  {
+   "compound": "AQ_COO_C3H7",
+   "condition": "dmf_co2",
+   "property": "BindingConstant",
+   "value": 77800000.0,
+   "unit": "PerMolar",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": null,
+   "quote": "AQ-Cl and AQ-COO-C3H7 were 2.35 × 105 and 7.78 × 107 M−1, respectively.",
+   "page": 7
+  }
+ ],
+ "observations": [
+  {
+   "compound": "BQ_Cl4",
+   "condition": "dmf_co2",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "corresponding to the dianion quinone−CO2 complex formation",
+   "page": 1
+  }
+ ],
+ "not_reported": [
+  "Reference electrode of the potentials (paper states Ag/AgCl wire served as pseudo-reference but potentials were measured using ferrocene as internal standard; specific offset not provided)",
+  "Binding constants for AQ and AQ-O-C3H7 (stated as greater than 10^8 M-1 but no specific value)",
+  "Specific half-wave potentials for BQ, p-NQ, o-NQ, AQ, AQ-O-C3H7, DBQ, TBQ (under CO2 or N2) other than those explicitly listed in text"
+ ],
+ "dropped": [
+  {
+   "kind": "observation",
+   "raw": {
+    "compound": "BQ_Cl4",
+    "condition": "dmf_n2",
+    "kind": "OxygenStability",
+    "outcome": "OxygenUnstable",
+    "quote": "the weakly complexing quinones are not suitable candidates for CO2 separation from dilute gas eﬄuents that contain O2."
+   },
+   "reasons": [
+    "observations[1] BQ_Cl4/OxygenStability: atmosphere Inert contradicts the observation OxygenStability; use CO2Atmosphere, FlueGas, AirOxygen or NotReported"
+   ]
+  }
+ ],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 9,
+   "dropped": 25
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 33,
+   "dropped": 1
+  },
+  {
+   "n": 3,
+   "parse_errors": [],
+   "kept": 33,
+   "dropped": 0
+  }
+ ],
+ "review_status": "machine_extracted"
+}

@@ -1,0 +1,234 @@
+{
+ "paper_id": "m074",
+ "title": "Electrochemical capture of carbon dioxide by substituted quinoxaline-5,8-diones",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "phenylQX",
+   "name": "2,3-diphenylquinoxaline-5,8-dione",
+   "skeleton": "HeterocyclicQuinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "2,3-diphenylquinoxaline-5,8-dione (phenylQX)",
+   "page": 1
+  },
+  {
+   "key": "methoxyQX",
+   "name": "2,3-bis(4-methoxyphenyl)quinoxaline-5,8-dione",
+   "skeleton": "HeterocyclicQuinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "ElectronDonating"
+   ],
+   "substituent_text": null,
+   "quote": "2,3-bis(4-methoxyphenyl)quinoxaline-5,8-dione (methoxyQX)",
+   "page": 1
+  },
+  {
+   "key": "benzoateQX",
+   "name": "dimethyl 4,4′-(5,8-dioxo-5,8-dihydroquinoxaline-2,3-diyl)dibenzoate",
+   "skeleton": "HeterocyclicQuinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "ElectronWithdrawing"
+   ],
+   "substituent_text": null,
+   "quote": "dimethyl 4,4′-(5,8-dioxo-5,8-dihydroquinoxaline-2,3-diyl)dibenzoate (benzoateQX)",
+   "page": 1
+  }
+ ],
+ "conditions": [
+  {
+   "key": "dmso_n2",
+   "solvent": "DMSO",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.1 M TBAPF6",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "recorded in 0.1 M TBAPF6 in DMSO with iR compensation of 550 Ω",
+   "page": 2
+  },
+  {
+   "key": "dmso_co2_20",
+   "solvent": "DMSO",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M TBAPF6",
+   "additive_text": "20 % CO2",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "the red line is the 20 % CO2 atmosphere",
+   "page": 3
+  },
+  {
+   "key": "dmso_co2_100",
+   "solvent": "DMSO",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M TBAPF6",
+   "additive_text": "100 % CO2",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "the blue line is the 100 % CO2 atmosphere",
+   "page": 3
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "phenylQX",
+   "condition": "dmso_n2",
+   "property": "ReductionPotential",
+   "value": -0.36,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "For phenylQX, the first cathodic potential (E1) appears at −0.36 V",
+   "page": 2
+  },
+  {
+   "compound": "phenylQX",
+   "condition": "dmso_n2",
+   "property": "ReductionPotential",
+   "value": -1.05,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "followed by a second cathodic potential (E2) at −1.05 V",
+   "page": 2
+  },
+  {
+   "compound": "methoxyQX",
+   "condition": "dmso_n2",
+   "property": "ReductionPotential",
+   "value": -0.38,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "In the case of methoxyQX, the observed potentials are E1 at −0.38 V",
+   "page": 2
+  },
+  {
+   "compound": "methoxyQX",
+   "condition": "dmso_n2",
+   "property": "ReductionPotential",
+   "value": -0.88,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "E2 at −0.88 V",
+   "page": 2
+  },
+  {
+   "compound": "benzoateQX",
+   "condition": "dmso_n2",
+   "property": "ReductionPotential",
+   "value": -0.36,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "For benzoateQX, the recorded values are E1 at −0.36 V",
+   "page": 2
+  },
+  {
+   "compound": "benzoateQX",
+   "condition": "dmso_n2",
+   "property": "ReductionPotential",
+   "value": -0.86,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "E2 at −0.86 V",
+   "page": 2
+  },
+  {
+   "compound": "phenylQX",
+   "condition": "dmso_co2_100",
+   "property": "Log10BindingConstant",
+   "value": 11.4,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": null,
+   "quote": "phenylQX −0.33 −1.01 0.12 0.59 11.4",
+   "page": 3
+  },
+  {
+   "compound": "methoxyQX",
+   "condition": "dmso_co2_100",
+   "property": "Log10BindingConstant",
+   "value": 9.3,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": null,
+   "quote": "methoxyQX −0,34 −0.88 0.05 0.46 9.3",
+   "page": 3
+  },
+  {
+   "compound": "benzoateQX",
+   "condition": "dmso_co2_100",
+   "property": "Log10BindingConstant",
+   "value": 3.4,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": null,
+   "quote": "benzoateQX −0,29 −0.86 0.02 0.10 3.4",
+   "page": 3
+  }
+ ],
+ "observations": [
+  {
+   "compound": "phenylQX",
+   "condition": "dmso_co2_100",
+   "kind": "BindingMode",
+   "outcome": "Carbonate",
+   "quote": "generating an adduct similar to a carbonate group",
+   "page": 3
+  },
+  {
+   "compound": "methoxyQX",
+   "condition": "dmso_co2_100",
+   "kind": "BindingMode",
+   "outcome": "Carbonate",
+   "quote": "generating an adduct similar to a carbonate group",
+   "page": 3
+  },
+  {
+   "compound": "benzoateQX",
+   "condition": "dmso_co2_100",
+   "kind": "BindingMode",
+   "outcome": "Carbonate",
+   "quote": "generating an adduct similar to a carbonate group",
+   "page": 3
+  }
+ ],
+ "not_reported": [
+  "Oxygen stability of the compounds",
+  "Capture capacity in MmolPerGram or MolPerMol",
+  "Energy consumption",
+  "Faradaic efficiency",
+  "Rate constants"
+ ],
+ "dropped": [],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 18,
+   "dropped": 0
+  }
+ ],
+ "review_status": "machine_extracted"
+}

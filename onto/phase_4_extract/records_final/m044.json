@@ -1,0 +1,421 @@
+{
+ "paper_id": "m044",
+ "title": "Quinone-annulated imidazolium salts as dual electrolyte-sorbents for electrochemical capture of carbon dioxide",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "c1",
+   "name": "compound 1",
+   "skeleton": "Naphthoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Amino",
+    "IonicGroup"
+   ],
+   "substituent_text": null,
+   "quote": "CVs of 1 mM solutions of compounds 1 (yellow), 2 (blue), 3 (red) under Ar in 0.1 M NBu4PF6 in MeCN",
+   "page": 2
+  },
+  {
+   "key": "c2",
+   "name": "compound 2",
+   "skeleton": "Naphthoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Amino",
+    "IonicGroup"
+   ],
+   "substituent_text": null,
+   "quote": "CVs of 1 mM solutions of compounds 1 (yellow), 2 (blue), 3 (red) under Ar in 0.1 M NBu4PF6 in MeCN",
+   "page": 2
+  },
+  {
+   "key": "c3",
+   "name": "compound 3",
+   "skeleton": "Naphthoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Amino",
+    "IonicGroup"
+   ],
+   "substituent_text": null,
+   "quote": "CVs of 1 mM solutions of compounds 1 (yellow), 2 (blue), 3 (red) under Ar in 0.1 M NBu4PF6 in MeCN",
+   "page": 2
+  },
+  {
+   "key": "c4",
+   "name": "sorbent 4",
+   "skeleton": "Naphthoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Amino",
+    "IonicGroup",
+    "Alkyl"
+   ],
+   "substituent_text": null,
+   "quote": "we additionally designed novel quinone-annulated imidazolium salts 4, 5, and 6 as presented in Fig. 3.",
+   "page": 6
+  },
+  {
+   "key": "c5",
+   "name": "compound 5",
+   "skeleton": "Naphthoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Amino",
+    "IonicGroup",
+    "Alkyl"
+   ],
+   "substituent_text": null,
+   "quote": "we additionally designed novel quinone-annulated imidazolium salts 4, 5, and 6 as presented in Fig. 3.",
+   "page": 6
+  },
+  {
+   "key": "c6",
+   "name": "compound 6",
+   "skeleton": "Naphthoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Amino",
+    "IonicGroup",
+    "Alkyl"
+   ],
+   "substituent_text": null,
+   "quote": "we additionally designed novel quinone-annulated imidazolium salts 4, 5, and 6 as presented in Fig. 3.",
+   "page": 6
+  }
+ ],
+ "conditions": [
+  {
+   "key": "me_cn_nbu4pf6_ar",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.1 M NBu4PF6",
+   "additive_text": "NotReported",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "CVs were collected with 0.1 M NBu4PF6 supporting",
+   "page": 2
+  },
+  {
+   "key": "me_cn_nbu4pf6_co2",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M NBu4PF6",
+   "additive_text": "NotReported",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "1 mM CVs of 1 under varying concentrations of CO2 (black under argon, cyan under 5% CO2, purple 30% CO2, red 100% CO2) collected with a scan rate of 50 mV s−1 in 0.1 M NBu4PF6 in MeCN",
+   "page": 4
+  },
+  {
+   "key": "me_cn_self_electrolyte",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "NotReported",
+   "electrolyte_text": "0.1 M 1",
+   "additive_text": "NotReported",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Supporting electrolyte-free CVs of 0.1 M 1 in MeCN under 100% CO2 (red) and Ar (black), collected at a scan rate of 100 mV s−1 – WE glassy carbon, Pt wire counter electrode, reference externally vs. Fc/Fc+.",
+   "page": 4
+  },
+  {
+   "key": "me_cn_self_electrolyte_6",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "NotReported",
+   "electrolyte_text": "0.1 M 6",
+   "additive_text": "NotReported",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Supporting electrolyte-free CVs of 0.1 M 6 in MeCN collected at scan rates of 50 mV s−1 (blue), 100 mV s−1 (green), 200 mV s−1 (brown), 300 mV s−1 (orange) – WE glassy carbon, Pt wire counter electrode, reference externally vs. Fc/Fc+.",
+   "page": 8
+  },
+  {
+   "key": "unspecified",
+   "solvent": "NotReported",
+   "reference_electrode": "NotReported",
+   "atmosphere": "NotReported",
+   "electrolyte_text": null,
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "(condition not stated in the paper)",
+   "page": null
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "c1",
+   "condition": "me_cn_nbu4pf6_ar",
+   "property": "ReductionPotential",
+   "value": -1.5,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "1 −1.5 −1.38 0.32 −2.05 −1.47 −5.3 −4.9 0.4 1",
+   "page": 3
+  },
+  {
+   "compound": "c2",
+   "condition": "me_cn_nbu4pf6_ar",
+   "property": "ReductionPotential",
+   "value": -1.53,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "2 −1.53 −1.34 0.53 −2.09 −1.53 −5.2 −3.9 1.3 1",
+   "page": 3
+  },
+  {
+   "compound": "c3",
+   "condition": "me_cn_nbu4pf6_ar",
+   "property": "ReductionPotential",
+   "value": -0.13,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "3a −0.13 n/a n/a n/a n/a n/a n/a n/a n/a",
+   "page": 3
+  },
+  {
+   "compound": "c4",
+   "condition": "me_cn_nbu4pf6_ar",
+   "property": "ReductionPotential",
+   "value": -1.55,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "4 −1.55 −1.38 0.26 −2.02 −1.44 −5.9 −7.9 2 1",
+   "page": 3
+  },
+  {
+   "compound": "c5",
+   "condition": "me_cn_nbu4pf6_ar",
+   "property": "ReductionPotential",
+   "value": -1.51,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "5 −1.51 −1.31 0.61 −2.08 −1.53 −5.7 −6.7 1 1",
+   "page": 3
+  },
+  {
+   "compound": "c6",
+   "condition": "me_cn_nbu4pf6_ar",
+   "property": "ReductionPotential",
+   "value": -1.55,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "6 −1.55 −1.39 0.67 −2.08b −1.53b −5.6 −6.7b 0.9 1",
+   "page": 3
+  },
+  {
+   "compound": "c1",
+   "condition": "me_cn_nbu4pf6_co2",
+   "property": "BindingEnergy",
+   "value": -5.3,
+   "unit": "KcalPerMol",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "NotReported",
+   "quote": "1 −1.5 −1.38 0.32 −2.05 −1.47 −5.3 −4.9 0.4 1",
+   "page": 3
+  },
+  {
+   "compound": "c2",
+   "condition": "me_cn_nbu4pf6_co2",
+   "property": "BindingEnergy",
+   "value": -5.2,
+   "unit": "KcalPerMol",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "NotReported",
+   "quote": "2 −1.53 −1.34 0.53 −2.09 −1.53 −5.2 −3.9 1.3 1",
+   "page": 3
+  },
+  {
+   "compound": "c4",
+   "condition": "me_cn_nbu4pf6_co2",
+   "property": "BindingEnergy",
+   "value": -5.9,
+   "unit": "KcalPerMol",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "NotReported",
+   "quote": "4 −1.55 −1.38 0.26 −2.02 −1.44 −5.9 −7.9 2 1",
+   "page": 3
+  },
+  {
+   "compound": "c5",
+   "condition": "me_cn_nbu4pf6_co2",
+   "property": "BindingEnergy",
+   "value": -5.7,
+   "unit": "KcalPerMol",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "NotReported",
+   "quote": "5 −1.51 −1.31 0.61 −2.08 −1.53 −5.7 −6.7 1 1",
+   "page": 3
+  },
+  {
+   "compound": "c6",
+   "condition": "me_cn_nbu4pf6_co2",
+   "property": "BindingEnergy",
+   "value": -5.6,
+   "unit": "KcalPerMol",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "NotReported",
+   "quote": "6 −1.55 −1.39 0.67 −2.08b −1.53b −5.6 −6.7b 0.9 1",
+   "page": 3
+  },
+  {
+   "compound": "c1",
+   "condition": "unspecified",
+   "property": "BindingEnergy",
+   "value": -4.9,
+   "unit": "KcalPerMol",
+   "basis": "Computation",
+   "method": "DFT",
+   "redox_couple": "NotReported",
+   "quote": "1 −1.5 −1.38 0.32 −2.05 −1.47 −5.3 −4.9 0.4 1",
+   "page": 3
+  },
+  {
+   "compound": "c2",
+   "condition": "unspecified",
+   "property": "BindingEnergy",
+   "value": -3.9,
+   "unit": "KcalPerMol",
+   "basis": "Computation",
+   "method": "DFT",
+   "redox_couple": "NotReported",
+   "quote": "2 −1.53 −1.34 0.53 −2.09 −1.53 −5.2 −3.9 1.3 1",
+   "page": 3
+  },
+  {
+   "compound": "c4",
+   "condition": "unspecified",
+   "property": "BindingEnergy",
+   "value": -7.9,
+   "unit": "KcalPerMol",
+   "basis": "Computation",
+   "method": "DFT",
+   "redox_couple": "NotReported",
+   "quote": "4 −1.55 −1.38 0.26 −2.02 −1.44 −5.9 −7.9 2 1",
+   "page": 3
+  },
+  {
+   "compound": "c5",
+   "condition": "unspecified",
+   "property": "BindingEnergy",
+   "value": -6.7,
+   "unit": "KcalPerMol",
+   "basis": "Computation",
+   "method": "DFT",
+   "redox_couple": "NotReported",
+   "quote": "5 −1.51 −1.31 0.61 −2.08 −1.53 −5.7 −6.7 1 1",
+   "page": 3
+  },
+  {
+   "compound": "c6",
+   "condition": "unspecified",
+   "property": "BindingEnergy",
+   "value": -6.7,
+   "unit": "KcalPerMol",
+   "basis": "Computation",
+   "method": "DFT",
+   "redox_couple": "NotReported",
+   "quote": "6 −1.55 −1.39 0.67 −2.08b −1.53b −5.6 −6.7b 0.9 1",
+   "page": 3
+  }
+ ],
+ "observations": [
+  {
+   "compound": "c1",
+   "condition": "me_cn_nbu4pf6_co2",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "oxidation features that grow in at increasing concentrations of CO2 are attributed to CO2 adduct reoxidation and CO2 release.",
+   "page": 3
+  },
+  {
+   "compound": "c2",
+   "condition": "me_cn_nbu4pf6_co2",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "oxidation features that grow in at increasing concentrations of CO2 are attributed to CO2 adduct reoxidation and CO2 release.",
+   "page": 3
+  },
+  {
+   "compound": "c4",
+   "condition": "me_cn_nbu4pf6_co2",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "Results for DGbind and the best-ﬁt CO2 binding stoichiometry for sorbents 4, 5, and 6 are reported in Table 1.",
+   "page": 6
+  },
+  {
+   "compound": "c5",
+   "condition": "me_cn_nbu4pf6_co2",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "Results for DGbind and the best-ﬁt CO2 binding stoichiometry for sorbents 4, 5, and 6 are reported in Table 1.",
+   "page": 6
+  },
+  {
+   "compound": "c6",
+   "condition": "me_cn_nbu4pf6_co2",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "Results for DGbind and the best-ﬁt CO2 binding stoichiometry for sorbents 4, 5, and 6 are reported in Table 1.",
+   "page": 6
+  }
+ ],
+ "not_reported": [
+  "First reduction potentials for compounds 1-6",
+  "Half-wave potentials",
+  "Capture capacity in MmolPerGram or MolPerMol",
+  "Faradaic efficiency",
+  "Rate constants"
+ ],
+ "dropped": [],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 0,
+   "dropped": 32
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 21,
+   "dropped": 12
+  },
+  {
+   "n": 3,
+   "parse_errors": [],
+   "kept": 27,
+   "dropped": 5
+  },
+  {
+   "n": 4,
+   "parse_errors": [],
+   "kept": 32,
+   "dropped": 0
+  }
+ ],
+ "review_status": "machine_extracted"
+}

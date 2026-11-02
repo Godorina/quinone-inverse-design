@@ -1,0 +1,154 @@
+{
+ "paper_id": "m047",
+ "title": "Solar-Driven Carbon Dioxide Capture Using a Photoelectrochemical Redox Flow System",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "AQDS",
+   "name": "anthraquinone-2,7-disulfonate (AQDS)",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Sulfonate"
+   ],
+   "substituent_text": null,
+   "quote": "we present a photoelectrochemical flow system using anthraquinone-2,7-disulfonate (AQDS) as a sorbent",
+   "page": 1
+  },
+  {
+   "key": "BQ",
+   "name": "1,4-benzoquinone (BQ)",
+   "skeleton": "Benzoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "Among the commercially available water-soluble quinones, such as 1,4-benzoquinone (BQ), 2,6-dimethyl-1,4-benzoquinone (DMBQ), and AQDS",
+   "page": 2
+  },
+  {
+   "key": "DMBQ",
+   "name": "2,6-dimethyl-1,4-benzoquinone (DMBQ)",
+   "skeleton": "Benzoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Alkyl"
+   ],
+   "substituent_text": null,
+   "quote": "Among the commercially available water-soluble quinones, such as 1,4-benzoquinone (BQ), 2,6-dimethyl-1,4-benzoquinone (DMBQ), and AQDS",
+   "page": 2
+  }
+ ],
+ "conditions": [
+  {
+   "key": "aq_05M_KCl_SHE",
+   "solvent": "Water",
+   "reference_electrode": "SHE",
+   "atmosphere": "NotReported",
+   "electrolyte_text": "0.5 M KCl",
+   "additive_text": "NotReported",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "The redox potentials of AQDS and K4[Fe(CN)6] were measured to be −0.275 V vs NHE and 0.50 V vs NHE, respectively",
+   "page": 3
+  },
+  {
+   "key": "aq_01M_KCl_pH7_SHE",
+   "solvent": "Water",
+   "reference_electrode": "SHE",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.1 M KCl",
+   "additive_text": "NotReported",
+   "ph": 7.0,
+   "temperature_k": null,
+   "quote": "Initially, at the measured pH of 7, a single electron transfer with a half-wave potential (E1/2, app) of −0.23 V vs NHE was observed.",
+   "page": 4
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "AQDS",
+   "condition": "aq_05M_KCl_SHE",
+   "property": "ReductionPotential",
+   "value": -0.275,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "The redox potentials of AQDS and K4[Fe(CN)6] were measured to be −0.275 V vs NHE and 0.50 V vs NHE, respectively",
+   "page": 3
+  },
+  {
+   "compound": "AQDS",
+   "condition": "aq_01M_KCl_pH7_SHE",
+   "property": "HalfWavePotential",
+   "value": -0.23,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "Initially, at the measured pH of 7, a single electron transfer with a half-wave potential (E1/2, app) of −0.23 V vs NHE was observed.",
+   "page": 4
+  }
+ ],
+ "observations": [
+  {
+   "compound": "AQDS",
+   "condition": "aq_05M_KCl_SHE",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "confirming AQDSH−as the key species for efficient and reversible CO2 cycling.",
+   "page": 6
+  }
+ ],
+ "not_reported": [
+  "CaptureCapacity",
+  "BindingConstant",
+  "RateConstant",
+  "EnergyConsumption",
+  "FaradaicEfficiency"
+ ],
+ "dropped": [
+  {
+   "kind": "observation",
+   "raw": {
+    "compound": "AQDS",
+    "condition": "aq_05M_KCl_SHE",
+    "kind": "OxygenStability",
+    "outcome": "OxygenStable",
+    "quote": "AQDS emerged as the better candidate due to its relatively higher stability in the presence of oxygen"
+   },
+   "reasons": [
+    "observations[1] AQDS/OxygenStability: quote is not verbatim on one page. no page contains the start of this quote; copy it exactly from the page text"
+   ]
+  }
+ ],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 3,
+   "dropped": 6
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 6,
+   "dropped": 3
+  },
+  {
+   "n": 3,
+   "parse_errors": [],
+   "kept": 8,
+   "dropped": 1
+  },
+  {
+   "n": 4,
+   "parse_errors": [],
+   "kept": 8,
+   "dropped": 1
+  }
+ ],
+ "review_status": "machine_extracted"
+}

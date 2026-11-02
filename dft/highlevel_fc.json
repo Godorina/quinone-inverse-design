@@ -1,0 +1,37 @@
+{
+  "source": "/home/hgpark/atomistic-agent-runs/reports/analysis.json",
+  "Fc_oxidation_eV": 4.417,
+  "fc_composite": {
+    "Fc": {
+      "E_tz_Eh": -1650.7527476674159,
+      "G_corr_svp_Eh": 0.13707043832846466,
+      "n_imag_svp": 1,
+      "s2_tz": null,
+      "spin_pop_tz": null,
+      "tz_run": "Fc_tz_opt",
+      "svp_run": "Fc_svp_optfreq"
+    },
+    "Fc_p1": {
+      "E_tz_Eh": -1650.5886285700706,
+      "G_corr_svp_Eh": 0.13525517072162074,
+      "n_imag_svp": 1,
+      "s2_tz": 0.7855242699316989,
+      "spin_pop_tz": [
+        [
+          "Fe0",
+          1.3099222931720687
+        ],
+        [
+          "C3",
+          -0.040707640372262044
+        ],
+        [
+          "C4",
+          -0.040707619463938784
+        ]
+      ],
+      "tz_run": "Fc_p1_tz_opt_g",
+      "svp_run": "Fc_p1_svp_optfreq_g"
+    }
+  }
+}

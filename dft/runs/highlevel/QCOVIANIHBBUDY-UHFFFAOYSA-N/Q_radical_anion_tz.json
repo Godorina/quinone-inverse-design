@@ -1,0 +1,43 @@
+{
+  "name": "QCOVIANIHBBUDY-UHFFFAOYSA-N_Q_radical_anion_tz",
+  "task": "opt",
+  "status": "ok",
+  "spec": {
+    "name": "QCOVIANIHBBUDY-UHFFFAOYSA-N_Q_radical_anion_tz",
+    "xyz": "O -0.3998707056 2.7291384353 0.0763635549\nC -0.2381140868 1.4863102916 0.0424126116\nC 1.0884194612 0.8864076432 0.0078830565\nF 2.1313050487 1.7324551107 0.0137430372\nC 1.2991520155 -0.4674261474 -0.0290090418\nCl 2.9335471622 -1.0828488744 -0.0685673059\nC 0.2146547710 -1.4506263610 -0.0379026517\nO 0.4072257891 -2.6797369492 -0.0712813601\nC -1.1059622978 -0.8255095385 -0.0034292354\nCl -2.4737854806 -1.9275770888 -0.0120522283\nC -1.3242175330 0.5291697464 0.0337580284\nH -2.3390130777 0.9312291456 0.0584940483",
+    "charge": -1,
+    "spin": 1,
+    "task": "opt",
+    "xc": "wb97m_v",
+    "basis": "def2-tzvpd",
+    "grids_atom": [
+      99,
+      590
+    ],
+    "nlc_grids_atom": [
+      50,
+      194
+    ],
+    "nlc_grids_prune": "sg1",
+    "thermo_model": "mrrho",
+    "temperature": 298.15,
+    "density_fit": true,
+    "solvent": {
+      "model": "smd",
+      "name": "acetonitrile"
+    },
+    "log": "/home/hgpark/whlee/hgpark/quinone/dft/runs/highlevel/QCOVIANIHBBUDY-UHFFFAOYSA-N/Q_radical_anion_tz.log"
+  },
+  "nao": 443,
+  "opt_converged": true,
+  "xyz_final": "O -0.39822443 2.70886766 0.07363420\nC -0.23655595 1.46680185 0.04070140\nC 1.07946802 0.87039862 0.00739445\nF 2.12184352 1.71879106 0.01329942\nC 1.29808096 -0.46724547 -0.02852169\nCl 2.91580709 -1.07534572 -0.06642648\nC 0.21301605 -1.43244303 -0.03681113\nO 0.40383547 -2.66115205 -0.06934456\nC -1.10077446 -0.81955881 -0.00354327\nCl -2.45839956 -1.90856134 -0.01175168\nC -1.31833346 0.52045935 0.03255595\nH -2.32505578 0.91758954 0.05661104",
+  "energy_Eh": -1400.1070513815623,
+  "scf_converged": true,
+  "s2": 0.7723033766551666,
+  "s2_ideal": 0.75,
+  "auxbasis": "None",
+  "wall_s": 626.8,
+  "source": "/home/hgpark/whlee/hgpark/quinone/onto/phase_8_design/runs/loop-20261031-151304/round_1/QCOVIANIHBBUDY-UHFFFAOYSA-N.json",
+  "o_index": null,
+  "nao_tz": 443
+}

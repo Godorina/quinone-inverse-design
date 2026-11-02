@@ -1,0 +1,285 @@
+{
+ "paper_id": "m051",
+ "title": "Electrified CO2 uptake in quinone-based covalent organic frameworks",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "DADOP_TFP",
+   "name": "DADOP-TFP",
+   "skeleton": "Phenanthrenequinone",
+   "form": "Framework",
+   "substituent_classes": [
+    "Amino"
+   ],
+   "substituent_text": null,
+   "quote": "we developed optimized conditions to synthesize a quinone-based COF, DADOP-TFP, which is composed of 2,7-diaminophenanthrene-9,10-dione (DADOP monomer) and 2,4,6-trihydroxybenzene-1,3,5-tricarbaldehyde (TFP)",
+   "page": 4
+  },
+  {
+   "key": "DADOP",
+   "name": "2,7-diaminophenanthrene-9,10-dione",
+   "skeleton": "Phenanthrenequinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Amino"
+   ],
+   "substituent_text": null,
+   "quote": "the E1/2 increased from −0.469 V for the amine monomer (2,7-diaminophenanthrene-9,10-dione) to +0.095 V for the COF",
+   "page": 6
+  },
+  {
+   "key": "DADOP_TRI",
+   "name": "DADOP-TRI",
+   "skeleton": "Phenanthrenequinone",
+   "form": "Framework",
+   "substituent_classes": [
+    "Amino"
+   ],
+   "substituent_text": null,
+   "quote": "three quinone-based COFs (DADOP-TRI, DADOP-TCA, and DAAQ-TFP, where TRI is 4,4′,4′′-(1,3,5-triazine-2,4,6-triyl)tribenzaldehyde",
+   "page": 6
+  },
+  {
+   "key": "DADOP_TCA",
+   "name": "DADOP-TCA",
+   "skeleton": "Phenanthrenequinone",
+   "form": "Framework",
+   "substituent_classes": [
+    "Amino"
+   ],
+   "substituent_text": null,
+   "quote": "three quinone-based COFs (DADOP-TRI, DADOP-TCA, and DAAQ-TFP, where TRI is 4,4′,4′′-(1,3,5-triazine-2,4,6-triyl)tribenzaldehyde, TCA is benzene-1,3,5-tricarbaldehyde",
+   "page": 6
+  },
+  {
+   "key": "DAAQ_TFP",
+   "name": "DAAQ-TFP",
+   "skeleton": "Anthraquinone",
+   "form": "Framework",
+   "substituent_classes": [
+    "Amino"
+   ],
+   "substituent_text": null,
+   "quote": "DAAQ-TFP, where TRI is 4,4′,4′′-(1,3,5-triazine-2,4,6-triyl)tribenzaldehyde, TCA is benzene-1,3,5-tricarbaldehyde, and DAAQ is 2,6-diaminoanthracene-9,10-dione",
+   "page": 6
+  },
+  {
+   "key": "DADOP_QF_TFP",
+   "name": "DADOP-QF-TFP",
+   "skeleton": "NotReported",
+   "form": "Framework",
+   "substituent_classes": [
+    "Amino"
+   ],
+   "substituent_text": null,
+   "quote": "a quinone-free analog of DADOP-TFP (denoted as DADOP-QF-TFP), which were each synthesized on at least an 800-mg scale",
+   "page": 6
+  }
+ ],
+ "conditions": [
+  {
+   "key": "dmf_air",
+   "solvent": "DMF",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "AirOxygen",
+   "electrolyte_text": null,
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "In N,N-dimethylformamide (DMF), O2 reduction to O2– occurs at −1.3 V vs. ferrocenium/ferrocene (Fc⁺/Fc)",
+   "page": 6
+  },
+  {
+   "key": "mea_n2_capture",
+   "solvent": "Water",
+   "reference_electrode": "NotReported",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.5 M Na2SO4 buffered with Na2HPO4 to a pH of ∼7.0",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "with 0.5 M Na2SO4 buffered with Na2HPO4 to a pH of ∼7.0, serving as the electrolyte",
+   "page": 7
+  },
+  {
+   "key": "mea_n2_release",
+   "solvent": "Water",
+   "reference_electrode": "NotReported",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.5 M Na2SO4 buffered with Na2HPO4 to a pH of ∼7.0",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "with 0.5 M Na2SO4 buffered with Na2HPO4 to a pH of ∼7.0, serving as the electrolyte",
+   "page": 7
+  },
+  {
+   "key": "mea_flue_capture",
+   "solvent": "Water",
+   "reference_electrode": "NotReported",
+   "atmosphere": "FlueGas",
+   "electrolyte_text": "0.5 M Na2SO4 buffered with Na2HPO4 to a pH of ∼7.0",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "with 0.5 M Na2SO4 buffered with Na2HPO4 to a pH of ∼7.0, serving as the electrolyte",
+   "page": 7
+  },
+  {
+   "key": "mea_flue_release",
+   "solvent": "Water",
+   "reference_electrode": "NotReported",
+   "atmosphere": "FlueGas",
+   "electrolyte_text": "0.5 M Na2SO4 buffered with Na2HPO4 to a pH of ∼7.0",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "with 0.5 M Na2SO4 buffered with Na2HPO4 to a pH of ∼7.0, serving as the electrolyte",
+   "page": 7
+  },
+  {
+   "key": "dft_ph7",
+   "solvent": "NotReported",
+   "reference_electrode": "NotReported",
+   "atmosphere": "NotReported",
+   "electrolyte_text": null,
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Free energy profiles of the 2e⁻ and 4e⁻ O2 reduction pathways (A and B) (A) DADOP monomer and (B) DADOP-TFP at pH = 7.",
+   "page": 9
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "DADOP",
+   "condition": "dmf_air",
+   "property": "HalfWavePotential",
+   "value": -0.469,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "the E1/2 increased from −0.469 V for the amine monomer (2,7-diaminophenanthrene-9,10-dione) to +0.095 V for the COF",
+   "page": 6
+  },
+  {
+   "compound": "DADOP_TFP",
+   "condition": "dmf_air",
+   "property": "HalfWavePotential",
+   "value": 0.095,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "the E1/2 increased from −0.469 V for the amine monomer (2,7-diaminophenanthrene-9,10-dione) to +0.095 V for the COF",
+   "page": 6
+  },
+  {
+   "compound": "DADOP_TFP",
+   "condition": "mea_n2_capture",
+   "property": "FaradaicEfficiency",
+   "value": 46.0,
+   "unit": "Percent",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": null,
+   "quote": "Coulombic efficiencies were similarly stable, with 46% for capture and 55% for release in N2",
+   "page": 8
+  },
+  {
+   "compound": "DADOP_TFP",
+   "condition": "mea_n2_release",
+   "property": "FaradaicEfficiency",
+   "value": 55.0,
+   "unit": "Percent",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": null,
+   "quote": "Coulombic efficiencies were similarly stable, with 46% for capture and 55% for release in N2",
+   "page": 8
+  },
+  {
+   "compound": "DADOP_TFP",
+   "condition": "mea_flue_capture",
+   "property": "FaradaicEfficiency",
+   "value": 43.0,
+   "unit": "Percent",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": null,
+   "quote": "compared to 43% and 53% in flue gas",
+   "page": 8
+  },
+  {
+   "compound": "DADOP_TFP",
+   "condition": "mea_flue_release",
+   "property": "FaradaicEfficiency",
+   "value": 53.0,
+   "unit": "Percent",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": null,
+   "quote": "compared to 43% and 53% in flue gas",
+   "page": 8
+  },
+  {
+   "compound": "DADOP",
+   "condition": "dft_ph7",
+   "property": "BindingEnergy",
+   "value": 0.36,
+   "unit": "ElectronVolt",
+   "basis": "Computation",
+   "method": "DFT",
+   "redox_couple": null,
+   "quote": "the protonation of the C=O oxygen in the DADOP monomer along the 2e⁻ pathway B exhibits an energy uphill of 0.36 eV",
+   "page": 9
+  }
+ ],
+ "observations": [
+  {
+   "compound": "DADOP_TFP",
+   "condition": "mea_flue_capture",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "electrochemical reduction of the COF generated nucleophilic quinone species (semiquinones or radical anions) that reacted with electrophilic CO2 to form stable COF-CO2 adducts",
+   "page": 8
+  },
+  {
+   "compound": "DADOP_TFP",
+   "condition": "mea_flue_capture",
+   "kind": "OxygenStability",
+   "outcome": "OxygenStable",
+   "quote": "no significant change in the O2 signal was detected, indicating that O2 reduction does not occur under these conditions",
+   "page": 7
+  }
+ ],
+ "not_reported": [
+  "reference electrode of the potentials in the MEA device",
+  "capture capacity in MmolPerGram or MolPerMol",
+  "binding constants",
+  "energy consumption in allowed units (GJ/ton is not an allowed unit for EnergyConsumption)"
+ ],
+ "dropped": [],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 11,
+   "dropped": 14
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 15,
+   "dropped": 4
+  },
+  {
+   "n": 3,
+   "parse_errors": [],
+   "kept": 21,
+   "dropped": 0
+  }
+ ],
+ "review_status": "machine_extracted"
+}

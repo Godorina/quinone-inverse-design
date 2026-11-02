@@ -1,0 +1,330 @@
+{
+ "paper_id": "m029",
+ "title": "Oxygen‐Stable Electrochemical CO 2 Capture using Redox‐Active Heterocyclic Benzodithiophene Quinone",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "BDT_Q",
+   "name": "benzodithiophene quinone (BDT-Q)",
+   "skeleton": "HeterocyclicQuinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "NotReported"
+   ],
+   "substituent_text": null,
+   "quote": "We demonstrate that benzodithiophene quinone (BDT-Q), a heterocyclic quinone, exhibits high stability in electrochemical carbon capture processes with oxygen-containing feed gas.",
+   "page": 1
+  },
+  {
+   "key": "AQ",
+   "name": "anthraquinone (AQ)",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "A systematic comparison with a well-studied anthraquinone (AQ)[14,34–36] under identical conditions using an H-cell indicates a high oxygen stability of BDT-Q relative to that of AQ with an electron utilization of 0.83.",
+   "page": 2
+  }
+ ],
+ "conditions": [
+  {
+   "key": "cv_dmf_tbaclo4_n2",
+   "solvent": "DMF",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.1 M tetrabutylammonium perchlorate (TBAClO4)",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "A solution of 10 mM of BDT-Q in dimethylformamide (DMF) was utilized, with the addition of 0.1 M tetrabutylammonium perchlorate (TBAClO4) as a supporting electrolyte.",
+   "page": 2
+  },
+  {
+   "key": "cv_dmf_tbaclo4_co2",
+   "solvent": "DMF",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M tetrabutylammonium perchlorate (TBAClO4)",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "All the CV experiments were conducted using a 10 mM BDT-Q/AQ in 0.1 M TBAClO4 as a supporting electrolyte dissolved in DMF, with a scan rate of 100 mV/s.",
+   "page": 3
+  },
+  {
+   "key": "hcell_dmf_tbaclo4_15co2",
+   "solvent": "DMF",
+   "reference_electrode": "NotReported",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.25 M TBAClO4",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "The cathodic chamber was equipped with graphite felt as a working electrode and 25 mM BDT-Q in 5 mL of DMF containing 0.25 M TBAClO4 as a supporting electrolyte.",
+   "page": 6
+  },
+  {
+   "key": "hcell_dmf_tbaclo4_13co2_35o2",
+   "solvent": "DMF",
+   "reference_electrode": "NotReported",
+   "atmosphere": "FlueGas",
+   "electrolyte_text": "0.25 M TBAClO4",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "The cathodic chamber was equipped with graphite felt as a working electrode and 25 mM BDT-Q in 5 mL of DMF containing 0.25 M TBAClO4 as a supporting electrolyte.",
+   "page": 6
+  },
+  {
+   "key": "hcell_dmf_tbaclo4_92co2_81o2",
+   "solvent": "DMF",
+   "reference_electrode": "NotReported",
+   "atmosphere": "FlueGas",
+   "electrolyte_text": "0.25 M TBAClO4",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "The cathodic chamber was equipped with graphite felt as a working electrode and 25 mM BDT-Q in 5 mL of DMF containing 0.25 M TBAClO4 as a supporting electrolyte.",
+   "page": 6
+  },
+  {
+   "key": "dft_smd",
+   "solvent": "NotReported",
+   "reference_electrode": "NotReported",
+   "atmosphere": "NotReported",
+   "electrolyte_text": "NotReported",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "The Gibbs free energies (ΔG) of electron transfer and the CO2 binding steps were calculated using Density Functional Theory (wB97M-V/def-2-tzvpd) with SMD solvent model.",
+   "page": 2
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "BDT_Q",
+   "condition": "cv_dmf_tbaclo4_co2",
+   "property": "Log10BindingConstant",
+   "value": 7.61,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "NotReported",
+   "quote": "yielding a value of log KCO2 of 7.61 (Figure S3).",
+   "page": 3
+  },
+  {
+   "compound": "BDT_Q",
+   "condition": "hcell_dmf_tbaclo4_15co2",
+   "property": "CaptureCapacity",
+   "value": 1.81,
+   "unit": "MolPerMol",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": "NotReported",
+   "quote": "1.81 (15% CO2)",
+   "page": 6
+  },
+  {
+   "compound": "BDT_Q",
+   "condition": "hcell_dmf_tbaclo4_13co2_35o2",
+   "property": "CaptureCapacity",
+   "value": 1.67,
+   "unit": "MolPerMol",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": "NotReported",
+   "quote": "1.67 (13.3% CO2+3.5% O2)",
+   "page": 6
+  },
+  {
+   "compound": "BDT_Q",
+   "condition": "hcell_dmf_tbaclo4_92co2_81o2",
+   "property": "CaptureCapacity",
+   "value": 1.43,
+   "unit": "MolPerMol",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": "NotReported",
+   "quote": "1.43 (9.2% CO2+8.1% O2)",
+   "page": 6
+  },
+  {
+   "compound": "BDT_Q",
+   "condition": "hcell_dmf_tbaclo4_13co2_35o2",
+   "property": "EnergyConsumption",
+   "value": 108.0,
+   "unit": "KJPerMol",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": "NotReported",
+   "quote": "The electrochemical work of 108 kJe/mol",
+   "page": 7
+  }
+ ],
+ "observations": [
+  {
+   "compound": "BDT_Q",
+   "condition": "hcell_dmf_tbaclo4_13co2_35o2",
+   "kind": "OxygenStability",
+   "outcome": "OxygenStable",
+   "quote": "exhibits high stability in electrochemical carbon capture processes with oxygen-containing feed gas.",
+   "page": 1
+  }
+ ],
+ "not_reported": [
+  "Reference electrode for H-cell and cyclic flow system experiments",
+  "Specific substituent classes for BDT-Q"
+ ],
+ "dropped": [
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "BDT_Q",
+    "condition": "cv_dmf_tbaclo4_n2",
+    "property": "ReductionPotential",
+    "value": -1.02,
+    "unit": "Volt",
+    "basis": "Experiment",
+    "method": "CyclicVoltammetry",
+    "redox_couple": "FirstReduction",
+    "quote": "Ered,peak,1=− 1.02 V"
+   },
+   "reasons": [
+    "measurements[0] BDT_Q/ReductionPotential: quote is not verbatim on one page. page 3: your quote matches up to '...ered,peak,1=' then the page has '\u00001.02vandered,peak,2=\u00001.81vvsfc+/fcindmf' but you wrote '-1.02v' (spaces ignored)",
+    "measurements[0] BDT_Q/ReductionPotential: the number -1.02 is not printed in the quote; quote the sentence or table row that prints it"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "BDT_Q",
+    "condition": "cv_dmf_tbaclo4_n2",
+    "property": "ReductionPotential",
+    "value": -1.81,
+    "unit": "Volt",
+    "basis": "Experiment",
+    "method": "CyclicVoltammetry",
+    "redox_couple": "SecondReduction",
+    "quote": "Ered,peak,2=− 1.81 V"
+   },
+   "reasons": [
+    "measurements[1] BDT_Q/ReductionPotential: quote is not verbatim on one page. page 3: your quote matches up to '...ered,peak,2=' then the page has '\u00001.81vvsfc+/fcindmf,resultingintwoquasir' but you wrote '-1.81v' (spaces ignored)",
+    "measurements[1] BDT_Q/ReductionPotential: the number -1.81 is not printed in the quote; quote the sentence or table row that prints it"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "BDT_Q",
+    "condition": "cv_dmf_tbaclo4_co2",
+    "property": "ReductionPotential",
+    "value": -1.44,
+    "unit": "Volt",
+    "basis": "Experiment",
+    "method": "CyclicVoltammetry",
+    "redox_couple": "SecondReduction",
+    "quote": "Ered,peak,2=− 1.44 V vs Fc+/Fc"
+   },
+   "reasons": [
+    "measurements[2] BDT_Q/ReductionPotential: quote is not verbatim on one page. page 3: your quote matches up to '...ered,peak,2=' then the page has '\u00001.81vvsfc+/fcindmf,resultingintwoquasir' but you wrote '-1.44vvsfc+/fc' (spaces ignored)",
+    "measurements[2] BDT_Q/ReductionPotential: the number -1.44 is not printed in the quote; quote the sentence or table row that prints it"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "AQ",
+    "condition": "cv_dmf_tbaclo4_co2",
+    "property": "ReductionPotential",
+    "value": -1.63,
+    "unit": "Volt",
+    "basis": "Experiment",
+    "method": "CyclicVoltammetry",
+    "redox_couple": "SecondReduction",
+    "quote": "Ered,peak,2=− 1.63 V vs Fc+/Fc"
+   },
+   "reasons": [
+    "measurements[3] AQ/ReductionPotential: quote is not verbatim on one page. page 3: your quote matches up to '...ered,peak,2=' then the page has '\u00001.81vvsfc+/fcindmf,resultingintwoquasir' but you wrote '-1.63vvsfc+/fc' (spaces ignored)",
+    "measurements[3] AQ/ReductionPotential: the number -1.63 is not printed in the quote; quote the sentence or table row that prints it"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "BDT_Q",
+    "condition": "cv_dmf_tbaclo4_co2",
+    "property": "RateConstant",
+    "value": 1.056,
+    "unit": "PerMolarPerSecond",
+    "basis": "Experiment",
+    "method": "NotReported",
+    "redox_couple": "NotReported",
+    "quote": "be 1.056 M− 1s− 1"
+   },
+   "reasons": [
+    "measurements[5] BDT_Q/RateConstant: quote is not verbatim on one page. no page contains the start of this quote; copy it exactly from the page text"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "BDT_Q",
+    "condition": "dft_smd",
+    "property": "BindingEnergy",
+    "value": -7.8,
+    "unit": "KcalPerMol",
+    "basis": "Computation",
+    "method": "DFT",
+    "redox_couple": "NotReported",
+    "quote": "ΔG: − 7.8 kcal/mol"
+   },
+   "reasons": [
+    "measurements[6] BDT_Q/BindingEnergy: quote is not verbatim on one page. no page contains the start of this quote; copy it exactly from the page text",
+    "measurements[6] BDT_Q/BindingEnergy: the number -7.8 is not printed in the quote; quote the sentence or table row that prints it"
+   ]
+  },
+  {
+   "kind": "observation",
+   "raw": {
+    "compound": "BDT_Q",
+    "condition": "cv_dmf_tbaclo4_co2",
+    "kind": "BindingMode",
+    "outcome": "CO2Adduct",
+    "quote": "leading to the formation of BDT-Q-(CO2)2 2−"
+   },
+   "reasons": [
+    "observations[0] BDT_Q/BindingMode: quote is not verbatim on one page. page 2: your quote matches up to '...theformationofbdtq(co2)22' then the page has '\u0000.[12,14]tocorroboratethemechanism,thegi' but you wrote '-' (spaces ignored)"
+   ]
+  }
+ ],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 5,
+   "dropped": 14
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 14,
+   "dropped": 7
+  },
+  {
+   "n": 3,
+   "parse_errors": [],
+   "kept": 14,
+   "dropped": 7
+  },
+  {
+   "n": 4,
+   "parse_errors": [],
+   "kept": 14,
+   "dropped": 7
+  }
+ ],
+ "review_status": "machine_extracted"
+}

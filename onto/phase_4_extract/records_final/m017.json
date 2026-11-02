@@ -1,0 +1,120 @@
+{
+ "paper_id": "m017",
+ "title": "CO2 capture based on polyanthraquinone/carbon nanotube composites",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "PAQ_MWCNT",
+   "name": "polyanthraquinone/multi-walled carbon nanotube composites",
+   "skeleton": "Anthraquinone",
+   "form": "Polymer",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "CO2 capture based on polyanthraquinone/carbon nanotube composites",
+   "page": 1
+  }
+ ],
+ "conditions": [
+  {
+   "key": "cond_1m_LiTFSI",
+   "solvent": "Water",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "NotReported",
+   "electrolyte_text": "1m aqueous electrolyte of lithium bis (trifluoromethanesulfonyl) imide",
+   "additive_text": "NotReported",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "the reduction potential of polyanthraquinone ranges from -0.40 V to 1.05 V in a 1m aqueous electrolyte of lithium bis (trifluoromethanesulfonyl) imide",
+   "page": 7
+  },
+  {
+   "key": "cond_20m_LiTFSI_exp",
+   "solvent": "Water",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "NotReported",
+   "electrolyte_text": "20 M aqueous electrolyte of lithium bis (trifluoromethanesulfonyl) imide",
+   "additive_text": "NotReported",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "from -0.60 V to 1.45 V in a 20 M aqueous electrolyte of lithium bis (trifluoromethanesulfonyl) imide",
+   "page": 7
+  },
+  {
+   "key": "cond_20m_LiTFSI_theo",
+   "solvent": "Water",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "NotReported",
+   "electrolyte_text": "20 M aqueous electrolyte of lithium bis (trifluoromethanesulfonyl) imide",
+   "additive_text": "NotReported",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "from -0.60 V to 1.45 V in a 20 M aqueous electrolyte of lithium bis (trifluoromethanesulfonyl) imide",
+   "page": 7
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "PAQ_MWCNT",
+   "condition": "cond_20m_LiTFSI_exp",
+   "property": "CaptureCapacity",
+   "value": 7.8,
+   "unit": "MmolPerGram",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "NotReported",
+   "quote": "The actual carbon dioxide capture capacity of the prepared PAQ/MWCNTs composite is 7.80 mm olg-1",
+   "page": 9
+  },
+  {
+   "compound": "PAQ_MWCNT",
+   "condition": "cond_20m_LiTFSI_theo",
+   "property": "CaptureCapacity",
+   "value": 9.26,
+   "unit": "MmolPerGram",
+   "basis": "Computation",
+   "method": "NotReported",
+   "redox_couple": "NotReported",
+   "quote": "It can be concluded that the theoretical carbon dioxide capture capacity of PAQ/MWCNTs is 9.26 mm olg-1.",
+   "page": 9
+  }
+ ],
+ "observations": [
+  {
+   "compound": "PAQ_MWCNT",
+   "condition": "cond_20m_LiTFSI_exp",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "it will combine with the carbon dioxide to form the PAQ-CO2 adduct.",
+   "page": 8
+  }
+ ],
+ "not_reported": [
+  "Reduction potential values for the specific compound in the capture experiment (only ranges for electrolyte stability or generic quinone principles are given, or values are in figures without explicit text numbers for the specific redox couple of the composite in the capture medium)",
+  "Binding constant",
+  "Rate constant"
+ ],
+ "dropped": [],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 1,
+   "dropped": 5
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 4,
+   "dropped": 2
+  },
+  {
+   "n": 3,
+   "parse_errors": [],
+   "kept": 7,
+   "dropped": 0
+  }
+ ],
+ "review_status": "machine_extracted"
+}

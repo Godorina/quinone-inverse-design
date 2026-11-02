@@ -1,0 +1,13 @@
+# CQ08: Which compounds have both a potential and a CO2 binding constant in the same condition (trade-off table, grouped by reference electrode)?
+PREFIX qn: <https://w3id.org/quinone#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX schema: <https://schema.org/>
+
+SELECT ?name ?couple ?potential ?logK ?reference WHERE {
+  ?me a qn:Measurement ; qn:ofCompound ?compound ; qn:property qn:HalfWavePotential ; qn:value ?potential ; qn:redoxCouple ?cp ; qn:underCondition ?c .
+  ?mk a qn:Measurement ; qn:ofCompound ?compound ; qn:property qn:Log10BindingConstant ; qn:value ?logK ; qn:underCondition ?c .
+  ?compound schema:name ?name .
+  ?cp skos:prefLabel ?couple . FILTER(lang(?couple) = "en")
+  ?c qn:referenceElectrode ?re .
+  ?re skos:prefLabel ?reference . FILTER(lang(?reference) = "en")
+} ORDER BY ?reference ?potential

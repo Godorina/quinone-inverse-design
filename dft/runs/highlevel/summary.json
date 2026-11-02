@@ -1,0 +1,103 @@
+{
+  "Fc_oxidation_eV": 4.417,
+  "molecules": [
+    {
+      "id": "QCOVIANIHBBUDY-UHFFFAOYSA-N",
+      "smiles": "O=C1C(F)=C(Cl)C(=O)C(Cl)=C1",
+      "low_source": "/home/hgpark/whlee/hgpark/quinone/onto/phase_8_design/runs/loop-20261031-151304/round_1/QCOVIANIHBBUDY-UHFFFAOYSA-N.json",
+      "o_index": 0,
+      "low_f": 1.3788717309511884,
+      "low_O2_margin_V": 0.1756098125964427,
+      "low_dE_bind_kcal": -25.560091102218934,
+      "G_Eh": {
+        "Q": -1399.9287060787924,
+        "Q_radical_anion": -1400.0851848958362,
+        "Q_dianion": -1400.197605983665,
+        "adduct": -1588.8429641045127,
+        "CO2": -188.63357152963363
+      },
+      "flags": [],
+      "E1_V": -0.1589923178953656,
+      "E2_V": -1.3578648106552071,
+      "O2_margin_V": -0.12786481065520716,
+      "O2_pass": false,
+      "dG_bind_1atm_kcal": -7.39608598685038,
+      "dG_bind_1M_kcal": -9.29008598685038
+    },
+    {
+      "id": "KOQCAJNJSQGENA-UHFFFAOYSA-N",
+      "smiles": "O=C1C(F)=C(Cl)C(=O)C(Cl)=C1F",
+      "low_source": "/home/hgpark/whlee/hgpark/quinone/onto/phase_8_design/runs/loop-20261031-151304/round_1/KOQCAJNJSQGENA-UHFFFAOYSA-N.json",
+      "o_index": 0,
+      "low_f": 1.3178486611224265,
+      "low_O2_margin_V": 0.25952598789982595,
+      "low_dE_bind_kcal": -24.597630892362616,
+      "G_Eh": {
+        "Q": -1499.1963149770875,
+        "Q_radical_anion": -1499.3576563722702,
+        "Q_dianion": -1499.474070897361,
+        "adduct": -1688.1166299458666,
+        "CO2": -188.63357152963363
+      },
+      "flags": [],
+      "E1_V": -0.026674759125015157,
+      "E2_V": -1.2491977919468158,
+      "O2_margin_V": -0.019197791946815812,
+      "O2_pass": false,
+      "dG_bind_1atm_kcal": -5.639668092254055,
+      "dG_bind_1M_kcal": -7.5336680922540555
+    },
+    {
+      "id": "SJZRFNPTPXVJLK-UHFFFAOYSA-N",
+      "smiles": "O=C1C(F)=C(Cl)C(=O)C=C1Cl",
+      "low_source": "/home/hgpark/whlee/hgpark/quinone/onto/phase_8_design/runs/loop-20261102-003356/round_2/SJZRFNPTPXVJLK-UHFFFAOYSA-N.json",
+      "o_index": 6,
+      "low_f": 1.180772491317112,
+      "low_O2_margin_V": 0.1809077168125497,
+      "low_dE_bind_kcal": -24.83210491417637,
+      "G_Eh": {
+        "Q": -1399.9285781266476,
+        "Q_radical_anion": -1400.0853909182479,
+        "Q_dianion": -1400.1979812750026,
+        "adduct": -1588.8419464382275,
+        "CO2": -188.63357152963363
+      },
+      "flags": [],
+      "E1_V": -0.14990440264869775,
+      "E2_V": -1.3532587662049274,
+      "O2_margin_V": -0.12325876620492737,
+      "O2_pass": false,
+      "dG_bind_1atm_kcal": -6.522005078553548,
+      "dG_bind_1M_kcal": -8.416005078553548
+    },
+    {
+      "id": "UGNWTBMOAKPKBL-UHFFFAOYSA-N",
+      "smiles": "O=C1C(Cl)=C(Cl)C(=O)C(Cl)=C1Cl",
+      "low_source": "/home/hgpark/whlee/hgpark/quinone/dft/runs/ref_set/UGNWTBMOAKPKBL-UHFFFAOYSA-N.json",
+      "o_index": 0,
+      "low_f": 0.7199285478815192,
+      "low_O2_margin_V": 0.3457930355721426,
+      "low_dE_bind_kcal": -21.769878227757857,
+      "G_Eh": {
+        "Q": -2219.8709583357463,
+        "Q_radical_anion": -2220.0322253696745,
+        "Q_dianion": -2220.1495182780054,
+        "adduct": -2408.7908078592272,
+        "CO2": -188.63357152963363
+      },
+      "flags": [],
+      "E1_V": -0.028698232966242188,
+      "E2_V": -1.2252957542442755,
+      "O2_margin_V": 0.004704245755724479,
+      "O2_pass": false,
+      "dG_bind_1atm_kcal": -4.843077371594973,
+      "dG_bind_1M_kcal": -6.737077371594973,
+      "experiment": {
+        "E2_V": -1.18,
+        "dG_bind_1M_kcal": -3.88
+      },
+      "difference_E2_V": -0.045295754244275566,
+      "difference_dG_bind_1M_kcal": -2.857077371594973
+    }
+  ]
+}

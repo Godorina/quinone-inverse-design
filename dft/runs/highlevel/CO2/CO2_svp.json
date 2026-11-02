@@ -1,0 +1,61 @@
+{
+  "name": "CO2_CO2_svp",
+  "task": "opt+freq",
+  "status": "ok",
+  "spec": {
+    "name": "CO2_CO2_svp",
+    "xyz": "O -1.1630815132 -0.0001329926 -0.0000000000\nC 0.0000036720 0.0000000006 -0.0000000000\nO 1.1630778146 0.0001329926 -0.0000000000",
+    "charge": 0,
+    "spin": 0,
+    "task": "opt+freq",
+    "xc": "wb97m_v",
+    "basis": "def2-svp",
+    "grids_atom": [
+      99,
+      590
+    ],
+    "nlc_grids_atom": [
+      50,
+      194
+    ],
+    "nlc_grids_prune": "sg1",
+    "thermo_model": "mrrho",
+    "temperature": 298.15,
+    "density_fit": true,
+    "solvent": {
+      "model": "smd",
+      "name": "acetonitrile"
+    },
+    "log": "/home/hgpark/whlee/hgpark/quinone/dft/runs/highlevel/CO2/CO2_svp.log"
+  },
+  "nao": 42,
+  "opt_converged": true,
+  "xyz_final": "O -1.16054716 -0.00014857 0.00000000\nC 0.00000072 0.00000000 -0.00000000\nO 1.16054643 0.00014857 -0.00000000",
+  "energy_Eh": -188.39481935991728,
+  "scf_converged": true,
+  "auxbasis": "None",
+  "thermo": {
+    "freq_cm": [
+      649.45,
+      649.45,
+      1414.64,
+      2467.14
+    ],
+    "n_imag": 0,
+    "zpe_Eh": 0.01180242405073963,
+    "H_Eh": -188.37943579306324,
+    "G_rrho_Eh": -188.4037183233109,
+    "temperature": 298.15,
+    "pressure_Pa": 101325,
+    "qh_cutoff_cm": null,
+    "thermo_model": "mrrho",
+    "S_vib_harmonic_Eh_K": 1.2127987150615282e-06,
+    "S_vib_qrrho_Eh_K": 1.21392272772822e-06,
+    "G_Eh": -188.40371865843528,
+    "G_corr_Eh": -0.008899298518002752
+  },
+  "wall_s": 13.6,
+  "source": "/home/hgpark/whlee/hgpark/quinone/dft/runs/ref_set/_common.json",
+  "o_index": null,
+  "nao_tz": 117
+}

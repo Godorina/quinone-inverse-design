@@ -1,0 +1,257 @@
+{
+ "paper_id": "m024",
+ "title": "Electrochemically Induced CO 2 Capture Enabled by Aqueous Quinone Flow Chemistry",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "BTMAPAQ_15",
+   "name": "1,5-BTMAPAQ",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "IonicGroup"
+   ],
+   "substituent_text": null,
+   "quote": "1,5-BTMAPAQ reaches the theoretical capture capacity of two CO2 molecules per quinone",
+   "page": 1
+  },
+  {
+   "key": "BTMAPAQ_18",
+   "name": "1,8-BTMAPAQs",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "IonicGroup"
+   ],
+   "substituent_text": null,
+   "quote": "Similar electrochemical behaviors were also shown by 1,4- and 1,8-BTMAPAQs.",
+   "page": 4
+  },
+  {
+   "key": "AQDS",
+   "name": "AQDS",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Sulfonate"
+   ],
+   "substituent_text": null,
+   "quote": "2,7-disulfonated anthraquinone (AQDS)",
+   "page": 3
+  },
+  {
+   "key": "D2PEAQ_26",
+   "name": "2,6-D2PEAQ",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "NotReported"
+   ],
+   "substituent_text": null,
+   "quote": "2,2′-((9,10-dioxo-9,10-dihydroanthracene-2,6-diyl)bis(oxy))dipropionic acid (2,6-D2PEAQ)",
+   "page": 3
+  },
+  {
+   "key": "AQ_18_3E_OH",
+   "name": "AQ-1,8-3E-OH",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Hydroxyl"
+   ],
+   "substituent_text": null,
+   "quote": "1,8-bis(2-(2-(2-hydroxyethoxy)ethoxy)ethoxy)anthracene-9,10-dione (AQ-1,8-3E-OH)",
+   "page": 3
+  }
+ ],
+ "conditions": [
+  {
+   "key": "cv_n2_kcl",
+   "solvent": "Water",
+   "reference_electrode": "SHE",
+   "atmosphere": "Inert",
+   "electrolyte_text": "1 M KCl",
+   "additive_text": null,
+   "ph": 7.0,
+   "temperature_k": null,
+   "quote": "at pH 7 in N2, 1,5-BTMAPAQ exhibits a redox potential of −0.465 V vs SHE",
+   "page": 3
+  },
+  {
+   "key": "cv_co2_kcl",
+   "solvent": "Water",
+   "reference_electrode": "SHE",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "1 M KCl",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "When the solution was constantly purged with CO2, the major cathodic peak appears at −0.51 V",
+   "page": 3
+  },
+  {
+   "key": "flow_co2_n2_kcl",
+   "solvent": "Water",
+   "reference_electrode": "NotReported",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "1 M KCl",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Flow cells comprising 10−12 mL of 0.115 M 1,5-BTMAPAQ in 1 M KCl and 40 mL of 0.2 M FcNCl in 1 M KCl were used for the experiments at 0.05, 0.1, and 0.2 bar.",
+   "page": 5
+  },
+  {
+   "key": "flow_co2_n2_tbac1",
+   "solvent": "Water",
+   "reference_electrode": "NotReported",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "1 M TBACl",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "5 mL of 0.1 M 1,8-BTMAPAQ and 1 M TBACl solution was paired with 40 mL of 0.1 M FcNCl and 1 M TBACl solution.",
+   "page": 6
+  },
+  {
+   "key": "flow_flue_gas_kcl",
+   "solvent": "Water",
+   "reference_electrode": "NotReported",
+   "atmosphere": "FlueGas",
+   "electrolyte_text": "1 M KCl",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "5 mL of 0.1 M 1,4- and 1,5-BTMAPAQs and 1 M KCl solutions were paired with 40 mL of 0.1 M FcNCl and 1 M KCl solution.",
+   "page": 6
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "BTMAPAQ_15",
+   "condition": "cv_n2_kcl",
+   "property": "ReductionPotential",
+   "value": -0.465,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "TwoElectron",
+   "quote": "at pH 7 in N2, 1,5-BTMAPAQ exhibits a redox potential of −0.465 V vs SHE",
+   "page": 3
+  },
+  {
+   "compound": "BTMAPAQ_15",
+   "condition": "cv_co2_kcl",
+   "property": "ReductionPotential",
+   "value": -0.51,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "TwoElectron",
+   "quote": "When the solution was constantly purged with CO2, the major cathodic peak appears at −0.51 V",
+   "page": 3
+  },
+  {
+   "compound": "BTMAPAQ_15",
+   "condition": "flow_co2_n2_kcl",
+   "property": "EnergyConsumption",
+   "value": 48.0,
+   "unit": "KJPerMol",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": null,
+   "quote": "two CO2 molecules were captured by one 1,5-BTMAPAQ with an energetic cost of 48−50 kJ/molCO2 at 20 mA/cm2",
+   "page": 6
+  },
+  {
+   "compound": "BTMAPAQ_15",
+   "condition": "flow_co2_n2_kcl",
+   "property": "CaptureCapacity",
+   "value": 2.0,
+   "unit": "MolPerMol",
+   "basis": "Computation",
+   "method": "NotReported",
+   "redox_couple": null,
+   "quote": "1,5-BTMAPAQ reaches the theoretical capture capacity of two CO2 molecules per quinone",
+   "page": 1
+  }
+ ],
+ "observations": [
+  {
+   "compound": "BTMAPAQ_15",
+   "condition": "flow_co2_n2_kcl",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "confirming that Q(CO2)2 2− is the major product when the reduced form is exposed to CO2",
+   "page": 4
+  }
+ ],
+ "not_reported": [
+  "Reference electrode for flow cell experiments",
+  "Binding constants",
+  "Rate constants"
+ ],
+ "dropped": [
+  {
+   "kind": "compound",
+   "raw": {
+    "key": "BTMAPAQ_14",
+    "name": "1,4-BTMAPAQs",
+    "skeleton": "Anthraquinone",
+    "form": "Molecular",
+    "substituent_classes": [
+     "IonicGroup"
+    ],
+    "substituent_text": null,
+    "quote": "Similar electrochemical behaviors were also shown by 1,4- and 1,8-BTMAPAQs."
+   },
+   "reasons": [
+    "compounds[1] BTMAPAQ_14: the name '1,4-BTMAPAQs' is not in the text"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "BTMAPAQ_15",
+    "condition": "flow_co2_n2_kcl",
+    "property": "EnergyConsumption",
+    "value": 140.0,
+    "unit": "KJPerMol",
+    "basis": "Experiment",
+    "method": "ControlledPotentialElectrolysis",
+    "redox_couple": null,
+    "quote": "resulting in a broad energetic cost range of 65−140 kJ/molCO2"
+   },
+   "reasons": [
+    "measurements[3] BTMAPAQ_15/EnergyConsumption: the number 140.0 is not printed in the quote; quote the sentence or table row that prints it"
+   ]
+  }
+ ],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 3,
+   "dropped": 15
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 14,
+   "dropped": 4
+  },
+  {
+   "n": 3,
+   "parse_errors": [],
+   "kept": 15,
+   "dropped": 2
+  },
+  {
+   "n": 4,
+   "parse_errors": [],
+   "kept": 15,
+   "dropped": 2
+  }
+ ],
+ "review_status": "machine_extracted"
+}

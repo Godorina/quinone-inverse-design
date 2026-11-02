@@ -1,0 +1,18 @@
+# CQ13: How does the medium change one value of one compound (same property, different conditions; compare potentials only when the reference electrodes match)?
+PREFIX qn: <https://w3id.org/quinone#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX schema: <https://schema.org/>
+
+SELECT ?name ?property ?value1 ?solvent1 ?additive1 ?reference1 ?value2 ?solvent2 ?additive2 ?reference2 WHERE {
+  ?m1 a qn:Measurement ; qn:ofCompound ?compound ; qn:property ?p ; qn:value ?value1 ; qn:underCondition ?c1 .
+  ?m2 a qn:Measurement ; qn:ofCompound ?compound ; qn:property ?p ; qn:value ?value2 ; qn:underCondition ?c2 .
+  FILTER(STR(?m1) < STR(?m2) && ?c1 != ?c2)
+  ?compound schema:name ?name .
+  ?p skos:prefLabel ?property . FILTER(lang(?property) = "en")
+  ?c1 qn:solvent ?s1 . ?s1 skos:prefLabel ?solvent1 . FILTER(lang(?solvent1) = "en")
+  ?c2 qn:solvent ?s2 . ?s2 skos:prefLabel ?solvent2 . FILTER(lang(?solvent2) = "en")
+  ?c1 qn:referenceElectrode ?re1 . ?re1 skos:prefLabel ?reference1 . FILTER(lang(?reference1) = "en")
+  ?c2 qn:referenceElectrode ?re2 . ?re2 skos:prefLabel ?reference2 . FILTER(lang(?reference2) = "en")
+  OPTIONAL { ?c1 qn:additiveText ?additive1 }
+  OPTIONAL { ?c2 qn:additiveText ?additive2 }
+} ORDER BY ?name ?property

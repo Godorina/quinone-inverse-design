@@ -1,0 +1,215 @@
+{
+ "paper_id": "m058",
+ "title": "Redox- and Photo-Controlled CO 2 Capture at Cooperative Quinone Rhenium Sites",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "Re_phendione_4py",
+   "name": "Re(CO)3(phendione)(4-pyridinecarboxaldehyde)",
+   "skeleton": "Phenanthrenequinone",
+   "form": "MetalComplex",
+   "substituent_classes": [
+    "NotReported"
+   ],
+   "substituent_text": null,
+   "quote": "Re(CO)3(phendione)(4-pyridinecarboxaldehyde) was investigated in the absence of the polymeric support.",
+   "page": 7
+  },
+  {
+   "key": "chitosan_Re",
+   "name": "chitosan−rhenium",
+   "skeleton": "Phenanthrenequinone",
+   "form": "Polymer",
+   "substituent_classes": [
+    "NotReported"
+   ],
+   "substituent_text": null,
+   "quote": "the response of the chitosan−rhenium material was evaluated by dissolving the polymer-bound complex in DMSO",
+   "page": 7
+  },
+  {
+   "key": "Re_phendione_Cl",
+   "name": "Re(CO)5Cl(phendione)",
+   "skeleton": "Phenanthrenequinone",
+   "form": "MetalComplex",
+   "substituent_classes": [
+    "NotReported"
+   ],
+   "substituent_text": null,
+   "quote": "Re(CO)5Cl(phendione)19",
+   "page": 8
+  },
+  {
+   "key": "phendione",
+   "name": "1,10-phenanthroline-5,6-dione",
+   "skeleton": "Phenanthrenequinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "NotReported"
+   ],
+   "substituent_text": null,
+   "quote": "1,10-phenanthroline-5,6-dione19",
+   "page": 8
+  }
+ ],
+ "conditions": [
+  {
+   "key": "DMSO_NBu4PF6_AgAgCl_N2",
+   "solvent": "DMSO",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.1 M [NBu4][PF6]",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "DMSO was used as the solvent with tetrabutylammonium hexafluorophosphate [NBu4][PF6] (0.1 M) as the supporting electrolyte.",
+   "page": 3
+  },
+  {
+   "key": "DMSO_NBu4PF6_AgAgCl_CO2_20",
+   "solvent": "DMSO",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M [NBu4][PF6]",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "a certified premixed gas containing 20% CO2 in N2 (v/ v, corresponding to pCO2 = 0.2 atm)",
+   "page": 3
+  },
+  {
+   "key": "DMSO_NBu4PF6_AgAgCl_CO2_100",
+   "solvent": "DMSO",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M [NBu4][PF6]",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "pure CO2 (pCO2 = 1 atm)",
+   "page": 3
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "Re_phendione_4py",
+   "condition": "DMSO_NBu4PF6_AgAgCl_N2",
+   "property": "HalfWavePotential",
+   "value": -0.2,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "half-wave potentials located at approximately −0.20 V and −0.81 V vs Ag/AgCl",
+   "page": 7
+  },
+  {
+   "compound": "Re_phendione_4py",
+   "condition": "DMSO_NBu4PF6_AgAgCl_N2",
+   "property": "HalfWavePotential",
+   "value": -0.81,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "half-wave potentials located at approximately −0.20 V and −0.81 V vs Ag/AgCl",
+   "page": 7
+  },
+  {
+   "compound": "chitosan_Re",
+   "condition": "DMSO_NBu4PF6_AgAgCl_N2",
+   "property": "HalfWavePotential",
+   "value": -0.11,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "half-wave potentials at −0.11 V and −0.69 V vs Ag/AgCl",
+   "page": 7
+  },
+  {
+   "compound": "chitosan_Re",
+   "condition": "DMSO_NBu4PF6_AgAgCl_N2",
+   "property": "HalfWavePotential",
+   "value": -0.69,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "half-wave potentials at −0.11 V and −0.69 V vs Ag/AgCl",
+   "page": 7
+  },
+  {
+   "compound": "Re_phendione_4py",
+   "condition": "DMSO_NBu4PF6_AgAgCl_CO2_100",
+   "property": "Log10BindingConstant",
+   "value": 5.1,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": null,
+   "quote": "Re(CO)3(phendione)(4-pyridinecarboxaldehyde) −0.15 −0.81 0.13 0.18 5.1",
+   "page": 8
+  },
+  {
+   "compound": "chitosan_Re",
+   "condition": "DMSO_NBu4PF6_AgAgCl_CO2_100",
+   "property": "Log10BindingConstant",
+   "value": 8.3,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": null,
+   "quote": "chitosan−rhenium −0.09 −0.69 0.32 0.36 8.3",
+   "page": 8
+  },
+  {
+   "compound": "Re_phendione_Cl",
+   "condition": "DMSO_NBu4PF6_AgAgCl_CO2_100",
+   "property": "Log10BindingConstant",
+   "value": 5.4,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": null,
+   "quote": "Re(CO)5Cl(phendione)19 −0.12 −0.77 0.14 0.20 5.4",
+   "page": 8
+  },
+  {
+   "compound": "phendione",
+   "condition": "DMSO_NBu4PF6_AgAgCl_CO2_100",
+   "property": "Log10BindingConstant",
+   "value": 7.9,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": null,
+   "quote": "1,10-phenanthroline-5,6-dione19 −0.35 −1.15 0.24 0.41 7.9",
+   "page": 8
+  }
+ ],
+ "observations": [
+  {
+   "compound": "Re_phendione_4py",
+   "condition": "DMSO_NBu4PF6_AgAgCl_CO2_100",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "reversible interaction between the reduced quinonoid site and CO2",
+   "page": 1
+  }
+ ],
+ "not_reported": [
+  "Oxygen stability of the compounds",
+  "Specific binding mode (e.g., carbonate vs carboxylate) for the rhenium complexes"
+ ],
+ "dropped": [],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 16,
+   "dropped": 0
+  }
+ ],
+ "review_status": "machine_extracted"
+}

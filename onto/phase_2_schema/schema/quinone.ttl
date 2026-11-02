@@ -1,0 +1,249 @@
+# quinone ontology v0.1.0 - electrochemical CO2 capture with quinones (schema).
+# Scope: the 11 must-have competency questions of phase_1_scope/cq.md (cq/cqNN.rq, same numbers); every term names the CQs it serves.
+# Value lists (SKOS) are in quinone-vocab.ttl. Every value carries its compound, its measuring condition, its paper and a quote.
+
+@prefix qn:      <https://w3id.org/quinone#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix schema:  <https://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<https://w3id.org/quinone> a owl:Ontology ;
+    dcterms:title "Quinones for electrochemical CO2 capture"@en , "전기화학적 CO2 포집용 quinone 온톨로지"@ko ;
+    dcterms:description "Which quinone, measured how and under which condition, binds CO2 how strongly and at which potential, with the paper and quote behind every value."@en ,
+        "어떤 quinone이 어떤 조건에서 측정되어 CO2와 얼마나 강하게, 어떤 전위에서 결합하는지를 값마다 논문과 인용 근거와 함께 표현한다."@ko ;
+    owl:versionInfo "0.1.0" .
+
+###############################################################################
+# Classes
+###############################################################################
+
+qn:Paper a owl:Class ; rdfs:subClassOf schema:ScholarlyArticle ;   # CQ19
+    rdfs:label "Paper"@en , "논문"@ko ;
+    rdfs:comment "One published paper; title, DOI and year use schema:name, schema:identifier and schema:datePublished."@en ,
+        "출판된 논문 하나. 제목·DOI·연도는 schema:name, schema:identifier, schema:datePublished로 적는다."@ko .
+
+qn:Compound a owl:Class ;   # CQ01 CQ02 CQ20
+    rdfs:label "Compound"@en , "화합물"@ko ;
+    rdfs:comment "A quinone molecule or quinone-based material (polymer, framework, immobilized on carbon) that a paper uses as a CO2 carrier."@en ,
+        "논문이 CO2 운반체로 쓴 quinone 분자 또는 quinone 기반 소재(고분자, 골격체, 탄소 고정화)."@ko .
+
+qn:Condition a owl:Class ;   # CQ07 CQ08 CQ13 CQ14 CQ20
+    rdfs:label "Condition"@en , "측정 조건"@ko ;
+    rdfs:comment "The medium and setting of a value: solvent, supporting electrolyte, additive, reference electrode, atmosphere, pH, temperature. Values are comparable only under the same condition."@en ,
+        "값이 측정된 매질과 환경: 용매, 지지 전해질, 첨가제, 기준 전극, 분위기, pH, 온도. 같은 조건의 값끼리만 비교할 수 있다."@ko .
+
+qn:Result a owl:Class ;   # CQ04 CQ05 CQ07 CQ19
+    rdfs:label "Result"@en , "결과"@ko ;
+    rdfs:comment "Common parent of Measurement and Observation: one reported fact about a compound under a condition, from one paper, with evidence."@en ,
+        "Measurement와 Observation의 공통 상위 클래스: 한 논문이 한 조건에서 한 화합물에 대해 보고한 사실 하나. 근거를 가진다."@ko .
+
+qn:Measurement a owl:Class ; rdfs:subClassOf qn:Result ;   # CQ02 CQ05 CQ07 CQ08 CQ13 CQ20 CQ22
+    rdfs:label "Measurement"@en , "측정값"@ko ;
+    rdfs:comment "A numeric value (potential, binding constant, energy, capacity, ...) with unit, basis (experiment or computation) and method."@en ,
+        "수치 값(전위, 결합 상수, 에너지, 용량 등)과 단위, 근거 종류(실험/계산), 방법."@ko .
+
+qn:Observation a owl:Class ; rdfs:subClassOf qn:Result ;   # CQ04 CQ14 CQ22
+    rdfs:label "Observation"@en , "관찰"@ko ;
+    rdfs:comment "A categorical statement: how CO2 is bound (adduct, carbonate, ...) or whether the compound survives oxygen."@en ,
+        "범주형 서술: CO2가 어떻게 결합하는지(adduct, 카보네이트 등) 또는 산소에서 안정한지."@ko .
+
+qn:Evidence a owl:Class ;   # CQ19
+    rdfs:label "Evidence"@en , "근거"@ko ;
+    rdfs:comment "A verbatim quote from the paper. Quotes from the abstract carry no page; quotes from the full text need one."@en ,
+        "논문에서 그대로 옮긴 인용. 초록 인용에는 쪽이 없고, 본문 인용에는 쪽이 필요하다."@ko .
+
+###############################################################################
+# Object properties
+###############################################################################
+
+qn:ofCompound a owl:ObjectProperty ; rdfs:domain qn:Result ; rdfs:range qn:Compound ;   # CQ01 CQ02 CQ04 CQ05 CQ19 CQ20 CQ22
+    rdfs:label "of compound"@en , "대상 화합물"@ko ;
+    rdfs:comment "The compound a result is about."@en ,
+        "결과가 다루는 화합물."@ko .
+
+qn:underCondition a owl:ObjectProperty ; rdfs:domain qn:Result ; rdfs:range qn:Condition ;   # CQ07 CQ08 CQ13 CQ14 CQ20
+    rdfs:label "under condition"@en , "측정 조건"@ko ;
+    rdfs:comment "The condition under which a result was obtained."@en ,
+        "결과를 얻은 조건."@ko .
+
+qn:fromPaper a owl:ObjectProperty ; rdfs:domain qn:Result ; rdfs:range qn:Paper ;   # CQ19
+    rdfs:label "from paper"@en , "출처 논문"@ko ;
+    rdfs:comment "The paper that reports a result."@en ,
+        "결과를 보고한 논문."@ko .
+
+qn:hasEvidence a owl:ObjectProperty ; rdfs:domain qn:Result ; rdfs:range qn:Evidence ;   # CQ19
+    rdfs:label "has evidence"@en , "근거"@ko ;
+    rdfs:comment "A quote that supports a result."@en ,
+        "결과를 뒷받침하는 인용."@ko .
+
+qn:derivedFrom a owl:ObjectProperty ; rdfs:domain qn:Measurement ; rdfs:range qn:Measurement ;
+    rdfs:label "derived from"@en , "유래 측정값"@ko ;
+    rdfs:comment "The source measurement for a reported conversion; it does not make the two conditions identical."@en , "보고된 환산의 원 측정값. 두 조건이 같다는 뜻은 아니다."@ko .
+
+qn:skeleton a owl:ObjectProperty ; rdfs:domain qn:Compound ; rdfs:range skos:Concept ;   # CQ01 CQ02 CQ20
+    rdfs:label "skeleton"@en , "골격"@ko ;
+    rdfs:comment "Core ring system (qn:SkeletonScheme)."@en ,
+        "핵심 고리 골격(qn:SkeletonScheme)."@ko .
+
+qn:form a owl:ObjectProperty ; rdfs:domain qn:Compound ; rdfs:range skos:Concept ;   # CQ01
+    rdfs:label "form"@en , "존재 형태"@ko ;
+    rdfs:comment "Physical form: free molecule, polymer, framework, carbon-immobilized, metal complex (qn:FormScheme)."@en ,
+        "물리적 형태: 자유 분자, 고분자, 골격체, 탄소 고정화, 금속 착물(qn:FormScheme)."@ko .
+
+qn:substituentClass a owl:ObjectProperty ; rdfs:domain qn:Compound ; rdfs:range skos:Concept ;   # CQ02 CQ20
+    rdfs:label "substituent class"@en , "치환기 종류"@ko ;
+    rdfs:comment "Kind of substituent on the skeleton (qn:SubstituentClassScheme); qn:substituentText holds the paper words."@en ,
+        "골격에 붙은 치환기의 종류(qn:SubstituentClassScheme). 논문 표현은 qn:substituentText에 적는다."@ko .
+
+qn:solvent a owl:ObjectProperty ; rdfs:domain qn:Condition ; rdfs:range skos:Concept ;   # CQ07 CQ13 CQ20
+    rdfs:label "solvent"@en , "용매"@ko ;
+    rdfs:comment "Solvent of the medium (qn:SolventScheme); qn:NotReported when the text does not say."@en ,
+        "매질의 용매(qn:SolventScheme). 글에 없으면 qn:NotReported."@ko .
+
+qn:referenceElectrode a owl:ObjectProperty ; rdfs:domain qn:Condition ; rdfs:range skos:Concept ;   # CQ07 CQ08
+    rdfs:label "reference electrode"@en , "기준 전극"@ko ;
+    rdfs:comment "Reference for potentials (qn:ReferenceElectrodeScheme); potentials against different references are not comparable."@en ,
+        "전위의 기준 전극(qn:ReferenceElectrodeScheme). 기준이 다른 전위는 비교할 수 없다."@ko .
+
+qn:atmosphere a owl:ObjectProperty ; rdfs:domain qn:Condition ; rdfs:range skos:Concept ;   # CQ14
+    rdfs:label "atmosphere"@en , "분위기"@ko ;
+    rdfs:comment "Gas atmosphere of the experiment (qn:AtmosphereScheme)."@en ,
+        "실험의 기체 분위기(qn:AtmosphereScheme)."@ko .
+
+qn:property a owl:ObjectProperty ; rdfs:domain qn:Measurement ; rdfs:range skos:Concept ;   # CQ02 CQ05 CQ07 CQ08 CQ13 CQ20 CQ22
+    rdfs:label "property"@en , "측정 항목"@ko ;
+    rdfs:comment "What was measured (qn:PropertyScheme)."@en ,
+        "무엇을 측정했는지(qn:PropertyScheme)."@ko .
+
+qn:unit a owl:ObjectProperty ; rdfs:domain qn:Measurement ; rdfs:range skos:Concept ;   # CQ05 CQ07
+    rdfs:label "unit"@en , "단위"@ko ;
+    rdfs:comment "Unit of the value (qn:UnitScheme); must be allowed for the property."@en ,
+        "값의 단위(qn:UnitScheme). 측정 항목에 허용된 단위여야 한다."@ko .
+
+qn:basis a owl:ObjectProperty ; rdfs:domain qn:Measurement ; rdfs:range skos:Concept ;   # CQ05
+    rdfs:label "basis"@en , "근거 종류"@ko ;
+    rdfs:comment "Experiment or computation (qn:BasisScheme)."@en ,
+        "실험인지 계산인지(qn:BasisScheme)."@ko .
+
+qn:method a owl:ObjectProperty ; rdfs:domain qn:Measurement ; rdfs:range skos:Concept ;   # CQ05
+    rdfs:label "method"@en , "방법"@ko ;
+    rdfs:comment "Technique that produced the value (qn:MethodScheme); must fit the basis."@en ,
+        "값을 얻은 기법(qn:MethodScheme). 근거 종류에 맞아야 한다."@ko .
+
+qn:redoxCouple a owl:ObjectProperty ; rdfs:domain qn:Measurement ; rdfs:range skos:Concept ;   # CQ07 CQ08 CQ20
+    rdfs:label "redox couple"@en , "산화환원 쌍"@ko ;
+    rdfs:comment "Which reduction step a potential belongs to (qn:RedoxCoupleScheme)."@en ,
+        "전위가 어느 환원 단계의 것인지(qn:RedoxCoupleScheme)."@ko .
+
+qn:observationKind a owl:ObjectProperty ; rdfs:domain qn:Observation ; rdfs:range skos:Concept ;   # CQ04 CQ14
+    rdfs:label "observation kind"@en , "관찰 종류"@ko ;
+    rdfs:comment "What the observation is about (qn:ObservationKindScheme)."@en ,
+        "관찰이 다루는 것(qn:ObservationKindScheme)."@ko .
+
+qn:outcome a owl:ObjectProperty ; rdfs:domain qn:Observation ; rdfs:range skos:Concept ;   # CQ04 CQ14 CQ22
+    rdfs:label "outcome"@en , "관찰 결과"@ko ;
+    rdfs:comment "The observed outcome; must belong to the observation kind."@en ,
+        "관찰된 결과. 관찰 종류에 속해야 한다."@ko .
+
+qn:evidenceSource a owl:ObjectProperty ; rdfs:domain qn:Evidence ; rdfs:range skos:Concept ;   # CQ19
+    rdfs:label "evidence source"@en , "근거 위치"@ko ;
+    rdfs:comment "Abstract or full text (qn:EvidenceSourceScheme)."@en ,
+        "초록인지 본문인지(qn:EvidenceSourceScheme)."@ko .
+
+qn:allowedUnit a owl:ObjectProperty ; rdfs:domain skos:Concept ; rdfs:range skos:Concept ;   # CQ05 CQ07
+    rdfs:label "allowed unit"@en , "허용 단위"@ko ;
+    rdfs:comment "On a property concept: a unit its values may use."@en ,
+        "측정 항목 개념에서: 값에 쓸 수 있는 단위."@ko .
+
+qn:appliesToBasis a owl:ObjectProperty ; rdfs:domain skos:Concept ; rdfs:range skos:Concept ;   # CQ05
+    rdfs:label "applies to basis"@en , "적용 근거 종류"@ko ;
+    rdfs:comment "On a method concept: the basis (experiment or computation) it belongs to."@en ,
+        "방법 개념에서: 그 방법이 속하는 근거 종류(실험 또는 계산)."@ko .
+
+qn:forKind a owl:ObjectProperty ; rdfs:domain skos:Concept ; rdfs:range skos:Concept ;   # CQ04 CQ14
+    rdfs:label "for kind"@en , "해당 관찰 종류"@ko ;
+    rdfs:comment "On an outcome concept: the observation kind it answers."@en ,
+        "결과 개념에서: 그 결과가 답하는 관찰 종류."@ko .
+
+###############################################################################
+# Datatype properties
+###############################################################################
+
+qn:value a owl:DatatypeProperty ; rdfs:domain qn:Measurement ; rdfs:range xsd:decimal ;   # CQ02 CQ05 CQ07 CQ08 CQ13 CQ20 CQ22
+    rdfs:label "value"@en , "값"@ko ;
+    rdfs:comment "The reported number, in the stated unit."@en ,
+        "보고된 수치. 표기된 단위 기준."@ko .
+
+qn:substituentText a owl:DatatypeProperty ; rdfs:domain qn:Compound ; rdfs:range xsd:string ;   # CQ02
+    rdfs:label "substituent text"@en , "치환기 표현"@ko ;
+    rdfs:comment "Substituents in the paper words, e.g. \"2,6-disulfonate\"."@en ,
+        "논문 표현 그대로의 치환기. 예: \"2,6-disulfonate\"."@ko .
+
+qn:smiles a owl:DatatypeProperty ; rdfs:domain qn:Compound ; rdfs:range xsd:string ;   # CQ01
+    rdfs:label "SMILES"@en , "SMILES"@ko ;
+    rdfs:comment "Structure as SMILES when the paper gives it or it is unambiguous."@en ,
+        "논문이 주거나 모호하지 않을 때의 구조(SMILES)."@ko .
+
+qn:inchikey a owl:DatatypeProperty ; rdfs:domain qn:Compound ; rdfs:range xsd:string ;
+    rdfs:label "InChIKey"@en , "InChIKey"@ko ; rdfs:comment "Structure identifier derived from a verified molecular structure."@en , "검증된 분자 구조에서 얻은 식별자."@ko .
+qn:smilesSource a owl:DatatypeProperty ; rdfs:domain qn:Compound ; rdfs:range xsd:string ;
+    rdfs:label "SMILES source"@en , "SMILES 출처"@ko ; rdfs:comment "How the SMILES was established, rather than an unsupported structure claim."@en , "근거 없는 구조 주장이 아닌 SMILES 확정 경로."@ko .
+qn:functional a owl:DatatypeProperty ; rdfs:domain qn:Measurement ; rdfs:range xsd:string ;
+    rdfs:label "functional"@en , "범함수"@ko ; rdfs:comment "Electronic-structure functional reported for a computation."@en , "계산에 보고된 전자구조 범함수."@ko .
+qn:basisSet a owl:DatatypeProperty ; rdfs:domain qn:Measurement ; rdfs:range xsd:string ;
+    rdfs:label "basis set"@en , "기저 함수"@ko ; rdfs:comment "Basis set reported for a computation."@en , "계산에 보고된 기저 함수."@ko .
+qn:solvationModel a owl:DatatypeProperty ; rdfs:domain qn:Measurement ; rdfs:range xsd:string ;
+    rdfs:label "solvation model"@en , "용매화 모델"@ko ; rdfs:comment "Solvation model reported for a computation."@en , "계산에 보고된 용매화 모델."@ko .
+qn:dispersion a owl:DatatypeProperty ; rdfs:domain qn:Measurement ; rdfs:range xsd:string ;
+    rdfs:label "dispersion correction"@en , "분산 보정"@ko ; rdfs:comment "Dispersion correction reported for a computation."@en , "계산에 보고된 분산 보정."@ko .
+qn:code a owl:DatatypeProperty ; rdfs:domain qn:Measurement ; rdfs:range xsd:string ;
+    rdfs:label "software code"@en , "계산 코드"@ko ; rdfs:comment "Software code reported for a computation."@en , "계산에 보고된 소프트웨어 코드."@ko .
+qn:co2StandardState a owl:DatatypeProperty ; rdfs:domain qn:Condition ; rdfs:range xsd:string ;
+    rdfs:label "CO2 standard state"@en , "CO2 표준 상태"@ko ; rdfs:comment "CO2 standard state stated for a thermodynamic result."@en , "열역학 결과에 명시된 CO2 표준 상태."@ko .
+qn:locator a owl:DatatypeProperty ; rdfs:domain qn:Evidence ; rdfs:range xsd:string ;
+    rdfs:label "locator"@en , "위치 표기"@ko ; rdfs:comment "A reported non-page locator such as a figure or table."@en , "그림·표 등 쪽 이외의 보고된 위치 표기."@ko .
+qn:simReviewTier a owl:DatatypeProperty ; rdfs:domain qn:Paper ; rdfs:range xsd:string ;
+    rdfs:label "simulation review tier"@en , "계산 논문 검토 등급"@ko ; rdfs:comment "Source spreadsheet tier A or B; it is not a quality score."@en , "원본 표의 A 또는 B 등급이며 품질 점수가 아니다."@ko .
+
+qn:electrolyteText a owl:DatatypeProperty ; rdfs:domain qn:Condition ; rdfs:range xsd:string ;   # CQ07 CQ13
+    rdfs:label "electrolyte text"@en , "전해질 표현"@ko ;
+    rdfs:comment "Supporting electrolyte with concentration, in the paper words."@en ,
+        "지지 전해질과 농도. 논문 표현 그대로."@ko .
+
+qn:additiveText a owl:DatatypeProperty ; rdfs:domain qn:Condition ; rdfs:range xsd:string ;   # CQ13 CQ14
+    rdfs:label "additive text"@en , "첨가제 표현"@ko ;
+    rdfs:comment "Additive and concentration, e.g. \"ethanol 0.66 M\"; absent when none."@en ,
+        "첨가제와 농도. 예: \"ethanol 0.66 M\". 없으면 쓰지 않는다."@ko .
+
+qn:pH a owl:DatatypeProperty ; rdfs:domain qn:Condition ; rdfs:range xsd:decimal ;   # CQ13
+    rdfs:label "pH"@en , "pH"@ko ;
+    rdfs:comment "pH of an aqueous medium."@en ,
+        "수용액 매질의 pH."@ko .
+
+qn:temperatureK a owl:DatatypeProperty ; rdfs:domain qn:Condition ; rdfs:range xsd:decimal ;   # CQ13
+    rdfs:label "temperature (K)"@en , "온도(K)"@ko ;
+    rdfs:comment "Temperature in kelvin."@en ,
+        "절대온도(K)."@ko .
+
+qn:quote a owl:DatatypeProperty ; rdfs:domain qn:Evidence ; rdfs:range xsd:string ;   # CQ19
+    rdfs:label "quote"@en , "인용"@ko ;
+    rdfs:comment "Verbatim text from the paper."@en ,
+        "논문에서 그대로 옮긴 글."@ko .
+
+qn:page a owl:DatatypeProperty ; rdfs:domain qn:Evidence ; rdfs:range xsd:integer ;   # CQ19
+    rdfs:label "page"@en , "쪽"@ko ;
+    rdfs:comment "Page of a full-text quote."@en ,
+        "본문 인용의 쪽 번호."@ko .
+
+qn:reviewStatus a owl:DatatypeProperty ; rdfs:domain qn:Result ; rdfs:range xsd:string ;   # CQ19
+    rdfs:label "review status"@en , "검수 상태"@ko ;
+    rdfs:comment "example, machine_extracted or reviewed. Machine extraction is not human review."@en ,
+        "example, machine_extracted, reviewed 중 하나. 자동 추출은 사람 검수가 아니다."@ko .
+
+qn:requiresRedoxCouple a owl:DatatypeProperty ; rdfs:domain skos:Concept ; rdfs:range xsd:boolean ;   # CQ07 CQ08
+    rdfs:label "requires redox couple"@en , "산화환원 쌍 필수"@ko ;
+    rdfs:comment "On a property concept: true for potentials, which must name their reduction step."@en ,
+        "측정 항목 개념에서: 전위는 true이며 환원 단계를 밝혀야 한다."@ko .

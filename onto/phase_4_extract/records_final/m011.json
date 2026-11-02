@@ -1,0 +1,259 @@
+{
+ "paper_id": "m011",
+ "title": "Oxygen-Stable Electrochemical CO 2 Capture and Concentration with Quinones Using Alcohol Additives",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "TCQ",
+   "name": "2,3,5,6-tetrachloro-p-benzoquinone",
+   "skeleton": "Benzoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "ElectronWithdrawing"
+   ],
+   "substituent_text": null,
+   "quote": "2,3,5,6-tetrachloro-p-benzoquinone (TCQ)",
+   "page": 2
+  }
+ ],
+ "conditions": [
+  {
+   "key": "dmf_n2",
+   "solvent": "DMF",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.2 M TBAPF6",
+   "additive_text": "no alcohol",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "All voltammograms were recorded using DMF solutions containing 0.2 M TBAPF6 electrolyte and 2.0 mM TCQ analyte concentrations under N2 atmosphere.",
+   "page": 17
+  },
+  {
+   "key": "dmf_co2_cv",
+   "solvent": "DMF",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.2 M TBAPF6",
+   "additive_text": "no alcohol",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "All voltammograms were recorded in DMF solutions containing 0.2 M TBAPF6 electrolyte and 2.0 mM TCQ analyte concentrations.",
+   "page": 18
+  },
+  {
+   "key": "dmf_co2_spec",
+   "solvent": "DMF",
+   "reference_electrode": "NotReported",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "NotReported",
+   "additive_text": "no alcohol",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Titration of [TBA]2[TCQ2–] with CO2 was monitored using electronic absorption spectroscopy.",
+   "page": 6
+  },
+  {
+   "key": "dmf_etoh_n2",
+   "solvent": "DMF",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.2 M TBAPF6",
+   "additive_text": "2M ethanol",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Voltammograms were recorded at 100 mV/sec scan rate with solutions containing 0.2 M TBAPF6 electrolyte and 2.0 mM TCQ.",
+   "page": 20
+  },
+  {
+   "key": "dmf_etoh_co2_cv",
+   "solvent": "DMF",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.2 M TBAPF6",
+   "additive_text": "2M ethanol",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Voltammograms were recorded at 100 mV/sec scan rate with solutions containing 0.2 M TBAPF6 electrolyte and 2.0 mM TCQ.",
+   "page": 20
+  },
+  {
+   "key": "dmf_etoh_co2_spec",
+   "solvent": "DMF",
+   "reference_electrode": "NotReported",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "NotReported",
+   "additive_text": "2M ethanol",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Titration of [TBA]2[TCQ2–] with CO2 was monitored using electronic absorption spectroscopy.",
+   "page": 6
+  },
+  {
+   "key": "dmf_etoh_fluegas_oxidation",
+   "solvent": "DMF",
+   "reference_electrode": "NotReported",
+   "atmosphere": "FlueGas",
+   "electrolyte_text": "0.2 M TBAPF6",
+   "additive_text": "2M ethanol",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Under a 89:8:3, N2:CO2:O2 (v/v) atmosphere, a 50 mM solution of [TBA]2[TCQ2–] in 2M ethanol in DMF captured and concentrate CO2 from 8.0% to 36.3% (v/v)",
+   "page": 10
+  },
+  {
+   "key": "dmf_etoh_fluegas_reduction",
+   "solvent": "DMF",
+   "reference_electrode": "NotReported",
+   "atmosphere": "FlueGas",
+   "electrolyte_text": "0.2 M TBAPF6",
+   "additive_text": "2M ethanol",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "The solution was then reduced once more until a total charge of –37.8 Coulombs was passed.",
+   "page": 10
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "TCQ",
+   "condition": "dmf_co2_cv",
+   "property": "Log10BindingConstant",
+   "value": 3.7,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "NotReported",
+   "quote": "Using this method, the log(KCO2) of TCQ2– is 3.7 ± 0.2 in the absence of hydrogen-bond donors in DMF.",
+   "page": 6
+  },
+  {
+   "compound": "TCQ",
+   "condition": "dmf_etoh_co2_cv",
+   "property": "Log10BindingConstant",
+   "value": 4.3,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "NotReported",
+   "quote": "While these values are slightly lower than those measured using voltametric methods (log(KCO2) = 3.7 ± 0.2 and 4.3 ± 0.2  for DMF and 2M ethanol in DMF, respectively)",
+   "page": 6
+  },
+  {
+   "compound": "TCQ",
+   "condition": "dmf_co2_spec",
+   "property": "Log10BindingConstant",
+   "value": 2.97,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "InSituSpectroscopy",
+   "redox_couple": "NotReported",
+   "quote": "From this data, TCQ2– has values of log(KCO2) = 2.97 ± 0.04 and 3.4 ± 0.2 in pure DMF and 2M ethanol in DMF, respectively.",
+   "page": 6
+  },
+  {
+   "compound": "TCQ",
+   "condition": "dmf_etoh_co2_spec",
+   "property": "Log10BindingConstant",
+   "value": 3.4,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "InSituSpectroscopy",
+   "redox_couple": "NotReported",
+   "quote": "From this data, TCQ2– has values of log(KCO2) = 2.97 ± 0.04 and 3.4 ± 0.2 in pure DMF and 2M ethanol in DMF, respectively.",
+   "page": 6
+  },
+  {
+   "compound": "TCQ",
+   "condition": "dmf_etoh_fluegas_oxidation",
+   "property": "FaradaicEfficiency",
+   "value": 95.0,
+   "unit": "Percent",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": "NotReported",
+   "quote": "The initial and final headspace CO2 concentration and charge passed corresponds to a 95% Faradaic efficiency (FE) and 98% yield of released CO2 based on the moles of TCQ2– in solution.",
+   "page": 10
+  },
+  {
+   "compound": "TCQ",
+   "condition": "dmf_etoh_fluegas_reduction",
+   "property": "FaradaicEfficiency",
+   "value": 73.0,
+   "unit": "Percent",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": "NotReported",
+   "quote": "The CO2 concentration in the headspace decreased from 36.3% to 15% (v/v), resulting in a 73% FE for the re-capture step.",
+   "page": 10
+  },
+  {
+   "compound": "TCQ",
+   "condition": "dmf_co2_cv",
+   "property": "EnergyConsumption",
+   "value": 23.3,
+   "unit": "KJPerMol",
+   "basis": "Computation",
+   "method": "NotReported",
+   "redox_couple": "NotReported",
+   "quote": "This ΔE value corresponds to a minimum calculated work of 23.3 kJ/mol CO2 captured, or 24% energetic efficiency",
+   "page": 10
+  },
+  {
+   "compound": "TCQ",
+   "condition": "dmf_etoh_co2_cv",
+   "property": "EnergyConsumption",
+   "value": 21.5,
+   "unit": "KJPerMol",
+   "basis": "Computation",
+   "method": "NotReported",
+   "redox_couple": "NotReported",
+   "quote": "At 2M ethanol concentration, ΔE drops to 220 mV between 10 to 100% CO2, lowering the calculated work required to just 21.5 kJ/mol",
+   "page": 10
+  }
+ ],
+ "observations": [
+  {
+   "compound": "TCQ",
+   "condition": "dmf_co2_cv",
+   "kind": "BindingMode",
+   "outcome": "Carbonate",
+   "quote": "TCQ2– reacts with CO2 to form an aryl carbonate",
+   "page": 4
+  },
+  {
+   "compound": "TCQ",
+   "condition": "dmf_etoh_fluegas_oxidation",
+   "kind": "OxygenStability",
+   "outcome": "OxygenStable",
+   "quote": "The use of ethanol as an additive to TCQ-based eCCC systems provides enhanced O2 stability, which is essential for practical eCCC.",
+   "page": 10
+  }
+ ],
+ "not_reported": [
+  "Specific reduction potential values (E1/2) for TCQ in the specified conditions",
+  "Reference electrode for the bulk electrolysis experiments"
+ ],
+ "dropped": [],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 6,
+   "dropped": 10
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 11,
+   "dropped": 6
+  },
+  {
+   "n": 3,
+   "parse_errors": [],
+   "kept": 19,
+   "dropped": 0
+  }
+ ],
+ "review_status": "machine_extracted"
+}

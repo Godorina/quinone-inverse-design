@@ -1,0 +1,199 @@
+{
+ "paper_id": "m039",
+ "title": "Electrochemical CO2 capture by quinone-functionalized ruthenium polypyridine complexes",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "Ru_phendione",
+   "name": "[Ru(bpy)2(phendione)]2+",
+   "skeleton": "Phenanthrenequinone",
+   "form": "MetalComplex",
+   "substituent_classes": [
+    "NotReported"
+   ],
+   "substituent_text": null,
+   "quote": "specifically [Ru(bpy)2(phendione)]2+ and [Ru (bpy)2(NQphen)]2+ (where phendione is 1,10-phenanthroline-5,6-dione; NQphen is benzo[i]dipyrido[3,2-a:2′,3′- c]phenazine-10,15-dione, and bpy is 2,2′-bipyridine)",
+   "page": 1
+  },
+  {
+   "key": "Ru_NQphen",
+   "name": "[Ru(bpy)2(NQphen)]2+",
+   "skeleton": "OtherQuinoid",
+   "form": "MetalComplex",
+   "substituent_classes": [
+    "NotReported"
+   ],
+   "substituent_text": null,
+   "quote": "specifically [Ru(bpy)2(phendione)]2+ and [Ru (bpy)2(NQphen)]2+ (where phendione is 1,10-phenanthroline-5,6-dione; NQphen is benzo[i]dipyrido[3,2-a:2′,3′- c]phenazine-10,15-dione, and bpy is 2,2′-bipyridine)",
+   "page": 1
+  },
+  {
+   "key": "NQphen",
+   "name": "NQphen",
+   "skeleton": "OtherQuinoid",
+   "form": "Molecular",
+   "substituent_classes": [
+    "NotReported"
+   ],
+   "substituent_text": null,
+   "quote": "the NQphen ligand alone exhibited a significantly lower log(K) of 2.1",
+   "page": 4
+  }
+ ],
+ "conditions": [
+  {
+   "key": "dmso_n2",
+   "solvent": "DMSO",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.1 M [NBu4][PF6]",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "DMSO was used as the solvent with tetrabutylammonium hexafluorophosphate [NBu4][PF6] (0.1 M) as the supporting electrolyte.",
+   "page": 2
+  },
+  {
+   "key": "dmso_co2_20",
+   "solvent": "DMSO",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M [NBu4][PF6]",
+   "additive_text": "20 % CO2",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "The system was sequentially saturated with nitrogen, 20 % CO2, and 100 % CO2, with a saturation time of 10 min for each condition.",
+   "page": 2
+  },
+  {
+   "key": "dmso_co2_100",
+   "solvent": "DMSO",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M [NBu4][PF6]",
+   "additive_text": "100 % CO2",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "The system was sequentially saturated with nitrogen, 20 % CO2, and 100 % CO2, with a saturation time of 10 min for each condition.",
+   "page": 2
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "Ru_phendione",
+   "condition": "dmso_n2",
+   "property": "HalfWavePotential",
+   "value": -0.17,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "the first, a quasi-reversible wave at −0.17 V vs Ag/AgCl, was assigned to the formation of the monoradical species (Q/Q•−)",
+   "page": 3
+  },
+  {
+   "compound": "Ru_phendione",
+   "condition": "dmso_n2",
+   "property": "HalfWavePotential",
+   "value": -0.81,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "the second quasi-reversible wave at −0.81 V vs Ag/AgCl corresponded to the conversion of the radical into the oxyanion (Q•−/Q2−)",
+   "page": 3
+  },
+  {
+   "compound": "Ru_NQphen",
+   "condition": "dmso_n2",
+   "property": "HalfWavePotential",
+   "value": -0.46,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "the first reduction of the NQphen ligand, corresponding to the formation of the radical ion (Q/Q•-), exhibited a half-wave potential at −0.46 V vs Ag/ AgCl",
+   "page": 3
+  },
+  {
+   "compound": "Ru_NQphen",
+   "condition": "dmso_n2",
+   "property": "HalfWavePotential",
+   "value": -0.97,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "the second reduction, leading to the formation of the oxy­anion (Q•/Q2−), occurred at −0.97 V vs Ag/AgCl",
+   "page": 3
+  },
+  {
+   "compound": "Ru_phendione",
+   "condition": "dmso_co2_100",
+   "property": "Log10BindingConstant",
+   "value": 5.8,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": null,
+   "quote": "yielding values of 5.8 for [Ru(bpy)2(phendione)]2+ and 7.2 for [Ru(bpy)2(NQphen)]2+",
+   "page": 1
+  },
+  {
+   "compound": "Ru_NQphen",
+   "condition": "dmso_co2_100",
+   "property": "Log10BindingConstant",
+   "value": 7.2,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": null,
+   "quote": "yielding values of 5.8 for [Ru(bpy)2(phendione)]2+ and 7.2 for [Ru(bpy)2(NQphen)]2+",
+   "page": 1
+  },
+  {
+   "compound": "NQphen",
+   "condition": "dmso_co2_100",
+   "property": "Log10BindingConstant",
+   "value": 2.1,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": null,
+   "quote": "the NQphen ligand alone exhibited a significantly lower log(K) of 2.1",
+   "page": 4
+  }
+ ],
+ "observations": [
+  {
+   "compound": "Ru_phendione",
+   "condition": "dmso_co2_100",
+   "kind": "BindingMode",
+   "outcome": "Carbonate",
+   "quote": "suggesting the reversible formation of adducts, similar to carbonates, between the oxygen anion of the reduced quinone and the electrophilic carbon of CO2.",
+   "page": 4
+  },
+  {
+   "compound": "Ru_NQphen",
+   "condition": "dmso_co2_100",
+   "kind": "BindingMode",
+   "outcome": "Carbonate",
+   "quote": "suggesting the reversible formation of adducts, similar to carbonates, between the oxygen anion of the reduced quinone and the electrophilic carbon of CO2.",
+   "page": 4
+  }
+ ],
+ "not_reported": [
+  "Oxygen stability of the complexes",
+  "Capture capacity in MmolPerGram or MolPerMol"
+ ],
+ "dropped": [],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 15,
+   "dropped": 0
+  }
+ ],
+ "review_status": "machine_extracted"
+}

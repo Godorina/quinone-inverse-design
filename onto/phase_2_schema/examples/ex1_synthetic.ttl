@@ -1,0 +1,49 @@
+# Synthetic example (not a real paper): three quinones in DMF, one in water, with all kinds of results.
+@prefix qn:     <https://w3id.org/quinone#> .
+@prefix e:      <https://w3id.org/quinone/entity/> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <https://schema.org/> .
+
+e:paper-syn-1 a qn:Paper ; schema:name "Synthetic paper: substituent effects on quinone CO2 capture (example only)" ;
+    schema:identifier "example:syn-1" ; schema:datePublished "2024" .
+
+e:cond-syn-dmf a qn:Condition ; qn:solvent qn:DMF ; qn:referenceElectrode qn:FcFcPlus ; qn:atmosphere qn:CO2Atmosphere ; qn:electrolyteText "0.1 M TBAPF6" .
+e:cond-syn-air a qn:Condition ; qn:solvent qn:DMF ; qn:referenceElectrode qn:FcFcPlus ; qn:atmosphere qn:AirOxygen ; qn:electrolyteText "0.1 M TBAPF6" ; qn:additiveText "ethanol 0.5 M" .
+e:cond-syn-water a qn:Condition ; qn:solvent qn:Water ; qn:referenceElectrode qn:SHE ; qn:atmosphere qn:Inert ; qn:electrolyteText "0.5 M NaCl" ; qn:pH 7.0 ; qn:temperatureK 298.15 .
+
+e:cpd-aq-so3 a qn:Compound ; schema:name "AQ-disulfonate (synthetic)" ; qn:skeleton qn:Anthraquinone ; qn:form qn:Molecular ; qn:substituentClass qn:Sulfonate ; qn:substituentText "2,6-disulfonate" .
+e:cpd-aq-nh2 a qn:Compound ; schema:name "AQ-amine (synthetic)" ; qn:skeleton qn:Anthraquinone ; qn:form qn:Molecular ; qn:substituentClass qn:Amino ; qn:substituentText "2-amino" .
+e:cpd-bq a qn:Compound ; schema:name "Benzoquinone (synthetic)" ; qn:skeleton qn:Benzoquinone ; qn:form qn:Molecular ; qn:substituentClass qn:Unsubstituted .
+e:cpd-generic a qn:Compound ; schema:name "Quinone, structure not stated (synthetic)" ; qn:skeleton qn:NotReported ; qn:form qn:NotReported ; qn:substituentClass qn:NotReported .
+e:cpd-pbq a qn:Compound ; schema:name "Poly-benzoquinone (synthetic)" ; qn:skeleton qn:Benzoquinone ; qn:form qn:Polymer ; qn:substituentClass qn:Unsubstituted .
+
+e:ev-syn-1 a qn:Evidence ; qn:quote "The amino derivative reaches log K = 7.1 in DMF (synthetic example)" ; qn:evidenceSource qn:FullText ; qn:page 5 .
+e:ev-syn-2 a qn:Evidence ; qn:quote "Quinones with donating groups bind CO2 more strongly (synthetic example)" ; qn:evidenceSource qn:Abstract .
+
+e:m-syn-1 a qn:Measurement ; qn:ofCompound e:cpd-aq-so3 ; qn:underCondition e:cond-syn-dmf ; qn:fromPaper e:paper-syn-1 ; qn:hasEvidence e:ev-syn-1 ; qn:reviewStatus "example" ;
+    qn:property qn:HalfWavePotential ; qn:value -1.10 ; qn:unit qn:Volt ; qn:redoxCouple qn:SecondReduction ; qn:basis qn:Experiment ; qn:method qn:CyclicVoltammetry .
+e:m-syn-2 a qn:Measurement ; qn:ofCompound e:cpd-aq-so3 ; qn:underCondition e:cond-syn-dmf ; qn:fromPaper e:paper-syn-1 ; qn:hasEvidence e:ev-syn-1 ; qn:reviewStatus "example" ;
+    qn:property qn:Log10BindingConstant ; qn:value 4.2 ; qn:unit qn:Dimensionless ; qn:basis qn:Experiment ; qn:method qn:CyclicVoltammetry .
+e:m-syn-3 a qn:Measurement ; qn:ofCompound e:cpd-aq-nh2 ; qn:underCondition e:cond-syn-dmf ; qn:fromPaper e:paper-syn-1 ; qn:hasEvidence e:ev-syn-1 ; qn:reviewStatus "example" ;
+    qn:property qn:HalfWavePotential ; qn:value -1.45 ; qn:unit qn:Volt ; qn:redoxCouple qn:SecondReduction ; qn:basis qn:Experiment ; qn:method qn:CyclicVoltammetry .
+e:m-syn-4 a qn:Measurement ; qn:ofCompound e:cpd-aq-nh2 ; qn:underCondition e:cond-syn-dmf ; qn:fromPaper e:paper-syn-1 ; qn:hasEvidence e:ev-syn-1 ; qn:reviewStatus "example" ;
+    qn:property qn:Log10BindingConstant ; qn:value 7.1 ; qn:unit qn:Dimensionless ; qn:basis qn:Experiment ; qn:method qn:CyclicVoltammetry .
+e:m-syn-5 a qn:Measurement ; qn:ofCompound e:cpd-bq ; qn:underCondition e:cond-syn-dmf ; qn:fromPaper e:paper-syn-1 ; qn:hasEvidence e:ev-syn-2 ; qn:reviewStatus "example" ;
+    qn:property qn:HalfWavePotential ; qn:value -0.95 ; qn:unit qn:Volt ; qn:redoxCouple qn:SecondReduction ; qn:basis qn:Experiment ; qn:method qn:CyclicVoltammetry .
+e:m-syn-6 a qn:Measurement ; qn:ofCompound e:cpd-bq ; qn:underCondition e:cond-syn-dmf ; qn:fromPaper e:paper-syn-1 ; qn:hasEvidence e:ev-syn-2 ; qn:reviewStatus "example" ;
+    qn:property qn:Log10BindingConstant ; qn:value 3.0 ; qn:unit qn:Dimensionless ; qn:basis qn:Experiment ; qn:method qn:CyclicVoltammetry .
+e:m-syn-7 a qn:Measurement ; qn:ofCompound e:cpd-aq-so3 ; qn:underCondition e:cond-syn-dmf ; qn:fromPaper e:paper-syn-1 ; qn:hasEvidence e:ev-syn-2 ; qn:reviewStatus "example" ;
+    qn:property qn:BindingEnergy ; qn:value -72.0 ; qn:unit qn:KJPerMol ; qn:basis qn:Computation ; qn:method qn:DFT .
+e:m-syn-8 a qn:Measurement ; qn:ofCompound e:cpd-aq-so3 ; qn:underCondition e:cond-syn-water ; qn:fromPaper e:paper-syn-1 ; qn:hasEvidence e:ev-syn-2 ; qn:reviewStatus "example" ;
+    qn:property qn:HalfWavePotential ; qn:value -0.40 ; qn:unit qn:Volt ; qn:redoxCouple qn:TwoElectron ; qn:basis qn:Experiment ; qn:method qn:CyclicVoltammetry .
+
+e:o-syn-1 a qn:Observation ; qn:ofCompound e:cpd-aq-nh2 ; qn:underCondition e:cond-syn-dmf ; qn:fromPaper e:paper-syn-1 ; qn:hasEvidence e:ev-syn-2 ; qn:reviewStatus "example" ;
+    qn:observationKind qn:BindingMode ; qn:outcome qn:CO2Adduct .
+e:o-syn-2 a qn:Observation ; qn:ofCompound e:cpd-aq-so3 ; qn:underCondition e:cond-syn-dmf ; qn:fromPaper e:paper-syn-1 ; qn:hasEvidence e:ev-syn-2 ; qn:reviewStatus "example" ;
+    qn:observationKind qn:BindingMode ; qn:outcome qn:CO2Adduct .
+e:o-syn-3 a qn:Observation ; qn:ofCompound e:cpd-aq-nh2 ; qn:underCondition e:cond-syn-air ; qn:fromPaper e:paper-syn-1 ; qn:hasEvidence e:ev-syn-1 ; qn:reviewStatus "example" ;
+    qn:observationKind qn:OxygenStability ; qn:outcome qn:OxygenStable .
+e:o-syn-4 a qn:Observation ; qn:ofCompound e:cpd-bq ; qn:underCondition e:cond-syn-air ; qn:fromPaper e:paper-syn-1 ; qn:hasEvidence e:ev-syn-2 ; qn:reviewStatus "example" ;
+    qn:observationKind qn:OxygenStability ; qn:outcome qn:OxygenUnstable .
+e:o-syn-5 a qn:Observation ; qn:ofCompound e:cpd-pbq ; qn:underCondition e:cond-syn-water ; qn:fromPaper e:paper-syn-1 ; qn:hasEvidence e:ev-syn-2 ; qn:reviewStatus "example" ;
+    qn:observationKind qn:BindingMode ; qn:outcome qn:Bicarbonate .

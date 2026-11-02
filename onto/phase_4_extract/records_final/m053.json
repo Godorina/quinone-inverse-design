@@ -1,0 +1,225 @@
+{
+ "paper_id": "m053",
+ "title": "Evaluating Quinone Redox Chemistry for CO 2 Capture in Aqueous Solvents under Flue Gas Conditions",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "BQ",
+   "name": "1,4-benzoquinone",
+   "skeleton": "Benzoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "1,4-benzoquinone (BQ)",
+   "page": 2
+  },
+  {
+   "key": "NQS",
+   "name": "1,2-naphthoquinone-4-sulfonic acid sodium salt",
+   "skeleton": "Naphthoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Sulfonate"
+   ],
+   "substituent_text": null,
+   "quote": "1,2-naphthoquinone-4-sulfonic acid sodium salt (NQS)",
+   "page": 2
+  },
+  {
+   "key": "AQS",
+   "name": "sodium anthraquinone-2-sulfonate",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Sulfonate"
+   ],
+   "substituent_text": null,
+   "quote": "sodium anthraquinone-2-sulfonate (AQS)",
+   "page": 2
+  },
+  {
+   "key": "AQDS",
+   "name": "sodium 9,10-dioxo-9,10-dihydroanthracene-2,7-disulfonate",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Sulfonate"
+   ],
+   "substituent_text": null,
+   "quote": "sodium 9,10-dioxo-9,10-dihydroanthracene-2,7-disulfonate (AQDS)",
+   "page": 2
+  }
+ ],
+ "conditions": [
+  {
+   "key": "cv_n2",
+   "solvent": "Water",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.5 M TMAB",
+   "additive_text": "5 mM quinone",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "the electrolyte was prepared with a 5 mM concentration of each quinone (analyte) in 0.5 M TMAB (supporting electrolyte). A platinum disc electrode with a diameter of 0.75 mm was used as the working electrode, a saturated Ag/AgCl electrode was used as the reference electrode",
+   "page": 2
+  },
+  {
+   "key": "cv_co2",
+   "solvent": "Water",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.5 M TMAB",
+   "additive_text": "5 mM quinone",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "the electrolyte was bubbled with either N2, CO2, or O2 for 30 min before each experiment",
+   "page": 2
+  },
+  {
+   "key": "cv_o2",
+   "solvent": "Water",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "AirOxygen",
+   "electrolyte_text": "0.5 M TMAB",
+   "additive_text": "5 mM quinone",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "the electrolyte was bubbled with either N2, CO2, or O2 for 30 min before each experiment",
+   "page": 2
+  },
+  {
+   "key": "flow_20co2_n2_10ma",
+   "solvent": "Water",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "FlueGas",
+   "electrolyte_text": "0.5 M TMAB",
+   "additive_text": "25 mM quinone",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "The electrolyte consisted of 0.5 M TMAB as the supporting electrolyte and 25 mM quinone (40 mL of total volume).",
+   "page": 2
+  },
+  {
+   "key": "flow_20co2_n2_stability",
+   "solvent": "Water",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "FlueGas",
+   "electrolyte_text": "0.5 M TMAB",
+   "additive_text": "25 mM quinone",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "At a current density of 10 mA/cm2 under a 20% CO2 and 80% N2 feed gas mixture, the EU efficiency remained stable at ca 45%",
+   "page": 6
+  },
+  {
+   "key": "flow_flue_gas",
+   "solvent": "Water",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "FlueGas",
+   "electrolyte_text": "0.5 M TMAB",
+   "additive_text": "25 mM quinone",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "experiments were conducted using a feed gas mixture of 20% CO2 and 3% O2 balanced by N2",
+   "page": 6
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "NQS",
+   "condition": "flow_20co2_n2_10ma",
+   "property": "FaradaicEfficiency",
+   "value": 49.7,
+   "unit": "Percent",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": "NotReported",
+   "quote": "NQS (Figure 3d) reached an EU efficiency of 49.7 ± 4.3%",
+   "page": 6
+  },
+  {
+   "compound": "BQ",
+   "condition": "flow_20co2_n2_10ma",
+   "property": "FaradaicEfficiency",
+   "value": 27.0,
+   "unit": "Percent",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": "NotReported",
+   "quote": "BQ (Figure 3c) followed, achieving a 27% EU efficiency at 10 mA/cm2",
+   "page": 6
+  },
+  {
+   "compound": "AQDS",
+   "condition": "flow_flue_gas",
+   "property": "FaradaicEfficiency",
+   "value": 87.0,
+   "unit": "Percent",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": "NotReported",
+   "quote": "AQDS and AQS, which achieved EU efficiencies of 87% and 66%, respectively.",
+   "page": 6
+  },
+  {
+   "compound": "AQS",
+   "condition": "flow_flue_gas",
+   "property": "FaradaicEfficiency",
+   "value": 66.0,
+   "unit": "Percent",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": "NotReported",
+   "quote": "AQDS and AQS, which achieved EU efficiencies of 87% and 66%, respectively.",
+   "page": 6
+  },
+  {
+   "compound": "NQS",
+   "condition": "flow_20co2_n2_stability",
+   "property": "FaradaicEfficiency",
+   "value": 45.0,
+   "unit": "Percent",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": "NotReported",
+   "quote": "the EU efficiency remained stable at ca 45%",
+   "page": 6
+  }
+ ],
+ "observations": [
+  {
+   "compound": "BQ",
+   "condition": "cv_co2",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "forming a Q(CO2)2 2−adduct",
+   "page": 3
+  }
+ ],
+ "not_reported": [
+  "BindingConstant values (units printed as M^-2, not allowed)",
+  "HalfWavePotential values for individual quinones",
+  "ReductionPotential values for individual quinones",
+  "CaptureCapacity in MmolPerGram or MolPerMol",
+  "RateConstant values",
+  "OxygenStability outcome (paper notes no fast degradation on CV timescale but does not explicitly state stability classification)"
+ ],
+ "dropped": [],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 13,
+   "dropped": 7
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 16,
+   "dropped": 0
+  }
+ ],
+ "review_status": "machine_extracted"
+}

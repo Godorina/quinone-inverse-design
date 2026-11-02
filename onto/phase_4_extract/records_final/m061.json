@@ -1,0 +1,214 @@
+{
+ "paper_id": "m061",
+ "title": "Tuning the Half-Wave Potential and Binding Constant of PAQ Molecules for the Enhanced O 2 -Tolerant Electrochemical CO 2 Capture Process",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "PAQ",
+   "name": "9,10-Phenanthrenequinone",
+   "skeleton": "Phenanthrenequinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "9,10-Phenanthrenequinone (PAQ) was chosen as a capture carrier",
+   "page": 1
+  }
+ ],
+ "conditions": [
+  {
+   "key": "me_cn_n2",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "Inert",
+   "electrolyte_text": "4 mM PAQ and 0.1 M TBAP were dissolved in MeCN",
+   "additive_text": "NotReported",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "4 mM PAQ and 0.1 M TBAP were dissolved in MeCN to form a homogeneous electrolyte.",
+   "page": 4
+  },
+  {
+   "key": "me_cn_co2",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "4 mM PAQ and 0.1 M TBAP were dissolved in MeCN",
+   "additive_text": "NotReported",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "However, in the CO2-saturated solution, PAQ exhibited only one pair of redox peaks.",
+   "page": 4
+  },
+  {
+   "key": "me_cn_etoh_066m",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "4 mM PAQ and 0.1 M TBAP were dissolved in MeCN",
+   "additive_text": "0.66 M EtOH",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "When the ethanol (EtOH) concentration was 0.66 M, the E1/2(Q−1/Q−2) of PAQ anodically shifted to −0.85 V vs Ag/AgCl",
+   "page": 1
+  },
+  {
+   "key": "me_cn_eg_0036m",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "4 mM PAQ and 0.1 M TBAP were dissolved in MeCN",
+   "additive_text": "0.036 M EG",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "When the concentration of EG in the electrolyte was 0.036 M, its estimated Log(KCO2) decreased from 13.06 to 7.14.",
+   "page": 9
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "PAQ",
+   "condition": "me_cn_n2",
+   "property": "HalfWavePotential",
+   "value": -0.55,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "The first redox event occurred at a half-wave potential E1/2(Q/Q−1) of about −0.55 V vs Ag/AgCl",
+   "page": 4
+  },
+  {
+   "compound": "PAQ",
+   "condition": "me_cn_n2",
+   "property": "HalfWavePotential",
+   "value": -1.23,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "The second redox event appeared at a half-wave potential E1/2(Q−1/Q−2) of approximately −1.23 V vs Ag/AgCl",
+   "page": 4
+  },
+  {
+   "compound": "PAQ",
+   "condition": "me_cn_co2",
+   "property": "RateConstant",
+   "value": 200.0,
+   "unit": "PerMolarPerSecond",
+   "basis": "Experiment",
+   "method": "NotReported",
+   "redox_couple": "NotReported",
+   "quote": "the kbimolecular obtained under the test conditions was approximately 200 M−1 s−1.",
+   "page": 5
+  },
+  {
+   "compound": "PAQ",
+   "condition": "me_cn_co2",
+   "property": "Log10BindingConstant",
+   "value": 13.06,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "NotReported",
+   "redox_couple": "NotReported",
+   "quote": "its estimated Log(KCO2) decreased from 13.06 to 7.14.",
+   "page": 9
+  },
+  {
+   "compound": "PAQ",
+   "condition": "me_cn_etoh_066m",
+   "property": "Log10BindingConstant",
+   "value": 8.55,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "NotReported",
+   "redox_couple": "NotReported",
+   "quote": "simultaneously, an appropriate Log(KCO2) (8.55) was still maintained at this time",
+   "page": 1
+  },
+  {
+   "compound": "PAQ",
+   "condition": "me_cn_etoh_066m",
+   "property": "EnergyConsumption",
+   "value": 50.94,
+   "unit": "KJPerMol",
+   "basis": "Experiment",
+   "method": "NotReported",
+   "redox_couple": "NotReported",
+   "quote": "the estimated minimum energy consumption of the electrochemical system was 50.94 kJ/mol",
+   "page": 1
+  },
+  {
+   "compound": "PAQ",
+   "condition": "me_cn_co2",
+   "property": "EnergyConsumption",
+   "value": 73.43,
+   "unit": "KJPerMol",
+   "basis": "Experiment",
+   "method": "NotReported",
+   "redox_couple": "NotReported",
+   "quote": "which was significantly lower than that of the original electrolyte (73.43 kJ/mol).",
+   "page": 1
+  },
+  {
+   "compound": "PAQ",
+   "condition": "me_cn_eg_0036m",
+   "property": "Log10BindingConstant",
+   "value": 7.14,
+   "unit": "Dimensionless",
+   "basis": "Experiment",
+   "method": "NotReported",
+   "redox_couple": "NotReported",
+   "quote": "When the concentration of EG in the electrolyte was 0.036 M, its estimated Log(KCO2) decreased from 13.06 to 7.14.",
+   "page": 9
+  },
+  {
+   "compound": "PAQ",
+   "condition": "me_cn_eg_0036m",
+   "property": "EnergyConsumption",
+   "value": 40.33,
+   "unit": "KJPerMol",
+   "basis": "Experiment",
+   "method": "NotReported",
+   "redox_couple": "NotReported",
+   "quote": "EG has the smallest electrochemical CO2 capture energy consumption (40.33 kJ/mol), corresponding to an EG concentration of 0.036 M.",
+   "page": 10
+  }
+ ],
+ "observations": [
+  {
+   "compound": "PAQ",
+   "condition": "me_cn_co2",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "react with the electrophilic carbon center in the CO2 molecule to form the carboxylated quinone radical anion (PAQ(CO2)•−)",
+   "page": 4
+  },
+  {
+   "compound": "PAQ",
+   "condition": "me_cn_etoh_066m",
+   "kind": "OxygenStability",
+   "outcome": "OxygenStable",
+   "quote": "This suggested that constructing intermolecular hydrogen-bonding networks is beneficial for alleviating the O2 stability problem of quinone molecules with strong CO2 complexation.",
+   "page": 1
+  }
+ ],
+ "not_reported": [],
+ "dropped": [],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 1,
+   "dropped": 15
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 16,
+   "dropped": 0
+  }
+ ],
+ "review_status": "machine_extracted"
+}

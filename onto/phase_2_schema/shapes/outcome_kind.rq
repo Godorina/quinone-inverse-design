@@ -1,0 +1,8 @@
+# An outcome must answer the observation kind it is attached to.
+PREFIX qn: <https://w3id.org/quinone#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?focus ?message WHERE {
+  ?focus a qn:Observation ; qn:observationKind ?k ; qn:outcome ?o .
+  FILTER NOT EXISTS { ?o qn:forKind ?k }
+  BIND("outcome does not belong to this observation kind (see qn:forKind)" AS ?message)
+}

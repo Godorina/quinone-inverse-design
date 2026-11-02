@@ -1,0 +1,15 @@
+# CQ02: How do substituents change the reduction potential and the CO2 binding constant of one skeleton?
+PREFIX qn: <https://w3id.org/quinone#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX schema: <https://schema.org/>
+
+SELECT ?skeleton ?substituent ?name ?property ?value ?solvent WHERE {
+  ?compound a qn:Compound ; schema:name ?name ; qn:skeleton ?sk ; qn:substituentClass ?sc .
+  ?sk skos:prefLabel ?skeleton . FILTER(lang(?skeleton) = "en")
+  ?sc skos:prefLabel ?substituent . FILTER(lang(?substituent) = "en")
+  ?m a qn:Measurement ; qn:ofCompound ?compound ; qn:property ?p ; qn:value ?value ; qn:underCondition ?c .
+  FILTER(?p IN (qn:HalfWavePotential, qn:ReductionPotential, qn:Log10BindingConstant))
+  ?p skos:prefLabel ?property . FILTER(lang(?property) = "en")
+  ?c qn:solvent ?sv .
+  ?sv skos:prefLabel ?solvent . FILTER(lang(?solvent) = "en")
+} ORDER BY ?skeleton ?substituent ?name ?property

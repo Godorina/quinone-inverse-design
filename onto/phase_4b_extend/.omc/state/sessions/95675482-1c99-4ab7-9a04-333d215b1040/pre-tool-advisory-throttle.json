@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "entries": {
+    "445ed27a3872b681d98190bae61ccb84954e1bc4e140df5370be958dee776b3a": {
+      "last_emitted_at_ms": 1793368698115,
+      "message": "Verify changes work after editing. Test functionality before marking complete."
+    },
+    "808cb04420bcb368ab4716038ddd950b51198d0402b6cf8e965d66ca42ebccbe": {
+      "last_emitted_at_ms": 1793368678023,
+      "message": "[SLOP WARNING] Detected fallback/workaround language in this tool input. Do not make potential slop: avoid ad-hoc fallback layers, workaround shims, or environment-specific patches unless explicitly justified. For architecture concerns, consult the architect for a concrete design first. If this seems environment-specific, ask the user to confirm constraints before proceeding.\n\nVerify changes work after editing. Test functionality before marking complete."
+    },
+    "79a93d4a2f8f50b95f852280616242fee1855dc99a3c75211917f55e72e95fae": {
+      "last_emitted_at_ms": 1793368532244,
+      "message": "Use parallel execution for independent tasks. Use run_in_background for long operations (npm install, builds, tests)."
+    },
+    "ea7aeb61e97e9cf36f7c49deff20df8cba591383dfd723e3ccc59e2a254e65cb": {
+      "last_emitted_at_ms": 1793367291359,
+      "message": "Spawning agent: oh-my-claudecode:verifier (inherit) | Task: Verify judgments, SMILES, loop"
+    }
+  },
+  "updated_at": "2026-10-30T13:58:18.115Z"
+}

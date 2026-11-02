@@ -1,0 +1,183 @@
+{
+ "paper_id": "m069",
+ "title": "Aqueous Electrochemical Direct Air Capture Using Alizarin Red S",
+ "evidence_source": "FullText",
+ "compounds": [],
+ "conditions": [
+  {
+   "key": "cv_argon_ph5",
+   "solvent": "Water",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.1 M KCl in H2O",
+   "additive_text": null,
+   "ph": 5.0,
+   "temperature_k": null,
+   "quote": "when ARS is dissolved in an aqueous electrolyte solution and purged with argon, the pH was measured to be 5",
+   "page": 2
+  },
+  {
+   "key": "cv_co2_ph4",
+   "solvent": "Water",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M KCl in H2O",
+   "additive_text": null,
+   "ph": 4.0,
+   "temperature_k": null,
+   "quote": "when the same solution is subsequently purged with CO2, the pH decreases to 4",
+   "page": 2
+  },
+  {
+   "key": "dac_catholyte",
+   "solvent": "Water",
+   "reference_electrode": "NotReported",
+   "atmosphere": "AirOxygen",
+   "electrolyte_text": "1 M KCl",
+   "additive_text": "1 M Nicotinamide",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "CO2 capture performed using 50 mL of 20 mM ARS, 1 M Nicotinamide, 1 M KCl aqueous catholyte",
+   "page": 3
+  }
+ ],
+ "measurements": [],
+ "observations": [],
+ "not_reported": [
+  "reference electrode of the potentials for the DAC cycling experiments",
+  "capture capacity in MmolPerGram or MolPerMol"
+ ],
+ "dropped": [
+  {
+   "kind": "compound",
+   "raw": {
+    "key": "ARS",
+    "name": "Alizarin Red S",
+    "skeleton": "Anthraquinone",
+    "form": "Molecular",
+    "substituent_classes": [
+     "Hydroxyl",
+     "Sulfonate"
+    ],
+    "substituent_text": null,
+    "quote": "we employed Alizarin Red S (ARS) as an electroactive capturing agent"
+   },
+   "reasons": [
+    "compounds[0] ARS: quote is not verbatim on one page. page 1: your quote matches up to '...weemployedalizarinreds(' then the page has 'sodium3,4dihydroxy9,10dioxo9,10dihydroan' but you wrote 'ars)asanelectroactivecapturingagent' (spaces ignored)"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "ARS",
+    "condition": "cv_argon_ph5",
+    "property": "HalfWavePotential",
+    "value": -0.696,
+    "unit": "Volt",
+    "basis": "Experiment",
+    "method": "CyclicVoltammetry",
+    "redox_couple": "TwoElectron",
+    "quote": "the E1/2 of ARS in argon is 0.696 V"
+   },
+   "reasons": [
+    "measurements[0] ARS/HalfWavePotential: quote is not verbatim on one page. page 2: your quote matches up to '...thee1/2ofarsinargonis' then the page has '\u00000.696vandthee1/2inco2is\u00000.441v,whichyie' but you wrote '0.696v' (spaces ignored)",
+    "measurements[0] ARS/HalfWavePotential: refers to 'ARS', which is not a kept compound or condition",
+    "measurements[0] ARS/HalfWavePotential: the number -0.696 is not printed in the quote; quote the sentence or table row that prints it"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "ARS",
+    "condition": "cv_co2_ph4",
+    "property": "HalfWavePotential",
+    "value": -0.441,
+    "unit": "Volt",
+    "basis": "Experiment",
+    "method": "CyclicVoltammetry",
+    "redox_couple": "TwoElectron",
+    "quote": "the E1/2 in CO2 is 0.441 V"
+   },
+   "reasons": [
+    "measurements[1] ARS/HalfWavePotential: quote is not verbatim on one page. page 2: your quote matches up to '...thee1/2inco2is' then the page has '\u00000.441v,whichyieldsatheoreticalminimumen' but you wrote '0.441v' (spaces ignored)",
+    "measurements[1] ARS/HalfWavePotential: refers to 'ARS', which is not a kept compound or condition",
+    "measurements[1] ARS/HalfWavePotential: the number -0.441 is not printed in the quote; quote the sentence or table row that prints it"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "ARS",
+    "condition": "cv_argon_ph5",
+    "property": "EnergyConsumption",
+    "value": 24.6,
+    "unit": "KJPerMol",
+    "basis": "Computation",
+    "method": "NotReported",
+    "redox_couple": "NotReported",
+    "quote": "which yields a theoretical minimum energy of 24.6 kJe/mole of CO2"
+   },
+   "reasons": [
+    "measurements[2] ARS/EnergyConsumption: refers to 'ARS', which is not a kept compound or condition"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "ARS",
+    "condition": "dac_catholyte",
+    "property": "FaradaicEfficiency",
+    "value": 100.0,
+    "unit": "Percent",
+    "basis": "Experiment",
+    "method": "ControlledPotentialElectrolysis",
+    "redox_couple": "NotReported",
+    "quote": "the system averaged a coulombic efficiency of 100%"
+   },
+   "reasons": [
+    "measurements[3] ARS/FaradaicEfficiency: refers to 'ARS', which is not a kept compound or condition"
+   ]
+  },
+  {
+   "kind": "observation",
+   "raw": {
+    "compound": "ARS",
+    "condition": "dac_catholyte",
+    "kind": "BindingMode",
+    "outcome": "Bicarbonate",
+    "quote": "CO2 reacts with the conjugate base OH- ions to form HCO3- ions"
+   },
+   "reasons": [
+    "observations[0] ARS/BindingMode: quote is not verbatim on one page. page 2: your quote matches up to '...ctswiththeconjugatebaseoh' then the page has '\u0000ionstoformhco3\u0000ions.thisfunctionssimila' but you wrote 'ionstoformhco3ions' (spaces ignored)",
+    "observations[0] ARS/BindingMode: refers to 'ARS', which is not a kept compound or condition"
+   ]
+  }
+ ],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 3,
+   "dropped": 6
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 3,
+   "dropped": 6
+  },
+  {
+   "n": 3,
+   "parse_errors": [],
+   "kept": 3,
+   "dropped": 6
+  },
+  {
+   "n": 4,
+   "parse_errors": [],
+   "kept": 3,
+   "dropped": 6
+  }
+ ],
+ "review_status": "machine_extracted"
+}

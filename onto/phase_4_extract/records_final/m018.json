@@ -1,0 +1,145 @@
+{
+ "paper_id": "m018",
+ "title": "Electrochemically Facilitated Transport of CO2 between Gas Diffusion Electrodes in Flat and Hollow Fiber Geometries",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "NQ_G2",
+   "name": "NQ-G2",
+   "skeleton": "Naphthoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Alkyl"
+   ],
+   "substituent_text": null,
+   "quote": "2,3-di(2-methoxyethoxy)-1,4-naphthoquinone, the LQ with a shorter glyme tail.38 This molecule is a solid at room temperature, but we found that the ether functionality still imparted excellent solubility in ionic liquids. With [emim][tcm] we observed no solubility limit at ambient temperature; instead, the solid readily formed a liquid with the addition of even small amounts of ionic liquid. We thus chose to investigate the performance of this quinone, termed NQ-G2 for the remainder of this work, in [emim][tcm].",
+   "page": 3
+  }
+ ],
+ "conditions": [
+  {
+   "key": "dms_o2",
+   "solvent": "DMSO",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.5 M tetrabutylammonium hexafluorophosphate",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Cyclic voltammogram of NQ-G2 at 20 mM in DMSO with 0.5 M tetrabutylammonium hexafluorophosphate as the supporting salt. (B) Cyclic voltammetry (CV) of NQ-G2 at 20 mM in [emim][tcm]. Both CVs were performed under N2 (solid blue line), under 15% CO2 in N2 (dashed orange line), and under pure CO2 (dotted purple line). Scan rate: 100 mV/s, working electrode: 3 mm glassy carbon, Counter: Pt wire, Ref: Ag wire. Following each experiment, Fc was added at 5 mM to reference the scan.",
+   "page": 3
+  },
+  {
+   "key": "emim_tcm_o2",
+   "solvent": "IonicLiquid",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "Inert",
+   "electrolyte_text": "[emim][tcm]",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Cyclic voltammogram of NQ-G2 at 20 mM in DMSO with 0.5 M tetrabutylammonium hexafluorophosphate as the supporting salt. (B) Cyclic voltammetry (CV) of NQ-G2 at 20 mM in [emim][tcm]. Both CVs were performed under N2 (solid blue line), under 15% CO2 in N2 (dashed orange line), and under pure CO2 (dotted purple line). Scan rate: 100 mV/s, working electrode: 3 mm glassy carbon, Counter: Pt wire, Ref: Ag wire. Following each experiment, Fc was added at 5 mM to reference the scan.",
+   "page": 3
+  },
+  {
+   "key": "emim_tcm_co2_15",
+   "solvent": "IonicLiquid",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "[emim][tcm]",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Cyclic voltammogram of NQ-G2 at 20 mM in DMSO with 0.5 M tetrabutylammonium hexafluorophosphate as the supporting salt. (B) Cyclic voltammetry (CV) of NQ-G2 at 20 mM in [emim][tcm]. Both CVs were performed under N2 (solid blue line), under 15% CO2 in N2 (dashed orange line), and under pure CO2 (dotted purple line). Scan rate: 100 mV/s, working electrode: 3 mm glassy carbon, Counter: Pt wire, Ref: Ag wire. Following each experiment, Fc was added at 5 mM to reference the scan.",
+   "page": 3
+  },
+  {
+   "key": "emim_tcm_co2_pure",
+   "solvent": "IonicLiquid",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "[emim][tcm]",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Cyclic voltammogram of NQ-G2 at 20 mM in DMSO with 0.5 M tetrabutylammonium hexafluorophosphate as the supporting salt. (B) Cyclic voltammetry (CV) of NQ-G2 at 20 mM in [emim][tcm]. Both CVs were performed under N2 (solid blue line), under 15% CO2 in N2 (dashed orange line), and under pure CO2 (dotted purple line). Scan rate: 100 mV/s, working electrode: 3 mm glassy carbon, Counter: Pt wire, Ref: Ag wire. Following each experiment, Fc was added at 5 mM to reference the scan.",
+   "page": 3
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "NQ_G2",
+   "condition": "dms_o2",
+   "property": "HalfWavePotential",
+   "value": -1.2,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "In DMSO under N2, NQ-G2 exhibits two redox waves at −1.2 and −1.8 V vs Fc/Fc+, corresponding to reduction to a semiquinone radical anion species and then the dianion quinone.",
+   "page": 3
+  },
+  {
+   "compound": "NQ_G2",
+   "condition": "dms_o2",
+   "property": "HalfWavePotential",
+   "value": -1.8,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "In DMSO under N2, NQ-G2 exhibits two redox waves at −1.2 and −1.8 V vs Fc/Fc+, corresponding to reduction to a semiquinone radical anion species and then the dianion quinone.",
+   "page": 3
+  }
+ ],
+ "observations": [
+  {
+   "compound": "NQ_G2",
+   "condition": "emim_tcm_co2_15",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "It was demonstrated that in this ionic liquid, the quinone redox behavior was similar to that of other nonaqueous systems, forming dianion adduct species with CO2 in their reduced state.",
+   "page": 2
+  }
+ ],
+ "not_reported": [
+  "Binding constant",
+  "Binding energy",
+  "Rate constant",
+  "Oxygen stability"
+ ],
+ "dropped": [
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "NQ_G2",
+    "condition": "emim_tcm_co2_15",
+    "property": "CaptureCapacity",
+    "value": 2.0,
+    "unit": "MolPerMol",
+    "basis": "Experiment",
+    "method": "ControlledPotentialElectrolysis",
+    "redox_couple": null,
+    "quote": "92.7% of the theoretical capacity was achieved, demonstrating that the quinone does react with 2 CO2 per molecule, that a 1e−/CO2 process should be expected, and that NQ-G2 is able to capture CO2 from a dilute feed stream in the ionic liquid system."
+   },
+   "reasons": [
+    "measurements[2] NQ_G2/CaptureCapacity: the text says 'theoretical', so basis must be Computation, not Experiment"
+   ]
+  }
+ ],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 8,
+   "dropped": 1
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 8,
+   "dropped": 0
+  }
+ ],
+ "review_status": "machine_extracted"
+}

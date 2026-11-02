@@ -1,0 +1,6 @@
+id,smiles
+R3-1,O=C1C(F)=C(Cl)C(=O)C=C1Cl
+R3-2,O=C1C(Br)=CC(=O)C(Cl)=C1Cl
+R3-3,O=C1C(F)=C(F)C(=O)C(Cl)=C1
+R3-4,O=C1C(=O)c2c(F)cccc2-c2c(F)cccc21
+R3-5,O=C1C(F)=C(Cl)C(=O)C(F)=C1

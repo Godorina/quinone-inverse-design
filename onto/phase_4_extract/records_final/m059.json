@@ -1,0 +1,125 @@
+{
+ "paper_id": "m059",
+ "title": "Speciation and Kinetics of Cation Stabilized-Anthraquinone Films for Electrochemically Mediated CO 2 Capture",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "AQ",
+   "name": "anthraquinone",
+   "skeleton": "Anthraquinone",
+   "form": "CarbonImmobilized",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "the electrochemical behavior and speciation of a tethered AQ film in an aprotic organic solvent under inert gas (argon) conditions are first determined.",
+   "page": 1
+  }
+ ],
+ "conditions": [
+  {
+   "key": "acn_tbabf4_ar",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.1 M TBABF4",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "The dotted line in Figure 1a shows the cyclic voltammogram of the grafted AQ film in 0.1 M TBABF4 (acetonitrile) electrolyte",
+   "page": 3
+  },
+  {
+   "key": "acn_liclo4_ar",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.1 M LiClO4",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "The solid line in Figure 1a shows the equivalent experiment using 0.1 M LiClO4.",
+   "page": 3
+  },
+  {
+   "key": "acn_liclo4_co2",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M LiClO4",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Voltammograms comparing the electrochemical response in Ar-saturated and CO2-saturated electrolytes are shown in Figure 5.",
+   "page": 6
+  }
+ ],
+ "measurements": [],
+ "observations": [
+  {
+   "compound": "AQ",
+   "condition": "acn_liclo4_co2",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "ATR-SEIRAS studies of the system show the formation of a Li2CO3 solid-electrolyte layer as well as the formation of a bis-CO2 adduct with the quinone dianion.",
+   "page": 1
+  }
+ ],
+ "not_reported": [
+  "HalfWavePotential or ReductionPotential values in Volts",
+  "BindingConstant or BindingEnergy values",
+  "CaptureCapacity values"
+ ],
+ "dropped": [
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "AQ",
+    "condition": "acn_liclo4_ar",
+    "property": "RateConstant",
+    "value": 1.3,
+    "unit": "PerMolarPerSecond",
+    "basis": "Experiment",
+    "method": "InSituSpectroscopy",
+    "redox_couple": "FirstReduction",
+    "quote": "The corresponding standard rate constants at these formal potentials are 1.3 and 0.8 s−1, respectively."
+   },
+   "reasons": [
+    "measurements[0] AQ/RateConstant: atmosphere Inert contradicts RateConstant (needs CO2); use CO2Atmosphere, FlueGas, AirOxygen or NotReported"
+   ]
+  },
+  {
+   "kind": "measurement",
+   "raw": {
+    "compound": "AQ",
+    "condition": "acn_liclo4_ar",
+    "property": "RateConstant",
+    "value": 0.8,
+    "unit": "PerMolarPerSecond",
+    "basis": "Experiment",
+    "method": "InSituSpectroscopy",
+    "redox_couple": "SecondReduction",
+    "quote": "The corresponding standard rate constants at these formal potentials are 1.3 and 0.8 s−1, respectively."
+   },
+   "reasons": [
+    "measurements[1] AQ/RateConstant: the quote prints 's^-1' after the value, which is not the saved unit PerMolarPerSecond; fix the unit or omit the item",
+    "measurements[1] AQ/RateConstant: atmosphere Inert contradicts RateConstant (needs CO2); use CO2Atmosphere, FlueGas, AirOxygen or NotReported"
+   ]
+  }
+ ],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 5,
+   "dropped": 2
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 5,
+   "dropped": 0
+  }
+ ],
+ "review_status": "machine_extracted"
+}

@@ -1,0 +1,223 @@
+{
+ "paper_id": "m002",
+ "title": "Competition between Reversible Capture of CO2 and Release of CO2•– Using Electrochemically Reduced Quinones in Acetonitrile Solutions",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "NQ",
+   "name": "1,4-Napthoquinone",
+   "skeleton": "Naphthoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Unsubstituted"
+   ],
+   "substituent_text": null,
+   "quote": "1,4-Napthoquinone (NQ, Tokyo Chemical Industry Co., 98%)",
+   "page": 2
+  },
+  {
+   "key": "MNQ",
+   "name": "2-methyl-1,4-naphthoquinone",
+   "skeleton": "Naphthoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Alkyl",
+    "ElectronDonating"
+   ],
+   "substituent_text": null,
+   "quote": "2-methyl-1,4-naphthoquinone (MNQ, Sigma-Aldrich, 98%)",
+   "page": 2
+  },
+  {
+   "key": "DMNQ",
+   "name": "2,3-dimethyl-1,4-naphthoquinone",
+   "skeleton": "Naphthoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Alkyl",
+    "ElectronDonating"
+   ],
+   "substituent_text": null,
+   "quote": "2,3-dimethyl-1,4-naphthoquinone (DMNQ)30,31 were synthesized in accordance with published procedures.",
+   "page": 2
+  }
+ ],
+ "conditions": [
+  {
+   "key": "acn_ar",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.1 M n-Bu4NPF6",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "CV experiments were conducted in CH3CN containing 0.1 M n-Bu4NPF6 with a 1 mm diameter planar GC WE at 22 ± 2 °C.",
+   "page": 4
+  },
+  {
+   "key": "acn_co2",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M n-Bu4NPF6",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "Cyclic voltammograms of 1 mM NQ in CH3CN containing 0.1 M n-Bu4NPF6 in CH3CN recorded under Ar (black trace) and CO2 (red trace)",
+   "page": 4
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "NQ",
+   "condition": "acn_ar",
+   "property": "ReductionPotential",
+   "value": -1.096,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "NQ −1.096 −1.028 68.4 −1.631 −1.560 70.8",
+   "page": 4
+  },
+  {
+   "compound": "NQ",
+   "condition": "acn_ar",
+   "property": "ReductionPotential",
+   "value": -1.631,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "NQ −1.096 −1.028 68.4 −1.631 −1.560 70.8",
+   "page": 4
+  },
+  {
+   "compound": "MNQ",
+   "condition": "acn_ar",
+   "property": "ReductionPotential",
+   "value": -1.174,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "MNQ −1.174 −1.108 65.9 −1.670 −1.599 70.8",
+   "page": 4
+  },
+  {
+   "compound": "MNQ",
+   "condition": "acn_ar",
+   "property": "ReductionPotential",
+   "value": -1.67,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "MNQ −1.174 −1.108 65.9 −1.670 −1.599 70.8",
+   "page": 4
+  },
+  {
+   "compound": "DMNQ",
+   "condition": "acn_ar",
+   "property": "ReductionPotential",
+   "value": -1.269,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "FirstReduction",
+   "quote": "DMNQ −1.269 −1.199 70.8 −1.775 −1.706 68.4",
+   "page": 4
+  },
+  {
+   "compound": "DMNQ",
+   "condition": "acn_ar",
+   "property": "ReductionPotential",
+   "value": -1.775,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "DMNQ −1.269 −1.199 70.8 −1.775 −1.706 68.4",
+   "page": 4
+  },
+  {
+   "compound": "NQ",
+   "condition": "acn_co2",
+   "property": "ReductionPotential",
+   "value": -1.1,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "TwoElectron",
+   "quote": "reduction peaks (Ep red) at −1.10 V vs Fc/Fc+, −1.15 V vs Fc/Fc+, and −1.25 V vs Fc/Fc+ for NQ, MNQ, and DMNQ, respectively.",
+   "page": 4
+  },
+  {
+   "compound": "MNQ",
+   "condition": "acn_co2",
+   "property": "ReductionPotential",
+   "value": -1.15,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "TwoElectron",
+   "quote": "reduction peaks (Ep red) at −1.10 V vs Fc/Fc+, −1.15 V vs Fc/Fc+, and −1.25 V vs Fc/Fc+ for NQ, MNQ, and DMNQ, respectively.",
+   "page": 4
+  },
+  {
+   "compound": "DMNQ",
+   "condition": "acn_co2",
+   "property": "ReductionPotential",
+   "value": -1.25,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "TwoElectron",
+   "quote": "reduction peaks (Ep red) at −1.10 V vs Fc/Fc+, −1.15 V vs Fc/Fc+, and −1.25 V vs Fc/Fc+ for NQ, MNQ, and DMNQ, respectively.",
+   "page": 4
+  }
+ ],
+ "observations": [
+  {
+   "compound": "NQ",
+   "condition": "acn_co2",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "It is proposed that a complex is formed between the reduced quinone and nCO2 molecules, [Q(CO2)n]2−",
+   "page": 1
+  },
+  {
+   "compound": "MNQ",
+   "condition": "acn_co2",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "It is proposed that a complex is formed between the reduced quinone and nCO2 molecules, [Q(CO2)n]2−",
+   "page": 1
+  },
+  {
+   "compound": "DMNQ",
+   "condition": "acn_co2",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "It is proposed that a complex is formed between the reduced quinone and nCO2 molecules, [Q(CO2)n]2−",
+   "page": 1
+  }
+ ],
+ "not_reported": [
+  "Binding constants",
+  "Capture capacity",
+  "Rate constants",
+  "Oxygen stability"
+ ],
+ "dropped": [],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 17,
+   "dropped": 0
+  }
+ ],
+ "review_status": "machine_extracted"
+}

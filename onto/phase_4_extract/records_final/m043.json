@@ -1,0 +1,236 @@
+{
+ "paper_id": "m043",
+ "title": "New Molecular Materials for Direct Air Capture of Carbon Dioxide Using Electro-Swing Chemistry",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "F4Q",
+   "name": "2,3,5,6-Tetrafluoro-1,4-benzoquinone",
+   "skeleton": "Benzoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "ElectronWithdrawing"
+   ],
+   "substituent_text": null,
+   "quote": "2,3,5,6-Tetrafluoro-1,4-benzoquinone (F4Q) was selected due to the increased electronegativity of F compared to Cl",
+   "page": 3
+  },
+  {
+   "key": "DBQ",
+   "name": "2,3-Dicyano-1,4-benzoquinone",
+   "skeleton": "Benzoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "ElectronWithdrawing"
+   ],
+   "substituent_text": null,
+   "quote": "2,3-Dicyano-1,4-benzoquinone (DBQ) and 2,3-dicyano-1,4-naphthoquinone (DNQ) possess two fewer electron-withdrawing groups (i.e., Cl) compared to 2,3-dichloro-5,6-dicyano-1,4-benzoquinone (DDQ)",
+   "page": 3
+  },
+  {
+   "key": "DNQ",
+   "name": "2,3-Dicyano-1,4-naphthoquinone",
+   "skeleton": "Naphthoquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "ElectronWithdrawing"
+   ],
+   "substituent_text": null,
+   "quote": "2,3-Dicyano-1,4-benzoquinone (DBQ) and 2,3-dicyano-1,4-naphthoquinone (DNQ) possess two fewer electron-withdrawing groups (i.e., Cl) compared to 2,3-dichloro-5,6-dicyano-1,4-benzoquinone (DDQ)",
+   "page": 3
+  }
+ ],
+ "conditions": [
+  {
+   "key": "me_cn_01M_NBu4PF6_FcFc",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.1 M NBu4PF6",
+   "additive_text": "1 mM analytes",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "solutions of 1 mM analytes were assayed in 0.1 M NBu4PF6 in acetonitrile at glassy carbon (GC) working electrodes, platinum counter electrodes with a single junction Ag reference electrode referenced externally vs. Fc/Fc+",
+   "page": 4
+  },
+  {
+   "key": "me_cn_01M_NBu4PF6_FcFc_CO2",
+   "solvent": "Acetonitrile",
+   "reference_electrode": "FcFcPlus",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M NBu4PF6",
+   "additive_text": "1 mM analytes",
+   "ph": null,
+   "temperature_k": null,
+   "quote": "For carbon capture assays, CV data were collected under argon (Ar), 5% CO2 in Ar, 30% CO2 in Ar, and 100% CO2 with the sparging hose connected to each tank in succession",
+   "page": 4
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "F4Q",
+   "condition": "me_cn_01M_NBu4PF6_FcFc",
+   "property": "ReductionPotential",
+   "value": -1.25,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "F4Q 296 0 0.000 −1.338 −1.162 −1.250 0.000",
+   "page": 6
+  },
+  {
+   "compound": "DBQ",
+   "condition": "me_cn_01M_NBu4PF6_FcFc",
+   "property": "ReductionPotential",
+   "value": -0.935,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "DBQ 295 0 0.000 −0.903 −0.966 −0.935 0.000",
+   "page": 6
+  },
+  {
+   "compound": "DNQ",
+   "condition": "me_cn_01M_NBu4PF6_FcFc",
+   "property": "ReductionPotential",
+   "value": -1.366,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "SecondReduction",
+   "quote": "DNQ 294 0 0.000 −1.532 −1.200 −1.366 0.000",
+   "page": 6
+  },
+  {
+   "compound": "F4Q",
+   "condition": "me_cn_01M_NBu4PF6_FcFc_CO2",
+   "property": "BindingConstant",
+   "value": 290000.0,
+   "unit": "PerMolar",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "NotReported",
+   "quote": "their binding constants (Ks) vary quite significantly, from 2.90 × 105 M−1 for F4Q to 9.76 × 103 M−1 for DBQ and 594 M−1 for DNQ",
+   "page": 6
+  },
+  {
+   "compound": "DBQ",
+   "condition": "me_cn_01M_NBu4PF6_FcFc_CO2",
+   "property": "BindingConstant",
+   "value": 9760.0,
+   "unit": "PerMolar",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "NotReported",
+   "quote": "their binding constants (Ks) vary quite significantly, from 2.90 × 105 M−1 for F4Q to 9.76 × 103 M−1 for DBQ and 594 M−1 for DNQ",
+   "page": 6
+  },
+  {
+   "compound": "DNQ",
+   "condition": "me_cn_01M_NBu4PF6_FcFc_CO2",
+   "property": "BindingConstant",
+   "value": 594.0,
+   "unit": "PerMolar",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "NotReported",
+   "quote": "their binding constants (Ks) vary quite significantly, from 2.90 × 105 M−1 for F4Q to 9.76 × 103 M−1 for DBQ and 594 M−1 for DNQ",
+   "page": 6
+  },
+  {
+   "compound": "F4Q",
+   "condition": "me_cn_01M_NBu4PF6_FcFc_CO2",
+   "property": "BindingEnergy",
+   "value": -7.4,
+   "unit": "KcalPerMol",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "NotReported",
+   "quote": "Both F4Q and DBQ are CO2 binders with ∆Gbind values of −7.40 and −5.39 kcal/mol, respectively, while DNQ is a weaker binder with a ∆Gbind of −3.74 kcal/mol",
+   "page": 6
+  },
+  {
+   "compound": "DBQ",
+   "condition": "me_cn_01M_NBu4PF6_FcFc_CO2",
+   "property": "BindingEnergy",
+   "value": -5.39,
+   "unit": "KcalPerMol",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "NotReported",
+   "quote": "Both F4Q and DBQ are CO2 binders with ∆Gbind values of −7.40 and −5.39 kcal/mol, respectively, while DNQ is a weaker binder with a ∆Gbind of −3.74 kcal/mol",
+   "page": 6
+  },
+  {
+   "compound": "DNQ",
+   "condition": "me_cn_01M_NBu4PF6_FcFc_CO2",
+   "property": "BindingEnergy",
+   "value": -3.74,
+   "unit": "KcalPerMol",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "NotReported",
+   "quote": "Both F4Q and DBQ are CO2 binders with ∆Gbind values of −7.40 and −5.39 kcal/mol, respectively, while DNQ is a weaker binder with a ∆Gbind of −3.74 kcal/mol",
+   "page": 6
+  }
+ ],
+ "observations": [
+  {
+   "compound": "F4Q",
+   "condition": "me_cn_01M_NBu4PF6_FcFc_CO2",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "This suggested rapid and spontaneous binding of CO2 after the second reduction in the quinones, and CO2 was released upon the first oxidation",
+   "page": 6
+  },
+  {
+   "compound": "DBQ",
+   "condition": "me_cn_01M_NBu4PF6_FcFc_CO2",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "This suggested rapid and spontaneous binding of CO2 after the second reduction in the quinones, and CO2 was released upon the first oxidation",
+   "page": 6
+  },
+  {
+   "compound": "DNQ",
+   "condition": "me_cn_01M_NBu4PF6_FcFc_CO2",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "This suggested rapid and spontaneous binding of CO2 after the second reduction in the quinones, and CO2 was released upon the first oxidation",
+   "page": 6
+  },
+  {
+   "compound": "DBQ",
+   "condition": "me_cn_01M_NBu4PF6_FcFc_CO2",
+   "kind": "OxygenStability",
+   "outcome": "OxygenStable",
+   "quote": "DBQ has a desired second reduction potential of −0.935 V, which is more positive than oxygen (−1.2 V), suggesting that it may be activated/reduced for carbon capture at approximately −1.0 V, thereby outside of the oxygen reduction window",
+   "page": 7
+  }
+ ],
+ "not_reported": [],
+ "dropped": [],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 3,
+   "dropped": 14
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 10,
+   "dropped": 7
+  },
+  {
+   "n": 3,
+   "parse_errors": [],
+   "kept": 18,
+   "dropped": 0
+  }
+ ],
+ "review_status": "machine_extracted"
+}

@@ -1,0 +1,261 @@
+{
+ "paper_id": "m033",
+ "title": "Towards Immobilized Proton-Coupled Electron Transfer Agents for Electrochemical Carbon Capture from Air and Seawater",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "PAAQ",
+   "name": "poly(1-aminoanthraquinone)",
+   "skeleton": "Anthraquinone",
+   "form": "Polymer",
+   "substituent_classes": [
+    "Amino"
+   ],
+   "substituent_text": null,
+   "quote": "Here, we use vapor phase chemistry to construct a textile electrode comprising an immobilized PCET agent, poly(1-aminoanthraquinone) (PAAQ)",
+   "page": 2
+  },
+  {
+   "key": "AQDS",
+   "name": "anthraquinone-2,6-disulfonic acid",
+   "skeleton": "Anthraquinone",
+   "form": "Molecular",
+   "substituent_classes": [
+    "Sulfonate"
+   ],
+   "substituent_text": null,
+   "quote": "we assembled a ﬂow cell containing 10 mM of anthraquinone-2,6-disulfonic acid dissolved in an 0.1 M KCl solution",
+   "page": 10
+  }
+ ],
+ "conditions": [
+  {
+   "key": "kcl_1m_ph2",
+   "solvent": "Water",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "NotReported",
+   "electrolyte_text": "1 M KCl",
+   "additive_text": null,
+   "ph": 2.1,
+   "temperature_k": null,
+   "quote": "The CV measurements indicate PAAQ undergoes quasi-reversible electrochemistry at pH 2.1, 4.2, 10, and 12",
+   "page": 6
+  },
+  {
+   "key": "kcl_1m_ph4",
+   "solvent": "Water",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "NotReported",
+   "electrolyte_text": "1 M KCl",
+   "additive_text": null,
+   "ph": 4.2,
+   "temperature_k": null,
+   "quote": "The CV measurements indicate PAAQ undergoes quasi-reversible electrochemistry at pH 2.1, 4.2, 10, and 12",
+   "page": 6
+  },
+  {
+   "key": "kcl_1m_ph10",
+   "solvent": "Water",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "NotReported",
+   "electrolyte_text": "1 M KCl",
+   "additive_text": null,
+   "ph": 10.0,
+   "temperature_k": null,
+   "quote": "The CV measurements indicate PAAQ undergoes quasi-reversible electrochemistry at pH 2.1, 4.2, 10, and 12",
+   "page": 6
+  },
+  {
+   "key": "kcl_1m_ph12",
+   "solvent": "Water",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "NotReported",
+   "electrolyte_text": "1 M KCl",
+   "additive_text": null,
+   "ph": 12.0,
+   "temperature_k": null,
+   "quote": "The CV measurements indicate PAAQ undergoes quasi-reversible electrochemistry at pH 2.1, 4.2, 10, and 12",
+   "page": 6
+  },
+  {
+   "key": "kcl_1m_co2",
+   "solvent": "Water",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "1 M KCl",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "we cycled the PAAQ electrode while the KCl solution was in contact with a steady ﬂow of premixed N2/CO2 gas",
+   "page": 8
+  },
+  {
+   "key": "kcl_1m_air",
+   "solvent": "Water",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "AirOxygen",
+   "electrolyte_text": "1 M KCl",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "cycling the ﬂow cell while the KCl solution was in continuous contact with air",
+   "page": 8
+  },
+  {
+   "key": "seawater",
+   "solvent": "Water",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "NotReported",
+   "electrolyte_text": "artiﬁcial seawater",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "The other electrolyte comprised either 1 M KCl or artiﬁcial seawater",
+   "page": 4
+  },
+  {
+   "key": "aqds_kcl_01m_air",
+   "solvent": "Water",
+   "reference_electrode": "AgAgCl",
+   "atmosphere": "AirOxygen",
+   "electrolyte_text": "0.1 M KCl",
+   "additive_text": null,
+   "ph": null,
+   "temperature_k": null,
+   "quote": "we assembled a ﬂow cell containing 10 mM of anthraquinone-2,6-disulfonic acid dissolved in an 0.1 M KCl solution",
+   "page": 10
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "PAAQ",
+   "condition": "kcl_1m_ph2",
+   "property": "ReductionPotential",
+   "value": 0.13,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "TwoElectron",
+   "quote": "with their respective reduction potentials at 0.13, −0.04, −0.35, and –0.45 V vs Ag/AgCl",
+   "page": 6
+  },
+  {
+   "compound": "PAAQ",
+   "condition": "kcl_1m_ph4",
+   "property": "ReductionPotential",
+   "value": -0.04,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "TwoElectron",
+   "quote": "with their respective reduction potentials at 0.13, −0.04, −0.35, and –0.45 V vs Ag/AgCl",
+   "page": 6
+  },
+  {
+   "compound": "PAAQ",
+   "condition": "kcl_1m_ph10",
+   "property": "ReductionPotential",
+   "value": -0.35,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "TwoElectron",
+   "quote": "with their respective reduction potentials at 0.13, −0.04, −0.35, and –0.45 V vs Ag/AgCl",
+   "page": 6
+  },
+  {
+   "compound": "PAAQ",
+   "condition": "kcl_1m_ph12",
+   "property": "ReductionPotential",
+   "value": -0.45,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "TwoElectron",
+   "quote": "with their respective reduction potentials at 0.13, −0.04, −0.35, and –0.45 V vs Ag/AgCl",
+   "page": 6
+  },
+  {
+   "compound": "PAAQ",
+   "condition": "kcl_1m_co2",
+   "property": "EnergyConsumption",
+   "value": 197.0,
+   "unit": "KJPerMol",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": null,
+   "quote": "We evaluated the average energetic cost of experimental CO2 capture and release as 197 kJ/molCO2 using Eq. 3",
+   "page": 8
+  },
+  {
+   "compound": "PAAQ",
+   "condition": "kcl_1m_air",
+   "property": "EnergyConsumption",
+   "value": 553.0,
+   "unit": "KJPerMol",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": null,
+   "quote": "The energetic cost of CO2 separation based on Eq. 2 was 553 kJ/molCO2.",
+   "page": 10
+  },
+  {
+   "compound": "PAAQ",
+   "condition": "seawater",
+   "property": "EnergyConsumption",
+   "value": 202.0,
+   "unit": "KJPerMol",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": null,
+   "quote": "54% of the seawater DIC was removed at an energetic cost of 202 kJ/molCO2.",
+   "page": 10
+  }
+ ],
+ "observations": [
+  {
+   "compound": "PAAQ",
+   "condition": "kcl_1m_air",
+   "kind": "OxygenStability",
+   "outcome": "OxygenStable",
+   "quote": "the reduced quinone moieties on PAAQ are chemically stable in the presence of oxygen.",
+   "page": 8
+  },
+  {
+   "compound": "AQDS",
+   "condition": "aqds_kcl_01m_air",
+   "kind": "OxygenStability",
+   "outcome": "OxygenUnstable",
+   "quote": "an oxidation capacity of ≈0 C was obtained, clearly because of oxidation of the reduced quinone species by oxygen in air.",
+   "page": 10
+  }
+ ],
+ "not_reported": [
+  "Binding constant or binding energy of CO2 to the quinone",
+  "Capture capacity in mmol/g or mol/mol",
+  "Rate constant for CO2 capture",
+  "Faradaic efficiency for CO2 capture (only current efficiency reported)"
+ ],
+ "dropped": [],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 6,
+   "dropped": 8
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 16,
+   "dropped": 3
+  },
+  {
+   "n": 3,
+   "parse_errors": [],
+   "kept": 19,
+   "dropped": 0
+  }
+ ],
+ "review_status": "machine_extracted"
+}

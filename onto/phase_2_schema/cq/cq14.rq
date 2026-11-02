@@ -1,0 +1,14 @@
+# CQ14: Which compounds survive oxygen, and with which additive or atmosphere?
+PREFIX qn: <https://w3id.org/quinone#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX schema: <https://schema.org/>
+
+SELECT ?name ?outcome ?atmosphere ?additive ?doi WHERE {
+  ?o a qn:Observation ; qn:observationKind qn:OxygenStability ; qn:outcome ?out ; qn:ofCompound ?compound ; qn:underCondition ?c ; qn:fromPaper ?paper .
+  ?compound schema:name ?name .
+  ?paper schema:identifier ?doi .
+  ?out skos:prefLabel ?outcome . FILTER(lang(?outcome) = "en")
+  ?c qn:atmosphere ?at .
+  ?at skos:prefLabel ?atmosphere . FILTER(lang(?atmosphere) = "en")
+  OPTIONAL { ?c qn:additiveText ?additive }
+} ORDER BY ?outcome ?name

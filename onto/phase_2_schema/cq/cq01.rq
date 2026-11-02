@@ -1,0 +1,11 @@
+# CQ01: Which quinone compounds were used, with which skeleton and form, and in how many papers?
+PREFIX qn: <https://w3id.org/quinone#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX schema: <https://schema.org/>
+
+SELECT ?compound ?name ?skeleton ?form (COUNT(DISTINCT ?paper) AS ?papers) WHERE {
+  ?compound a qn:Compound ; schema:name ?name ; qn:skeleton ?sk ; qn:form ?f .
+  ?sk skos:prefLabel ?skeleton . FILTER(lang(?skeleton) = "en")
+  ?f skos:prefLabel ?form . FILTER(lang(?form) = "en")
+  OPTIONAL { ?r qn:ofCompound ?compound ; qn:fromPaper ?paper }
+} GROUP BY ?compound ?name ?skeleton ?form ORDER BY ?skeleton ?name

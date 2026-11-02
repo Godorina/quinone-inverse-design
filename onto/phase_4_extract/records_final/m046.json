@@ -1,0 +1,289 @@
+{
+ "paper_id": "m046",
+ "title": "Reversible Carbon Dioxide Capture and Release using an Electropolymerized Anthraquinone Electrode in Aqueous Solution",
+ "evidence_source": "FullText",
+ "compounds": [
+  {
+   "key": "p_1_AAQ",
+   "name": "poly-1-aminoanthraquinone (p-1-AAQ)",
+   "skeleton": "Anthraquinone",
+   "form": "Polymer",
+   "substituent_classes": [
+    "Amino"
+   ],
+   "substituent_text": null,
+   "quote": "This study investigates the electrochemical carbon capture capabilities of the polymer poly-1-aminoanthraquinone (p-1-AAQ) when coated onto glassy carbon and carbon paper electrodes.",
+   "page": 1
+  }
+ ],
+ "conditions": [
+  {
+   "key": "ph2",
+   "solvent": "Water",
+   "reference_electrode": "SHE",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M phosphate buffer",
+   "additive_text": null,
+   "ph": 2.0,
+   "temperature_k": null,
+   "quote": "Three different 0.1 M phosphate buffer solutions were used as electrolyte solutions. The buffer solutions were prepared from H3PO4 (Sigma-Aldrich, 85 wt % in H2O) and NaH2PO4 · 2 H2O (Sigma-Aldrich) for pH 2",
+   "page": 2
+  },
+  {
+   "key": "ph7",
+   "solvent": "Water",
+   "reference_electrode": "SHE",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M phosphate buffer",
+   "additive_text": null,
+   "ph": 7.0,
+   "temperature_k": null,
+   "quote": "NaH2PO4 · 2 H2O and Na2HPO4 (Sigma-Aldrich) for pH 7",
+   "page": 2
+  },
+  {
+   "key": "ph11",
+   "solvent": "Water",
+   "reference_electrode": "SHE",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M phosphate buffer",
+   "additive_text": null,
+   "ph": 11.0,
+   "temperature_k": null,
+   "quote": "Na2HPO4 and Na3PO4 · 12 H2O (Thermo-Scientific) for pH 11",
+   "page": 2
+  },
+  {
+   "key": "ph11_gc_n2",
+   "solvent": "Water",
+   "reference_electrode": "SHE",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.1 M phosphate buffer",
+   "additive_text": "glassy carbon electrode",
+   "ph": 11.0,
+   "temperature_k": null,
+   "quote": "Under N2 saturated conditions, the CV of p-1-AAQ on a glassy carbon electrode shows a reversible peak at a half-step potential of −0.58 V.",
+   "page": 4
+  },
+  {
+   "key": "ph11_gc_n2_post",
+   "solvent": "Water",
+   "reference_electrode": "SHE",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.1 M phosphate buffer",
+   "additive_text": "glassy carbon electrode",
+   "ph": 10.5,
+   "temperature_k": null,
+   "quote": "Upon removing unbound CO2 from the solution by purging with N2 and a subsequent pH shift to 10.5, the half-step potential reverts to a more cathodic potential of −0.48 V.",
+   "page": 4
+  },
+  {
+   "key": "ph11_cp_n2",
+   "solvent": "Water",
+   "reference_electrode": "SHE",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.1 M phosphate buffer",
+   "additive_text": "carbon paper electrode",
+   "ph": 11.0,
+   "temperature_k": null,
+   "quote": "The reductive peak, with a half-step potential of −0.62 V, reverts to a more anodic potential upon the introduction of CO2.",
+   "page": 4
+  },
+  {
+   "key": "ph11_cp_n2_post",
+   "solvent": "Water",
+   "reference_electrode": "SHE",
+   "atmosphere": "Inert",
+   "electrolyte_text": "0.1 M phosphate buffer",
+   "additive_text": "carbon paper electrode",
+   "ph": 11.0,
+   "temperature_k": null,
+   "quote": "Upon the subsequent removal of CO2 from the system, the reductive peak reverts to a half-step potential of −0.56 V.",
+   "page": 4
+  },
+  {
+   "key": "ph11_cp_cv",
+   "solvent": "Water",
+   "reference_electrode": "SHE",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M phosphate buffer",
+   "additive_text": "carbon paper electrode, CV method",
+   "ph": 11.0,
+   "temperature_k": null,
+   "quote": "Thereby we found that an uptake of 2.85 mmolCO2 gp‑1‑AAQ −1 was possible for the CV method",
+   "page": 6
+  },
+  {
+   "key": "ph11_cp_es",
+   "solvent": "Water",
+   "reference_electrode": "SHE",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M phosphate buffer",
+   "additive_text": "carbon paper electrode, electroswing method",
+   "ph": 11.0,
+   "temperature_k": null,
+   "quote": "and 6.85 mmolCO2 gp‑1‑AAQ −1 for the “electroswing” method when using a carbon paper electrode.",
+   "page": 6
+  },
+  {
+   "key": "ph11_cp_es_gravimetric",
+   "solvent": "Water",
+   "reference_electrode": "SHE",
+   "atmosphere": "CO2Atmosphere",
+   "electrolyte_text": "0.1 M phosphate buffer",
+   "additive_text": "carbon paper electrode, electroswing method, whole electrode mass",
+   "ph": 11.0,
+   "temperature_k": null,
+   "quote": "P-1-AAQ not only excels in molar uptake efficiency but also achieves gravimetric CO2 capacities of 0.17 mmolCO2 gp‑1‑AAQ+CP −1.",
+   "page": 7
+  }
+ ],
+ "measurements": [
+  {
+   "compound": "p_1_AAQ",
+   "condition": "ph11_gc_n2",
+   "property": "HalfWavePotential",
+   "value": -0.58,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "TwoElectron",
+   "quote": "Under N2 saturated conditions, the CV of p-1-AAQ on a glassy carbon electrode shows a reversible peak at a half-step potential of −0.58 V.",
+   "page": 4
+  },
+  {
+   "compound": "p_1_AAQ",
+   "condition": "ph11_gc_n2_post",
+   "property": "HalfWavePotential",
+   "value": -0.48,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "TwoElectron",
+   "quote": "Upon removing unbound CO2 from the solution by purging with N2 and a subsequent pH shift to 10.5, the half-step potential reverts to a more cathodic potential of −0.48 V.",
+   "page": 4
+  },
+  {
+   "compound": "p_1_AAQ",
+   "condition": "ph11_cp_n2",
+   "property": "HalfWavePotential",
+   "value": -0.62,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "TwoElectron",
+   "quote": "The reductive peak, with a half-step potential of −0.62 V, reverts to a more anodic potential upon the introduction of CO2.",
+   "page": 4
+  },
+  {
+   "compound": "p_1_AAQ",
+   "condition": "ph11_cp_n2_post",
+   "property": "HalfWavePotential",
+   "value": -0.56,
+   "unit": "Volt",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "TwoElectron",
+   "quote": "Upon the subsequent removal of CO2 from the system, the reductive peak reverts to a half-step potential of −0.56 V.",
+   "page": 4
+  },
+  {
+   "compound": "p_1_AAQ",
+   "condition": "ph2",
+   "property": "FaradaicEfficiency",
+   "value": 92.0,
+   "unit": "Percent",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": "NotReported",
+   "quote": "However, when looking at the Faradaic efficiency, it drastically increases under extreme conditions, with 92% at pH 2 and 77% at pH 11.",
+   "page": 6
+  },
+  {
+   "compound": "p_1_AAQ",
+   "condition": "ph11",
+   "property": "FaradaicEfficiency",
+   "value": 77.0,
+   "unit": "Percent",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": "NotReported",
+   "quote": "However, when looking at the Faradaic efficiency, it drastically increases under extreme conditions, with 92% at pH 2 and 77% at pH 11.",
+   "page": 6
+  },
+  {
+   "compound": "p_1_AAQ",
+   "condition": "ph11_cp_cv",
+   "property": "CaptureCapacity",
+   "value": 2.85,
+   "unit": "MmolPerGram",
+   "basis": "Experiment",
+   "method": "CyclicVoltammetry",
+   "redox_couple": "NotReported",
+   "quote": "Thereby we found that an uptake of 2.85 mmolCO2 gp‑1‑AAQ −1 was possible for the CV method",
+   "page": 6
+  },
+  {
+   "compound": "p_1_AAQ",
+   "condition": "ph11_cp_es",
+   "property": "CaptureCapacity",
+   "value": 6.85,
+   "unit": "MmolPerGram",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": "NotReported",
+   "quote": "and 6.85 mmolCO2 gp‑1‑AAQ −1 for the “electroswing” method when using a carbon paper electrode.",
+   "page": 6
+  },
+  {
+   "compound": "p_1_AAQ",
+   "condition": "ph11_cp_es_gravimetric",
+   "property": "CaptureCapacity",
+   "value": 0.17,
+   "unit": "MmolPerGram",
+   "basis": "Experiment",
+   "method": "ControlledPotentialElectrolysis",
+   "redox_couple": "NotReported",
+   "quote": "P-1-AAQ not only excels in molar uptake efficiency but also achieves gravimetric CO2 capacities of 0.17 mmolCO2 gp‑1‑AAQ+CP −1.",
+   "page": 7
+  }
+ ],
+ "observations": [
+  {
+   "compound": "p_1_AAQ",
+   "condition": "ph11",
+   "kind": "BindingMode",
+   "outcome": "CO2Adduct",
+   "quote": "it is assumed that it can also partly be attributed to the thus occurring capture of the CO2 molecule by the quinone group of the anthraquinone",
+   "page": 4
+  }
+ ],
+ "not_reported": [
+  "Specific Faradaic efficiency values for pH 7",
+  "Specific capture capacity values for glassy carbon electrodes",
+  "Binding constants or binding energies",
+  "Rate constants"
+ ],
+ "dropped": [],
+ "attempts": [
+  {
+   "n": 1,
+   "parse_errors": [],
+   "kept": 7,
+   "dropped": 7
+  },
+  {
+   "n": 2,
+   "parse_errors": [],
+   "kept": 18,
+   "dropped": 2
+  },
+  {
+   "n": 3,
+   "parse_errors": [],
+   "kept": 21,
+   "dropped": 0
+  }
+ ],
+ "review_status": "machine_extracted"
+}

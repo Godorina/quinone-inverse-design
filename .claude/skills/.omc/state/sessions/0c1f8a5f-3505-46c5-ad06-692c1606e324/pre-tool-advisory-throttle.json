@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "entries": {
+    "466399dafa2d20f60587180bad0a07358eb7f2bce724df0ff682f038ad33f5ad": {
+      "last_emitted_at_ms": 1793351373716,
+      "message": "Read multiple files in parallel when possible for faster analysis."
+    },
+    "844789e6a01f56238471c401de26e2a2d1c76e263c266eddff829864972cea69": {
+      "last_emitted_at_ms": 1793351366881,
+      "message": "Spawning agent: oh-my-claudecode:architect (inherit) | Task: Analyze ontology-mlip architecture"
+    },
+    "79a93d4a2f8f50b95f852280616242fee1855dc99a3c75211917f55e72e95fae": {
+      "last_emitted_at_ms": 1793351324733,
+      "message": "Use parallel execution for independent tasks. Use run_in_background for long operations (npm install, builds, tests)."
+    }
+  },
+  "updated_at": "2026-10-30T09:09:33.716Z"
+}
