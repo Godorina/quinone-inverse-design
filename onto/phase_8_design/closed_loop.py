@@ -12,6 +12,7 @@ from pathlib import Path
 
 from generate import _inchikey, call_llm, check, context, prompt
 from loop import edit
+from pubchem import lookup as pubchem_lookup
 
 
 def o2_feasible(rows):
@@ -86,11 +87,14 @@ def report(out, history, ctx, arm):
         oxygen = [x['f'] for x in r['results'] if x['margin'] >= .15]
         lines.append(f"| {r['round']} | {max(values) if values else 'N/A'} | {max(oxygen) if oxygen else 'N/A'} | {sum(values)/len(values) if values else 'N/A'} | {sum(x['success'] for x in r['results'])} | {len(r['accepted']) + len(r['rejected'])} |")
         failures.update(x['reason'] for x in r['rejected'])
-    lines += ['', f"Reference best f: {max(r['f'] for r in ctx['dft']):.2f} (all), {max((r['f'] for r in o2_feasible(ctx['dft'])), default=float('nan')):.2f} (O2-feasible; compare with the O2-pass column)", f"Proposals attempted: {sum(len(r['accepted']) + len(r['rejected']) for r in history)}", f'Rejection counts: {dict(failures)}', f"Total LLM cost USD: {sum(r['cost'] for r in history):.6f}", '실행 1회, 통계 비교 없음']
+    evaluated = [x for r in history for x in r['results']]
+    found = sum(x.get('pubchem_status') == 'found' for x in evaluated)
+    unknown = sum(x.get('pubchem_status') not in ('found', 'not_found') for x in evaluated)
+    lines += ['', f'평가 후보 중 PubChem 등록 {found}/{len(evaluated)} (조회 오류 또는 미조회 {unknown})', f"Reference best f: {max(r['f'] for r in ctx['dft']):.2f} (all), {max((r['f'] for r in o2_feasible(ctx['dft'])), default=float('nan')):.2f} (O2-feasible; compare with the O2-pass column)", f"Proposals attempted: {sum(len(r['accepted']) + len(r['rejected']) for r in history)}", f'Rejection counts: {dict(failures)}', f"Total LLM cost USD: {sum(r['cost'] for r in history):.6f}", '실행 1회, 통계 비교 없음']
     (out / 'report.md').write_text('\n'.join(lines) + '\n', encoding='utf-8')
 
 
-def main(argv=None, llm=None, evaluator=None):
+def main(argv=None, llm=None, evaluator=None, lookup=None):
     parser = argparse.ArgumentParser()
     parser.add_argument('--rounds', type=int, default=3)
     parser.add_argument('--per-round', type=int, default=5)
@@ -100,6 +104,7 @@ def main(argv=None, llm=None, evaluator=None):
     parser.add_argument('--extra-ref', type=Path, nargs='+', default=[])
     parser.add_argument('--arm', choices=['llm', 'random'], default='llm')
     parser.add_argument('--seed', type=int, default=0)
+    parser.add_argument('--reject-pubchem', action='store_true')
     parser.add_argument('--compare', nargs=2, metavar=('A', 'B'))
     args = parser.parse_args(argv)
     if args.compare:
@@ -111,7 +116,11 @@ def main(argv=None, llm=None, evaluator=None):
     out.mkdir(parents=True, exist_ok=True)
     ctx, history = context(), []
     add_extra_refs(ctx, args.extra_ref)
-    llm, evaluator = llm or call_llm, evaluator or evaluate
+    llm, evaluator, lookup = llm or call_llm, evaluator or evaluate, lookup or pubchem_lookup
+
+    def annotate(proposal, key):
+        result = lookup(key)
+        return {**proposal, "pubchem_cid": result["cid"], "pubchem_status": result["status"]}
     for number in range(1, args.rounds + 1):
         path = out / f'round_{number}'
         path.mkdir(exist_ok=True)
@@ -143,6 +152,10 @@ def main(argv=None, llm=None, evaluator=None):
                     smiles = proposal.get('smiles') if isinstance(proposal, dict) else None
                     key = _inchikey(smiles) if isinstance(smiles, str) else None
                     reason = 'duplicate' if key in ctx['extra_seen'] else check(proposal, ctx, seen)
+                    if not reason and len(accepted) < args.per_round:
+                        proposal = annotate(proposal, key)
+                        if args.reject_pubchem and proposal['pubchem_status'] == 'found':
+                            reason = 'known_pubchem'
                     if reason:
                         rejected.append({**proposal, 'reason': reason})
                     elif len(accepted) >= args.per_round:
@@ -167,6 +180,10 @@ def main(argv=None, llm=None, evaluator=None):
                 proposal = {'parent_id': parent.get('parent_id', parent.get('id')), 'smiles': smiles, 'edits': ['random_edit'], 'cited_ids': [], 'hypothesis': 'B0 random edit'}
                 key = _inchikey(smiles) if isinstance(smiles, str) else None
                 reason = 'duplicate' if key in ctx['extra_seen'] else check(proposal, ctx, seen)
+                if not reason:
+                    proposal = annotate(proposal, key)
+                    if args.reject_pubchem and proposal['pubchem_status'] == 'found':
+                        reason = 'known_pubchem'
                 if reason:
                     rejected.append({**proposal, 'reason': reason})
                 else:

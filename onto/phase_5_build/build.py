@@ -9,6 +9,7 @@ from rdflib import RDF, Graph, Literal, Namespace, URIRef
 from rdflib.namespace import XSD
 
 ONTO = Path(__file__).resolve().parents[1]
+PUBCHEM_CACHE = ONTO / "data/pubchem_cache.json"
 QN = Namespace("https://w3id.org/quinone#")
 E = Namespace("https://w3id.org/quinone/entity/")
 S = Namespace("https://schema.org/")
@@ -22,6 +23,7 @@ def build(skipped: list | None = None) -> str:
     skipped = [] if skipped is None else skipped  # filled with (paper, node id, quote) of results left out
     g = Graph()
     g.bind("qn", QN), g.bind("e", E), g.bind("schema", S)
+    cache = json.loads(PUBCHEM_CACHE.read_text()) if PUBCHEM_CACHE.exists() else {}
     master = {m["id"]: m for m in json.loads((ONTO / "phase_3_corpus/master.json").read_text(encoding="utf-8"))}
     tier = {r["doi"]: r["xlsx_tier"] for r in csv.DictReader(open(ONTO / "phase_4b_extend/xlsx_status.csv", encoding="utf-8"))}
     smiles = {(r["paper_id"], r["compound"]): r for r in
@@ -61,6 +63,9 @@ def build(skipped: list | None = None) -> str:
                 p = smiles[pid, c["key"]]
                 g.add((cpd, QN.smiles, Literal(p["canonical_smiles"])))
                 g.add((cpd, QN.inchikey, Literal(p["inchikey"])))
+                hit = cache.get(p["inchikey"], {})
+                if hit.get("status") == "found" and hit.get("cid") is not None:
+                    g.add((cpd, QN.pubchemCID, Literal(hit["cid"], datatype=XSD.integer)))
                 g.add((cpd, QN.smilesSource, Literal("llm_checked")))
 
         for c in rec["conditions"]:

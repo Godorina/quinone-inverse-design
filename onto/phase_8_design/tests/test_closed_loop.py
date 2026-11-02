@@ -26,8 +26,8 @@ def test_rounds_resume_and_feedback():
             from rdkit import Chem
             rows = list(csv.DictReader((path / 'input.csv').open()))
             return {'molecules': [{'inchikey': Chem.MolToInchiKey(Chem.MolFromSmiles(r['smiles'])), 'E2_eV': -2, 'E_O2_eV': -1.7, 'dE_bind_kcal': -30, 'co2_detached': False} for r in rows]}
-        main(['--rounds', '1', '--per-round', '1', '--out', str(out)], llm=llm, evaluator=evaluate)
-        main(['--rounds', '3', '--per-round', '1', '--resume', str(out)], llm=llm, evaluator=evaluate)
+        main(['--rounds', '1', '--per-round', '1', '--out', str(out)], llm=llm, evaluator=evaluate, lookup=lambda _: {'cid': None, 'status': 'not_found'})
+        main(['--rounds', '3', '--per-round', '1', '--resume', str(out)], llm=llm, evaluator=evaluate, lookup=lambda _: {'cid': None, 'status': 'not_found'})
         history = [json.loads(line) for line in (out / 'ledger.jsonl').read_text().splitlines()]
         assert len(history) == 3 and len(prompts) == 3 and len(evaluations) == 3
         assert smiles[0] in prompts[1] and 'not_quinone' in prompts[1] and '"f"' in prompts[1]

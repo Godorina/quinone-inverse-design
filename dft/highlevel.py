@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'dft/runs/highlevel'
 REF = ROOT / 'dft/runs/ref_set'
 FC = Path(__file__).with_name('highlevel_fc.json')
+PUBCHEM_CACHE = ROOT / 'onto/data/pubchem_cache.json'
 EV = 27.2114
 SMILES = ['O=C1C(F)=C(Cl)C(=O)C(Cl)=C1',
           'O=C1C(F)=C(Cl)C(=O)C(Cl)=C1F',
@@ -158,6 +159,7 @@ def summarize(out=OUT):
     co2 = common['CO2']['energy']
     o2 = (common['O2_radical_anion']['energy'] - common['O2']['energy']) * EV
     rows = []
+    cache = read(PUBCHEM_CACHE) if PUBCHEM_CACHE.exists() else {}
     for item in inputs():
         low = item['low']
         rad, dian = (low['states'][s]['energy'] for s in ('Q_radical_anion', 'Q_dianion'))
@@ -167,6 +169,7 @@ def summarize(out=OUT):
         margin = o2 - e2
         f = (line['a'] * e2 + line['b'] - bind) / line['sigma']
         row = {'id': item['id'], 'smiles': item['smiles'], 'low_source': item['source'],
+               'pubchem_cid': cache.get(item['id'], {}).get('cid'),
                'o_index': adduct['o_index'], 'low_f': f, 'low_O2_margin_V': margin,
                'low_dE_bind_kcal': bind, **composite(out, item['id'], fc)}
         rows.append(row)
@@ -182,10 +185,10 @@ def summarize(out=OUT):
     def fmt(value):
         return '—' if value is None else f'{value:.3f}'
     lines = ['# 고수준 비교', '', '저수준 f와 O₂ 여유는 B3LYP 전자 에너지 기준; 고수준은 Fc 및 실험 O₂ 기준.', '',
-             '| InChIKey | 저수준 f | 저수준 O₂ 여유 (V) | ΔE 결합 (kcal/mol) | 고수준 E2 (V) | ΔG 결합 1 M (kcal/mol) | 고수준 O₂ 여유 (V) | 경고 |',
-             '|---|---:|---:|---:|---:|---:|---:|---|']
+             '| InChIKey | PubChem CID | 저수준 f | 저수준 O₂ 여유 (V) | ΔE 결합 (kcal/mol) | 고수준 E2 (V) | ΔG 결합 1 M (kcal/mol) | 고수준 O₂ 여유 (V) | 경고 |',
+             '|---|---:|---:|---:|---:|---:|---:|---:|---|']
     for row in rows:
-        lines.append('| ' + ' | '.join([row['id']] + [fmt(row.get(k)) for k in ('low_f', 'low_O2_margin_V', 'low_dE_bind_kcal', 'E2_V', 'dG_bind_1M_kcal', 'O2_margin_V')] + [', '.join(row.get('flags', [])) or '—']) + ' |')
+        lines.append('| ' + ' | '.join([row['id'], str(row['pubchem_cid']) if row['pubchem_cid'] is not None else '—'] + [fmt(row.get(k)) for k in ('low_f', 'low_O2_margin_V', 'low_dE_bind_kcal', 'E2_V', 'dG_bind_1M_kcal', 'O2_margin_V')] + [', '.join(row.get('flags', [])) or '—']) + ' |')
     lines += ['', f"chloranil 실험: E2 {exp['exp_E2_V']} V, ΔG {exp['exp_dG_bind_kcal']} kcal/mol; 계산−실험: E2 {fmt(chloranil.get('difference_E2_V'))} V, ΔG {fmt(chloranil.get('difference_dG_bind_1M_kcal'))} kcal/mol."]
     (out / 'summary.md').write_text('\n'.join(lines) + '\n')
     return summary

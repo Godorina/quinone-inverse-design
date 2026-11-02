@@ -247,3 +247,7 @@ qn:requiresRedoxCouple a owl:DatatypeProperty ; rdfs:domain skos:Concept ; rdfs:
     rdfs:label "requires redox couple"@en , "산화환원 쌍 필수"@ko ;
     rdfs:comment "On a property concept: true for potentials, which must name their reduction step."@en ,
         "측정 항목 개념에서: 전위는 true이며 환원 단계를 밝혀야 한다."@ko .
+
+qn:pubchemCID a owl:DatatypeProperty ; rdfs:domain qn:Compound ; rdfs:range xsd:integer ;
+    rdfs:label "PubChem CID"@en , "PubChem 화합물 식별자"@ko ;
+    rdfs:comment "PubChem compound identifier for this compound."@en , "이 화합물의 PubChem 식별자."@ko .

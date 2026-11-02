@@ -17,8 +17,8 @@ test:      ## all test suites
 	cd $(B4) && $(PY) tests/test_4b.py && $(PY) tests/test_compound_review.py
 	cd onto/phase_8_design && $(PY) tests/test_loop.py
 	cd onto/phase_8_design && $(PY) tests/test_generate.py && $(PY) tests/test_o2_sign.py && $(PY) tests/test_loop_contract.py && $(PY) tests/test_random_parents.py
-	cd onto/phase_8_design && $(PY) tests/test_closed_loop.py && $(PY) tests/test_loop2.py
-	cd onto/phase_5_build && $(PY) tests/test_build.py
+	cd onto/phase_8_design && $(PY) tests/test_closed_loop.py && $(PY) tests/test_loop2.py && $(PY) tests/test_pubchem.py
+	cd onto/phase_5_build && $(PY) tests/test_build.py && $(PY) tests/test_pubchem_build.py
 	cd dft && $(PY) tests/test_dft.py
 	cd dft && $(PY) tests/test_run_set.py && $(PY) tests/test_summarize_foreign_json.py && $(PY) tests/test_highlevel_flags.py && $(PY) tests/test_highlevel_failed_jobs.py
 	cd dft && $(PY) tests/test_highlevel.py

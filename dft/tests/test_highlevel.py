@@ -1,6 +1,7 @@
 import json
 import sys
 import tempfile
+from unittest.mock import patch
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
@@ -61,7 +62,13 @@ def test_jobs_and_failure():
 
 def test_summary_inputs():
     with tempfile.TemporaryDirectory() as tmp:
-        result = hl.summarize(tmp)
+        cache = Path(tmp) / 'cache.json'
+        key = hl.inputs()[0]['id']
+        cache.write_text(json.dumps({key: {'status': 'found', 'cid': 123}}))
+        with patch.object(hl, 'PUBCHEM_CACHE', cache):
+            result = hl.summarize(tmp)
+        assert result['molecules'][0]['pubchem_cid'] == 123
+        assert '123' in (Path(tmp) / 'summary.md').read_text()
         assert len(result['molecules']) == 4
         row = result['molecules'][0]
         assert abs(row['low_f'] - 1.3788717309511884) < 1e-8

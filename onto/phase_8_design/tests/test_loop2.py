@@ -37,12 +37,12 @@ def test_refill_and_resume():
         def llm(text):
             calls.append(text)
             return {'proposals': ([proposal(smiles[0]), {'smiles': 'c1ccccc1'}] if len(calls) == 1 else [proposal(smiles[len(calls)-1])]), 'total_cost_usd': .1}
-        c.main(['--rounds', '1', '--per-round', '3', '--out', tmp], llm=llm, evaluator=evaluate)
+        c.main(['--rounds', '1', '--per-round', '3', '--out', tmp], llm=llm, evaluator=evaluate, lookup=lambda _: {'cid': None, 'status': 'not_found'})
         assert len(calls) == 3 and 'not_quinone' in calls[1] and smiles[0] in calls[1]
         record = json.loads((Path(tmp) / 'round_1/completed.json').read_text())
         assert len(record['accepted']) == 3 and len(record['rejected']) == 1 and abs(record['cost'] - .3) < 1e-8
         (Path(tmp) / 'round_1/completed.json').unlink()
-        c.main(['--rounds', '1', '--per-round', '3', '--resume', tmp], llm=lambda _: 1/0, evaluator=evaluate)
+        c.main(['--rounds', '1', '--per-round', '3', '--resume', tmp], llm=lambda _: 1/0, evaluator=evaluate, lookup=lambda _: {'cid': None, 'status': 'not_found'})
         assert len(json.loads((Path(tmp) / 'round_1/completed.json').read_text())['accepted']) == 3
     with tempfile.TemporaryDirectory() as tmp:
         calls = []
@@ -53,7 +53,7 @@ def test_refill_and_resume():
 def test_random_and_compare():
     with tempfile.TemporaryDirectory() as a, tempfile.TemporaryDirectory() as b:
         for out in (a, b):
-            c.main(['--rounds', '2', '--per-round', '3', '--arm', 'random', '--seed', '7', '--out', out], llm=lambda _: 1/0, evaluator=evaluate)
+            c.main(['--rounds', '2', '--per-round', '3', '--arm', 'random', '--seed', '7', '--out', out], llm=lambda _: 1/0, evaluator=evaluate, lookup=lambda _: {'cid': None, 'status': 'not_found'})
         def records(out):
             return [json.loads(x) for x in (Path(out) / 'ledger.jsonl').read_text().splitlines()]
         x, y = records(a), records(b)

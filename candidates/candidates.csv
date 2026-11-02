@@ -1,0 +1,5 @@
+name,smiles,low_f,E2_V_vs_Fc,dG_bind_1M_kcal,O2_margin_V,verdict
+candidate1,O=C1C(F)=C(Cl)C(=O)C(Cl)=C1,1.38,-1.358,-9.29,-0.128,fail
+candidate2,O=C1C(F)=C(Cl)C(=O)C(Cl)=C1F,1.32,-1.249,-7.53,-0.019,borderline
+candidate3,O=C1C(F)=C(Cl)C(=O)C=C1Cl,1.18,-1.353,-8.42,-0.123,fail
+chloranil_reference,O=C1C(Cl)=C(Cl)C(=O)C(Cl)=C1Cl,0.72,-1.225,-6.74,0.005,borderline
