@@ -1,0 +1,7 @@
+id,name,smiles,class,source,note,pubchem_cid
+X01,"1,10-phenanthroline-5,6-dione",O=C1C(=O)c2cccnc2-c2ncccc21,phenanthroline-dione,10.1016/j.poly.2025.117719; abstract and Fig. 1,Free ligand of metal complex; CID 72810,72810
+X02,"benzodithiophene-4,8-dione",O=C1c2ccsc2C(=O)c2ccsc21,benzodithiophene-dione,10.1021/acssuschemeng.5c03181; Fig. 2a (first reported 10.1002/anie.202412229),BDT-Q monomer; CID 288478,288478
+X03,"quinoxaline-5,8-dione",O=C1C=CC(=O)c2nccnc21,quinoxaline-dione,10.1016/j.cplett.2025.141869; Fig. 1,Unsubstituted parent not reported in the paper (only R-phenyl derivatives); added as a DFT reference; CID 11355645,11355645
+X04,"2,3-diphenylquinoxaline-5,8-dione",O=C1C=CC(=O)c2nc(-c3ccccc3)c(-c3ccccc3)nc21,quinoxaline-dione,10.1016/j.cplett.2025.141869; abstract and Fig. 1,phenylQX; CID 278888,278888
+X05,"2,3-bis(4-methoxyphenyl)quinoxaline-5,8-dione",COc1ccc(-c2nc3c(nc2-c2ccc(OC)cc2)C(=O)C=CC3=O)cc1,quinoxaline-dione,10.1016/j.cplett.2025.141869; abstract and Fig. 1,methoxyQX; PubChem InChIKey query not found; CID unavailable,
+X06,"2,3-diaminonaphthalene-1,4-dione",Nc1c(N)c(=O)c2ccccc2c1=O,diaminonaphthoquinone,10.1016/j.poly.2025.117719; section 3.1,Neutral synthetic precursor of NQphen ligand; CID 4167268,4167268

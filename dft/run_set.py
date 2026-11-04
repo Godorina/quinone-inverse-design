@@ -34,7 +34,7 @@ def input_set(csv_path):
     """Read phase-8 selections; compute an InChIKey only when CSV omitted it."""
     with open(csv_path, newline="", encoding="utf-8") as handle:
         return [{"inchikey": row.get("inchikey") or Chem.MolToInchiKey(Chem.MolFromSmiles(row["smiles"])),
-                 "smiles": row["smiles"], "sources": row["id"]} for row in csv.DictReader(handle)]
+                 "smiles": row["smiles"], "sources": row["id"], **({"class": row["class"]} if row.get("class") else {})} for row in csv.DictReader(handle)]
 
 
 def carbonyl_sites(smiles):
@@ -97,7 +97,8 @@ def run_selected(items, out_dir, gpu, common_path=OUT / "_common.json", optimize
     """Run selected candidates after copying already-computed common states."""
     out_dir = Path(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
-    shutil.copyfile(common_path, out_dir / "_common.json")
+    if Path(common_path).resolve() != (out_dir / "_common.json").resolve():
+        shutil.copyfile(common_path, out_dir / "_common.json")
     for item in items:
         run_molecule(item, out_dir, gpu, optimize_fn=optimize_fn)
 
@@ -105,6 +106,36 @@ def run_selected(items, out_dir, gpu, common_path=OUT / "_common.json", optimize
 def _distance(adduct):
     symbols, coords = _xyz(adduct["xyz"])
     return float(np.linalg.norm(coords[adduct["o_index"]] - coords[len(symbols) - 3]))
+
+
+def best_adduct(adducts):
+    """Choose the lowest-energy attached result, falling back to detached results."""
+    good = [value for value in adducts.values() if _done(value) and value.get("xyz") and value.get("energy") is not None]
+    attached = []
+    for value in good:
+        try:
+            # A malformed geometry cannot establish attachment.
+            if len(_xyz(value["xyz"])[0]) >= 4 and _distance(value) <= 2.0:
+                attached.append(value)
+        except (IndexError, KeyError, TypeError, ValueError):
+            pass
+    return min(attached or good, key=lambda value: value["energy"])
+
+
+# Match the more specific fused cores before their smaller substructures.
+_FAMILY_CORES = [(name, Chem.MolFromSmarts(pattern)) for name, pattern in (
+    ("PQ", "O=C1C(=O)c2ccccc2-c2ccccc21"),
+    ("AQ", "O=C1c2ccccc2C(=O)c2ccccc21"),
+    ("NQ", "O=C1C(=O)c2ccccc2C=C1"),
+    ("NQ", "O=C1C=CC2=CC=CC=C2C1=O"),
+    ("NQ", "O=C1C=CC(=O)c2ccccc21"),
+    ("BQ", "O=C1C=CC(=O)C=C1"),
+)]
+
+
+def family(smiles):
+    mol = Chem.MolFromSmiles(smiles)
+    return next((name for name, core in _FAMILY_CORES if mol and mol.HasSubstructMatch(core)), "unknown")
 
 
 def summarize(out_dir):
@@ -123,13 +154,15 @@ def summarize(out_dir):
         if not all(_done(states.get(name)) for name in ("Q_radical_anion", "Q_dianion")):
             continue
         e2 = (states["Q_dianion"]["energy"] - states["Q_radical_anion"]["energy"]) * 27.2114
-        candidates = [(adduct["energy"], _distance(adduct)) for adduct in data["adducts"].values() if _done(adduct)]
-        if not candidates:
+        try:
+            adduct = best_adduct(data["adducts"])
+        except ValueError:
             continue
-        adduct_energy, distance = min(candidates)
+        adduct_energy, distance = adduct["energy"], _distance(adduct)
         # ponytail: electronic energies only; add vibrational/free-energy corrections for absolute comparisons.
         bind = (adduct_energy - states["Q_dianion"]["energy"] - co2) * 627.5
-        row = {"inchikey": data["inchikey"], "E2_eV": e2, "E2_reported_V": -e2, "dE_bind_kcal": bind,
+        molecule_family = data.get("class") or family(data["smiles"])
+        row = {"family": molecule_family, "inchikey": data["inchikey"], "E2_eV": e2, "E2_reported_V": -e2, "dE_bind_kcal": bind,
                "co2_distance": distance, "co2_detached": distance > 2.0,
                "E_O2_eV": (o2_minus - o2) * 27.2114}
         rows.append(row)
@@ -140,9 +173,14 @@ def summarize(out_dir):
         x, y = np.array([row["E2_eV"] for row in fit_rows]), np.array([row["dE_bind_kcal"] for row in fit_rows])
         a, b = np.linalg.lstsq(np.column_stack([x, np.ones(len(x))]), y, rcond=None)[0]
         summary["line"] = {"a": float(a), "b": float(b), "sigma": float(np.std(y - (a * x + b))), "n": len(x)}
+        families = {}
+        for row in fit_rows:
+            residual = row["dE_bind_kcal"] - (a * row["E2_eV"] + b)
+            families.setdefault(row["family"], []).append(float(residual))
+        summary["family_residuals"] = {name: {"n": len(values), "mean": float(np.mean(values)), "max_abs": max(map(abs, values))} for name, values in families.items()}
     save_json(out_dir / "summary.json", summary)
     with open(out_dir / "summary.csv", "w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=["inchikey", "E2_eV", "E2_reported_V", "dE_bind_kcal", "co2_distance", "co2_detached", "E_O2_eV"])
+        writer = csv.DictWriter(handle, fieldnames=["family", "inchikey", "E2_eV", "E2_reported_V", "dE_bind_kcal", "co2_distance", "co2_detached", "E_O2_eV"])
         writer.writeheader()
         writer.writerows(rows)
     return summary

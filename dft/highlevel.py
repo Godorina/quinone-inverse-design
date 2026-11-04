@@ -2,13 +2,18 @@
 import argparse
 import csv
 import json
+import math
 import numpy as np
 import multiprocessing as mp
 import os
+import shutil
+import statistics
 import traceback
 from pathlib import Path
 
 from rdkit import Chem
+from run_set import best_adduct
+from o2_calibration import classify
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'dft/runs/highlevel'
@@ -16,10 +21,42 @@ REF = ROOT / 'dft/runs/ref_set'
 FC = Path(__file__).with_name('highlevel_fc.json')
 PUBCHEM_CACHE = ROOT / 'onto/data/pubchem_cache.json'
 EV = 27.2114
-SMILES = ['O=C1C(F)=C(Cl)C(=O)C(Cl)=C1',
-          'O=C1C(F)=C(Cl)C(=O)C(Cl)=C1F',
-          'O=C1C(F)=C(Cl)C(=O)C=C1Cl',
-          'O=C1C(Cl)=C(Cl)C(=O)C(Cl)=C1Cl']
+class CandidateSet(list):
+    """SMILES list with the exact low-level source used for each candidate."""
+    def __init__(self, entries):
+        super().__init__(smiles for smiles, _ in entries)
+        self.sources = dict(entries)
+
+
+_REFERENCE = 'dft/runs/ref_set/UGNWTBMOAKPKBL-UHFFFAOYSA-N.json'
+_CHLORANIL = 'O=C1C(Cl)=C(Cl)C(=O)C(Cl)=C1Cl'
+SMILES = CandidateSet([
+    ('O=C1C(F)=C(Cl)C(=O)C(Cl)=C1', 'onto/phase_8_design/runs/loop-20261031-151304/round_1/QCOVIANIHBBUDY-UHFFFAOYSA-N.json'),
+    ('O=C1C(F)=C(Cl)C(=O)C(Cl)=C1F', 'onto/phase_8_design/runs/loop-20261031-151304/round_1/KOQCAJNJSQGENA-UHFFFAOYSA-N.json'),
+    ('O=C1C(F)=C(Cl)C(=O)C=C1Cl', 'onto/phase_8_design/runs/loop-20261102-003356/round_2/SJZRFNPTPXVJLK-UHFFFAOYSA-N.json'),
+    (_CHLORANIL, _REFERENCE),
+])
+# name -> (SMILES and their exact sources, output folder, selected exchange line)
+SETS = {'v1': (SMILES, OUT, 'v1'),
+        'v2': (CandidateSet([
+            ('O=C1C=CC(=O)c2nc3cnc(F)cc3nc21', 'onto/phase_8_design/runs/loop-20261102-212436/round_3/METHVWQPJYOAPU-UHFFFAOYSA-N.json'),
+            ('O=C1C=CC(=O)c2nc3nccnc3nc21', 'onto/phase_8_design/runs/loop-20261102-212436/round_2/CAVKVIOROYYCTO-UHFFFAOYSA-N.json'),
+            (_CHLORANIL, _REFERENCE),
+        ]), ROOT / 'dft/runs/highlevel_v2', 'v2')}
+CALIB = CandidateSet([
+    ('O=C1C=CC(=O)c2nccnc21', 'dft/runs/ref_set/GHLUWAJFYKILGZ-UHFFFAOYSA-N.json'),
+    ('O=C1C(=O)c2cccnc2-c2ncccc21', 'dft/runs/ref_set/KCALAFIVPCAXJI-UHFFFAOYSA-N.json'),
+    ('O=C1c2ccsc2C(=O)c2ccsc21', 'dft/runs/ref_set/SIUXRPJYVQQBAF-UHFFFAOYSA-N.json'),
+    ('O=C1C=CC(=O)c2nc(-c3ccccc3)c(-c3ccccc3)nc21', 'dft/runs/ref_set/VNBZDYJWROOJRD-UHFFFAOYSA-N.json'),
+    ('O=C1c2ccccc2C(=O)c2ccccc21', 'dft/runs/ref_set/RZVHIXYEVGDQDX-UHFFFAOYSA-N.json'),
+    ('O=C1C(Cl)=C(Cl)C(=O)c2ccccc21', 'dft/runs/ref_set/SVPKNMBRVBMTLB-UHFFFAOYSA-N.json'),
+    ('O=C1C(F)=C(F)C(=O)C(F)=C1F', 'dft/runs/ref_set/JKLYZOGJWVAIQS-UHFFFAOYSA-N.json'),
+    ('O=C1C(=O)c2ccccc2-c2ccccc21', 'dft/runs/ref_set/YYVYAPXYZVYDHN-UHFFFAOYSA-N.json'),
+    ('O=C1C=C(Cl)C(=O)C(Cl)=C1', 'dft/runs/ref_set/JCARTGJGWCGSSU-UHFFFAOYSA-N.json'),
+])
+SETS['calib'] = (CALIB, ROOT / 'dft/runs/highlevel_calib', None)
+CALIB_STATES = ('Q_radical_anion', 'Q_dianion')
+
 STATES = {'Q': (0, 0), 'Q_radical_anion': (-1, 1), 'Q_dianion': (-2, 0),
           'adduct': (-2, 0), 'CO2': (0, 0)}
 
@@ -38,8 +75,7 @@ def save(path, data):
 
 def start_geometry(low, state):
     if state == 'adduct':
-        good = [v for v in low['adducts'].values() if v.get('converged') and v.get('geom_converged') and not v.get('error') and v.get('xyz') and v.get('energy') is not None]
-        result = min(good, key=lambda v: v['energy'])
+        result = best_adduct(low['adducts'])
         site = result['o_index']
     else:
         result = low['states'][state]
@@ -49,23 +85,24 @@ def start_geometry(low, state):
     return '\n'.join(result['xyz'].splitlines()[2:]).strip(), site
 
 
-def inputs():
+def inputs(smiles_list=SMILES):
     items = []
-    for smiles in SMILES:
+    for smiles in smiles_list:
         key = Chem.MolToInchiKey(Chem.MolFromSmiles(smiles))
-        matches = sorted((ROOT / 'onto/phase_8_design/runs').glob(f'loop-*/round_*/{key}.json'))
-        path = REF / f'{key}.json' if smiles == SMILES[-1] else matches[-1]
+        path = ROOT / smiles_list.sources[smiles]
         items.append({'id': key, 'smiles': smiles, 'source': str(path), 'low': read(path)})
     return items
 
 
-def jobs(out=OUT):
+def jobs(out=OUT, smiles_list=SMILES, states=None):
     from pyscf import gto
-    items = inputs()
-    common = read(REF / '_common.json')
+    items = inputs(smiles_list)
+    if states is None:
+        common = read(REF / '_common.json')
+        items += [{'id': 'CO2', 'low': common, 'source': str(REF / '_common.json')}]
     tasks = []
-    for item in items + [{'id': 'CO2', 'low': common, 'source': str(REF / '_common.json')}]:
-        for state in (['CO2'] if item['id'] == 'CO2' else list(STATES)[:-1]):
+    for item in items:
+        for state in (['CO2'] if item['id'] == 'CO2' else (states or list(STATES)[:-1])):
             xyz, site = start_geometry(item['low'], state)
             charge, spin = STATES[state]
             nao = gto.M(atom=xyz, basis='def2-tzvpd', charge=charge, spin=spin, verbose=0).nao
@@ -150,21 +187,20 @@ def composite(out, key, fc):
     return row
 
 
-def summarize(out=OUT):
+def summarize(out=OUT, smiles_list=SMILES, line_key='v1'):
     out = Path(out)
     fc = read(FC)['Fc_oxidation_eV']
-    ref_summary = read(REF / 'summary.json')
-    line = ref_summary['line']
+    line = read(REF / 'lines.json')[line_key]
     common = read(REF / '_common.json')['states']
     co2 = common['CO2']['energy']
     o2 = (common['O2_radical_anion']['energy'] - common['O2']['energy']) * EV
     rows = []
     cache = read(PUBCHEM_CACHE) if PUBCHEM_CACHE.exists() else {}
-    for item in inputs():
+    for item in inputs(smiles_list):
         low = item['low']
         rad, dian = (low['states'][s]['energy'] for s in ('Q_radical_anion', 'Q_dianion'))
         e2 = (dian - rad) * EV
-        adduct = min((v for v in low['adducts'].values() if v.get('converged') and v.get('geom_converged') and not v.get('error')), key=lambda v: v['energy'])
+        adduct = best_adduct(low['adducts'])
         bind = (adduct['energy'] - dian - co2) * 627.5
         margin = o2 - e2
         f = (line['a'] * e2 + line['b'] - bind) / line['sigma']
@@ -194,14 +230,68 @@ def summarize(out=OUT):
     return summary
 
 
+def summarize_calib(out, smiles_list=CALIB, calibration_path=REF / 'o2_calib.json'):
+    """Produce a calibration only when every new calculation is usable."""
+    out = Path(out)
+    fc = read(FC)['Fc_oxidation_eV']
+    common = read(REF / '_common.json')['states']
+    o2 = (common['O2_radical_anion']['energy'] - common['O2']['energy']) * EV
+    rows = {}
+
+    def add(item, high):
+        if high.get('flags') or 'E2_V' not in high or 'O2_margin_V' not in high:
+            raise ValueError(f"Incomplete or flagged calibration result: {item['id']}")
+        rad, dian = (item['low']['states'][s]['energy'] for s in CALIB_STATES)
+        e2 = (dian - rad) * EV
+        low_margin = o2 - e2
+        if not all(math.isfinite(v) for v in (e2, low_margin, high['E2_V'], high['O2_margin_V'])):
+            raise ValueError(f"Non-finite calibration result: {item['id']}")
+        row = {'id': item['id'], 'smiles': item['smiles'], 'class': classify(item['smiles']),
+               'low_source': item['source'], 'low_E2_eV': e2, 'low_O2_margin_V': low_margin,
+               'E2_V': high['E2_V'], 'O2_margin_V': high['O2_margin_V'],
+               'shift_V': high['O2_margin_V'] - low_margin}
+        if row['id'] in rows:
+            if rows[row['id']] != row:
+                raise ValueError(f"Conflicting calibration result: {row['id']}")
+            return
+        rows[row['id']] = row
+
+    for item in inputs(smiles_list):
+        add(item, composite(out, item['id'], fc))
+    for name in ('v1', 'v2'):
+        candidates, previous_out, _ = SETS[name]
+        previous = {row['id']: row for row in read(previous_out / 'summary.json')['molecules']}
+        for item in inputs(candidates):
+            add(item, previous[item['id']])
+    calibration = {}
+    for category in ('carbocyclic', 'heterocyclic'):
+        shifts = [r['shift_V'] for r in rows.values() if r['class'] == category]
+        if len(shifts) < 2:
+            raise ValueError(f'Insufficient {category} calibration results')
+        # ponytail: use one shift per class; consider an E2 slope if residuals demand it.
+        calibration[category] = {'mean_shift': statistics.mean(shifts), 'sd': statistics.stdev(shifts), 'n': len(shifts)}
+    summary = {'Fc_oxidation_eV': fc, 'molecules': list(rows.values()), 'calibration': calibration}
+    save(out / 'summary.json', summary)
+    lines = ['# O₂ calibration', '', '| InChIKey | class | low E2 (eV) | low margin (V) | high E2 (V) | high margin (V) | shift (V) |', '|---|---|---:|---:|---:|---:|---:|']
+    for r in rows.values():
+        lines.append(f"| {r['id']} | {r['class']} | {r['low_E2_eV']:.3f} | {r['low_O2_margin_V']:.3f} | {r['E2_V']:.3f} | {r['O2_margin_V']:.3f} | {r['shift_V']:.3f} |")
+    (out / 'summary.md').write_text('\n'.join(lines) + '\n')
+    save(calibration_path, calibration)
+    return summary
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--gpus', default='0,1')
     parser.add_argument('--summary', action='store_true')
-    parser.add_argument('--out', type=Path, default=OUT)
+    parser.add_argument('--set', choices=SETS, default='v1')
     args = parser.parse_args()
+    smiles_list, out, line_key = SETS[args.set]
+    for name in (() if args.set == 'calib' else ('CO2', inputs(smiles_list)[-1]['id'])):  # reuse finished CO2/chloranil jobs from the v1 folder
+        if out != OUT and (OUT / name).exists() and not (out / name).exists():
+            shutil.copytree(OUT / name, out / name)
     if not args.summary:
-        tasks = jobs(args.out)
+        tasks = jobs(out, smiles_list, states=CALIB_STATES if args.set == 'calib' else None)
         gpus = args.gpus.split(',')
         ctx = mp.get_context('spawn')
         queue = ctx.Queue()
@@ -209,7 +299,10 @@ def main():
             queue.put(gpu)
         with ctx.Pool(len(gpus), initializer=_init, initargs=(queue,)) as pool:
             pool.map(run_job, tasks, chunksize=1)
-    summarize(args.out)
+    if args.set == 'calib':
+        summarize_calib(out, smiles_list)
+    else:
+        summarize(out, smiles_list, line_key)
 
 
 if __name__ == '__main__':

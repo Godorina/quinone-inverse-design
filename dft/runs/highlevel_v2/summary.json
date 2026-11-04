@@ -1,0 +1,83 @@
+{
+  "Fc_oxidation_eV": 4.417,
+  "molecules": [
+    {
+      "id": "METHVWQPJYOAPU-UHFFFAOYSA-N",
+      "smiles": "O=C1C=CC(=O)c2nc3cnc(F)cc3nc21",
+      "low_source": "/home/hgpark/whlee/hgpark/quinone/onto/phase_8_design/runs/loop-20261102-212436/round_3/METHVWQPJYOAPU-UHFFFAOYSA-N.json",
+      "pubchem_cid": null,
+      "o_index": 0,
+      "low_f": 1.2514048858742115,
+      "low_O2_margin_V": 0.19894540530889193,
+      "low_dE_bind_kcal": -25.378675528278762,
+      "G_Eh": {
+        "Q": -836.1157379346404,
+        "Q_radical_anion": -836.2558407870654,
+        "Q_dianion": -836.3578787947156,
+        "adduct": -1025.0102876558685,
+        "CO2": -188.63357152963363
+      },
+      "flags": [],
+      "E1_V": -0.6046052415222918,
+      "E2_V": -1.6404029586271331,
+      "O2_margin_V": -0.41040295862713316,
+      "O2_pass": false,
+      "dG_bind_1atm_kcal": -11.82042552836549,
+      "dG_bind_1M_kcal": -13.71442552836549
+    },
+    {
+      "id": "CAVKVIOROYYCTO-UHFFFAOYSA-N",
+      "smiles": "O=C1C=CC(=O)c2nc3nccnc3nc21",
+      "low_source": "/home/hgpark/whlee/hgpark/quinone/onto/phase_8_design/runs/loop-20261102-212436/round_2/CAVKVIOROYYCTO-UHFFFAOYSA-N.json",
+      "pubchem_cid": null,
+      "o_index": 0,
+      "low_f": 1.0700210791010891,
+      "low_O2_margin_V": 0.1826182620433503,
+      "low_dE_bind_kcal": -24.96769848511704,
+      "G_Eh": {
+        "Q": -752.897346131263,
+        "Q_radical_anion": -753.0378490438314,
+        "Q_dianion": -753.1392459538869,
+        "adduct": -941.7904755665493,
+        "CO2": -188.63357152963363
+      },
+      "flags": [],
+      "E1_V": -0.5937190449356335,
+      "E2_V": -1.6578481217177337,
+      "O2_margin_V": -0.4278481217177337,
+      "O2_pass": false,
+      "dG_bind_1atm_kcal": -11.080447100557933,
+      "dG_bind_1M_kcal": -12.974447100557933
+    },
+    {
+      "id": "UGNWTBMOAKPKBL-UHFFFAOYSA-N",
+      "smiles": "O=C1C(Cl)=C(Cl)C(=O)C(Cl)=C1Cl",
+      "low_source": "/home/hgpark/whlee/hgpark/quinone/dft/runs/ref_set/UGNWTBMOAKPKBL-UHFFFAOYSA-N.json",
+      "pubchem_cid": 8371,
+      "o_index": 0,
+      "low_f": 0.6265574481655978,
+      "low_O2_margin_V": 0.3457930355721426,
+      "low_dE_bind_kcal": -21.769878227757857,
+      "G_Eh": {
+        "Q": -2219.8709583357463,
+        "Q_radical_anion": -2220.0322253696745,
+        "Q_dianion": -2220.1495182780054,
+        "adduct": -2408.7908078592272,
+        "CO2": -188.63357152963363
+      },
+      "flags": [],
+      "E1_V": -0.028698232966242188,
+      "E2_V": -1.2252957542442755,
+      "O2_margin_V": 0.004704245755724479,
+      "O2_pass": false,
+      "dG_bind_1atm_kcal": -4.843077371594973,
+      "dG_bind_1M_kcal": -6.737077371594973,
+      "experiment": {
+        "E2_V": -1.18,
+        "dG_bind_1M_kcal": -3.88
+      },
+      "difference_E2_V": -0.045295754244275566,
+      "difference_dG_bind_1M_kcal": -2.857077371594973
+    }
+  ]
+}

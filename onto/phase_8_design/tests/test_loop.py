@@ -12,7 +12,7 @@ from loop import auc, edit, in_domain, objective, run, t0
 
 
 BQ = "O=C1C=CC(=O)C=C1"
-DOMAIN = {"cores_smarts": [BQ], "allowed_subst": {"F"}, "ref_fps": [BQ]}
+DOMAIN = {"domain": "v1", "cores_smarts": [BQ], "allowed_subst": {"F"}, "ref_fps": [BQ]}
 FEEDBACK_DOMAIN = {**DOMAIN, "ref_fps": [BQ, "O=C1C=C(F)C(=O)C(F)=C1"]}
 
 
@@ -23,9 +23,9 @@ def test_t0_accepts_quinone_and_rejects_benzene_and_metal():
 
 
 def test_domain_rejects_wrong_core_and_unregistered_substituent():
-    assert in_domain("c1ccccc1", [BQ], {"F"}, [BQ]) == "out_of_domain_core"
+    assert in_domain("c1ccccc1", [BQ], {"F"}, [BQ], domain="v1") == "out_of_domain_core"
     chlorinated = edit(BQ, "add", substituents=["Cl"], position=2)
-    assert in_domain(chlorinated, [BQ], {"F"}, [BQ]) == "unregistered_substituent"
+    assert in_domain(chlorinated, [BQ], {"F"}, [BQ], domain="v1") == "unregistered_substituent"
 
 
 def test_objective_applies_o2_margin_and_auc_is_hand_calculated():

@@ -1,0 +1,29 @@
+{
+  "binding_loo_rmse_kcal": 1.665037932918463,
+  "binding_std_scale": 2.7715794506959597,
+  "binding_training_n": 91,
+  "e2_loo_rmse_ev": 0.11617007753842469,
+  "e2_std_scale": 0.19242355192090382,
+  "e2_training_n": 94,
+  "eligible": 13836,
+  "kappa": 1.0,
+  "library": 13836,
+  "library_sha256": "a2338e8db9cb5183d5c223cc42344fba1964fcd1dba3b32e10f63ae345ba88de",
+  "o2_calibration": "uncalibrated",
+  "o2_plausible": 11728,
+  "random_control": 10,
+  "seed": 0,
+  "selected": 50,
+  "skipped": {},
+  "top_per_core": {
+    "1,2-BQ": 17,
+    "1,2-NQ": 1,
+    "1,4-BQ": 11,
+    "1,4-NQ": 9,
+    "aza-1,2-NQ": 7,
+    "aza-1,4-NQ": 1,
+    "aza-quinoline-5,8-dione": 1,
+    "quinoline-5,8-dione": 1,
+    "quinoxaline-5,8-dione": 2
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "excluded_detached": 0,
+  "line_measurable": false,
+  "molecules": [
+    {
+      "E2_eV": -2.2660290032126094,
+      "E2_reported_V": 2.2660290032126094,
+      "E_O2_eV": -2.230119513869266,
+      "co2_detached": false,
+      "co2_distance": 1.4690372185141076,
+      "dE_bind_kcal": -27.1258135972964,
+      "family": "original_1_rings",
+      "inchikey": "GNBZSYCVGHQSMC-UHFFFAOYSA-N"
+    },
+    {
+      "E2_eV": -2.588649665037287,
+      "E2_reported_V": 2.588649665037287,
+      "E_O2_eV": -2.230119513869266,
+      "co2_detached": false,
+      "co2_distance": 1.4907012229475092,
+      "dE_bind_kcal": -22.87457652187456,
+      "family": "original_1_rings",
+      "inchikey": "SVBZNPIEBNZEGE-UHFFFAOYSA-N"
+    },
+    {
+      "E2_eV": -2.23778172477701,
+      "E2_reported_V": 2.23778172477701,
+      "E_O2_eV": -2.230119513869266,
+      "co2_detached": false,
+      "co2_distance": 1.4713511112632986,
+      "dE_bind_kcal": -26.59456609306389,
+      "family": "original_1_rings",
+      "inchikey": "UTUADGNURNXMJQ-UHFFFAOYSA-N"
+    },
+    {
+      "E2_eV": -2.8614418134773207,
+      "E2_reported_V": 2.8614418134773207,
+      "E_O2_eV": -2.230119513869266,
+      "co2_detached": false,
+      "co2_distance": 1.5039140977301377,
+      "dE_bind_kcal": -19.285433750269334,
+      "family": "original_1_rings",
+      "inchikey": "XWUVGDBKIQCSGA-UHFFFAOYSA-N"
+    },
+    {
+      "E2_eV": -2.2985894742092317,
+      "E2_reported_V": 2.2985894742092317,
+      "E_O2_eV": -2.230119513869266,
+      "co2_detached": false,
+      "co2_distance": 1.4837906538643417,
+      "dE_bind_kcal": -26.2686938762171,
+      "family": "original_1_rings",
+      "inchikey": "XZUKPUPEYNAPPU-UHFFFAOYSA-N"
+    }
+  ]
+}

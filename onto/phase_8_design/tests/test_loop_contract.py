@@ -20,11 +20,11 @@ def test_unknown_citation_still_rejected():
     assert gen.check(p, CTX, set()) == "bad_citation"
 
 
-def test_loop_prompt_does_not_offer_cn_which_check_rejects():
+def test_loop_allows_cn_in_v2():
     text = (HERE / "closed_loop.py").read_text()
-    assert "CN, NH2" not in text
+    assert "at most 30 heavy atoms" in text
     p = {"parent_id": "D08", "smiles": "O=C1C(F)=C(F)C(=O)C(F)=C1C#N", "cited_ids": ["D08"], "edits": [], "hypothesis": ""}
-    assert gen.check(p, CTX, set()) == "unregistered_substituent"
+    assert gen.check(p, CTX, set()) is None
 
 
 if __name__ == "__main__":

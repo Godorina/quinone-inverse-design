@@ -24,7 +24,7 @@ def tiny_context():
             {"id": "D02", "smiles": F_BQ, "inchikey": "ACDQKMGNQHDBNL-UHFFFAOYSA-N"},
         ],
         "kg": [{"id": "K001", "iri": "urn:k:1", "name": "evidence"}],
-        "kg_inchikeys": set(), "cores_smarts": [BQ], "allowed_subst": {"F", "Cl"},
+        "domain": "v1", "kg_inchikeys": set(), "cores_smarts": [BQ], "allowed_subst": {"F", "Cl"},
         "ref_fps": [BQ, F_BQ], "line": {"a": -1, "b": 0, "sigma": 1},
     }
 

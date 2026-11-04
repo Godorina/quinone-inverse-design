@@ -1,12 +1,55 @@
 {
   "excluded_detached": 3,
+  "family_residuals": {
+    "benzodithiophene-dione": {
+      "max_abs": 0.6189739130378165,
+      "mean": 0.6189739130378165,
+      "n": 1
+    },
+    "diaminonaphthoquinone": {
+      "max_abs": 0.7694389677781075,
+      "mean": -0.7694389677781075,
+      "n": 1
+    },
+    "original_1_rings": {
+      "max_abs": 3.373226987761221,
+      "mean": -2.2274954592066445,
+      "n": 4
+    },
+    "original_2_rings": {
+      "max_abs": 0.3810980277781084,
+      "mean": -0.3810980277781084,
+      "n": 1
+    },
+    "original_3_rings": {
+      "max_abs": 8.062972121754886,
+      "mean": 2.9602231480799976,
+      "n": 7
+    },
+    "phenanthroline-dione": {
+      "max_abs": 1.8168877087820867,
+      "mean": -1.8168877087820867,
+      "n": 1
+    },
+    "quinoxaline-dione": {
+      "max_abs": 3.5272236003442643,
+      "mean": -3.154376469477716,
+      "n": 3
+    }
+  },
   "line": {
+    "a": -10.79814529768974,
+    "b": -47.556304329783046,
+    "n": 18,
+    "sigma": 3.237774743441207
+  },
+  "line_measurable": true,
+  "line_v1": {
     "a": -8.971458339658367,
     "b": -42.406668947099355,
     "n": 12,
     "sigma": 3.4349261629533934
   },
-  "line_measurable": true,
   "molecules": [
     {
       "E2_eV": -2.237027607950826,
@@ -15,6 +58,7 @@
       "co2_detached": false,
       "co2_distance": 1.4904741977371712,
       "dE_bind_kcal": -18.66018216744166,
+      "family": "original_3_rings",
       "inchikey": "AQXYVFBSOOBBQV-UHFFFAOYSA-N"
     },
     {
@@ -24,6 +68,7 @@
       "co2_detached": false,
       "co2_distance": 1.4856968143209692,
       "dE_bind_kcal": -17.627812229997204,
+      "family": "original_3_rings",
       "inchikey": "BTLXPCBPYBNQNR-UHFFFAOYSA-N"
     },
     {
@@ -33,6 +78,7 @@
       "co2_detached": true,
       "co2_distance": 2.467268706313453,
       "dE_bind_kcal": -7.902775090506253,
+      "family": "original_1_rings",
       "inchikey": "DNXUGBMARDFRGG-UHFFFAOYSA-N"
     },
     {
@@ -42,7 +88,18 @@
       "co2_detached": false,
       "co2_distance": 1.4828878992232637,
       "dE_bind_kcal": -20.954939430923645,
+      "family": "original_3_rings",
       "inchikey": "FBMQNRKSAWNXBT-UHFFFAOYSA-N"
+    },
+    {
+      "E2_eV": -2.1758768944427476,
+      "E2_reported_V": 2.1758768944427476,
+      "E_O2_eV": -2.230119513869266,
+      "co2_detached": false,
+      "co2_distance": 1.4662270295979551,
+      "dE_bind_kcal": -27.5880930740486,
+      "family": "quinoxaline-dione",
+      "inchikey": "GHLUWAJFYKILGZ-UHFFFAOYSA-N"
     },
     {
       "E2_eV": -2.437147397216987,
@@ -51,6 +108,7 @@
       "co2_detached": false,
       "co2_distance": 1.5310900146878574,
       "dE_bind_kcal": -13.176660500992767,
+      "family": "original_3_rings",
       "inchikey": "GUEIZVNYDFNHJU-UHFFFAOYSA-N"
     },
     {
@@ -60,6 +118,7 @@
       "co2_detached": true,
       "co2_distance": 2.574481532025363,
       "dE_bind_kcal": -7.079285957022279,
+      "family": "original_1_rings",
       "inchikey": "HZNVUJQVZSTENZ-UHFFFAOYSA-N"
     },
     {
@@ -69,6 +128,7 @@
       "co2_detached": false,
       "co2_distance": 1.4705517241698367,
       "dE_bind_kcal": -25.79966429875853,
+      "family": "original_1_rings",
       "inchikey": "JCARTGJGWCGSSU-UHFFFAOYSA-N"
     },
     {
@@ -78,7 +138,18 @@
       "co2_detached": false,
       "co2_distance": 1.4901527984024194,
       "dE_bind_kcal": -24.331667840117035,
+      "family": "original_1_rings",
       "inchikey": "JKLYZOGJWVAIQS-UHFFFAOYSA-N"
+    },
+    {
+      "E2_eV": -2.220411642951694,
+      "E2_reported_V": 2.220411642951694,
+      "E_O2_eV": -2.230119513869266,
+      "co2_detached": false,
+      "co2_distance": 1.4641416773610187,
+      "dE_bind_kcal": -25.39686449729075,
+      "family": "phenanthroline-dione",
+      "inchikey": "KCALAFIVPCAXJI-UHFFFAOYSA-N"
     },
     {
       "E2_eV": -2.0513773083330142,
@@ -87,6 +158,7 @@
       "co2_detached": false,
       "co2_distance": 1.4703360824029639,
       "dE_bind_kcal": -24.58336565305231,
+      "family": "original_3_rings",
       "inchikey": "KHUFHLFHOQVFGB-UHFFFAOYSA-N"
     },
     {
@@ -96,6 +168,7 @@
       "co2_detached": true,
       "co2_distance": 2.5313409994639007,
       "dE_bind_kcal": -7.564045693931263,
+      "family": "original_2_rings",
       "inchikey": "KIAJWKWOKTWTIZ-UHFFFAOYSA-N"
     },
     {
@@ -105,7 +178,18 @@
       "co2_detached": false,
       "co2_distance": 1.5037234480536381,
       "dE_bind_kcal": -19.21452322120203,
+      "family": "original_1_rings",
       "inchikey": "LWHDQPLUIFIFFT-UHFFFAOYSA-N"
+    },
+    {
+      "E2_eV": -2.2277925817005992,
+      "E2_reported_V": 2.2277925817005992,
+      "E_O2_eV": -2.230119513869266,
+      "co2_detached": false,
+      "co2_distance": 1.4670806714206188,
+      "dE_bind_kcal": -26.656338628172733,
+      "family": "quinoxaline-dione",
+      "inchikey": "NCWRIGLPSABKGA-UHFFFAOYSA-N"
     },
     {
       "E2_eV": -2.038857454414933,
@@ -114,7 +198,18 @@
       "co2_detached": false,
       "co2_distance": 1.4718005249690194,
       "dE_bind_kcal": -24.612101588808883,
+      "family": "original_3_rings",
       "inchikey": "RZVHIXYEVGDQDX-UHFFFAOYSA-N"
+    },
+    {
+      "E2_eV": -2.1111783492143883,
+      "E2_reported_V": 2.1111783492143883,
+      "E_O2_eV": -2.230119513869266,
+      "co2_detached": false,
+      "co2_distance": 1.4807328783298221,
+      "dE_bind_kcal": -24.140519852591495,
+      "family": "benzodithiophene-dione",
+      "inchikey": "SIUXRPJYVQQBAF-UHFFFAOYSA-N"
     },
     {
       "E2_eV": -2.319402121793004,
@@ -123,6 +218,7 @@
       "co2_detached": false,
       "co2_distance": 1.4830946032846533,
       "dE_bind_kcal": -22.892161242670426,
+      "family": "original_2_rings",
       "inchikey": "SVPKNMBRVBMTLB-UHFFFAOYSA-N"
     },
     {
@@ -132,7 +228,28 @@
       "co2_detached": false,
       "co2_distance": 1.4946977968147253,
       "dE_bind_kcal": -21.769878227757857,
+      "family": "original_1_rings",
       "inchikey": "UGNWTBMOAKPKBL-UHFFFAOYSA-N"
+    },
+    {
+      "E2_eV": -2.3057613812837072,
+      "E2_reported_V": 2.3057613812837072,
+      "E_O2_eV": -2.230119513869266,
+      "co2_detached": false,
+      "co2_distance": 1.4688987768504091,
+      "dE_bind_kcal": -25.43820143226057,
+      "family": "quinoxaline-dione",
+      "inchikey": "VNBZDYJWROOJRD-UHFFFAOYSA-N"
+    },
+    {
+      "E2_eV": -1.8514317067635824,
+      "E2_reported_V": 1.8514317067635824,
+      "E_O2_eV": -2.230119513869266,
+      "co2_detached": false,
+      "co2_distance": 1.4416210661590663,
+      "dE_bind_kcal": -28.33371471917829,
+      "family": "diaminonaphthoquinone",
+      "inchikey": "YGFBBXYYCLHOOW-UHFFFAOYSA-N"
     },
     {
       "E2_eV": -2.033749703130892,
@@ -141,6 +258,7 @@
       "co2_detached": false,
       "co2_distance": 1.458101567789804,
       "dE_bind_kcal": -27.89734957958032,
+      "family": "original_3_rings",
       "inchikey": "YYVYAPXYZVYDHN-UHFFFAOYSA-N"
     }
   ]

@@ -1,0 +1,556 @@
+{
+  "1,10-phenanthroline-5,6-dione": {
+    "cid": 72810,
+    "smiles": "C1=CC2=C(C3=C(C=CC=N3)C(=O)C2=O)N=C1",
+    "status": "found"
+  },
+  "1,2-dichloronaphthoquinone (2ClNQ)": {
+    "status": "not_found"
+  },
+  "1,2-naphthoquinone": {
+    "cid": 10667,
+    "smiles": "C1=CC=C2C(=C1)C=CC(=O)C2=O",
+    "status": "found"
+  },
+  "1,2-naphthoquinone (oNQ)": {
+    "status": "not_found"
+  },
+  "1,4-BTMAPAQ": {
+    "status": "not_found"
+  },
+  "1,4-Dichloroquinone (2ClQ)": {
+    "status": "not_found"
+  },
+  "1,4-Napthoquinone": {
+    "status": "not_found"
+  },
+  "1,4-benzoquinone": {
+    "cid": 4650,
+    "smiles": "C1=CC(=O)C=CC1=O",
+    "status": "found"
+  },
+  "1,4-benzoquinone (BQ)": {
+    "status": "not_found"
+  },
+  "1,4-difluoroanthraquinone": {
+    "cid": 2818125,
+    "smiles": "C1=CC=C2C(=C1)C(=O)C3=C(C=CC(=C3C2=O)F)F",
+    "status": "found"
+  },
+  "1,4-methoxyanthraquinone": {
+    "status": "not_found"
+  },
+  "1,4-naphthoquinone": {
+    "cid": 8530,
+    "smiles": "C1=CC=C2C(=O)C=CC(=O)C2=C1",
+    "status": "found"
+  },
+  "1,4-naphthoquinone (pNQ)": {
+    "status": "not_found"
+  },
+  "1,5-BTMAPAQ": {
+    "status": "not_found"
+  },
+  "1,5-dimethylbenzoquinone (2MeQ)": {
+    "status": "not_found"
+  },
+  "1,8-BTMAPAQ": {
+    "status": "not_found"
+  },
+  "1,8-BTMAPAQs": {
+    "status": "not_found"
+  },
+  "1-Chloroanthraquinone": {
+    "cid": 6709,
+    "smiles": "C1=CC=C2C(=C1)C(=O)C3=C(C2=O)C(=CC=C3)Cl",
+    "status": "found"
+  },
+  "1-Hydroxyanthraquinone": {
+    "cid": 8512,
+    "smiles": "C1=CC=C2C(=C1)C(=O)C3=C(C2=O)C(=CC=C3)O",
+    "status": "found"
+  },
+  "1-aminoanthraquinone": {
+    "cid": 6710,
+    "smiles": "C1=CC=C2C(=C1)C(=O)C3=C(C2=O)C(=CC=C3)N",
+    "status": "found"
+  },
+  "1-bromoanthraquinone": {
+    "cid": 12444,
+    "smiles": "C1=CC=C2C(=C1)C(=O)C3=C(C2=O)C(=CC=C3)Br",
+    "status": "found"
+  },
+  "1-chloroanthraquinone": {
+    "cid": 6709,
+    "smiles": "C1=CC=C2C(=C1)C(=O)C3=C(C2=O)C(=CC=C3)Cl",
+    "status": "found"
+  },
+  "1-methylaminoanthraquinone": {
+    "cid": 6706,
+    "smiles": "CNC1=CC=CC2=C1C(=O)C3=CC=CC=C3C2=O",
+    "status": "found"
+  },
+  "10-ethyl-3-methyl ﬂavin derivative": {
+    "status": "not_found"
+  },
+  "2,1,3-benzothiadiazole": {
+    "cid": 67502,
+    "smiles": "C1=CC2=NSN=C2C=C1",
+    "status": "found"
+  },
+  "2,1,3-benzothiadiazole (BTZ)": {
+    "status": "not_found"
+  },
+  "2,3,5,6-tetrachloro-p-benzoquinone": {
+    "cid": 8371,
+    "smiles": "C1(=C(C(=O)C(=C(C1=O)Cl)Cl)Cl)Cl",
+    "status": "found"
+  },
+  "2,3,5,6-tetrachlorobenzoquinone": {
+    "cid": 8371,
+    "smiles": "C1(=C(C(=O)C(=C(C1=O)Cl)Cl)Cl)Cl",
+    "status": "found"
+  },
+  "2,3-Di-(2-(2-methoxyethoxy)ethoxy)-1,4-naphthoquinone": {
+    "status": "not_found"
+  },
+  "2,3-Di-(2-(2-methoxyethoxy)ethoxy)-p-naphthoquinone": {
+    "status": "not_found"
+  },
+  "2,3-bis(4-methoxyphenyl)quinoxaline-5,8-dione": {
+    "status": "not_found"
+  },
+  "2,3-dichloro-p-napthoquinone": {
+    "status": "not_found"
+  },
+  "2,3-dicyano-1,4-naphthoquinone": {
+    "cid": 98547,
+    "smiles": "C1=CC=C2C(=C1)C(=O)C(=C(C2=O)C#N)C#N",
+    "status": "found"
+  },
+  "2,3-dimethyl-1,4-naphthoquinone": {
+    "cid": 16615,
+    "smiles": "CC1=C(C(=O)C2=CC=CC=C2C1=O)C",
+    "status": "found"
+  },
+  "2,3-dimethyl-p-naphthoquinone": {
+    "status": "not_found"
+  },
+  "2,3-dimethyl-p-napthoquinone": {
+    "status": "not_found"
+  },
+  "2,3-diphenylquinoxaline-5,8-dione": {
+    "cid": 278888,
+    "smiles": "C1=CC=C(C=C1)C2=C(N=C3C(=O)C=CC(=O)C3=N2)C4=CC=CC=C4",
+    "status": "found"
+  },
+  "2,3-naphthoquinone": {
+    "cid": 11105623,
+    "smiles": "C1=CC2=CC(=O)C(=O)C=C2C=C1",
+    "status": "found"
+  },
+  "2,3-naphthoquinone dianion": {
+    "status": "not_found"
+  },
+  "2,5-bis(dimethylamino)-3,6-difluoro-1,4-benzoquinone": {
+    "status": "not_found"
+  },
+  "2,5-bis(dimethylamino)-3,6-difluoro-p-benzoquinone": {
+    "status": "not_found"
+  },
+  "2,5-bis(dimethylamino)-p-benzoquinone": {
+    "cid": 96304,
+    "smiles": "CN(C)C1=CC(=O)C(=CC1=O)N(C)C",
+    "status": "found"
+  },
+  "2,6-D2PEAQ": {
+    "status": "not_found"
+  },
+  "2,6-dimethyl-1,4-benzoquinone": {
+    "cid": 68241,
+    "smiles": "CC1=CC(=O)C=C(C1=O)C",
+    "status": "found"
+  },
+  "2,6-dimethyl-1,4-benzoquinone (DMBQ)": {
+    "status": "not_found"
+  },
+  "2,7-Diiodo-9,10-phenanthraquinone": {
+    "status": "not_found"
+  },
+  "2,7-anthraquinone disulfonic acid": {
+    "cid": 66533,
+    "smiles": "C1=CC2=C(C=C1S(=O)(=O)O)C(=O)C3=C(C2=O)C=CC(=C3)S(=O)(=O)O",
+    "status": "found"
+  },
+  "2,7-di-tert-butyl-1,4-benzoquinone": {
+    "status": "not_found"
+  },
+  "2,7-di-tert-butyl-p-benzoquinone": {
+    "status": "not_found"
+  },
+  "2,7-diaminophenanthrene-9,10-dione": {
+    "cid": 1980698,
+    "smiles": "C1=CC2=C(C=C1N)C(=O)C(=O)C3=C2C=CC(=C3)N",
+    "status": "found"
+  },
+  "2,7-dichloro-1,4-benzoquinone": {
+    "status": "not_found"
+  },
+  "2,7-dichloro-p-benzoquinone": {
+    "status": "not_found"
+  },
+  "2-Chloroanthraquinone": {
+    "cid": 8553,
+    "smiles": "C1=CC=C2C(=C1)C(=O)C3=C(C2=O)C=C(C=C3)Cl",
+    "status": "found"
+  },
+  "2-Iodo-9,10-phenanthraquinone": {
+    "status": "not_found"
+  },
+  "2-aminoanthracene-9,10-dione": {
+    "cid": 8341,
+    "smiles": "C1=CC=C2C(=C1)C(=O)C3=C(C2=O)C=C(C=C3)N",
+    "status": "found"
+  },
+  "2-aminoanthracene-9,10-dione (AAQ)": {
+    "status": "not_found"
+  },
+  "2-aminoanthraquinone": {
+    "cid": 8341,
+    "smiles": "C1=CC=C2C(=C1)C(=O)C3=C(C2=O)C=C(C=C3)N",
+    "status": "found"
+  },
+  "2-carboxylic acid-9,10-anthraquinone": {
+    "status": "not_found"
+  },
+  "2-chloro-9,10-anthraquinone": {
+    "cid": 8553,
+    "smiles": "C1=CC=C2C(=C1)C(=O)C3=C(C2=O)C=C(C=C3)Cl",
+    "status": "found"
+  },
+  "2-hydroxy-9,10-anthraquinone": {
+    "cid": 11796,
+    "smiles": "C1=CC=C2C(=C1)C(=O)C3=C(C2=O)C=C(C=C3)O",
+    "status": "found"
+  },
+  "2-methyl-1,4-naphthoquinone": {
+    "cid": 4055,
+    "smiles": "CC1=CC(=O)C2=CC=CC=C2C1=O",
+    "status": "found"
+  },
+  "4-BQ-tpy": {
+    "status": "not_found"
+  },
+  "9,10-Phenanthrenequinone": {
+    "cid": 6763,
+    "smiles": "C1=CC=C2C(=C1)C3=CC=CC=C3C(=O)C2=O",
+    "status": "found"
+  },
+  "9,10-anthraquinone": {
+    "cid": 6780,
+    "smiles": "C1=CC=C2C(=C1)C(=O)C3=CC=CC=C3C2=O",
+    "status": "found"
+  },
+  "9,10-anthraquinone (AQ)": {
+    "status": "not_found"
+  },
+  "9,10-phenanthraquinone": {
+    "cid": 6763,
+    "smiles": "C1=CC=C2C(=C1)C3=CC=CC=C3C(=O)C2=O",
+    "status": "found"
+  },
+  "9,10-phenanthrenequinone (PAQ)": {
+    "status": "not_found"
+  },
+  "AQ": {
+    "status": "not_found"
+  },
+  "AQ-1,8-3E-OH": {
+    "status": "not_found"
+  },
+  "AQCOF@CNTs": {
+    "status": "not_found"
+  },
+  "AQDS": {
+    "status": "ambiguous"
+  },
+  "AQphen": {
+    "status": "not_found"
+  },
+  "Anthraquinone": {
+    "cid": 6780,
+    "smiles": "C1=CC=C2C(=C1)C(=O)C3=CC=CC=C3C2=O",
+    "status": "found"
+  },
+  "BDT-Q": {
+    "status": "not_found"
+  },
+  "BDT-Q/CNT": {
+    "status": "not_found"
+  },
+  "BQ-Cl2": {
+    "status": "not_found"
+  },
+  "Bromanil": {
+    "cid": 68101,
+    "smiles": "C1(=C(C(=O)C(=C(C1=O)Br)Br)Br)Br",
+    "status": "found"
+  },
+  "Coenzyme Q0": {
+    "cid": 69068,
+    "smiles": "CC1=CC(=O)C(=C(C1=O)OC)OC",
+    "status": "found"
+  },
+  "Coenzyme Q1": {
+    "cid": 4462,
+    "smiles": "CC1=C(C(=O)C(=C(C1=O)OC)OC)CC=C(C)C",
+    "status": "found"
+  },
+  "Coenzyme Q10": {
+    "max_heavy_atoms": 40,
+    "status": "too_many_heavy_atoms"
+  },
+  "Coenzyme Q2": {
+    "cid": 5280346,
+    "smiles": "CC1=C(C(=O)C(=C(C1=O)OC)OC)C/C=C(\\C)/CCC=C(C)C",
+    "status": "found"
+  },
+  "Coenzyme Q4": {
+    "cid": 5283545,
+    "smiles": "CC1=C(C(=O)C(=C(C1=O)OC)OC)C/C=C(\\C)/CC/C=C(\\C)/CC/C=C(\\C)/CCC=C(C)C",
+    "status": "found"
+  },
+  "DAAQ-TFP": {
+    "status": "not_found"
+  },
+  "DADOP-QF-TFP": {
+    "status": "not_found"
+  },
+  "DADOP-TCA": {
+    "status": "not_found"
+  },
+  "DADOP-TFP": {
+    "status": "not_found"
+  },
+  "DADOP-TRI": {
+    "status": "not_found"
+  },
+  "Ester Derivative of 9,10-Anthraquinone": {
+    "status": "not_found"
+  },
+  "Ether Derivative of 9,10-Anthraquinone": {
+    "status": "not_found"
+  },
+  "NQ-G2": {
+    "status": "not_found"
+  },
+  "NQphen": {
+    "status": "not_found"
+  },
+  "PBDT-Q": {
+    "status": "not_found"
+  },
+  "PBDT-Q/CNT": {
+    "status": "not_found"
+  },
+  "PQ": {
+    "status": "not_found"
+  },
+  "PQ-I": {
+    "status": "not_found"
+  },
+  "PQ-I2": {
+    "status": "not_found"
+  },
+  "Re(CO)3(phendione)(4-pyridinecarboxaldehyde)": {
+    "status": "not_found"
+  },
+  "Re(CO)3Cl(AQphen)": {
+    "status": "not_found"
+  },
+  "Re(CO)3Cl(phendione)": {
+    "status": "not_found"
+  },
+  "Re(CO)5Cl(phendione)": {
+    "status": "not_found"
+  },
+  "TMAP-NH2-NQ": {
+    "status": "not_found"
+  },
+  "Tiron": {
+    "status": "metal"
+  },
+  "Vitamin K2": {
+    "status": "ambiguous"
+  },
+  "Vitamin K3": {
+    "cid": 4055,
+    "smiles": "CC1=CC(=O)C2=CC=CC=C2C1=O",
+    "status": "found"
+  },
+  "amide-derivative 9,10-anthraquinone": {
+    "status": "not_found"
+  },
+  "anthraquinone": {
+    "cid": 6780,
+    "smiles": "C1=CC=C2C(=C1)C(=O)C3=CC=CC=C3C2=O",
+    "status": "found"
+  },
+  "anthraquinone (AQ)": {
+    "status": "not_found"
+  },
+  "anthraquinone-1,5-disulfonic acid sodium": {
+    "status": "not_found"
+  },
+  "anthraquinone-2,6-disulfonic acid": {
+    "cid": 66534,
+    "smiles": "C1=CC2=C(C=C1S(=O)(=O)O)C(=O)C3=C(C2=O)C=C(C=C3)S(=O)(=O)O",
+    "status": "found"
+  },
+  "anthraquinone-2,7-disulfonate": {
+    "cid": 66533,
+    "smiles": "C1=CC2=C(C=C1S(=O)(=O)O)C(=O)C3=C(C2=O)C=CC(=C3)S(=O)(=O)O",
+    "status": "found"
+  },
+  "anthraquinone-2,7-disulfonate (AQDS)": {
+    "status": "not_found"
+  },
+  "benzodithiophene quinone (BDT-Q)": {
+    "status": "not_found"
+  },
+  "benzoquinone": {
+    "cid": 4650,
+    "smiles": "C1=CC(=O)C=CC1=O",
+    "status": "found"
+  },
+  "benzoquinone (BQ)": {
+    "status": "not_found"
+  },
+  "chitosan-rhenium": {
+    "status": "not_found"
+  },
+  "chitosan−rhenium": {
+    "status": "not_found"
+  },
+  "chloranil (4ClQ)": {
+    "status": "not_found"
+  },
+  "compound 1": {
+    "status": "not_found"
+  },
+  "compound 2": {
+    "status": "not_found"
+  },
+  "compound 3": {
+    "status": "metal"
+  },
+  "compound 5": {
+    "cid": 169492136,
+    "smiles": "C/C=C/C=C\\C(=O)N[C@@H](CCSC(=O)/C=C\\C=C\\C)C(=O)O",
+    "status": "found"
+  },
+  "compound 6": {
+    "status": "not_found"
+  },
+  "dichlorodicyanoquinone (DDQ)": {
+    "status": "not_found"
+  },
+  "dimethyl 4,4′-(5,8-dioxo-5,8-dihydroquinoxaline-2,3-diyl)dibenzoate": {
+    "status": "not_found"
+  },
+  "f-ABP": {
+    "status": "not_found"
+  },
+  "f-BP-1300": {
+    "status": "not_found"
+  },
+  "f-CMK-3": {
+    "status": "not_found"
+  },
+  "f-YP-80F": {
+    "status": "not_found"
+  },
+  "naphthoquinone (NQ)": {
+    "status": "not_found"
+  },
+  "o-naphthoquinone": {
+    "cid": 10667,
+    "smiles": "C1=CC=C2C(=C1)C=CC(=O)C2=O",
+    "status": "found"
+  },
+  "o-napthoquinone": {
+    "status": "not_found"
+  },
+  "octafluoroanthraquinone": {
+    "cid": 6426350,
+    "smiles": "C12=C(C(=C(C(=C1F)F)F)F)C(=O)C3=C(C2=O)C(=C(C(=C3F)F)F)F",
+    "status": "found"
+  },
+  "p-Benzoquinone": {
+    "cid": 4650,
+    "smiles": "C1=CC(=O)C=CC1=O",
+    "status": "found"
+  },
+  "p-NQ": {
+    "status": "not_found"
+  },
+  "p-NQ-Cl2": {
+    "status": "not_found"
+  },
+  "p-NQ-Me2": {
+    "status": "not_found"
+  },
+  "p-Napthoquinone": {
+    "status": "not_found"
+  },
+  "p-naphthoquinone": {
+    "cid": 8530,
+    "smiles": "C1=CC=C2C(=O)C=CC(=O)C2=C1",
+    "status": "found"
+  },
+  "phendione": {
+    "cid": 72810,
+    "smiles": "C1=CC2=C(C3=C(C=CC=N3)C(=O)C2=O)N=C1",
+    "status": "found"
+  },
+  "sodium 9,10-dioxo-9,10-dihydroanthracene-2,7-disulfonate": {
+    "status": "metal"
+  },
+  "sodium anthraquinone-2-sulfonate": {
+    "status": "metal"
+  },
+  "sorbent 4": {
+    "status": "not_found"
+  },
+  "terachloro-benzoquinone": {
+    "status": "not_found"
+  },
+  "terachloro-benzoquinone (BQ-Cl4)": {
+    "status": "not_found"
+  },
+  "tetra(dimethlyamino)-1,4-benzoquinone": {
+    "status": "not_found"
+  },
+  "tetra(dimethlyamino)-p-benzoquinone": {
+    "status": "not_found"
+  },
+  "tetrachloro-p-benzoquinone": {
+    "cid": 8371,
+    "smiles": "C1(=C(C(=O)C(=C(C1=O)Cl)Cl)Cl)Cl",
+    "status": "found"
+  },
+  "tetramethyl-p-benzoquinone": {
+    "cid": 68238,
+    "smiles": "CC1=C(C(=O)C(=C(C1=O)C)C)C",
+    "status": "found"
+  },
+  "tetramethylester-1,4-benzoquinone": {
+    "status": "not_found"
+  },
+  "tetramethylester-p-benzoquinone": {
+    "status": "not_found"
+  },
+  "u-CMK-3": {
+    "status": "not_found"
+  }
+}

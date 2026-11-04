@@ -1,4 +1,14 @@
 {
+  "AFDMGIUNNDWCBX-UHFFFAOYSA-N": {
+    "cid": 418494,
+    "iupac": "6,9-dihydroxybenzo[g]quinoline-5,10-dione",
+    "status": "found"
+  },
+  "ALBXEVXVOXRGPC-UHFFFAOYSA-N": {
+    "cid": null,
+    "iupac": null,
+    "status": "not_found"
+  },
   "AQXYVFBSOOBBQV-UHFFFAOYSA-N": {
     "cid": 8323,
     "iupac": "1-amino-4-hydroxyanthracene-9,10-dione",
@@ -25,6 +35,11 @@
     "status": "found"
   },
   "BTYMLGIZBYPMAV-UHFFFAOYSA-N": {
+    "cid": null,
+    "iupac": null,
+    "status": "not_found"
+  },
+  "CAVKVIOROYYCTO-UHFFFAOYSA-N": {
     "cid": null,
     "iupac": null,
     "status": "not_found"
@@ -84,6 +99,21 @@
     "iupac": "naphthalene-1,4-dione",
     "status": "found"
   },
+  "GCDBEYOJCZLKMC-UHFFFAOYSA-N": {
+    "cid": 11796,
+    "iupac": "2-hydroxyanthracene-9,10-dione",
+    "status": "found"
+  },
+  "GHLUWAJFYKILGZ-UHFFFAOYSA-N": {
+    "cid": 11355645,
+    "iupac": "quinoxaline-5,8-dione",
+    "status": "found"
+  },
+  "GNBZSYCVGHQSMC-UHFFFAOYSA-N": {
+    "cid": 19883972,
+    "iupac": "3,5-dichloro-2-methylcyclohexa-2,5-diene-1,4-dione",
+    "status": "found"
+  },
   "GNQVNMOALCQXTO-UHFFFAOYSA-N": {
     "cid": 352335,
     "iupac": "4-aminophenanthrene-9,10-dione",
@@ -109,14 +139,29 @@
     "iupac": "4,5-dichloro-3,6-dioxocyclohexa-1,4-diene-1,2-dicarbonitrile",
     "status": "found"
   },
+  "IAOSJZVZBBNNOU-UHFFFAOYSA-N": {
+    "cid": null,
+    "iupac": null,
+    "status": "not_found"
+  },
   "IEPZQKHOQUWWMU-UHFFFAOYSA-N": {
     "cid": 130026780,
     "iupac": "2-chloro-5-fluorocyclohexa-2,5-diene-1,4-dione",
     "status": "found"
   },
+  "IYKJULVLOGOTFQ-UHFFFAOYSA-N": {
+    "cid": 23262334,
+    "iupac": "2,3,5-trifluoro-6-methylcyclohexa-2,5-diene-1,4-dione",
+    "status": "found"
+  },
   "JCARTGJGWCGSSU-UHFFFAOYSA-N": {
     "cid": 12771,
     "iupac": "2,6-dichlorocyclohexa-2,5-diene-1,4-dione",
+    "status": "found"
+  },
+  "JJEJSMGPHGEAHY-UHFFFAOYSA-N": {
+    "cid": 638851,
+    "iupac": "1-hydroxy-6-methylanthracene-9,10-dione",
     "status": "found"
   },
   "JKGFIOZFZCDESJ-UHFFFAOYSA-N": {
@@ -134,9 +179,24 @@
     "iupac": "2,5-dichloro-3,6-difluorocyclohexa-2,5-diene-1,4-dione",
     "status": "found"
   },
+  "JRTUYKKYUKKRIS-UHFFFAOYSA-N": {
+    "cid": null,
+    "iupac": null,
+    "status": "not_found"
+  },
   "JTRRSYRDRYQMQO-UHFFFAOYSA-N": {
     "cid": 11344083,
     "iupac": "2,6-difluorocyclohexa-2,5-diene-1,4-dione",
+    "status": "found"
+  },
+  "JUEZZBCFCJSJOC-UHFFFAOYSA-N": {
+    "cid": 101865165,
+    "iupac": "2-chloro-6-fluorocyclohexa-2,5-diene-1,4-dione",
+    "status": "found"
+  },
+  "KCALAFIVPCAXJI-UHFFFAOYSA-N": {
+    "cid": 72810,
+    "iupac": "1,10-phenanthroline-5,6-dione",
     "status": "found"
   },
   "KHUFHLFHOQVFGB-UHFFFAOYSA-N": {
@@ -169,15 +229,35 @@
     "iupac": "2,5-dichlorocyclohexa-2,5-diene-1,4-dione",
     "status": "found"
   },
+  "LRQNASHCYSQENE-UHFFFAOYSA-N": {
+    "cid": 14067871,
+    "iupac": "2,3-dichloroquinoxaline-5,8-dione",
+    "status": "found"
+  },
   "LWHDQPLUIFIFFT-UHFFFAOYSA-N": {
     "cid": 68101,
     "iupac": "2,3,5,6-tetrabromocyclohexa-2,5-diene-1,4-dione",
     "status": "found"
   },
+  "METHVWQPJYOAPU-UHFFFAOYSA-N": {
+    "cid": null,
+    "iupac": null,
+    "status": "not_found"
+  },
+  "MTINXPSGYHAJKO-UHFFFAOYSA-N": {
+    "cid": null,
+    "iupac": null,
+    "status": "not_found"
+  },
   "MTOMDPXSGNMANE-UHFFFAOYSA-N": {
     "cid": 101102474,
     "iupac": "2-bromo-3,5,6-trichlorocyclohexa-2,5-diene-1,4-dione",
     "status": "found"
+  },
+  "NCWRIGLPSABKGA-UHFFFAOYSA-N": {
+    "cid": null,
+    "iupac": null,
+    "status": "not_found"
   },
   "NFCYFTDUSTZLCS-UHFFFAOYSA-N": {
     "cid": null,
@@ -197,6 +277,11 @@
   "NYAVPORNTNZVOE-UHFFFAOYSA-N": {
     "cid": 351593,
     "iupac": "2-fluorophenanthrene-9,10-dione",
+    "status": "found"
+  },
+  "OTDZYMUHPIUUQE-UHFFFAOYSA-N": {
+    "cid": 19915278,
+    "iupac": "1,4-dihydroxy-5-methylanthracene-9,10-dione",
     "status": "found"
   },
   "PGSXOQZNHHGTHK-UHFFFAOYSA-N": {
@@ -229,6 +314,11 @@
     "iupac": "3,6-dichlorophenanthrene-9,10-dione",
     "status": "found"
   },
+  "RICYLKQZEXDOCT-UHFFFAOYSA-N": {
+    "cid": null,
+    "iupac": null,
+    "status": "not_found"
+  },
   "RZVHIXYEVGDQDX-UHFFFAOYSA-N": {
     "cid": 6780,
     "iupac": "anthracene-9,10-dione",
@@ -237,6 +327,16 @@
   "SENUUPBBLQWHMF-UHFFFAOYSA-N": {
     "cid": 68241,
     "iupac": "2,6-dimethylcyclohexa-2,5-diene-1,4-dione",
+    "status": "found"
+  },
+  "SEYCJGXCYDOTGT-UHFFFAOYSA-N": {
+    "cid": 149159,
+    "iupac": "6,7-dichloroquinoxaline-5,8-dione",
+    "status": "found"
+  },
+  "SIUXRPJYVQQBAF-UHFFFAOYSA-N": {
+    "cid": 288478,
+    "iupac": "thieno[2,3-f][1]benzothiole-4,8-dione",
     "status": "found"
   },
   "SJZRFNPTPXVJLK-UHFFFAOYSA-N": {
@@ -249,15 +349,30 @@
     "iupac": "2,3-dichloro-5,6-difluorocyclohexa-2,5-diene-1,4-dione",
     "status": "found"
   },
+  "SVBZNPIEBNZEGE-UHFFFAOYSA-N": {
+    "cid": 134947878,
+    "iupac": "3,5-dichloro-2-(trifluoromethyl)cyclohexa-2,5-diene-1,4-dione",
+    "status": "found"
+  },
   "SVPKNMBRVBMTLB-UHFFFAOYSA-N": {
     "cid": 8342,
     "iupac": "2,3-dichloronaphthalene-1,4-dione",
+    "status": "found"
+  },
+  "TXVFLDVSASONQS-UHFFFAOYSA-N": {
+    "cid": 129919848,
+    "iupac": "3-fluoroquinoline-5,8-dione",
     "status": "found"
   },
   "TYFXNGJGIBMEFV-UHFFFAOYSA-N": {
     "cid": 10956447,
     "iupac": "2,3-dibromocyclohexa-2,5-diene-1,4-dione",
     "status": "found"
+  },
+  "UDAJDRIVAYGYRP-UHFFFAOYSA-N": {
+    "cid": null,
+    "iupac": null,
+    "status": "not_found"
   },
   "UGNWTBMOAKPKBL-UHFFFAOYSA-N": {
     "cid": 8371,
@@ -269,6 +384,11 @@
     "iupac": null,
     "status": "not_found"
   },
+  "UTUADGNURNXMJQ-UHFFFAOYSA-N": {
+    "cid": 11095425,
+    "iupac": "2,3-dichloro-5-methylcyclohexa-2,5-diene-1,4-dione",
+    "status": "found"
+  },
   "UUKXSRGFRMNCGI-UHFFFAOYSA-N": {
     "cid": null,
     "iupac": null,
@@ -277,6 +397,16 @@
   "VDSBRSKMXYUDTA-UHFFFAOYSA-N": {
     "cid": 265842,
     "iupac": "2-chlorophenanthrene-9,10-dione",
+    "status": "found"
+  },
+  "VHKSHSDHWXAPIT-UHFFFAOYSA-N": {
+    "cid": null,
+    "iupac": null,
+    "status": "not_found"
+  },
+  "VNBZDYJWROOJRD-UHFFFAOYSA-N": {
+    "cid": 278888,
+    "iupac": "2,3-diphenylquinoxaline-5,8-dione",
     "status": "found"
   },
   "VSEZYZZXJAKKJQ-UHFFFAOYSA-N": {
@@ -294,10 +424,35 @@
     "iupac": "2,3,5-tribromocyclohexa-2,5-diene-1,4-dione",
     "status": "found"
   },
+  "WRJMCDMDERSWFI-UHFFFAOYSA-N": {
+    "cid": null,
+    "iupac": null,
+    "status": "not_found"
+  },
   "XHKUTQNVGAHLPK-UHFFFAOYSA-N": {
     "cid": 14795056,
     "iupac": "2-fluorocyclohexa-2,5-diene-1,4-dione",
     "status": "found"
+  },
+  "XIIXRHAKYWSWNT-UHFFFAOYSA-N": {
+    "cid": null,
+    "iupac": null,
+    "status": "not_found"
+  },
+  "XKJPSLJHYVCADH-UHFFFAOYSA-N": {
+    "cid": 323876,
+    "iupac": "2-amino-3,5,6-trichlorocyclohexa-2,5-diene-1,4-dione",
+    "status": "found"
+  },
+  "XQDJIZIIZRWTNV-UHFFFAOYSA-N": {
+    "cid": null,
+    "iupac": null,
+    "status": "not_found"
+  },
+  "XWUVGDBKIQCSGA-UHFFFAOYSA-N": {
+    "cid": null,
+    "iupac": null,
+    "status": "not_found"
   },
   "XZUKPUPEYNAPPU-UHFFFAOYSA-N": {
     "cid": 21282859,
@@ -312,6 +467,11 @@
   "YYVYAPXYZVYDHN-UHFFFAOYSA-N": {
     "cid": 6763,
     "iupac": "phenanthrene-9,10-dione",
+    "status": "found"
+  },
+  "ZBWPOKNIKGLQBA-UHFFFAOYSA-N": {
+    "cid": 138301,
+    "iupac": "2,3,5-trichloro-6-methylcyclohexa-2,5-diene-1,4-dione",
     "status": "found"
   },
   "ZVIHDGFEDVBZEO-UHFFFAOYSA-N": {

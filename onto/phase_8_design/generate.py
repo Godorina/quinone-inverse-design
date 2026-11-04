@@ -22,6 +22,8 @@ ROOT = Path(__file__).resolve().parents[1]
 KG = ROOT / "phase_5_build" / "kg.ttl"
 SUMMARY = ROOT.parents[0] / "dft" / "runs" / "ref_set" / "summary.json"
 SMILES = ROOT / "phase_4b_extend" / "smiles_proposals.csv"
+EXPANSION = ROOT / "phase_4b_extend" / "reference_expansion.csv"
+SUBSTITUENTS = ["F", "Cl", "Br", "C#N", "C(F)(F)F", "C", "OC", "O", "N", "C(=O)OC", "S(=O)(=O)C"]
 QN = Namespace("https://w3id.org/quinone#")
 CORE_SMARTS = ("O=C1C=CC(=O)C=C1", "O=C1C(=O)c2ccccc2C=C1", "O=C1C=CC2=CC=CC=C2C1=O",
                "O=C1C=CC(=O)c2ccccc21", "O=C1c2ccccc2C(=O)c2ccccc21", "O=C1C(=O)c2ccccc2-c2ccccc21")
@@ -48,7 +50,18 @@ def _substituents(smiles, cores=CORE_SMARTS):
             return index, tuple(sorted(atom.GetSymbol() for atom in mol.GetAtoms()
                                        if atom.GetIdx() not in atoms and
                                        any(n.GetIdx() in atoms for n in atom.GetNeighbors())))
-    return None, ()
+    # ponytail: use the whole ring scaffold when no legacy core matches.
+    from rdkit.Chem.Scaffolds import MurckoScaffold
+    scaffold = MurckoScaffold.GetScaffoldForMol(mol)
+    atoms = set(mol.GetSubstructMatch(scaffold))
+    editable = Chem.RWMol(mol)
+    for bond in mol.GetBonds():
+        if (bond.GetBeginAtomIdx() in atoms) != (bond.GetEndAtomIdx() in atoms):
+            editable.RemoveBond(bond.GetBeginAtomIdx(), bond.GetEndAtomIdx())
+    fragments = Chem.GetMolFrags(editable, sanitizeFrags=False)
+    substituents = [Chem.MolFragmentToSmiles(mol, atomsToUse=fragment, canonical=True)
+                    for fragment in fragments if not any(i in atoms for i in fragment)]
+    return Chem.MolToSmiles(scaffold), tuple(sorted(substituents))
 
 
 def context(kg_path=KG, summary_path=SUMMARY, smiles_path=SMILES):
@@ -64,6 +77,11 @@ def context(kg_path=KG, summary_path=SUMMARY, smiles_path=SMILES):
                     for atom in mol.GetAtoms():
                         if not atom.IsInRing() and any(neighbor.IsInRing() for neighbor in atom.GetNeighbors()):
                             allowed.add(atom.GetSymbol())
+    if EXPANSION.exists():
+        with EXPANSION.open(newline="", encoding="utf-8") as handle:
+            for row in csv.DictReader(handle):
+                key = _inchikey(row["smiles"])
+                records.setdefault(key, {"canonical_smiles": row["smiles"], "name": row["name"]})
     line, dft = summary["line"], []
     for index, value in enumerate(summary["molecules"], 1):
         source = records.get(value["inchikey"])
@@ -94,12 +112,22 @@ def context(kg_path=KG, summary_path=SUMMARY, smiles_path=SMILES):
     return {"dft": dft, "kg": kg, "kg_inchikeys": kg_inchikeys, "cores_smarts": list(CORE_SMARTS), "allowed_subst": allowed & {"F", "Cl", "Br", "N", "O"}, "ref_fps": [row["smiles"] for row in dft], "line": line}
 
 
+def sa_score(smiles):
+    try:
+        from rdkit.Contrib.SA_Score import sascorer
+        mol = Chem.MolFromSmiles(smiles)
+        return sascorer.calculateScore(mol) if mol else None
+    except ImportError:
+        return None
+
+
 def prompt(ctx, previous_smiles):
     dft = "\n".join(f"{r['id']} {r['smiles']} E2={r['E2_eV']:.3f} eV bind={r['dE_bind_kcal']:.2f} f={r['f']:.2f} O2margin={r['o2_margin_V']:.3f} detached={r['co2_detached']}" for r in ctx["dft"])
     kg = "\n".join(f"{r['id']} {r['name']} {r['smiles']} {r['measurements']} O2={r['oxygen_observations']}" for r in ctx["kg"])
+    rules = ("Use a D parent and D/K citations. Edit only by add/replace/remove/move of F, Cl, Br, NH2, OH; use BQ/NQ/AQ/PQ cores." if ctx.get("domain", "v2") == "v1" else "Use a D parent and D/K citations. Propose neutral quinones with a ring 1,2- or 1,4-carbonyl pair, only C/H/N/O/F/Cl/Br/S, and at most 30 heavy atoms. Heterocycles and diverse substituents are allowed.")
     return f"""Propose exactly 10 quinone CO2-capture candidates, or return insufficient_evidence.
 Goal: f >= 2 relative to the exchange line, O2 margin >= 0.15 V, and no CO2 detachment.
-Use a D parent and KG citations only. Edit only by add/replace/remove/move of F, Cl, Br, NH2, OH; use BQ/NQ/AQ/PQ cores.
+{rules}
 Do not repeat these SMILES: {json.dumps(sorted(previous_smiles))}
 Return JSON {{\"proposals\":[{{\"parent_id\":\"D01\",\"smiles\":\"...\",\"edits\":[\"...\"],\"cited_ids\":[\"K001\"],\"hypothesis\":\"...\"}}]}}.
 DFT evidence:\n{dft}\nKG evidence:\n{kg}"""
@@ -115,7 +143,8 @@ def check(proposal, ctx, seen):
     smiles = proposal.get("smiles") if isinstance(proposal, dict) else None
     if not isinstance(smiles, str):
         return "invalid_smiles"
-    reason = t0(smiles) or in_domain(smiles, ctx["cores_smarts"], ctx["allowed_subst"], ctx["ref_fps"])
+    domain = ctx.get("domain", "v2")
+    reason = t0(smiles, domain) or in_domain(smiles, ctx["cores_smarts"], ctx["allowed_subst"], ctx["ref_fps"], domain=domain)
     if reason:
         return reason
     if not set(proposal.get("cited_ids", [])) <= {row["id"] for row in ctx["kg"] + ctx["dft"]}:  # D (our DFT) and K (literature) are both evidence
@@ -147,7 +176,7 @@ def baseline(ctx, parents_used, n=10, seed=0):
         for _ in range(count):
             while attempts < 2000:
                 attempts += 1
-                smiles = edit(parents[parent_id]["smiles"], rng.choice(["add", "replace", "remove", "move"]), substituents=sorted(ctx["allowed_subst"]), rng=rng)
+                smiles = edit(parents[parent_id]["smiles"], rng.choice(["add", "replace", "remove", "move", "aza"] if ctx.get("domain", "v2") == "v2" else ["add", "replace", "remove", "move"]), substituents=SUBSTITUENTS if ctx.get("domain", "v2") == "v2" else sorted(ctx["allowed_subst"]), rng=rng)
                 row = {"parent_id": parent_id, "smiles": smiles, "edits": ["random_edit"], "cited_ids": [], "hypothesis": "B0 random edit", "arm": "b0"}
                 if smiles and check(row, ctx, seen) is None:
                     row["inchikey"] = _inchikey(smiles)
@@ -174,8 +203,10 @@ def main(argv=None):
     parser.add_argument("--replay", type=Path)
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--out", type=Path)
+    parser.add_argument("--domain", choices=["v1", "v2"], default="v2")
     args = parser.parse_args(argv)
     ctx, seen, checked, responses = context(), set(), [], []
+    ctx["domain"] = args.domain
     out = args.out or Path(__file__).with_name("runs") / datetime.now().strftime("%Y%m%d-%H%M")
     out.mkdir(parents=True, exist_ok=True)
     replay = args.replay.read_text().splitlines() if args.replay else []
@@ -188,7 +219,7 @@ def main(argv=None):
         responses.append(response)
         for proposal in response.get("structured_output", response).get("proposals", []):
             reason, key = check(proposal, ctx, seen), _inchikey(proposal.get("smiles", ""))
-            row = {**proposal, "inchikey": key, "reason": reason}
+            row = {**proposal, "inchikey": key, "reason": reason, "sa_score": sa_score(proposal.get("smiles", ""))}
             if reason is None:
                 seen.add(key)
                 checked.append(row)

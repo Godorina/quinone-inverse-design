@@ -1,0 +1,6 @@
+id,smiles
+R3-1,O=C1C=CC(=O)c2nc3nc(F)cnc3nc21
+R3-2,O=C1C=CC(=O)c2nc3nc(F)c(F)nc3nc21
+R3-3,O=C1C=CC(=O)c2nc(Cl)cnc21
+R3-4,O=C1C=CC(=O)c2ncc(F)cc21
+R3-5,O=C1C=CC(=O)c2nc3cnc(F)cc3nc21

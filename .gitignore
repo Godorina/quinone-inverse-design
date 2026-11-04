@@ -25,3 +25,5 @@ onto/phase_4_extract/*.log
 .omc/*
 !.omc/plans/
 !.omc/artifacts/
+**/.omc/state/
+models/

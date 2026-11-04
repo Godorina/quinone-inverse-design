@@ -5,7 +5,7 @@ import random
 from collections import Counter
 
 from rdkit import Chem, DataStructs
-from rdkit.Chem import rdFingerprintGenerator
+from rdkit.Chem import Descriptors, rdFingerprintGenerator
 
 
 QUINONES = ("O=C1C=CC(=O)C=C1", "O=C1C(=O)c2ccccc2C=C1", "O=C1C=CC2=CC=CC=C2C1=O",
@@ -32,14 +32,12 @@ def _choose(items, rng, selected=None):
 
 
 def _substituent(substituents, rng, selected=None):
-    if not substituents:
-        return None
     return selected or _choose(substituents, rng)
 
 
 def _add(mol, position, substituent):
     frag = _mol(substituent)
-    if frag is None or frag.GetNumAtoms() != 1 or position is None:
+    if frag is None or position is None:
         return None
     joined = Chem.CombineMols(mol, frag)
     editable = Chem.RWMol(joined)
@@ -53,13 +51,17 @@ def _add(mol, position, substituent):
 
 def _external_neighbors(mol):
     return [(atom.GetIdx(), neighbor.GetIdx()) for atom in mol.GetAtoms() if atom.IsInRing()
-            for neighbor in atom.GetNeighbors() if not neighbor.IsInRing() and neighbor.GetAtomicNum() != 8]
+            for neighbor in atom.GetNeighbors() if not neighbor.IsInRing() and mol.GetBondBetweenAtoms(atom.GetIdx(), neighbor.GetIdx()).GetBondType() == Chem.BondType.SINGLE]
 
 
 def _remove(mol, ring_idx, sub_idx):
     editable = Chem.RWMol(mol)
     editable.RemoveBond(ring_idx, sub_idx)
-    editable.RemoveAtom(sub_idx)
+    # ponytail: delete the detached substituent fragment; ring-linked substituents are excluded above.
+    fragments = Chem.GetMolFrags(editable, asMols=False, sanitizeFrags=False)
+    removed = next((part for part in fragments if sub_idx in part and ring_idx not in part), ())
+    for idx in sorted(removed, reverse=True):
+        editable.RemoveAtom(idx)
     try:
         Chem.SanitizeMol(editable)
         return Chem.MolToSmiles(editable)
@@ -76,6 +78,18 @@ def edit(smiles, op, *, substituents=(), rng=None, position=None, bond=None, sub
     positions = _positions(mol)
     if op == "add":
         return _add(mol, _choose(positions, rng, position), _substituent(substituents, rng, substituent))
+    if op == "aza":
+        choices = [a.GetIdx() for a in mol.GetAtoms() if a.GetIsAromatic() and a.GetAtomicNum() == 6 and a.GetTotalNumHs()]
+        idx = _choose(choices, rng, position)
+        if idx is None:
+            return None
+        editable = Chem.RWMol(mol)
+        editable.GetAtomWithIdx(idx).SetAtomicNum(7)
+        try:
+            Chem.SanitizeMol(editable)
+            return Chem.MolToSmiles(editable)
+        except ValueError:
+            return None
     external = _external_neighbors(mol)
     if op == "remove":
         picked = _choose(external, rng, bond)
@@ -84,7 +98,12 @@ def edit(smiles, op, *, substituents=(), rng=None, position=None, bond=None, sub
         picked = _choose(external, rng, bond)
         if not picked:
             return None
-        old = mol.GetAtomWithIdx(picked[1]).GetSymbol()
+        cut = Chem.RWMol(mol)
+        cut.RemoveBond(*picked)
+        fragment = next((part for part in Chem.GetMolFrags(cut, asMols=False, sanitizeFrags=False) if picked[1] in part and picked[0] not in part), ())
+        if not fragment:
+            return None
+        old = Chem.MolFragmentToSmiles(mol, atomsToUse=fragment, rootedAtAtom=picked[1], canonical=False)
         reduced = _remove(mol, *picked)
         if reduced is None:
             return None
@@ -94,11 +113,26 @@ def edit(smiles, op, *, substituents=(), rng=None, position=None, bond=None, sub
     return None
 
 
-def t0(smiles):
+def t0(smiles, domain="v2"):
     """Return a rejection reason, or ``None`` for a small, metal-free quinone."""
     mol = _mol(smiles)
     if mol is None:
         return "invalid_smiles"
+    if domain == "v2":
+        if Descriptors.NumRadicalElectrons(mol):
+            return "radical"
+        if any(atom.GetIsotope() for atom in mol.GetAtoms()):
+            return "isotope"
+        if any(a.GetAtomicNum() not in {1, 6, 7, 8, 9, 16, 17, 35} for a in mol.GetAtoms()):
+            return "metal"
+        if sum(a.GetFormalCharge() for a in mol.GetAtoms()) != 0 or len(Chem.GetMolFrags(mol)) != 1:
+            return "charged_or_disconnected"
+        if mol.GetNumHeavyAtoms() > 30:
+            return "too_many_heavy_atoms"
+        carbonyls = {a.GetIdx() for a in mol.GetAtoms() if a.GetAtomicNum() == 6 and any(n.GetAtomicNum() == 8 and mol.GetBondBetweenAtoms(a.GetIdx(), n.GetIdx()).GetBondType() == Chem.BondType.DOUBLE for n in a.GetNeighbors())}
+        if not any(len(r) == 6 and all(mol.GetAtomWithIdx(i).GetAtomicNum() in {6, 7, 16} and mol.GetAtomWithIdx(i).GetHybridization() == Chem.HybridizationType.SP2 for i in r) and any(r[i] in carbonyls and r[(i + d) % 6] in carbonyls for i in range(6) for d in (1, 3)) for r in mol.GetRingInfo().AtomRings()):
+            return "not_quinone"
+        return None
     if any(atom.GetAtomicNum() not in NON_METALS for atom in mol.GetAtoms()):
         return "metal"
     if mol.GetNumHeavyAtoms() > 40:
@@ -112,8 +146,10 @@ def _pattern(value):
     return _mol(value, smarts=True) or _mol(value)
 
 
-def in_domain(smiles, cores_smarts, allowed_subst, ref_fps):
+def in_domain(smiles, cores_smarts=None, allowed_subst=None, ref_fps=None, domain="v2"):
     """Check the phase-7 core, substituent, and fingerprint support contract."""
+    if domain == "v2":
+        return t0(smiles)
     mol = _mol(smiles)
     if mol is None:
         return "out_of_domain_core"
@@ -138,7 +174,7 @@ def in_domain(smiles, cores_smarts, allowed_subst, ref_fps):
 
 
 def objective(E2, dG, a, b, sigma, o2_E, margin=0.15):
-    if sigma == 0 or E2 < o2_E + margin:
+    if sigma == 0 or o2_E - E2 < margin:
         return None
     return (a * E2 + b - dG) / sigma
 
@@ -161,13 +197,13 @@ def _score(evaluate, smiles):
 
 
 def run(propose, evaluate, start, budget=80, rounds=8, k=5, feedback=True, ledger_path="ledger.jsonl",
-        cores_smarts=None, allowed_subst=None, ref_fps=None):
+        cores_smarts=None, allowed_subst=None, ref_fps=None, domain="v2"):
     """Run exactly ``budget`` proposals and return the running-best score curve."""
     start_records = []
     for item in start:
         smiles = item["smiles"] if isinstance(item, dict) else item
         score = item.get("f") if isinstance(item, dict) else None
-        if score is None and t0(smiles) is None:
+        if score is None and t0(smiles, domain) is None:
             score, _ = _score(evaluate, smiles)
         if score is not None:
             start_records.append({"smiles": smiles, "f": float(score)})
@@ -204,10 +240,10 @@ def run(propose, evaluate, start, budget=80, rounds=8, k=5, feedback=True, ledge
             elif proposal in seen:
                 reason = "duplicate"
             else:
-                reason = t0(proposal)
+                reason = t0(proposal, domain)
                 row["t0"] = reason
             if reason is None:
-                row["domain"] = in_domain(proposal, cores_smarts, allowed_subst, ref_fps)
+                row["domain"] = in_domain(proposal, cores_smarts, allowed_subst, ref_fps, domain=domain)
                 if row["domain"]:
                     reason = "out_of_domain"
                 else:

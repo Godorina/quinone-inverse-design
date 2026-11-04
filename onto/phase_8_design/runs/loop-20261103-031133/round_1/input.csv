@@ -1,0 +1,6 @@
+id,smiles
+R1-1,NC1=C(Cl)C(=O)C(Cl)=C(Cl)C1=O
+R1-2,CC1=C(Cl)C(=O)C(Cl)=C(Cl)C1=O
+R1-3,Cc1ccc2c(c1)C(=O)c1cccc(O)c1C2=O
+R1-4,Cc1cccc2c1C(=O)c1c(O)ccc(O)c1C2=O
+R1-5,O=C1c2cccnc2C(=O)c2c(O)ccc(O)c21
